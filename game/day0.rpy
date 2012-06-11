@@ -5,24 +5,24 @@ label day0:
     m "Fiou..."
     m "J'ai bientôt fini de déballer mes affaires."
     m "Il était temps, on dépasse minuit..."
-    "Mon regard se figea sur mes cartons."
+    "Mon regard se fige sur mes cartons."
     m "C'est difficile de déménager en pleine année scolaire..."
     m "En plus, ces cartons ne sont pas légers... Les porter au 3ème ne fut pas une mince affaire !"
     "Je réfléchis."
-    "Je repensais à mon ancienne école."
-    "Il n'y avait aucun bon souvenir qui s'y attachait."
+    "Je repense à mon ancienne école."
+    "Il n'y a aucun bon souvenir qui s'y attache."
     stop music fadeout 1.0
     play sound "sound/bell.mp3"
-    "Je secoua ma tête, balayant mes songes."
+    "Je secoue ma tête, balayant mes songes."
     m "J'arrive, j'arrive !"
-    "Qui pouvait bien venir à une heure pareille ?"
+    "Qui peut bien venir sonner à une heure pareille ?"
     play sound "sound/dooropen.mp3"
     scene couloir with dissolve
     $ renpy.music.play("music/ryouzanki.ogg", fadein=1)
     show ryou angry
-    "J'ouvris la porte et vis un jeune homme sur le palier."
+    "J'ouvre la porte et vois un jeune homme sur le palier."
     "Il me dévisagea, les yeux plissés."
-    "Soudain, il baissa la tête et frappa doucement du poing sur le cadrant de ma porte."
+    "Soudain, il baisse la tête et frappe doucement du poing sur le cadrant de ma porte."
     r "Merde !"
     m " Quoi ?"
     show ryou sad
@@ -84,7 +84,7 @@ label sonnette:
         "Mais non... Retourne en primaire !":
             show ryou sad
             m "Mais non... Retourne en primaire !"
-            "Dans le doute, je regardais une fois de plus."
+            "Dans le doute, je regarde une fois de plus."
             show ryou normal
             jump sonnette
             
