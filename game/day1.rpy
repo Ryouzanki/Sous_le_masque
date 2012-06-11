@@ -27,15 +27,15 @@ label day1:
         jump ss
         
 label oo:
-    "Une fois mes préparatifs terminés, je sortis."
+    "Mes préparatifs terminés, je sors."
     play sound "sound/doorclose.mp3"
     scene black with dissolve
     scene couloir with dissolve
-    "Je ne savais pas où aller."
+    "Je ne sais pas où aller."
     scene street with dissolve
-    "J'eus alors une idée géniale : Suivre le flux d'étudiants"
-    "Un peu plus loin, j'aperçu une silouhette familière."
-    "Ryouzanki était devant moi, accompagné d'une jeune fille."
+    "J'ai une idée géniale : Suivre le flux d'étudiants"
+    "Un peu plus loin, j'aperçois une silhouette familière."
+    "Ryouzanki est devant moi, accompagné d'une jeune fille."
     "Je suis sur la bonne voie."
     "Et maintenant ?"
     menu:
@@ -69,7 +69,7 @@ label oo:
             $ rel_lulu += 2
             jump day1_matin
         "Les suivre.":
-            "Je les suivis jusqu'en classe."
+            "Je les suis jusqu'en classe."
             scene black with dissolve
             scene classroom with dissolve
             show ryou normal
