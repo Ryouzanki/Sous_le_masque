@@ -189,7 +189,7 @@ label sport_collectif:
 label sport_col:
     
         hide laura
-        if bite == True:
+        if bite:
                 "C'est ainsi que je me retrouvais inscrit dans l'équipe masculine de [sport]."
                 "Laura est un manager impitoyable."
                 "Elle ne m'a pas ménagé..."
@@ -218,7 +218,7 @@ label sport_solo:
     if sport == 'tennis':
         $ agi_points +=1
         $ str_points +=1
-        if bite == True:
+        if bite:
                 "C'est ainsi que je me retrouvais inscrit dans l'équipe masculine de tennis."
                 "Elusia est un manager autoritaire."
                 "Je n'ai pas été ménagé..."

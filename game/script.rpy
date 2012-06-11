@@ -59,6 +59,14 @@ image alice angry = "CG/alice angry.png"
 image alice sad = "CG/alice sad.png"
 image alice geez = "CG/alice geez.png"
 
+image salazard normal = "CG/salazard normal.png"
+image salazard happy = "CG/salazard happy.png"
+image salazard angry = "CG/salazard angry.png"
+image salazard sad = "CG/salazard sad.png"
+image salazard geez = "CG/salazard geez.png"
+image salazard geez2 = "CG/salazard geez2.png"
+image salazard evil = "CG/salazard evil.png"
+
 image prof normal = "CG/prof normal.png"
 image prof happy = "CG/prof happy.png"
 

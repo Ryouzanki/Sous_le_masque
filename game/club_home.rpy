@@ -12,7 +12,7 @@ label home_0:
     show ryou normal at center with move
     r "Je t'attendais pour rentrer."
     m "Oh, c'est bien gentil de ta part."
-    if bite == True:
+    if bite:
         r "Ce serait bête que tu te perdes pour rentrer."
         m "Désolé."
         r "Ne t'en fais pas pour ça."
@@ -26,7 +26,7 @@ label home_0:
     r "Nous y voilà !"
     r "Tant qu'à faire, tu veux passer chez moi ?"
     m "Pourquoi faire ?"
-    if bite == True:
+    if bite:
         show ryou normal
         r "Juste récupérer les cours."
         r "'Fin après, si tu veux jouer à la console ou sortir..."

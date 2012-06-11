@@ -46,7 +46,7 @@ label day0:
     show ryou angry
     r "Hey ! C'est MA question !"
     m "Quoi ?"
-    if bite == True:
+    if bite:
         r "Espèce de voleur de question !"
         m "Tu viens de sonner chez moi quand même..."
         show ryou happy
@@ -73,7 +73,7 @@ label day0:
     m "Enfin je crois..."
     "Je me penchais en dehors afin de vérifier moi même."
 label sonnette:
-    if bite == True:
+    if bite:
        $ j = renpy.input("Il y avait bien mon prénom :", "Minato", length=15) or "Minato"
     else:
         $ j = renpy.input("Il y avait bien mon prénom :", "Hamuko", length=15) or "Hamuko"
@@ -92,11 +92,7 @@ label sonnette:
     r "Sympa comme prénom !"
     m "Merci..."
     show ryou normal
-    if bite == True:
-        r "T'es étudiant ?"
-    else:
-        r "T'es étudiante ?"
-        
+    r "T'es étudiant[ter] ?"    
     m "Bien sur !"
     m "Je vais à l'école juste à côté !"
     m " Enfin d'après googlemap..."
@@ -111,7 +107,7 @@ label sonnette:
     m "Ouep."
     r "Idem. On pourra venir te chercher le matin si tu veux !"
     show ryou happy
-    if bite == True:
+    if bite:
         r "Tu verra, la voisine, elle est mignonne et gentille."
     else :
         r "Il est de mon devoir de chevalier de t'accompagner à l'école !"
@@ -175,7 +171,7 @@ label rencontre_elusia:
     e "Oh ! Bonsoir !"
     e "A qui ai-je l'honneur ?"
     show ryou happy at left
-    if bite == True:
+    if bite:
         r "Je te présente mon frère : [j] !"
     else:
         r "Je te présente ma soeur : [j] !"
@@ -191,7 +187,7 @@ label rencontre_elusia:
     e "Bon, vu que personne ne semble vouloir aller se coucher tout de suite..."
     e "Voulez vous venir prendre le thé ?"
     r "Nan, je préfère le café, c'est un truc d'homme !"
-    if bite == True:
+    if bite:
         menu:
             "Prendre un café.":
                 $ rel_ryou += 2

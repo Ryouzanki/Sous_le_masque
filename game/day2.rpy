@@ -12,13 +12,13 @@ label day2:
         jump day2_autre
         
 label day2_autre:
-    "Une fois mes préparatifs terminés, je sortis."
+    "Mes préparatifs terminés, je sors."
     play sound "sound/doorclose.mp3"
     scene black with dissolve
     scene couloir with dissolve
     "C'est ennuyeux d'y aller seul."
     scene street with dissolve
-    "Ryouzanki est venu m'aborder."
+    "Ryouzanki m'aborder."
     "Ils étaient juste derrière moi."
     jump route_d2
         
