@@ -1,0 +1,5 @@
+*.rpyb
+*.rpyc
+*~
+*.rpy.bak
+brouillon/*
