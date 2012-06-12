@@ -14,6 +14,30 @@ label ryou_confirme:
     define v = Character('Valeth', color="#800080", show_two_window=True)
     define y = Character('Lloyd', color="#FF8C00", show_two_window=True)
     define a =  Character('Alice', color="#228B22", show_two_window=True)
+    
+    image rect = "CG/rect.png"
+
+
+    "test position"
+    # show ryou normal at left
+    # show alice normal at center
+    # show rect at Position(xpos = 0.75, xanchor=0, ypos=0, yanchor=0)
+    # "1"
+    # show rect at Position(xpos = 0.25, xanchor=0, ypos=0, yanchor=0) with move
+    # "xpos --"
+    # show rect at Position(xpos = 0, xanchor=0, ypos=0.75, yanchor=0)
+    # "3"
+    # show rect at Position(xpos = 0, xanchor=0, ypos=0.25, yanchor=0)with move
+    # "ypos--"
+    # show rect at Position(xpos = 0, xanchor=0.75, ypos=0, yanchor=0)
+    # "1"
+    # show rect at Position(xpos = 0, xanchor=0.25, ypos=0, yanchor=0) with move
+    # "xanchor --"
+    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=0.75)
+    # "3"
+    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=0.25)with move
+    # "yanchor--"
+    show rect at Position(xpos = 0.5, xanchor=0.5, ypos=1, yanchor=0)
 
     a "le journal va etre incrementé"
     $ unlocked_journal_pages += 1
@@ -25,5 +49,3 @@ label ryou_confirme:
     l "test"
     v "test"
     y "test"
-
-    
