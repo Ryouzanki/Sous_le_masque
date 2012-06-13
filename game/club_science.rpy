@@ -82,7 +82,7 @@ label lloyd_menu_1:
                             y "C'est elle. Alors qu'elle n'y pouvait rien !"
                             m "Oui."
                     jump lloyd_menu_1
-        "Je suis [j]. Et toi ?" if choix_2 :
+        "Je suis [j]. Et toi ?" if choix_2 and noble == 'Jeune homme' :
             $ choix_2 = False
             m "Je suis [j]. Et toi ?"
             y "Classe ?"
@@ -137,10 +137,11 @@ label science_1:
     show alice sad
     a "Il m'a encore sermonée pour soi-disant manquement à mes obligations."
     show alice normal
-    a "Oh, je suis tête en l'air..."
-    a "Je suis Alice, la présidente de tous les clubs scientifiques de cette école."
-    $ noble = 'Lloyd'
-    $ ali = 'Alice'
+    if ali != 'Alice':
+        a "Oh, je suis tête en l'air..."
+        a "Je suis Alice, la présidente de tous les clubs scientifiques de cette école."
+        $ noble = 'Lloyd'
+        $ ali = 'Alice'
     a "Ici, si tu t'inscrit, tu pourra participer à divers projets dans les clubs d'informatique, de robotique et de chimie."
     a "C'est amusant en plus d'être instructif."
     a "Par contre, tu devra venir régulièrement si tu participes à des projets."

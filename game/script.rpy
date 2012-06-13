@@ -8,10 +8,10 @@
     
     $ rel_ryou_max = 33
     $ rel_lulu_max = 29
-    $ rel_val_max = 25
+    $ rel_val_max = 27
     $ rel_lolo_max = 24
     $ rel_neph_max =  100
-    $ rel_lloy_max = 15
+    $ rel_lloy_max = 17
     $ rel_ali_max = 11
     $ rel_sala_max = 100
 

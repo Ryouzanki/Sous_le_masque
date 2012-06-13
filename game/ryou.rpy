@@ -17,28 +17,30 @@ label ryou_confirme:
     
     image rect = "CG/rect.png"
 
+    $ posizion = Position(xpos=0.5)
 
     "test position"
-    # show ryou normal at left
-    # show alice normal at center
-    # show rect at Position(xpos = 0.75, xanchor=0, ypos=0, yanchor=0)
+    show ryou normal at left
+    show alice normal at right
+    # show rect at Position(xpos = 10, xanchor=0, ypos=0, yanchor=0)
     # "1"
-    # show rect at Position(xpos = 0.25, xanchor=0, ypos=0, yanchor=0) with move
+    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=0) with move
     # "xpos --"
-    # show rect at Position(xpos = 0, xanchor=0, ypos=0.75, yanchor=0)
+    # show rect at Position(xpos = 0, xanchor=0, ypos=10, yanchor=0)
     # "3"
-    # show rect at Position(xpos = 0, xanchor=0, ypos=0.25, yanchor=0)with move
+    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=0)with move
     # "ypos--"
-    # show rect at Position(xpos = 0, xanchor=0.75, ypos=0, yanchor=0)
+    # show rect at Position(xpos = 0, xanchor=10, ypos=0, yanchor=0)
     # "1"
-    # show rect at Position(xpos = 0, xanchor=0.25, ypos=0, yanchor=0) with move
+    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=0) with move
     # "xanchor --"
-    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=0.75)
+    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=10)
     # "3"
-    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=0.25)with move
+    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=0)with move
     # "yanchor--"
-    show rect at Position(xpos = 0.5, xanchor=0.5, ypos=1, yanchor=0)
-
+    show lloyd normal at Position(xpos=0.40)
+    show salazard evil at Position(xpos=0.60)
+    "fin du test"
     a "le journal va etre incrementé"
     $ unlocked_journal_pages += 1
     r "journal incrémenté"

@@ -229,3 +229,6 @@ label sport_solo:
     "Elusia m'a raccompagné[ter] jusqu'à l'immeuble."
     "Puis, elle est partie car elle avait des choses à faire."
     return
+    
+label sport_1:
+    "rien"
