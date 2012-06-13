@@ -259,4 +259,99 @@ label d3_sport:
                       v "Et donc, que fais tu pour t'occuper ?"
                       jump d3_loisir
 label d3_loisir:
-    "TODO"
+    v "Je me demande si tu faisais des jeux de rôles, de plateau ou ce genre de choses."
+    menu:
+        "Oui, très souvent !":
+            $ rel_val += 5
+            m "Oui, très souvent !"
+            show valeth happy
+            v "Cool, au bâtiment des clubs, on a beaucoup de jeu."
+            show valeth normal
+            v "Plus que de joueurs d'ailleurs..."
+            show alice normal
+            a "On pourrait y aller tous ensemble un de ces jours."
+            show ryou normal
+            r "Oui, pourquoi pas."
+        "Oui, ça m'arrive.":
+            $ rel_val +=2
+            m "Oui, ça m'arrive."
+            v "Oh, on pourrait jouer de temps en temps."
+            show alice normal
+            a "C'est agréable de temps à autre."
+            show ryou normal
+            r "Ouais, on y pensera."
+        "Non, pas trop.":
+            m "Non pas trop."
+            show laura normal
+            l "Tu préfères sortir ?"
+            m "Entre autre."
+            v "Oh, tant pis..."
+            v "Si un jour tu es tenté[ter], passe me voir."
+    show elusia normal
+    e "Etais-tu impliqué[ter] dans la vie associative de ton école ?"
+    show alice normal
+    a "Tu étais dans des clubs ?"
+    menu:
+        "J'étais très impliqué dans les clubs.":
+            m "J'étais très impliqué dans les clubs."
+            $ rel_lulu += 1
+            $ rel_ali += 3
+            $ rel_ali += 3
+            a "Intéressant..."
+            show valeth happy
+            v "C'est super !"
+            v "J'espère vraiment que nos clubs te plaîront alors !"
+            show valeth normal
+            a "Le pannel de nos clubs n'est pas bien large mais ils sont de qualité."
+        "Je venais de temps en temps.":
+            m "Je venais de temps en temps."
+            $ rel_ali += 1
+            $ rel_ali += 1
+            a "Comme tous les gens normaux... Je suppose."
+            v "Ca peut pas faire de mal d'avoir des membres en plus."
+            a "Le pannel de nos clubs n'est pas bien large mais ils sont de qualité."
+            e "J'espère que tu en trouvera un qui te convienne."
+        "Les clubs ne m'ont jamais vraiment intéressé.":
+            m "Les clubs ne m'ont jamais vraiment intéressé."
+            r "Pourtant, je veux pas dire mais ici les clubs sont assez sympas."
+            r "Tu devrais vraiment au moins les tester."
+            e "C'est bien vrai."
+            jump day3_cours
+            
+    a "Et donc ? Dans quel club étais-tu ?"
+    menu:
+        m "J'étais dans des clubs..."
+        "... De sport":
+            extend "De sport."
+            e "Oh, c'est sympa ça..."
+            l "Tu jouais dans l'équipe de ton école ?"
+            m "Oui !"
+            l "D'ailleurs, qu'est ce qui est le plus important pour toi ?"
+            menu:
+                l "L'esprit d'équipe ou la rivalité ?"
+                "L'esprit d'équipe.":
+                    m "Je pense que l'esprit d'équipe est très important."
+                    l "Je le pense aussi."
+                    l "Que ce soit pour gagner ou juste d'amuser."
+                    $ rel_lolo += 5
+                    $ rel_lulu += 2
+                "La rivalité.":
+                     m "Je pense que la rivalité permet de se surpasser."
+                     e "Tout juste."
+                     e "L'être humain peut devenir plus fort via l'esprit de compétivité !"
+                     $ rel_lolo += 2
+                     $ rel_lulu += 5
+        "... Plutôt techniques.":
+            extend "... Plutôt techniques."
+            a "Très intéressant."
+            a "Ton expérience m'intéresse... Je suppose."
+            a "Tu devrais devenir membre régulier des clubs de science."
+            show alice sad
+            a "Nous avons... besoin de toute l'aide disponible."
+            v "Oui, d'autant plus que ça commence à être urgent."
+            show elusia happy
+            e "Oh, c'est vrai ! Le grand gala approche !"
+            m "C'est quoi le... Grand gala ?"
+            r "Genre t'avais pas ça dans ton école..."
+            e "C'est le festival de l'école. Une grande fête en quelque sorte."
+            a "Nous devons produire des... animations pour le gala."
