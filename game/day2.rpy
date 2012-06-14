@@ -38,7 +38,7 @@ label route_d2:
     if aller_science == 1:
         r "Alors le club des grosses têtes, c'était comment ?"
         m "De quoi ?"
-        r "Le club de science ! Tu y es allé hier non ?"
+        r "Le club de science ! Tu y es allé[ter] hier non ?"
         m "Comment tu sais ?"
         show ryou happy
         r "Je suis Dieu voyons, je sais tout !"

@@ -142,7 +142,7 @@ label science_1:
         a "Je suis Alice, la présidente de tous les clubs scientifiques de cette école."
         $ noble = 'Lloyd'
         $ ali = 'Alice'
-    a "Ici, si tu t'inscrit, tu pourra participer à divers projets dans les clubs d'informatique, de robotique et de chimie."
+    a "Ici, si tu t'inscris, tu pourra participer à divers projets dans les clubs d'informatique, de robotique et de chimie."
     a "C'est amusant en plus d'être instructif."
     a "Par contre, tu devra venir régulièrement si tu participes à des projets."
     a "On ne compte pas les absences mais c'est par respect pour les gens qui participent à ton projet."
@@ -156,7 +156,7 @@ label science_1:
             a "Vraiment... Tant mieux alors..."
             a "Le sage parle parce qu'il a quelque chose à dire."
             a "Et le fou parle parce qu'il veut dire quelque chose..."
-            a "N'est-ce pas ?"
+            a "Je suppose..."
             $ rel_ali +=5
         "Comme tous les geeks.":
             m "Comme tous les geeks."
@@ -175,7 +175,9 @@ label science_1:
             a "Ne rien penser, c'est ne pas exister."
             
 label science_02:
-    a "Je vais êtres directe !"
+    show alice geez
+    a "Désolée mais je vais être directe !"
+    show alice sad
     a "Es tu venu t'inscrire oui ou non ?"
     menu :
         m "Je crois bien que..."
@@ -221,10 +223,13 @@ label science_02:
             show alice happy
             a "Bienvenu[ter] parmis nous !"
             show alice geez at left with move
-            a "Que faîtes vous ici sir Lloyd ?"
+            a "Que faîtes vous ici Sir Lloyd ?"
             show lloyd normal at right
-            y "Je suis venu vérifier que l'inscription de mon camarade de classe se déroule correctement."
-            a "Et tout est bon pour vous, sir ?"
+            if bite:
+                y "Je suis venu vérifier que l'inscription de mon camarade de classe se déroule correctement."
+            else:
+                y "Je suis venu vérifier que l'inscription de ma camarade de classe se déroule correctement."
+            a "Et tout est bon pour vous, Sir ?"
             y "Oui. Vous devriez prendre votre rôle plus à coeur."
             show alice sad
             a "J'y réfléchirais. Allez donc me chercher les feuilles d'inscription."
@@ -265,7 +270,7 @@ label science_02:
             m "Vous avez quoi déjà ?"
             a "Chimie, robotique ou informatique."
             menu:
-                m "Je vais prendre.."
+                m "Je vais prendre..."
                 "Chimie.":
                     m "Chimie."
                     $ club = 'chimie'
@@ -292,14 +297,16 @@ label science_02:
             a "Lulu, tu n'as pas le droit d'être ici."
             show alice sad
             a "N'est ce pas Sir vice président ?"
-            a "Bien qu'elle avait tant envie de rester ici..."
+            a "Bien qu'elle ait tant envie de rester ici..."
             show lloyd angry
             y "Heu... Oui... hum..."
             y "Elusia, tu n'as pas le droit de rester ici. Sortons tous les deux."
             e "A plus tard !"
             hide elusia
             hide lloyd
-            show alice geez at center with move
+            show alice sad at center with move
+            a "Action, réaction..."
+            show alice geez
             a "Désolée, je n'aime pas quand le labo est bondé, ça me stress..."
             a "Tâche de remplir tout ça aussi tôt que possible."
             show alice sad

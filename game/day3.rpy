@@ -275,7 +275,7 @@ label d3_loisir:
         "Oui, ça m'arrive.":
             $ rel_val +=2
             m "Oui, ça m'arrive."
-            v "Oh, on pourrait jouer de temps en temps."
+            v "Oh, on pourrait jouer quelques soirs.."
             show alice normal
             a "C'est agréable de temps à autre."
             show ryou normal
@@ -413,6 +413,7 @@ label d3_loisir:
                     extend "Théâtre."
                     m "J'aime bien jouer la comédie."
                     v "Intéressant. Je veux te voir à l'oeuvre !"
+                    show elusia happy
                     e "Absolument, moi aussi !"
                     $ rel_val += 5
                     $ rel_lulu += 3
@@ -433,13 +434,11 @@ label day3_cours:
                 show elusia normal at right
                 "Le premier rang n'est pas aussi désagréable que ça..."
                 "C'est amusant d'empêcher Ryouzanki de dormir en lui pinçant les côte..."
-                hide elusia
-                hide ryou
                 $ rel_lulu += 2
                 $ rel_ryou += 2
                 "A la fin du cours, Alice est venue me voir."
                 show alice sad at center
-                a "Ne vous en faite pas, je n'en ai pas pour longtemps."
+                a "Ne vous en faites pas, je n'en ai pas pour longtemps."
                 a "je vous rend [j] juste après."
                 r "OK, on part devant."
                 hide ryou
@@ -453,7 +452,7 @@ label day3_cours:
             $ rel_lolo += 2
             "A la fin du cours, Alice est venue me voir."
             show alice sad at center
-            a "Ne vous en faite pas, je n'en ai pas pour longtemps."
+            a "Ne vous en faites pas, je n'en ai pas pour longtemps."
             a "je vous rend [j] juste après."
             r "OK, tu sais où me trouver."
             hide valeth

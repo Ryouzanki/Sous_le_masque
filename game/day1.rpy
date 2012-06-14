@@ -47,7 +47,7 @@ label oo:
             r "T'as trouvé le chemin !"
             m "Oui, j'ai suivi des jeunes au pif."
             r "Pas mal !"
-            r "[j], je te présente ta voisine du dessous : Elusia"
+            r "[j], je te présente ta voisine du dessous : Elusia !"
             r "Elusia, [j] !"
             r "[j], Elusia !"
             r "Elusia~"
@@ -168,7 +168,7 @@ label day1_matin:
     pause(1)
     scene classroom with dissolve
     $ renpy.music.play("music/matin.ogg", fadein=2)
-    "Pendant que je rangeais mes affaires à la fin du cours, ils vinrent devant la table."
+    "Pendant que je range mes affaires à la fin du cours, ils viennent devant la table."
     show ryou normal at left
     show elusia normal at right
     r "Tu fais quoi pour la pause de midi ?"

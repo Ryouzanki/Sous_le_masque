@@ -123,6 +123,7 @@ label sonnette:
             r "..."
             r "Bon OK. Bah, à demain !"
             hide ryou
+            stop music
             return
             
 label accompagner_matin:
@@ -145,6 +146,7 @@ label rencontre_tard:
     m "Oui..."
     r "Bonne nuit et à demain !"
     m "Toi aussi, à demain !"
+    stop music
     hide ryou
     return
     
