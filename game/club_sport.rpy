@@ -1,8 +1,8 @@
 label sport:
     if aller_sport == 0:
         jump sport_0
-    elif aller_sport == 1:
-        jump sport_1
+    #elif aller_sport == 1:
+     #   jump sport_1
 
 
 label sport_0:
@@ -230,5 +230,3 @@ label sport_solo:
     "Puis, elle est partie car elle avait des choses à faire."
     return
     
-label sport_1:
-    "rien"

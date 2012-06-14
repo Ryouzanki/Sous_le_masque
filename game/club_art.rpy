@@ -163,6 +163,28 @@ label club_2:
             v "Excellent partie [j]."
             m "Tu m'avais bien laissé gagné la dernière fois."
             v "C'est possible."
+            jump art3_fin
+        "Non, pas cette fois.":
+            m "Non, pas cette fois Valeth."
+            v "Oh... Dommage."
+            v "Tu veux faire un jeu de plateau à la place ?"
+            menu:
+                "Oui":
+                    m "Oui, pourquoi pas !"
+                    v "C'est partit."
+                    "J'ai joué à divers jeux de réflexion avec Valeth."
+                    "C'était amusant."
+                    $ int_points += 1
+                    $ rel_val += 2
+                    jump art3_fin
+                "Non":
+                    m "Non, merci, une autre fois."
+                    m "Je vais rentrer."
+                    v "Déjà ? Tu viens juste d'arriver..."
+                    v "Très bien, à la prochaine !"
+                    return
+label art3_fin:
+            $ aller_art += 1
             v" On dirait qu'il ne reste plus que nous."
             v "Je vais rentrer donc je vais devoir fermer les locaux."
             v "Désolé de te kicker aussi brutalement !"
@@ -215,8 +237,17 @@ label club_2:
                     v "Si je croyais au destin, je le remercirais de nous avoir mis à des postes en opposition !" 
                 "Moi ?":
                     extend "Moi ?"
+                    $ rel_val += 2
+                    v "Haha, ne t'en fais pas."
+                    v "Je pense que comme moi, tout le monde t'apprécie."
+                    v "Désolé si on t'agresse un peu mais on est tous très curieux !"
                 "Rien, oublie...":
                     extend "Rien, oublie..."
                     show valeth happy
                     v "Hey, je mords pas tu sais !"
-                    jump club3_next
+                    v "Personnellement, je pense que tu devrais être honnête."
+                    v "Et satisfaire ta curiosité aussi ! N'hésites pas hein !"
+            v "Oh pardon, je m'égare !"
+            v "On a fait le tour des salles."
+            v "Bon bah, à demain !"
+            return

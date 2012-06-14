@@ -8,7 +8,7 @@
     
     $ rel_ryou_max = 46
     $ rel_lulu_max = 50
-    $ rel_val_max = 57 # max 50 au lieu de 52 WTF
+    $ rel_val_max = 57
     $ rel_lolo_max = 39
     $ rel_neph_max =  100
     $ rel_lloy_max = 17
