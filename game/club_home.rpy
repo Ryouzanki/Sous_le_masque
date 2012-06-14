@@ -14,7 +14,7 @@ label home_0:
     m "Oh, c'est bien gentil de ta part."
     if bite:
         r "Ce serait bête que tu te perdes pour rentrer."
-        m "Désolé."
+        m "Très drôle. Merci quand même."
         r "Ne t'en fais pas pour ça."
     else:
         r "Je ne peux pas te laisser rentrer seule."
@@ -95,7 +95,7 @@ label chez_ryou_homme:
                     extend "je l'aime beaucoup !"
                     show ryou sad
                     r "Sérieusement ?"
-                    r "Tu la cotoies depuis moins de 24h..."
+                    r "Tu la cotoies depuis pas très longtemps..."
                     r "C'est un peu tôt nan ?"
                     $ rel_ryou -= 2
                 "...je ne sais pas.":

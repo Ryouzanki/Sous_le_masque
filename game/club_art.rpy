@@ -7,6 +7,8 @@ label club:
         jump club_0
     elif aller_art == 1:
         jump club_1
+    elif aller_art == 2:
+        jump club_2
         
 label club_0:
     $ aller_art += 1
@@ -141,3 +143,80 @@ label club_1:
     m "Non, je vais partir aussi."
     hide valeth
     return
+    
+label club_2:
+    $ aller_art += 1
+    show valeth normal
+    v "Oh, bonjour [j] !"
+    v "Tu es venu[ter] m'écrabouiller à nouveau ?"
+    menu:
+        "Je veux rejouer.":
+            $ rel_val += 5
+            m "Oui, je vais rejouer contre toi."
+            v "Très bien. Je vais pouvoir tenter de prendre ma revanche !"
+            v "Commence donc !"
+            $ int_points += 2
+            "Je joue aux échecs contre Valeth."
+            "Je joue aussi bien que la dernière fois."
+            "Voir mieux même."
+            "Cette fois, Valeth n'a rien laissé au hasard et je perds."
+            v "Excellent partie [j]."
+            m "Tu m'avais bien laissé gagné la dernière fois."
+            v "C'est possible."
+            v" On dirait qu'il ne reste plus que nous."
+            v "Je vais rentrer donc je vais devoir fermer les locaux."
+            v "Désolé de te kicker aussi brutalement !"
+            m "Que veux tu que je fasses ici seul[ter] de toutes façons ?"
+            v "Ouais, j'y avais pensé mais bon."
+            "Il n'y a vraiment que nous."
+            "Ce silence pesant n'est brisé que par Valeth qui vérouille des portes."
+            "Et si j'en profitais ?"
+            m "Dis moi Valeth..."
+            v "Oui ?"
+            menu:
+                m "Que penses-tu de :"
+                "Elusia ?":
+                    extend "Elusia ?"
+                    v "Elusia... C'est une chouette fille."
+                    v "Toujours en duo inséparable avec Ryou."
+                    v "Elle est plutôt sérieuse et dynamique."
+                    v "Aussi serviable qu'attentionnée."
+                    v "On dirait qu'elle a peur de la solitude..."
+                "Ryouzanki ?":
+                    extend "Ryouzanki ?"
+                    v "Je ne sais pas..."
+                    v "C'est quelqu'un de très gentil et de plutôt présent."
+                    v "Il ne quitte jamais Elusia des yeux."
+                    v "Personnellement, je l'aime bien."
+                    v "Il y a quelque chose qui cloche avec lui."
+                "Laura ?":
+                    extend "Laura ?"
+                    v "Je l'aime bien."
+                    v "Même si elle paraît méchante, ce n'est pas le cas."
+                    v "C'est quelqu'un de très juste et honnête."
+                    v "C'est juste que c'est la déléguée malgré elle."
+                    v "Alors elle ne prend pas son rôle très à coeur."
+                    v "D'où cette animosité avec Elusia."
+                "Lloyd ?":
+                    extend "Lloyd ?"
+                    v "Il est clairement issu d'un autre monde que nous celui-là."
+                    v "Il est né dans un cocon loin de tous."
+                    v "Entouré de domestiques toujours d'accord avec lui quoi."
+                    v "Du coup il a du mal à comprendre qu'on peut ne pas être d'accord avec lui."
+                    v "Mais c'est pas quelqu'un de méchant, il fait vraiment des efforts pour changer."
+                "Alice ?":
+                    extend "Alice ?"
+                    v "Je l'aime beaucoup !"
+                    v "C'est mon miroir."
+                    v "Elle est très sérieuse mais très timide."
+                    v "Elle ose rarement demander de l'aide."
+                    v "Si tu la vois dans le besoin, n'hésite pas à lui proposer de l'aide."
+                    v "Elle ne croit qu'en ce qu'elle voit."
+                    v "Si je croyais au destin, je le remercirais de nous avoir mis à des postes en opposition !" 
+                "Moi ?":
+                    extend "Moi ?"
+                "Rien, oublie...":
+                    extend "Rien, oublie..."
+                    show valeth happy
+                    v "Hey, je mords pas tu sais !"
+                    jump club3_next
