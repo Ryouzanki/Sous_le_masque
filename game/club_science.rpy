@@ -82,7 +82,7 @@ label lloyd_menu_1:
                             y "C'est elle. Alors qu'elle n'y pouvait rien !"
                             m "Oui."
                     jump lloyd_menu_1
-        "Je suis [j]. Et toi ?" if choix_2 and noble == 'Jeune homme' :
+        "Je suis [j]. Et toi ?" if choix_2 :
             $ choix_2 = False
             m "Je suis [j]. Et toi ?"
             y "Classe ?"
@@ -175,8 +175,8 @@ label science_1:
             a "Ne rien penser, c'est ne pas exister."
             
 label science_02:
-            
-    a "Bon, es tu venu t'inscrire oui ou non ?"
+    a "Je vais êtres directe !"
+    a "Es tu venu t'inscrire oui ou non ?"
     menu :
         m "Je crois bien que..."
         "J'ai bien réfléchit, je ne veux pas m'inscrire.":

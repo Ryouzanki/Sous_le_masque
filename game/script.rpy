@@ -6,13 +6,13 @@
     $ int_max = 20
     $ str_max = 20
     
-    $ rel_ryou_max = 33
-    $ rel_lulu_max = 29
-    $ rel_val_max = 27
-    $ rel_lolo_max = 24
+    $ rel_ryou_max = 46
+    $ rel_lulu_max = 50
+    $ rel_val_max = 52 # max 50 WTF
+    $ rel_lolo_max = 39
     $ rel_neph_max =  100
     $ rel_lloy_max = 17
-    $ rel_ali_max = 11
+    $ rel_ali_max = 27
     $ rel_sala_max = 100
 
 # Variables affectives

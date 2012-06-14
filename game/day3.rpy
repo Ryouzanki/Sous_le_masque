@@ -296,7 +296,7 @@ label d3_loisir:
             m "J'étais très impliqué dans les clubs."
             $ rel_lulu += 1
             $ rel_ali += 3
-            $ rel_ali += 3
+            $ rel_val += 3
             a "Intéressant..."
             show valeth happy
             v "C'est super !"
@@ -306,7 +306,7 @@ label d3_loisir:
         "Je venais de temps en temps.":
             m "Je venais de temps en temps."
             $ rel_ali += 1
-            $ rel_ali += 1
+            $ rel_val += 1
             a "Comme tous les gens normaux... Je suppose."
             v "Ca peut pas faire de mal d'avoir des membres en plus."
             a "Le pannel de nos clubs n'est pas bien large mais ils sont de qualité."
@@ -316,6 +316,7 @@ label d3_loisir:
             r "Pourtant, je veux pas dire mais ici les clubs sont assez sympas."
             r "Tu devrais vraiment au moins les tester."
             e "C'est bien vrai."
+            "Ils ont discuté des clubs jusqu'à la fin de la pause."
             jump day3_cours
             
     a "Et donc ? Dans quel club étais-tu ?"
@@ -341,8 +342,9 @@ label d3_loisir:
                      e "L'être humain peut devenir plus fort via l'esprit de compétivité !"
                      $ rel_lolo += 2
                      $ rel_lulu += 5
+            "On a discuté de sport pendant jusqu'à la fin de la pause."
         "... Plutôt techniques.":
-            extend "... Plutôt techniques."
+            extend "Plutôt techniques."
             a "Très intéressant."
             a "Ton expérience m'intéresse... Je suppose."
             a "Tu devrais devenir membre régulier des clubs de science."
@@ -352,6 +354,159 @@ label d3_loisir:
             show elusia happy
             e "Oh, c'est vrai ! Le grand gala approche !"
             m "C'est quoi le... Grand gala ?"
+            show ryou angry
             r "Genre t'avais pas ça dans ton école..."
             e "C'est le festival de l'école. Une grande fête en quelque sorte."
             a "Nous devons produire des... animations pour le gala."
+            a "Est-ce que tu pourrais nous filer un coup de main ?"
+            menu:
+                a "On manque de gens responsables pour coordiner tout ça."
+                "Oui, pourquoi pas !":
+                    $ rel_ali += 5
+                    m "Oui, pourquoi pas !"
+                    show alice happy
+                    a "Superbe. Passe me voir le plus tôt possible dans les labos pour qu'on voit ça ensemble."
+                    a "J'espère vraiment qu'on sera en mesure de surpasser l'équipe de l'année dernière !"
+                "Oui, je vais essayer.":
+                    $ rel_ali += 3
+                    a "Intéressant. Passe me voir le plus tôt possible dans les labos pour qu'on voit ça ensemble."
+                    a "J'espère vraiment qu'on sera en mesure de surpasser l'équipe de l'année dernière !"
+                "Non, je n'aime pas les responsabilités.":
+                    show alice geez
+                    a "Tu viens d'arriver après tout... Je suppose."
+                    v "Dommage Alice. Au moins t'aura essayé."
+                    show alice sad
+                    a "Essayer ne suffit pas, il faut du résultat."
+            "Ils ont parlé du gala de l'année dernière jusqu'à la fin de la pause."
+        "... Plutôt art et divertissement.":
+            extend "Plutôt art et divertissement."
+            show valeth happy
+            v "Génial !"
+            v "Théâtre ? Jeux de société ? Jeux de rôle ? Dessin ? Peinture ?"
+            show ryou angry
+            r "Hey, c'est bon l'excité du bocal là !"
+            r "Même si les jeux sont sympas."
+            show elusia sad
+            e "J'aime bien le théâtre, mais je suis trop nulle."
+            show alice geez
+            a "C'est assez vague art et divertissement..."
+            show alice sad
+            a "Tu y faisais quoi ?"
+            menu:
+                m "Je dirais que j'étais plutôt du côté..."
+                "Art":
+                    extend "Art."
+                    m "J'aime bien dessiner et peindre."
+                    v "Tu dois avoir l'oeil alors ! Un regard expert serait le bienvenu au sein du club !"
+                    $ rel_val += 5
+                    "On a parlé d'art jusqu'à la fin de la pause."
+                "Divertissement.":
+                    extend "Divertissement."
+                    m "J'aime bien ce genre d'occupation."
+                    show ryou happy
+                    r "Un nouveau partenaire de jeu !"
+                    v "Oui. [j] pourrait aussi nous parler des jeux d'où [sexe] vient."
+                    $ rel_val += 5
+                    $ rel_ryou += 3
+                    "On a parlé de jeux de rôle jusqu'à la fin de la pause."
+                "Théâtre.":
+                    extend "Théâtre."
+                    m "J'aime bien jouer la comédie."
+                    v "Intéressant. Je veux te voir à l'oeuvre !"
+                    e "Absolument, moi aussi !"
+                    $ rel_val += 5
+                    $ rel_lulu += 3
+                    "On a parlé de théâtre jusqu'à la fin de la pause."
+label day3_cours:
+    "C'était plutôt intéressant."
+    $ renpy.music.play("music/jour.ogg", fadein=2)
+    scene black with dissolve
+    "La pause de midi est terminée."
+    "Il faut retourner en cours..."
+    "Alice est retournée avec des gens de sa promotion."
+    scene classroom with dissolve
+    "Comme toujours, Ryouzanki et Elusia se sont mis au premier rang."
+    "Laura et Valeth sont au dernier rang."
+    menu:
+        "J'irais bien au premier rang...":
+                show ryou sad at left
+                show elusia normal at right
+                "Le premier rang n'est pas aussi désagréable que ça..."
+                "C'est amusant d'empêcher Ryouzanki de dormir en lui pinçant les côte..."
+                hide elusia
+                hide ryou
+                $ rel_lulu += 2
+                $ rel_ryou += 2
+                "A la fin du cours, Alice est venue me voir."
+                show alice sad at center
+                a "Ne vous en faite pas, je n'en ai pas pour longtemps."
+                a "je vous rend [j] juste après."
+                r "OK, on part devant."
+                hide ryou
+                hide elusia
+        "J'irais bien au dernier rang...":
+            show valeth normal at left
+            show laura sad at right
+            "Valeth passe son temps à dessiner en relevant la tête parfois pour suivre le cours."
+            "Laura est très perplexe. On dirait qu'elle est ailleurs."
+            $ rel_val += 2
+            $ rel_lolo += 2
+            "A la fin du cours, Alice est venue me voir."
+            show alice sad at center
+            a "Ne vous en faite pas, je n'en ai pas pour longtemps."
+            a "je vous rend [j] juste après."
+            r "OK, tu sais où me trouver."
+            hide valeth
+            hide laura
+    a "Désolée de venir te voir de manière aussi brutale."
+    a "Mais je n'ai plus beaucoup de temps."
+    a "Le festival de notre école approche, et je manque cruellement d'équipiers."
+    a "Je voudrais que tu viennes m'aider."
+    if aller_science <= 1:
+        a "S'il te plaît, viens t'inscrire le plus tôt possible."
+        $ aller_science = 1
+    else:
+        a "Il faut que je te présente aux autres."
+        a "Je vais faire un briefing à chaque club sur ce qu'il doit faire pour le festi juste après."
+        a "Je compte vraiment sur ta présence..."
+    m "D'accord."
+    a "A plus tard."
+    hide alice
+    "Elle est partie vite..."
+label day3_passport:
+    window hide None
+    call screen demo_imagemap
+    window show None
+        
+    if _return == "swimming":
+        "Il n'y a pas sport aujourd'hui..."
+        jump day3_passport
+    
+    elif _return == "science":
+        "Allons voir Alice."
+        call labo
+        
+    elif _return == "art":
+        $ rel_ali -= 5
+        if aller_art >= 1:
+            "Allons tenter de battre Valeth !"
+        else:
+            "Et si j'allais faire un tour au bâtiments des clubs..."
+        call club
+
+    elif _return == "go home":
+        $ rel_ali -= 5
+        "Je crois que je vais rentrer."
+        call go_home
+        
+        
+    $ renpy.music.play("music/joueur.ogg", fadein=2)
+    scene couloir with dissolve
+    play sound "sound/dooropen.mp3"
+    pause(1)
+    "Ouf, je suis épuisé[ter]..."
+    "3 eme jour fini."
+    scene chambre m with dissolve
+    play sound "sound/doorclose.mp3"
+    "Je crois que je vais dormir."
+    return
