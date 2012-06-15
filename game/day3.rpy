@@ -344,6 +344,7 @@ label d3_loisir:
                      $ rel_lulu += 5
             "On a discuté de sport pendant jusqu'à la fin de la pause."
         "... Plutôt techniques.":
+            $ rel_ali +=2
             extend "Plutôt techniques."
             a "Très intéressant."
             a "Ton expérience m'intéresse... Je suppose."

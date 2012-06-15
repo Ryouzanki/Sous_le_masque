@@ -524,9 +524,9 @@ screen quick_menu:
     hbox:
         style_group "quick"
     
-        xalign 1.0
-        yalign 1.0
-
+        xalign 0.98
+        yalign 0.99
+        
         textbutton _("Q.Save") action QuickSave()
         textbutton _("Q.Load") action QuickLoad()
         textbutton _("Sauvegarde") action ShowMenu('save')

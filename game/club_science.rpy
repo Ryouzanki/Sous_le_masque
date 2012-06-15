@@ -9,6 +9,8 @@ label labo:
         jump science_02
     elif aller_science ==1:
         jump science_1
+    elif aller_science == 2:
+        jump science_2
         
 label science_0:
     $ aller_science += 1
@@ -314,4 +316,20 @@ label science_02:
             hide alice
             "Je rentre chez moi avec les papiers administratifs."
             return
-            
+
+label science_2:
+    show alice sad
+    a "Oh, te voilà [j]."
+    a "Votre attention tout le monde !"
+    a "Je vous présente [j] qui s'est joint[ter] à nous hier."
+    a "[sexe] travaillera désormais avec nous dans ta team [club]."
+    "Ils sont tous souriants et me souhaitent la bienvenu[ter]"
+    a "Mais... On n'a plus vraiment le temps de former des gens, si ?"
+    show alice geez
+    a "Non, effectivement, question stupide."
+    show alice sad
+    a "Donc, [j], voici Isaac, le président du club [club]."
+    a "File lui la doc, [sexe] se débrouillera... Je suppose."
+    "Isaac me donne des polycopiés."
+    a "C'est un rapport de ce qui a été fait depuis le début de l'année."
+    

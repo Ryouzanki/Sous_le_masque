@@ -3,6 +3,8 @@ label go_home:
         jump home_0
     elif aller_home == 1:
         jump home_1
+    elif aller_home == 2:
+        jump home_2
         
 label home_0:
     $ renpy.music.play("music/ryouzanki.ogg", fadein=2)
@@ -215,7 +217,7 @@ label home_1:
     show ryou normal at left
     r "Je savais que t'allais te défiler..."
     show ryou normal at center with move
-    r "Tu devrais vraiment t'inscrire à un club."
+    r "Tu devrais vraiment participer aux club."
     r "Et y participer activement..."
     m "Mais..."
     menu:
@@ -233,9 +235,9 @@ label home_1:
                     r "Pfff, si tu veux rentrer seul[ter], il fallait le dire plus tôt..."
                     hide ryou
                     return
-                "C'est si urgent que ça ?":
+                "C'est si important que ça ?":
                     m "C'est si urgent que ça ?"
-                    r "Bah non, mais Elusia t'attend quand même..."
+                    r "Bah non, pas pour moi mais quand même..."
                     r "On rentre ?"
                     r "Je voulais justement te parler."
                     jump home2
@@ -263,7 +265,7 @@ label home_1:
                     hide ryou
                     return
                     
-label home2:
+label home2:  #var a changer car ambigue
     play sound "sound/dooropen.mp3"
     scene chambre r with dissolve
     show ryou happy
@@ -317,7 +319,6 @@ label home2:
                 m "Il est partit vite..."
                 return
                 
-                    
     else:
         "Je n'ai rien vu de très important dans ses propos."
         "Peut être qu'il hésite à en parler..."
@@ -325,4 +326,59 @@ label home2:
         $ rel_ryou += 2
         return
             
-                    
+label home_2:
+    $ renpy.music.play("music/ryouzanki.ogg", fadein=2)
+    scene street with dissolve
+    show ryou normal at left
+    show ryou sad at center with move
+    r "El~... Ah, c'est toi [j]."
+    menu:
+        "Perdu ! T'es déçu ?":
+            m "Perdu ! T'es déçu ?"
+            show ryou normal
+            if bite :
+                r "Trop marrant mec..."
+            else:
+                r "Funny..."
+            r "En ce moment, elle me fausse souvent compagnie..."
+            r "Depuis ton arrivée en fait..."
+            m "Je suis là, avec toi."
+            r "Oh, mais j'ai rien insinué."
+        "Tu veux qu'on aille la chercher ?":
+            $rel_ryou += 2
+            m  "Tu veux qu'on aille la chercher ?"
+            show ryou normal
+            r "C'est sympa de proposer mais non."
+            r "Si elle ne vient pas, c'est probablement parce qu'elle ne peut pas."
+            r "On va juste la déranger en faisant ça."
+    r "Je vais rentrer. Je suppose que toi aussi du coup..."
+    r "Tu te plaîs ici ?"
+    m "C'est pas comme si j'avais le choix !"
+    r "Oui. Comment sont tes nouveaux camarades ?"
+    menu:
+        "Je les aime tous.":
+            m "Je les aime tous."
+            $ rel_ryou += 5
+            r "Je vois."
+            r "Content de savoir que tu t'es adapté[ter]."
+        "J'en aime beaucoup.":
+            m "J'en aime beaucoup."
+            r "OK."
+            r "C'est assez normal de ne pas tous les aimer."
+        "Ils ne sont pas tous très intéressants.":
+            m "Ils ne sont pas tous très intéressants."
+            r "Ah bon..."
+            r "Ils ont tous leur bon et mauvais côté."
+            $ rel_ryou += 1
+        "Ils sont ennuyeux.":
+            m "Ils sont ennuyeux."
+            r "Carrément..."
+            r "Les types d'où tu venais étaient des anges alors."
+            $ rel_ryou += 3
+    scene couloir with dissolve
+    show ryou sad
+    r "Bon bah, on est arrivé..."
+    r "A plus tard !"
+    m "A plus tard."
+    $ aller_home +=1
+    return

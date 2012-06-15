@@ -12,7 +12,7 @@
     $ rel_lolo_max = 39
     $ rel_neph_max =  100
     $ rel_lloy_max = 17
-    $ rel_ali_max = 27
+    $ rel_ali_max = 29
     $ rel_sala_max = 100
 
 # Variables affectives
