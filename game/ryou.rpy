@@ -15,29 +15,14 @@ label ryou_confirme:
     define y = Character('Lloyd', color="#FF8C00", show_two_window=True)
     define a =  Character('Alice', color="#228B22", show_two_window=True)
     
-    image rect = "CG/rect.png"
 
     $ posizion = Position(xpos=0.5)
 
     "test position"
+    scene RU
     show ryou normal at left
     show alice normal at right
-    # show rect at Position(xpos = 10, xanchor=0, ypos=0, yanchor=0)
-    # "1"
-    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=0) with move
-    # "xpos --"
-    # show rect at Position(xpos = 0, xanchor=0, ypos=10, yanchor=0)
-    # "3"
-    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=0)with move
-    # "ypos--"
-    # show rect at Position(xpos = 0, xanchor=10, ypos=0, yanchor=0)
-    # "1"
-    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=0) with move
-    # "xanchor --"
-    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=10)
-    # "3"
-    # show rect at Position(xpos = 0, xanchor=0, ypos=0, yanchor=0)with move
-    # "yanchor--"
+    scene classroom with dissolve
     show lloyd normal at Position(xpos=0.40)
     show salazard evil at Position(xpos=0.60)
     "fin du test"

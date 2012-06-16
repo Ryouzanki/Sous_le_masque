@@ -521,4 +521,5 @@ label day1_fin:
     scene chambre m with dissolve
     play sound "sound/doorclose.mp3"
     "Je crois que je vais dormir."
+    stop music
     return

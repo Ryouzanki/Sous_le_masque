@@ -4,6 +4,7 @@ label day3:
     m "..."
     m "J'ai bien dormi..."
     stop sound
+    $ renpy.music.play("music/joueur.ogg", fadein=2)
     m "Allons, c'est l'heure !"
     play sound "sound/bell.mp3"
     m "Ils sont vraiment ponctuels ces deux là..."
@@ -474,6 +475,7 @@ label day3_cours:
     hide alice
     "Elle est partie vite..."
 label day3_passport:
+    $ choix1 = True
     window hide None
     call screen demo_imagemap
     window show None
@@ -488,6 +490,7 @@ label day3_passport:
         
     elif _return == "art":
         $ rel_ali -= 5
+        $ choix1 = False
         if aller_art >= 1:
             "Allons tenter de battre Valeth !"
         else:
@@ -496,6 +499,7 @@ label day3_passport:
 
     elif _return == "go home":
         $ rel_ali -= 5
+        $ choix1 = False
         "Je crois que je vais rentrer."
         call go_home
         
@@ -505,8 +509,12 @@ label day3_passport:
     play sound "sound/dooropen.mp3"
     pause(1)
     "Ouf, je suis épuisé[ter]..."
+    if aller_science == 3:
+        "Maintenant, je me suis engagé à venir les aider pour le gala..."
+        "Ou plutôt j'ai été forcé[ter]..."
     "3 eme jour fini."
     scene chambre m with dissolve
     play sound "sound/doorclose.mp3"
     "Je crois que je vais dormir."
+    stop music
     return

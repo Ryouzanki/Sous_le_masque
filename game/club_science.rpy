@@ -319,6 +319,7 @@ label science_02:
 
 label science_2:
     show alice sad
+    $ aller_science += 1 # on passe a 3
     a "Oh, te voilà [j]."
     a "Votre attention tout le monde !"
     a "Je vous présente [j] qui s'est joint[ter] à nous hier."

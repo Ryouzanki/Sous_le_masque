@@ -6,13 +6,13 @@
     $ int_max = 20
     $ str_max = 20
     
-    $ rel_ryou_max = 53
-    $ rel_lulu_max = 50
-    $ rel_val_max = 57
-    $ rel_lolo_max = 39
+    $ rel_ryou_max = 59
+    $ rel_lulu_max = 58
+    $ rel_val_max = 59
+    $ rel_lolo_max = 41
     $ rel_neph_max =  100
     $ rel_lloy_max = 17
-    $ rel_ali_max = 39
+    $ rel_ali_max = 41
     $ rel_sala_max = 100
 
 # Variables affectives
@@ -29,47 +29,6 @@ init python:
 # Données persistantes
 $ mp = MultiPersistent("win")
 
-# Personnages
-image elusia normal = "CG/elusia normal.png"
-image elusia happy = "CG/elusia happy.png"
-image elusia angry = "CG/elusia angry.png"
-image elusia sad = "CG/elusia sad.png"
-
-image laura normal = "CG/laura normal.png"
-image laura happy = "CG/laura happy.png"
-image laura angry = "CG/laura angry.png"
-image laura sad = "CG/laura sad.png"
-
-image ryou normal = "CG/ryou normal.png"
-image ryou happy = "CG/ryou happy.png"
-image ryou angry = "CG/ryou angry.png"
-image ryou sad = "CG/ryou sad.png"
-
-image valeth normal = "CG/valeth normal.png"
-image valeth happy = "CG/valeth happy.png"
-image valeth angry = "CG/valeth angry.png"
-
-image lloyd normal = "CG/lloyd normal.png"
-image lloyd happy = "CG/lloyd happy.png"
-image lloyd angry = "CG/lloyd angry.png"
-
-image alice normal = "CG/alice normal.png"
-image alice happy = "CG/alice happy.png"
-image alice angry = "CG/alice angry.png"
-image alice sad = "CG/alice sad.png"
-image alice geez = "CG/alice geez.png"
-
-image salazard normal = "CG/salazard normal.png"
-image salazard happy = "CG/salazard happy.png"
-image salazard angry = "CG/salazard angry.png"
-image salazard sad = "CG/salazard sad.png"
-image salazard geez = "CG/salazard geez.png"
-image salazard geez2 = "CG/salazard geez2.png"
-image salazard evil = "CG/salazard evil.png"
-
-image prof normal = "CG/prof normal.png"
-image prof happy = "CG/prof happy.png"
-
 # Variables
 $ sexe = 'il'
 $ bite = True
@@ -81,24 +40,6 @@ $ choix_2 = True
 $ choix_3 = True
 $ choix_4 = True
 $ choix_5 = True
-
-# background
-image chambre m = "back/m_chambre.jpg"
-image chambre e = "back/e_chambre.jpg"
-image chambre r = "back/r_chambre.jpg"
-image chambre m_cartons = "back/m_chambre_cartons.jpg"
-
-image classroom = "back/ecole_classe.JPG"
-image labo = "back/labo.jpg"
-image couloir = "back/couloir.jpg"
-image black = "#000000"
-image reveil = "back/reveil.jpg"
-image parc = "back/parc.jpg"
-image ru = "back/ru.JPG"
-image street = "back/street.jpg"
-image gymnase = "back/gymnase.jpg"
-image gymnaseout = "back/gymnaseout.jpg"
-image salledart = "back/salledart.jpg"
 
 label start:
     show screen button
@@ -143,6 +84,7 @@ label route:
     call day1
     call day2
     call day3
+    call day4
 
     
     r "Fin du jeu"
