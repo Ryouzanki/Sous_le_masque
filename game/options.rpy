@@ -96,7 +96,7 @@ init -1 python hide:
     ## are the size of the left/right and top/bottom borders,
     ## respectively.
 
-    style.window.background = Frame("UI/rect.png", 6, 6)
+    style.window.background = Frame("UI/rect.png",15 , 15) # ancien 6,6
 
     ## Margin is space surrounding the window, where the background
     ## is not drawn.
@@ -109,10 +109,10 @@ init -1 python hide:
     ## Padding is space inside the window, where the background is
     ## drawn.
 
-    # style.window.left_padding = 6
-    # style.window.right_padding = 6
-    # style.window.top_padding = 6
-    # style.window.bottom_padding = 6
+    style.window.left_padding = 15
+    style.window.right_padding = 14
+    style.window.top_padding = 10
+    style.window.bottom_padding = 10
 
     ## This is the minimum height of the window, including the margins
     ## and padding.

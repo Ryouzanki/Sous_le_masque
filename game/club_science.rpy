@@ -322,7 +322,7 @@ label science_2:
     a "Oh, te voilà [j]."
     a "Votre attention tout le monde !"
     a "Je vous présente [j] qui s'est joint[ter] à nous hier."
-    a "[sexe] travaillera désormais avec nous dans ta team [club]."
+    a "Désormais, [sexe] travaillera avec nous dans ta team [club]."
     "Ils sont tous souriants et me souhaitent la bienvenu[ter]"
     a "Mais... On n'a plus vraiment le temps de former des gens, si ?"
     show alice geez
@@ -332,4 +332,89 @@ label science_2:
     a "File lui la doc, [sexe] se débrouillera... Je suppose."
     "Isaac me donne des polycopiés."
     a "C'est un rapport de ce qui a été fait depuis le début de l'année."
-    
+    a "Il faut que tu en prennes conscience avant."
+    a "Le plus tôt sera le mieux."
+    a "Je te laisse lire, si tu as des questions, Isaac est là."
+    a "A plus tard."
+    hide alice
+    "C'est un rapport sur les activités du club [club]."
+    "Toutes les activités recensées dans ce cahier sont centrées autour du Grand Gala."
+    "Le festival de l'école est donc très attendu."
+    "Le club qui aura l'animation la plus intéressante recevra des subventions supplémentaires."
+    "Les 3 clubs scientifiques se sont alliés."
+    if club == 'chimie':
+        "Le club où je suis s'est engagé à produire des effets spéciaux tels que des nuages de fumée colorée."
+        "Il produit du parfum et des colorants."
+        "Et enfin, il s'occupe des feux d'artifices."
+    elif club == 'robot':
+        "Le club où je suis s'est engagé s'occuper de la logistique d'un feu d'artifice."
+        "Il étudie les emplacements possibles pour les poster ainsi que comment les lancer."
+        "Enfin, il bricole des piédestaux pour poser les fusées et des raccordements."
+    elif club == 'info':
+        "Le club où je suis s'est engagé s'occuper de la logistique d'un feu d'artifice."
+        "Il étudie les timings pour les lancer en synchronisant avec une musique."
+        "Enfin, il s'occupe du programme de lancement quoi."
+    m "Excuse moi Isaac, le club chimie produit les feux d'artifices ?"
+    "Isaac secoue la tête et tapote son index sur la page suivante."
+    m "Ah, excuse moi."
+    "La fabrication des feux d'artifices est interdite dans notre pays."
+    "Leur utilisation est réglementée."
+    "Pour un feu d'artifice contenant uniquement des produits de catégorie C1, C2, C3, T1, K1, K2 et K3 et dont la quantité de matière active est inférieure à 35 kg..."
+    "... Il faut juste une autorisation écrite de la mairie."
+    "Pour un feu d'artifice contenant au moins un produit de catégorie C4, T2 ou plus de 35 kg de matière active..."
+    "... Une déclaration au moins un mois avant à la mairie et à la préfecture du département est nécessaire."
+    "Tout est minutieusement noté sur ce carnet."
+    "Les rôles de chaque membre, les lois, l'inventaire..."
+    show alice normal
+    a "Bon, il se fait tard. On a bien travaillé aujourd'hui."
+    show alice sad
+    a "Heu, [j], j'ai oublié de te dire que le rapport ne dois pas quitter les locaux."
+    a "Donc tu vas devoir venir à chaque fois pour le lire, désolée."
+    m "D'accord."
+    a "Tu n'as pas lu grand chose on dirait..."
+    menu:
+        "Je fais ce que je peux hein !":
+            m "Je fais ce que je peux hein !"
+            show alice normal
+            a "Je plaisantais."
+            $ rel_ali += 2
+        "Je fais ce que je veux hein !":
+            m "Je fais ce que je veux hein !"
+            show alice geez
+            a "Mais non, mais non..."
+            a "Fallait pas le prendre comme ça..."
+            a "Je plaisantais."
+        "Désolé[ter]":
+            m "Désolé[ter]."
+            show alice geez
+            a "Mais non, mais non..."
+            a "Fallait pas le prendre comme ça..."
+            a "Je plaisantais."
+            $ rel_ali += 5
+    show alice sad
+    a "Tu es là depuis peu et je te rentre déjà dans un club..."
+    a "Je ne peux pas te demander la lune non plus... Je suppose."
+    a "Tu sais, je me sens assez coupable de t'avoir forcé la main..."
+    menu:
+        "Oui tu peux...":
+            m "Oui, tu peux..."
+            show alice geez
+            a "Désolée... Je suis sous pression..."
+        "Non, ne t'en fais pas...":
+            $  rel_ali += 3
+            m "Non ne t'en fais pas..."
+            show alice sad
+            a "Oui... J'espère sincèrement que tu ne regrettera pas d'être parmi nous."
+        "Je voulais venir de toutes façons.":
+            $  rel_ali += 5
+            m "Je voulais venir de toutes façons."
+            show alice geez
+            a "Quel soulagement..."
+            show alice sad
+            a "J'ai moins l'impression d'être tyrannique."
+    a "J'ai très peur de ne pas finir à temps..."
+    m "Oui, je comprends."
+    a "A très bientôt j'espère !"
+    m "Je tâcherais de revenir."
+    a "D'accord merci."
+    return
