@@ -210,6 +210,7 @@ label science_02:
                     m "Oui."
                     a "Et bah voilà."
                     a "La prochaine fois, clarifie donc tes objectifs avant d'agir."
+                    jump arrive_lloyd
                 "Non.":
                     m "Non."
                     a "Et bah voilà."
@@ -227,6 +228,9 @@ label science_02:
             m "Oui, je veux venir."
             show alice happy
             a "Bienvenu[ter] parmis nous !"
+            
+label arrive_lloyd:
+    
             show alice geez at left with move
             a "Que faîtes vous ici Sir Lloyd ?"
             show lloyd normal at right
