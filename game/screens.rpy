@@ -192,7 +192,8 @@ screen main_menu:
         textbutton _("Nouvelle partie") action Start()
         textbutton _("Charger sauvegarde") action ShowMenu("load")
         textbutton _("Préférences") action ShowMenu("preferences")
-        textbutton _("Aide") action Help()
+        # textbutton _("Aide") action Help()
+        textbutton _("Galerie de CG") action void()
         textbutton _("Quitter") action Quit(confirm=False)
 
 init -2 python:
@@ -533,7 +534,7 @@ screen quick_menu:
         textbutton _("Avance rapide") action Skip()
         textbutton _("Auto") action Preference("auto-forward", "toggle")
         textbutton _("Paramètres") action ShowMenu('preferences')
-        textbutton _("Relations") action ShowMenu('stats')
+        #textbutton _("Relations") action ShowMenu('stats')
         
 init -2 python:
     style.quick_button.set_parent('default')

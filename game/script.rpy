@@ -6,7 +6,7 @@
     $ int_max = 20
     $ str_max = 20
     
-    $ rel_ryou_max = 59
+    $ rel_ryou_max = 59   # impossible a atteindre et a calculer a cause des clubs
     $ rel_lulu_max = 58
     $ rel_val_max = 59
     $ rel_lolo_max = 41
@@ -18,13 +18,13 @@
 # Variables affectives
 init python:
     register_stat("Ryouzanki", "rel_ryou", 0, rel_ryou_max)
-    register_stat("Elusia       ", "rel_lulu", 0, rel_lulu_max)
-    register_stat("Valeth       ", "rel_val", 0, rel_val_max)
-    register_stat("Laura        ", "rel_lolo", 0, rel_lolo_max)
-    register_stat("Néphénie  ", "rel_neph", 0, rel_neph_max)
-    register_stat("Lloyd         ", "rel_lloy", 0, rel_lloy_max)
-    register_stat("Alice         ", "rel_ali", 0, rel_ali_max)
-    register_stat("Salazard   ", "rel_sala", 0, rel_sala_max)
+    register_stat("Elusia", "rel_lulu", 0, rel_lulu_max)
+    register_stat("Valeth", "rel_val", 0, rel_val_max)
+    register_stat("Laura", "rel_lolo", 0, rel_lolo_max)
+    register_stat("Néphénie", "rel_neph", 0, rel_neph_max)
+    register_stat("Lloyd", "rel_lloy", 0, rel_lloy_max)
+    register_stat("Alice", "rel_ali", 0, rel_ali_max)
+    register_stat("Salazard", "rel_sala", 0, rel_sala_max)
     
     dp_period("Matin", "action_matin")
     dp_choice("Grasse mat'", "dodo")
@@ -73,6 +73,9 @@ label start:
         
 
 label route:
+    $ weekday = "Dimanche"
+    $ day = 0
+    
     $ j = 'Moi'
     $ inc = 'Jeune homme'
     $ fille = 'Jeune fille'
@@ -89,6 +92,11 @@ label route:
     $ y = DynamicCharacter("noble", color="#FF8C00", show_two_window=True)
     $ a = DynamicCharacter("ali", color="#228B22", show_two_window=True)
     
+    # $ a = Character('Alice',
+                # color="#228B22",
+                # window_left_padding=110,
+                # show_side_image=Image("CG/mini.png", xalign=0.0, yalign=1.0), show_two_window=True)
+    # 
     $ aller_sport = 0
     $ aller_art = 0
     $ aller_science = 0
@@ -98,11 +106,17 @@ label route:
     $ club = 'aucun'
     
     call day0
+    call night
     call day1
+    call night
     call day2
+    call night
     call day3
+    call night
     call day4
+    call night
     call day5
+    call night
     
     r "Fin du jeu"
     $ persistent.ending = "win"

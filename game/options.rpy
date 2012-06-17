@@ -97,7 +97,9 @@ init -1 python hide:
     ## respectively.
 
     style.window.background = Frame("UI/rect.png",15 , 15) # ancien 6,6
-
+    #style.say_who_window.background = Frame("UI/rect2.png", 15, 15)
+    style.say_who_window.xalign = 0.0
+    style.say_who_window.yalign = 1.0
     ## Margin is space surrounding the window, where the background
     ## is not drawn.
 
@@ -169,7 +171,7 @@ init -1 python hide:
 
     ## Set this to False if the game does not have voicing.
 
-    config.has_voice = True
+    config.has_voice = False
 
     ## Sounds that are used when button and imagemaps are clicked.
 
