@@ -5,6 +5,9 @@ label go_home:
         jump home_1
     elif aller_home == 2:
         jump home_2
+    else:
+        "BUG"
+        return
         
 label home_0:
     $ renpy.music.play("music/ryouzanki.ogg", fadein=2)

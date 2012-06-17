@@ -9,6 +9,9 @@ label club:
         jump club_1
     elif aller_art == 2:
         jump club_2
+    else:
+        "BUG"
+        return
         
 label club_0:
     $ aller_art += 1

@@ -3,7 +3,9 @@ label sport:
         jump sport_0
     #elif aller_sport == 1:
      #   jump sport_1
-
+    else:
+        "BUG"
+        return
 
 label sport_0:
         $ aller_sport +=1

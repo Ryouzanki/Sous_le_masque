@@ -15,14 +15,16 @@ label ryou_confirme:
     define y = Character('Lloyd', color="#FF8C00", show_two_window=True)
     define a =  Character('Alice', color="#228B22", show_two_window=True)
     
-
-    $ posizion = Position(xpos=0.5)
-
+    $ action_matin = None
+    $ action_aprem = None
+    $ action_soir = None
+    #dp_period("matin a la con", $choix1)
+    call day_planner(["Matin", "Après midi", "Soir"])
+    
     "test position"
     scene RU
     show ryou normal at left
     show alice normal at right
-    scene classroom with dissolve
     show lloyd normal at Position(xpos=0.40)
     show salazard evil at Position(xpos=0.60)
     "fin du test"

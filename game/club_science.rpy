@@ -11,6 +11,9 @@ label labo:
         jump science_1
     elif aller_science == 2:
         jump science_2
+    else:
+        "BUG"
+        return
         
 label science_0:
     $ aller_science += 1

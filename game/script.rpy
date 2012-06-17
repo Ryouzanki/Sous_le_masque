@@ -26,6 +26,21 @@ init python:
     register_stat("Alice         ", "rel_ali", 0, rel_ali_max)
     register_stat("Salazard   ", "rel_sala", 0, rel_sala_max)
     
+    dp_period("Matin", "action_matin")
+    dp_choice("Grasse mat'", "dodo")
+    dp_choice("Jogging", "jog")
+    dp_choice("Grasse mat'", "dodo")
+    
+    dp_period("Après midi", "action_aprem")
+    dp_choice("Sortir", "out")
+    dp_choice("Jouer", "game")
+    dp_choice("Travailler", "devoirs2")
+
+    dp_period("Soir", "action_soir")
+    dp_choice("Dormir tôt", "dodo2")
+    dp_choice("Jouer", "game2")
+    dp_choice("Travailler", "devoirs3")
+    
 # Données persistantes
 $ mp = MultiPersistent("win")
 
@@ -41,7 +56,8 @@ $ choix_3 = True
 $ choix_4 = True
 $ choix_5 = True
 
-label start:
+label start: 
+    
     show screen button
     if persistent.ending == "win":
         call ryou
@@ -79,13 +95,14 @@ label route:
     $ aller_home = 0
     
     $ sport = 'aucun'
+    $ club = 'aucun'
     
     call day0
     call day1
     call day2
     call day3
     call day4
-
+    call day5
     
     r "Fin du jeu"
     $ persistent.ending = "win"
