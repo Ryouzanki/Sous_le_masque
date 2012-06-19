@@ -26,8 +26,22 @@ label ryou_confirme:
     eside "lol"
     
     
-    "test position"
-    scene RU
+    scene parc with fade
+    r "Voilà un fond de parc."
+    show elusia normal at Position(xpos=0.0)
+    r "Elusia va arriver, cachons-nous."
+    show elusia normal at center with move
+    e "Il fait beau..."
+    show elusia happy
+    extend "Une journée parfaite pour aller au parc !"
+    show elusia angry
+    e "Une minute... Je parle toute seule moi ?"
+    show elusia sad
+    e "Je suis barge..."
+    hide elusia
+    r "Elle est partie."
+    
+    
     show ryou normal at left
     show alice normal at right
     show lloyd normal at Position(xpos=0.40)
