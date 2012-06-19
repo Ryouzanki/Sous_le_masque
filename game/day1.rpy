@@ -344,6 +344,20 @@ label RUU:
             hide valeth
             $ rel_lolo += 2
             jump cours2
+        "Je ne la connais pas.":
+            m "Je ne la connais pas."
+            show laura angry at left
+            l "Quand ce sera le cas, tu comprendra !"
+            v "Enfin, [sexe] vient d'arriver..."
+            v "Laisse lui le temps de~"
+            show laura angry at left
+            l "Comprendre Elusia ? Il n'y a rien à comprendre."
+            l "Je la hais !"
+            "Je passais le reste de ma pause à entendre Laura se plaindre à propos d'Elusia."
+            "C'était aussi amusant qu'embarassant."
+            hide laura
+            hide valeth
+            jump cours2
             
 label cours22:
     hide ryou
