@@ -17,14 +17,14 @@ label day0:
     m "J'arrive, j'arrive !"
     "Qui peut bien venir sonner à une heure pareille ?"
     play sound "sound/dooropen.mp3"
-    scene couloir with dissolve
+    scene couloir nuit with dissolve
     $ renpy.music.play("music/ryouzanki.ogg", fadein=1)
     show ryou angry
     "J'ouvre la porte et vois un jeune homme sur le palier."
     "Il me dévisagea, les yeux plissés."
     "Soudain, il baisse la tête et frappe doucement du poing sur le cadrant de ma porte."
     r "Merde !"
-    m " Quoi ?"
+    m "Quoi ?"
     show ryou sad
     r "Moi qui voulait tomber sur une jolie demoiselle en petite tenue..."
 label choix_sexe:
@@ -103,7 +103,7 @@ label sonnette:
     r "T'es étudiant[ter] ?"    
     m "Bien sur !"
     m "Je vais à l'école juste à côté !"
-    m " Enfin d'après googlemap..."
+    m "Enfin d'après googlemap..."
     m "Mais je ne sais pas vraiment encore comment m'y rendre..."
     show ryou angry
     r "Sérieusement ?"
@@ -159,8 +159,8 @@ label rencontre_tard:
     return
     
 label rencontre_elusia:
-    "Nous descendîme d'un étage."
-    scene couloir with fade
+    "Nous descendons d'un étage."
+    scene couloir nuit with fade
     show ryou happy
     r "Voila on y est !"
     r "Pile en dessous de chez toi !"
@@ -175,7 +175,7 @@ label rencontre_elusia:
     show elusia angry at right
     e "Ryou ?!"
     e "Qu'est ce qu'il te prend de venir sonner à une heure pareille ?"
-    "Elle me remarqua enfin."
+    "Elle me remarque enfin."
     show elusia normal at right
     e "Oh ! Bonsoir !"
     e "A qui ai-je l'honneur ?"

@@ -352,8 +352,6 @@ label day2_cours2:
                 show elusia normal at right
                 "Le premier rang n'est pas aussi désagréable que ça..."
                 "C'est amusant d'empêcher Ryouzanki de dormir en lui pinçant les côte..."
-                hide elusia
-                hide ryou
                 $ rel_lulu += 2
                 $ rel_ryou += 2
                 jump day2_cours3
@@ -365,7 +363,6 @@ label day2_cours2:
             $ rel_lloy +=3
             "Lloyd n'est pas très causant."
             "Il suit le cours et regarde d'un air menaçant ceux qui parlent."
-            hide lloyd
             jump day2_cours3
             
         "Laura et Valeth." if en != 'Jeune fille' and valou != 'Jeune homme':
@@ -380,11 +377,10 @@ label day2_cours2:
             "Et Valeth qui la calme."
             $ rel_lolo += 2
             $ rel_val += 2
-            hide valeth
-            hide laura
             jump day2_cours3
     
 label day2_cours3:
+    scene classroom with fade
     show prof normal
     "A la fin de cours, le prof m'a encore retenu[ter]."
     "Cette fois pour me dire que les clubs sont ouvert tous les jours."

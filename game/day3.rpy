@@ -231,6 +231,7 @@ label d3_sport:
                                 e "La compétivité est un excellent moteur !"
                                 show laura sad
                                 l "L'esprit d'équipe est bien plus important."
+                                show elusia normal
                                 e "Oui mais il ne permet pas d'avancer en soi."
                                 show laura angry
                                 l "Bien sur que si !"

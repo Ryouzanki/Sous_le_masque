@@ -96,9 +96,9 @@ label day4_labo:
         e "On allait voir comment ça allait de ton côté."
         show alice geez
         a "Ah... Tout va mal... Je suppose..."
-        a "Je viens de trouver les papiers des feux d'artifices pour la mairies."
+        a "Je viens de trouver les papiers des feux d'artifices pour la mairie."
         show elusia sad
-        e "Hum... Cela veut dire qu'on ne les a pas envoyé ?"
+        e "Misère... Cela veut dire qu'on ne les a pas encore envoyé ?"
         show ryou angry
         r "Je vais m'en charger ce soir dans ce cas."
         show alice sad
@@ -134,7 +134,7 @@ label day4_labo:
         scene street
         show ryou normal at left
         show elusia normal at right
-        "Nous sommes allés acheter des sandwwichs."
+        "Nous sommes allés acheter des sandwichs."
         "Après en avoir apporté un à Alice, nous sommes allés au parc."
         scene parc with dissolve
         show elusia happy at right

@@ -20,7 +20,6 @@ label night:
         $ weekday = "ERREUR"
         
     $ day += 1
-    pause(1.0)
     centered "{size=30}Jour [day]\n\n[weekday]{/size}"
         
     return
