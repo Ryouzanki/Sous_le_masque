@@ -7,7 +7,7 @@
     $ str_max = 20
     
     $ rel_ryou_max = 59   # impossible a atteindre et a calculer a cause des clubs
-    $ rel_lulu_max = 58
+    $ rel_lulu_max = 60
     $ rel_val_max = 59
     $ rel_lolo_max = 41
     $ rel_neph_max =  100

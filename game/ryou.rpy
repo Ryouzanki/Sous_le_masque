@@ -46,6 +46,7 @@ label ryou_confirme:
     show alice normal at right
     show lloyd normal at Position(xpos=0.40)
     show salazard evil at Position(xpos=0.60)
+    scene ru
     "fin du test"
     a "le journal va etre incrementé"
     $ unlocked_journal_pages += 1

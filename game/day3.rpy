@@ -9,8 +9,7 @@ label day3:
     play sound "sound/bell.mp3"
     m "Ils sont vraiment ponctuels ces deux là..."
     play sound "sound/dooropen.mp3"
-    scene black with dissolve
-    scene couloir with dissolve
+    scene couloir with fade
     show ryou normal at left
     show elusia normal at right
     r "Yo !"
@@ -18,14 +17,9 @@ label day3:
     scene street with dissolve
     pause(1)
     "Nous avons discuté des cours."
-    scene black with dissolve
-    scene classroom with dissolve
-    hide ryou
-    hide elusia
+    scene classroom with fade
     "Encore un cours à suivre avec Elusia pendant que Ryouzanki dors."
-    scene black with dissolve
-    pause(1)
-    scene classroom with dissolve
+    scene classroom with fade
     $ renpy.music.play("music/matin.ogg", fadein=2)
     show ryou sad at left
     show elusia happy at right

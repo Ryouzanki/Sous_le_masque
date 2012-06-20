@@ -26,7 +26,8 @@ label day0:
     r "Merde !"
     m " Quoi ?"
     show ryou sad
-    r "Moi qui voulait tomber sur une jolie demoiselle en petite tenue..."    
+    r "Moi qui voulait tomber sur une jolie demoiselle en petite tenue..."
+label choix_sexe:
     menu:
         "Perdu, je suis un homme, un vrai ! Pour la petite tenue, revient plus tard !":
             m "Perdu, je suis un homme, un vrai ! Pour la petite tenue, revient plus tard !"
@@ -36,6 +37,13 @@ label day0:
             $ bite = True
             $ ter = ''
         "Tssss ! Heureuse de constater que certaines choses sont immuables !":
+            centered "Attention, la route \"Fille\" comporte quelques problèmes scénaristique."
+            centered "Voulez vous vraiment continuer ?"
+            menu:
+                "Oui.":
+                    pass
+                "Non.":
+                    jump choix_sexe
             m "Tssss ! Heureuse de constater que certaines choses sont immuables !"
             show ryou happy
             r "Oh ça va, je plaisantais ! Ne le prends pas aussi mal !"
@@ -152,8 +160,7 @@ label rencontre_tard:
     
 label rencontre_elusia:
     "Nous descendîme d'un étage."
-    scene black with dissolve    
-    scene couloir with dissolve
+    scene couloir with fade
     show ryou happy
     r "Voila on y est !"
     r "Pile en dessous de chez toi !"

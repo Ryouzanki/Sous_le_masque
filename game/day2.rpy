@@ -15,10 +15,9 @@ label day2:
 label day2_autre:
     "Mes préparatifs terminés, je sors."
     play sound "sound/doorclose.mp3"
-    scene black with dissolve
-    scene couloir with dissolve
+    scene couloir with fade
     "C'est ennuyeux d'y aller seul."
-    scene street with dissolve
+    scene street with fade
     "Ryouzanki m'aborder."
     "Ils étaient juste derrière moi."
     jump route_d2
@@ -27,8 +26,7 @@ label day2_ER:
     play sound "sound/bell.mp3"
     pause(1)
     play sound "sound/dooropen.mp3"
-    scene black with dissolve
-    scene couloir with dissolve
+    scene couloir with fade
 label route_d2:
     show ryou normal at left
     show elusia normal at right
@@ -172,17 +170,13 @@ label route_d2:
         jump day2_matin
         
 label day2_matin:
-    scene street with dissolve
-    pause(1)
-    scene black with dissolve
-    scene classroom with dissolve
+    scene street with fade
+    scene classroom with fade
     hide ryou
     hide elusia
     "Encore un cours à suivre avec Elusia pendant que Ryouzanki dors."
 label day2_midi:
-    scene black with dissolve
-    pause(1)
-    scene classroom with dissolve
+    scene classroom with fade
     $ renpy.music.play("music/matin.ogg", fadein=2)
     show ryou sad at left
     show elusia normal at right

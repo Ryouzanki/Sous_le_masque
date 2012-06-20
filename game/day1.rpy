@@ -29,8 +29,7 @@ label day1:
 label oo:
     "Mes préparatifs terminés, je sors."
     play sound "sound/doorclose.mp3"
-    scene black with dissolve
-    scene couloir with dissolve
+    scene couloir with fade
     "Je ne sais pas où aller."
     scene street with dissolve
     "J'ai une idée géniale : Suivre le flux d'étudiants"
@@ -57,10 +56,7 @@ label oo:
             show elusia normal at right
             e "Enchantée [j] !"
             e "On ferait mieux de se dépêcher, les retards ne sont pas bien vus ici."
-            hide ryou
-            hide elusia
-            scene black with dissolve
-            scene classroom with dissolve
+            scene classroom with fade
             "On s'est mis au premier rang."
             "Le cour était vraiment ennuyeux."
             "Mais c'est rassurant."
@@ -70,8 +66,7 @@ label oo:
             jump day1_matin
         "Les suivre.":
             "Je les suis jusqu'en classe."
-            scene black with dissolve
-            scene classroom with dissolve
+            scene classroom with fade
             show ryou normal
             r "Hey ! Salut !"
             r "T'as trouvé le chemin !"
@@ -104,8 +99,7 @@ label os:
     play sound "sound/bell.mp3"
     pause(1)
     play sound "sound/dooropen.mp3"
-    scene black with dissolve
-    scene couloir with dissolve
+    scene couloir with fade
     show ryou normal at left
     show elusia normal at right
     r "Yo !"
@@ -124,8 +118,7 @@ label ss:
     play sound "sound/bell.mp3"
     pause(1)
     play sound "sound/dooropen.mp3"
-    scene black with dissolve
-    scene couloir with dissolve
+    scene couloir with fade
     show ryou normal at left
     show elusia normal at right
     r "Yo !"
@@ -150,8 +143,7 @@ label ss:
 label route1:
     scene street with dissolve
     "L'école est toute proche."
-    scene black with dissolve
-    scene classroom with dissolve
+    scene classroom with fade
     hide ryou
     hide elusia
     "On s'est mis au premier rang."
@@ -164,9 +156,7 @@ label day1_matin:
     
     "Etre au premier rang n'empêcha pas Ryouzanki de dormir."
     "Elusia a cependant l'air plus sérieuse."
-    scene black with dissolve
-    pause(1)
-    scene classroom with dissolve
+    scene classroom with fade
     $ renpy.music.play("music/matin.ogg", fadein=2)
     "Pendant que je range mes affaires à la fin du cours, ils viennent devant la table."
     show ryou normal at left

@@ -9,8 +9,7 @@ label day4:
     play sound "sound/bell.mp3"
     m "Toujours aussi ponctuels ces deux là..."
     play sound "sound/dooropen.mp3"
-    scene black with dissolve
-    scene couloir with dissolve
+    scene couloir with fade
     show ryou normal at left
     show elusia normal at right
     r "Yo !"
@@ -72,12 +71,9 @@ label day4:
                 r "Ah bon... Vraiment ?"
                 e "Tant pis. On te le rappellera ce soir alors."
         
-    scene black with dissolve
-    scene classroom with dissolve
+    scene classroom with fade
     "Encore un cours à suivre avec Elusia pendant que Ryouzanki dors."
-    scene black with dissolve
-    pause(1)
-    scene classroom with dissolve
+    scene classroom with fade
     $ renpy.music.play("music/matin.ogg", fadein=2)
     show ryou sad at left
     show elusia normal at right
@@ -240,8 +236,7 @@ label day4_labo2:
     
 label day4_apres:
     if aller_science < 3:
-        scene black with dissolve
-        scene classroom with dissolve
+        scene classroom with fade
         show alice normal
         a "Allons-y..."
         hide alice
