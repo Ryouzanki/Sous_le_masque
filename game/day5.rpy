@@ -48,8 +48,8 @@ label day5:
             e "Que fait-on ?"
             menu:
                 "Sonner.":
-                    "Je sonne..."
                     play sound "sound/bell.mp3"
+                    "Je sonne..."
                 "Attendre.":
                     pass
             play sound "sound/dooropen.mp3"
@@ -87,7 +87,7 @@ label day5_solo:
     "Ryouzanki est arrivé en même temps que le professeur, tout essouflé."
 label day5_matin:
     "Le cours porte sur des rappels de SVT..."
-    "Le sang est composé de 54 % de plasma, 45 % de globules rouges et 1 % de globules blancs et de plaquettes."
+    "Le sang est composé de 54 \% de plasma, 45 \% de globules rouges et 1 \% de globules blancs et de plaquettes."
     "Soit 4 éléments au total."
     "Ce genre de choses..."
     scene classroom with fade
@@ -127,6 +127,8 @@ label day5_matin:
         show elusia normal
         e "Lloyd est quelqu'un de très à cheval sur le règlement et la hierarchie."
         e "Et Alice est quelqu'un de plutôt méticuleux qui respecte ces règles."
+        "Nous avons discuté de la hierarchie de l'AE pendant la pause."
+        "C'était plutôt intéressant."
 
 
     $ renpy.music.play("music/jour.ogg", fadein=2)
@@ -147,6 +149,7 @@ label day5_matin:
         m "OK."
         call club_science
     else:
+        scene classroom with fade
         show ryou sad at left
         show elusia normal at right
         r "Bon !"

@@ -133,7 +133,7 @@ label day4_labo:
         a "Désolée, mais je vais rester là."
         a "Si vous voulez m'aider, vous pourriez me rapporter un sandwich ?"
         e "Bien sur !"
-        scene street
+        scene street with fade
         show ryou normal at left
         show elusia normal at right
         "Nous sommes allés acheter des sandwichs."
@@ -168,7 +168,7 @@ label day4_labo:
                 a "Par exemple que tu viendra ce soir..."
         a "Bon, j'ai énormément de travail."
         a "Allez manger sans moi."
-        scene parc with dissolve
+        scene parc with fade
         show elusia sad at right
         show ryou sad at left
         r "Il faudrait vraiment l'aider..."
