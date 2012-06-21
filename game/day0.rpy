@@ -26,11 +26,11 @@ label day0:
     r "Merde !"
     m "Quoi ?"
     show ryou sad
-    r "Moi qui voulait tomber sur une jolie demoiselle en petite tenue..."
+    r "Moi qui voulais tomber sur une jolie demoiselle en petite tenue..."
 label choix_sexe:
     menu:
-        "Perdu, je suis un homme, un vrai ! Pour la petite tenue, revient plus tard !":
-            m "Perdu, je suis un homme, un vrai ! Pour la petite tenue, revient plus tard !"
+        "Perdu, je suis un homme, un vrai ! Pour la petite tenue, reviens plus tard !":
+            m "Perdu, je suis un homme, un vrai ! Pour la petite tenue, reviens plus tard !"
             show ryou happy
             r "Ha ha ! Ouais mais... Nan merci !"
             $ sexe = 'il'
@@ -212,7 +212,7 @@ label rencontre_elusia:
                 show ryou angry at left
                 "Ryouzanki s'éloigne de moi."
                 show elusia sad at right
-                e "Tu sais Ryou, il avait de très grand samouraïs qui ne buvaient que ça !"
+                e "Tu sais Ryou, il y avait de très grand samouraïs qui ne buvaient que ça !"
                 r "... Pas faux."
                 show ryou happy at left
                 r "Je m'en contenterais !"

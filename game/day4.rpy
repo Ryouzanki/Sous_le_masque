@@ -49,7 +49,7 @@ label day4:
                 e "Oui... Mais j'aimerais vraiment être plus utile."
                 r "Chacun fait ce qu'il peut."
     else:
-        r "Alice t'avais demandé de venir la voir hier je crois."
+        r "Alice t'avait demandé de venir la voir hier je crois."
         r "Elle était vraiment pas contente que tu lui fausses compagnie."
         e "Tu as vraiment fait ça ?"
         menu:
@@ -241,6 +241,7 @@ label day4_apres:
         scene classroom with fade
         show alice normal
         a "Allons-y..."
+        $ choix1 = True
         hide alice
         call labo
     else:        

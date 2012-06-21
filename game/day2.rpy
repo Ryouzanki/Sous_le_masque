@@ -119,7 +119,7 @@ label route_d2:
         show elusia sad
         e "Vous n'auriez pas jouer à la console toute la nuit hier quand même ?"
         show ryou happy
-        r "Quoi, qu'est-ce qui te fais dire ça ?"
+        r "Quoi, qu'est-ce qui te fait dire ça ?"
         e "Tu as des cernes si marquées qu'on dirait du maquillage..."
         show ryou normal
         r "Mais non. Demande à [j] !"
@@ -133,7 +133,7 @@ label route_d2:
         e "Si tu l'as..."
         show elusia normal
         e "Qu'importe. [j], ne deviens pas comme lui."
-        e "Inscrit toi à un club."
+        e "Inscris toi à un club."
         m "Lequel ?"
         e "Peu importe."
         e "Bon, on devrait commencer à marcher en discutant ou on sera en retard."
@@ -174,7 +174,7 @@ label day2_matin:
     scene classroom with fade
     hide ryou
     hide elusia
-    "Encore un cours à suivre avec Elusia pendant que Ryouzanki dors."
+    "Encore un cours à suivre avec Elusia pendant que Ryouzanki dort."
 label day2_midi:
     scene classroom with fade
     $ renpy.music.play("music/matin.ogg", fadein=2)
@@ -383,7 +383,7 @@ label day2_cours3:
     scene classroom with fade
     show prof normal
     "A la fin de cours, le prof m'a encore retenu[ter]."
-    "Cette fois pour me dire que les clubs sont ouvert tous les jours."
+    "Cette fois pour me dire que les clubs sont ouverts tous les jours."
     "Sauf le sport qui n'est ouvert que lundi et jeudi."
     "Des choses qui sont marquées sur des panneaux en face des bâtiments en questions."
     hide prof

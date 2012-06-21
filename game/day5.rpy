@@ -83,6 +83,8 @@ label day5_solo:
     m "On y va ?"
     show elusia sad at center with move
     e "Oui, allons-y."
+    scene street with fade
+    scene classroom with fade
     "Elle est restée silencieuse jursqu'en classe."
     "Ryouzanki est arrivé en même temps que le professeur, tout essouflé."
 label day5_matin:
@@ -147,7 +149,8 @@ label day5_matin:
         m "Oui."
         a "Très bien, tu viens ?"
         m "OK."
-        call club_science
+        call labo
+        jump day5_end
     else:
         scene classroom with fade
         show ryou sad at left
@@ -211,6 +214,7 @@ label day5_choix:
             "Je crois que je vais rentrer."
             call club_home
             
+label day5_end:
         $ renpy.music.play("music/joueur.ogg", fadein=2)
         scene couloir with dissolve
         play sound "sound/dooropen.mp3"

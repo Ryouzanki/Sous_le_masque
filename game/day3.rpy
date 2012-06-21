@@ -191,7 +191,7 @@ label day3:
                     show elusia sad
                     e "Il est bon de rêvasser de temps en temps !"
                     show ryou angry
-                    r "On n'a pas encore de croiseurs interglactiques !"
+                    r "On n'a pas encore de croiseurs intergalactiques !"
                     v "Dans la litterature, il y a des romans historiques tu sais..."
                     a "Mais comme tu le dis, c'est de l'histoire ancienne, cela ne nous concerne plus."
             l "Et sinon avec ça, tu faisais du sport ?"
@@ -261,7 +261,7 @@ label d3_loisir:
             $ rel_val += 5
             m "Oui, très souvent !"
             show valeth happy
-            v "Cool, au bâtiment des clubs, on a beaucoup de jeu."
+            v "Cool, au bâtiment des clubs, on a beaucoup de jeux."
             show valeth normal
             v "Plus que de joueurs d'ailleurs..."
             show alice normal

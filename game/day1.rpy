@@ -147,7 +147,7 @@ label route1:
     hide ryou
     hide elusia
     "On s'est mis au premier rang."
-    "Le cour était vraiment ennuyeux."
+    "Le cours était vraiment ennuyeux."
     "Mais c'est rassurant."
     "Je n'ai pas accumulé énormément de retard lors de mon transfert."
     jump day1_matin
@@ -209,6 +209,7 @@ label day1_matin:
                         e "Bon appétit !"
                         hide elusia
                         m "Merci !"
+                        $ rel_lulu += 2
                         jump RU
                     "Accepter l'avance d'Elusia":
                         m "Oh vraiment, merci !"
@@ -224,7 +225,7 @@ label day1_matin:
                         m "Oh, vraiment, merci !"
                         m "Je vais venir mais je ne veux pas que tu m'avances."
                         show elusia happy at right
-                        e "Comme tu voudra !"
+                        e "Comme tu voudras !"
                         show ryou happy at left
                         r "Moi je veux bien que~"
                         show elusia angry at right
@@ -483,7 +484,7 @@ label fin_cours:
     "A la fin du cours, notre professeur principal a demandé à me parler."
     "La routine."
     "Me dire qu'on ne peut choisir qu'un seul sport."
-    "Il voulait aussi savoir si j'avais des difficultées à m'intégrer."
+    "Il voulait aussi savoir si j'avais des difficultés à m'intégrer."
     "Demander cela dès le premier jour est assez brusque..."
     hide prof
     "..."
