@@ -212,7 +212,7 @@ label sport_col:
         
 label sport_solo:
     hide elusia
-    if sport == 'arc':
+    if sport == 'tir à l\'arc':
         $ agi_points +=2
         "C'est ainsi que je me retrouvais dans l'équipe de tir à l'arc de l'école."
         "Elusia est vraiment compétente."

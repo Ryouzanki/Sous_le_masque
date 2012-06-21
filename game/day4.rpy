@@ -86,10 +86,12 @@ label day4:
     jump day4_cours
     
 label day4_labo:
+    $ choix2 = True
     scene labo with dissolve
     show ryou normal at left
     show elusia normal at center
     if choix1 and aller_science > 1:
+        $ choix2 = False
         show alice normal at right
         a "Oh, que faites vous là ?"
         a "Vous n'allez pas manger au parc ?"
@@ -136,7 +138,7 @@ label day4_labo:
         show elusia normal at right
         "Nous sommes allés acheter des sandwichs."
         "Après en avoir apporté un à Alice, nous sommes allés au parc."
-        scene parc with dissolve
+        scene parc with fade
         show elusia happy at right
         show ryou happy at left
         r "Alice n'est pas méchante, loin de là."

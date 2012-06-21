@@ -6,8 +6,8 @@
     $ int_max = 20
     $ str_max = 20
     
-    $ rel_ryou_max = 59   # impossible a atteindre et a calculer a cause des clubs
-    $ rel_lulu_max = 60
+    $ rel_ryou_max = 63   # impossible a atteindre et a calculer a cause des clubs
+    $ rel_lulu_max = 67
     $ rel_val_max = 59
     $ rel_lolo_max = 41
     $ rel_neph_max =  100
@@ -116,6 +116,8 @@ label route:
     call day4
     call night
     call day5
+    call night
+    call day6
     call night
     
     r "Fin du jeu"
