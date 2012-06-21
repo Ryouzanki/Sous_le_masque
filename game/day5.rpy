@@ -183,7 +183,7 @@ label day5_matin:
         e "A demain !"
         hide elusia
         "Que faire, que faire..."
-label day5_choix
+label day5_choix:
         window hide None
         call screen demo_imagemap
         window show None
