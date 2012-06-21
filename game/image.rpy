@@ -1,8 +1,13 @@
-# Personnages
+## Personnages
+# Elusia Hrist
 image elusia normal = "CG/elusia normal.png"
 image elusia happy = "CG/elusia happy.png"
 image elusia angry = "CG/elusia angry.png"
 image elusia sad = "CG/elusia sad.png"
+image elusia geez = "CG/elusia geez.png"
+image elusia blush = "CG/elusia blush.png"
+image elusia surprised = "CG/elusia surprised.png"
+image elusia satisfied = "CG/elusia satisfied.png"
 
 image laura normal = "CG/laura normal.png"
 image laura happy = "CG/laura happy.png"
