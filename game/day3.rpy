@@ -45,7 +45,7 @@ label day3:
     y "En quel honneur ?"
     e "Mmmh... l'arrivée de [j] !"
     y "[j] est arrivé[ter] depuis 3 jours déjà."
-    show elusia normal
+    show elusia geez
     e "Misère, ce n'est pas une raison !"
     show alice geez
     a "Allons bon... Nous vous laisserons le siège d'honneur en boût de table, Sir."
@@ -55,6 +55,7 @@ label day3:
     y "Au revoir et bon appétit."
     hide lloyd
     show alice sad
+    show elusia sad
     e "Tant pis."
     r "On vient de rater monsieur le vice président de l'Association des Elèves."
     a "Messire Lloyd Baptiste Reeds de Bellato."
@@ -62,24 +63,27 @@ label day3:
     r "Bon, je vais chercher Valeth."
     hide ryou
     show alice sad at left with move
+    show elusia happy
     e "[j], je te présente Alice, présidente de tous les clubs scientifiques de l'école."
     show alice geez
     a "Arrête... Tu vas me faire rougir..."
     e "Donc voilà, si tu veux t'occuper l'esprit..."
+    show elusia satisfied
     e "Et là, à point nommé, arrive Valeth !"
     show alice normal
     show valeth normal at Position(xpos=0.4)
     $ valou = 'Valeth'
     v "Salut !"
+    show elusia happy
     e "A l'instar d'Alice, c'est le responsable de tous les clubs artistiques de l'école."
     e "Que ce soit les JDR, le théâtre..."
     show alice sad
     a "Tu nous fait passer pour des rivaux..."
     v "C'est bon Elusia, [sexe] viendra me parler quand ça l'intéressera."
-    v" Par contre, je ne peux pas laisser Laura seule."
+    v"Par contre, je ne peux pas laisser Laura seule."
     v "Ce serait vache."
     v"Donc je sais que tu ne t'entends pas bien avec elle, Elusia mais..."
-    show elusia happy
+    show elusia normal
     e "Ne t'en fais pas Valou, je comprends parfaitement."
     e "Après tout, elle fait partie des personnes influentes ce cette promo !"
     e "Elle est tout comme moi déléguée de cette promo."
@@ -166,7 +170,7 @@ label day3:
                     show alice geez
                     a "C'est toi le moisi."
                     a "Scientifiquement parlant, ces livres sont vraiment puérils."
-                    show elusia sad
+                    show elusia geez
                     e "Pourquoi tu t'intéresses autant aux space opéra ?"
                     r "J'adore les complots et tout ça..."
                     show ryou sad
@@ -200,7 +204,7 @@ label d3_sport:
         show ryou angry
         show alice normal
         r "Du quoi ?"
-        show elusia normal
+        show elusia geez
         e "Quelque chose que tu sèches chaque semaine Ryou."
         
         
@@ -218,16 +222,17 @@ label d3_sport:
                                 extend "Collectifs !"
                                 show laura happy
                                 l "C'est bien, ça change de ce groupe d'asociaux !"
-                                show elusia sad
+                                show elusia geez
                                 e "On n'est pas asociaux, sinon,ne on serait pas tous réunis ici."
                                 show laura normal
                                 l "Oui, je suis très étonnée de te voir au RU."
+                                show elusia angry
                                 e "J'ai le droit non ?"
                             "Solo !":
                                 $ rel_lolo += 2
                                 $ rel_lulu += 5
                                 extend "Solo !"
-                                show elusia happy
+                                show elusia satisfied
                                 e "La compétivité est un excellent moteur !"
                                 show laura sad
                                 l "L'esprit d'équipe est bien plus important."
@@ -246,7 +251,7 @@ label d3_sport:
                       m "Pas trop non."
                       show laura sad
                       l "OK."
-                      show elusia normal
+                      show elusia sad
                       e "Il faut entretenir ton corps ou tu vas devenir un légume."
                       show alice happy
                       a "Comme baka-powa !"
@@ -283,7 +288,7 @@ label d3_loisir:
             m "Entre autre."
             v "Oh, tant pis..."
             v "Si un jour tu es tenté[ter], passe me voir."
-    show elusia normal
+    show elusia happy
     e "Etais-tu impliqué[ter] dans la vie associative de ton école ?"
     show alice normal
     a "Tu étais dans des clubs ?"
@@ -348,11 +353,12 @@ label d3_loisir:
             show alice sad
             a "Nous avons... besoin de toute l'aide disponible."
             v "Oui, d'autant plus que ça commence à être urgent."
-            show elusia happy
+            show elusia surprised
             e "Oh, c'est vrai ! Le grand gala approche !"
             m "C'est quoi le... Grand gala ?"
             show ryou angry
             r "Genre t'avais pas ça dans ton école..."
+            show elusia happy
             e "C'est le festival de l'école. Une grande fête en quelque sorte."
             a "Nous devons produire des... animations pour le gala."
             a "Est-ce que tu pourrais nous filer un coup de main ?"

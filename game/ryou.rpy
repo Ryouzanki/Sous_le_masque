@@ -14,16 +14,16 @@ label ryou_confirme:
     define v = Character('Valeth', color="#800080", show_two_window=True)
     define y = Character('Lloyd', color="#FF8C00", show_two_window=True)
     define a =  Character('Alice', color="#228B22", show_two_window=True)
-    $ eside = Character('Eileen',
-                color="#c8ffc8",
-                window_left_padding=160,
-                show_side_image=Image("UI/rect.png", xalign=0.0, yalign=1.0), show_two_window=True)
+    # $ eside = Character('Eileen',
+                # color="#c8ffc8",
+                # window_left_padding=160,
+                # show_side_image=Image("UI/rect.png", xalign=0.0, yalign=1.0), show_two_window=True)
     
     $ action_matin = None
     $ action_aprem = None
     $ action_soir = None
-    #call day_planner(["Matin", "Après midi", "Soir"])
-    eside "lol"
+    call day_planner(["Matin", "Après midi", "Soir"])
+    #eside "lol"
     
     
     scene parc with fade

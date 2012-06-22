@@ -67,7 +67,7 @@ screen say:
 screen choice:
 
     window: 
-        style "menu_window"        
+        style "menu_window"       
         xalign 0.5
         yalign 0.5
         
@@ -81,7 +81,7 @@ screen choice:
                     
                     button:
                         action action
-                        style "menu_choice_button"                        
+                        style "menu_choice_button"                       
 
                         text caption style "menu_choice"
                     
@@ -297,14 +297,14 @@ screen file_picker:
                     add FileScreenshot(i)
                     
                     # Format the description, and add it as text.
-                    $ description = "% 2s. %s\n%s" % (
+                    $ description = "% 2s. %s\n%s"% (
                         FileSlotName(i, columns * rows),
                         FileTime(i, empty=_("Slot vide.")),
                         FileSaveName(i))
 
                     text description
 
-                    key "save_delete" action FileDelete(i)
+                    key "save_delete"action FileDelete(i)
                     
                     
 screen save:
@@ -556,15 +556,17 @@ init -2 python:
 
         
 screen button:
-    grid 4 1:
+    grid 5 1:
          vbox:
-             textbutton "Stats" action ui.callsinnewcontext("stats_screen")
+             textbutton "Stats"action ui.callsinnewcontext("stats_screen")
          vbox:
-             textbutton "Relations" action ShowMenu('stat_rel')
+             textbutton "Relations"action ShowMenu('stat_rel')
          vbox:
-             textbutton "Records" action ui.callsinnewcontext("record_screen")
+             textbutton "Records"action ui.callsinnewcontext("record_screen")
          vbox:
              textbutton _("Résumé") action void()# ShowMenu("stats")
+         vbox:
+             textbutton _("Aide") action void() # faire un menu d'aide qui explique les stats
 
 
 label stats_screen:
@@ -588,6 +590,7 @@ label stats_screen:
         ui.bar(str_max, str_points)
         ui.text("Agilité: ")
         ui.bar(agi_max, agi_points)
+        ui.text("\nVigueur: [vig]")
         ui.close() # for the vbox
         
         ui.close() # for the hbox

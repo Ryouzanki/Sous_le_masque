@@ -53,7 +53,7 @@ init -100 python:
         ui.window(style=style.stats_frame)
         ui.vbox(style=style.stats_vbox)
             
-        layout.label("             Relations avec les différents personnages", "stats")
+        layout.label("            Relations avec les différents personnages", "stats")
         
         for s in __dse_stats:
             v = getattr(store, s.var)
@@ -66,11 +66,11 @@ init -100 python:
                 ui.nul()
 
             if value and max:
-                layout.label("%d/%d" % (v, s.max), "stat_value")
+                layout.label("%d/%d"% (v, s.max), "stat_value")
             elif value:
-                layout.label("%d" % (v,), "stat_value")
+                layout.label("%d"% (v,), "stat_value")
             elif max:
-                layout.label("%d" % (max,), "stat_value")
+                layout.label("%d"% (max,), "stat_value")
             else:
                 ui.null()
 

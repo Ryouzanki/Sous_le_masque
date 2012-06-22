@@ -9,6 +9,9 @@ label club:
         jump club_1
     elif aller_art == 2:
         jump club_2
+    #elif aller_art == 3:
+        #$ aller_art += 1
+        #jump club_3
     else:
         "BUG"
         return
@@ -81,7 +84,7 @@ label club_1:
     m "Salut !"
     show ryou angry at left
     r "Je vous attendais monsieur Bond !"
-    show elusia sad at right
+    show elusia geez at right
     e "Misère..."
     show ryou happy
     r "Bonne chance Valeth !"
@@ -108,8 +111,9 @@ label club_1:
     r "Nan, sérieusement, Valeth, tu as..."
     r "T'as fait exprès, espèce de traitre !!"
     r "Combien est-ce que la déléguée t'a payé pour perdre ?"
-    show elusia normal
+    show elusia satisfied
     e "Misère... Je ne l'ai pas soudoyé !"
+    show elusia happy
     e "Allons-y, avant que les magasins ne ferment..."
     e "Un pari est un pari !"
     show ryou sad
@@ -188,7 +192,7 @@ label club_2:
                     return
 label art3_fin:
             $ aller_art += 1
-            v" On dirait qu'il ne reste plus que nous."
+            v"On dirait qu'il ne reste plus que nous."
             v "Je vais rentrer donc je vais devoir fermer les locaux."
             v "Désolé de te kicker aussi brutalement !"
             m "Que veux tu que je fasses ici seul[ter] de toutes façons ?"
@@ -237,7 +241,7 @@ label art3_fin:
                     v "Elle ose rarement demander de l'aide."
                     v "Si tu la vois dans le besoin, n'hésite pas à lui proposer de l'aide."
                     v "Elle ne croit qu'en ce qu'elle voit."
-                    v "Si je croyais au destin, je le remercirais de nous avoir mis à des postes en opposition !" 
+                    v "Si je croyais au destin, je le remercirais de nous avoir mis à des postes en opposition !"
                 "Moi ?":
                     extend "Moi ?"
                     $ rel_val += 2
@@ -254,3 +258,26 @@ label art3_fin:
             v "On a fait le tour des salles."
             v "Bon bah, à demain !"
             return
+            
+# label club_3:
+    # # le +1 à aller_club est deja fait
+    # show lloyd normal
+    # "On dirait que Valeth n'est pas là..."
+    # menu:
+        # "Que faire..."
+        # "Rentrer chez moi":
+            # "Je vais rentrer chez moi."
+            # return
+        # "Attendre en silence.":
+            # "..."
+            # "Bon, et maintenant ?"
+            # jump club_3
+        # "Parler à Lloyd.":
+            # $ rel_lloy += 5
+            # m "Salut !"
+            # y "Bien le bonjour [j]"
+            # m "Qu'est ce que tu fais là ?"
+            # y "Je suis venu jouer."
+            # y "Comme tout le monde non ?"
+            # m "Heu... T'as l'air"
+            # 

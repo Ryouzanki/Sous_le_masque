@@ -51,10 +51,11 @@ label oo:
             r "[j], Elusia !"
             r "Elusia~"
             $ fille = 'Elusia'
-            show elusia sad at right
+            show elusia geez
             e "Oui, c'est bon, on a compris !"
-            show elusia normal at right
+            show elusia normal
             e "Enchantée [j] !"
+            show elusia sad
             e "On ferait mieux de se dépêcher, les retards ne sont pas bien vus ici."
             scene classroom with fade
             "On s'est mis au premier rang."
@@ -126,17 +127,17 @@ label ss:
     e "Bien dormi ?"
     m "Oui mais pas assez !"
     if rel_ryou == 7:
-        show elusia happy at right
+        show elusia satisfied at right
         e "Il ne fallait pas prendre de café..."
         e "Ca t'apprendra !"
     else:
         show ryou happy at left
         r "Pourtant, [sexe] a pris un thé."
-        show elusia angry at right
+        show elusia geez at right
         e "A force de te gorger de caféine, tu y es immunisé."
         show ryou normal at left
         
-    show elusia normal at right
+    show elusia sad at right
     e "Bref, allons-y avant d'être en retard..."
     jump route1
     
@@ -166,8 +167,9 @@ label day1_matin:
     m "Comme tout le monde non ?"
     show ryou sad at left
     r "Bah..."
-    show elusia happy at right
+    show elusia satisfied at right
     e "Pas nous !"
+    show elusia happy
     r "Il y a toujours une queue immense."
     e "Nous, on préfère acheter des sandwichs et aller déjeuner dans le parc."
     e "C'est nettement plus agréable !"
@@ -203,20 +205,24 @@ label day1_matin:
                     "Refuser poliment":
                         m "Non merci, c'est vraiment gentil."
                         m "Mais je ne peux pas accepter."
+                        show elusia geez
                         e "Ah... Dommage."
                         r "Bon bah tant pis. On se voit après la pause !"
                         hide ryou
-                        e "Bon appétit !"
-                        hide elusia
+                        show elusia sad
+                        e "Bon appétit."
                         m "Merci !"
+                        hide elusia
                         $ rel_lulu += 2
                         jump RU
                     "Accepter l'avance d'Elusia":
                         m "Oh vraiment, merci !"
+                        show elusia satisfied
                         e "Tout le plaisir est pour moi voyons !"
-                        show ryou happy at left
+                        show elusia normal
+                        show ryou happy
                         r "Ah ouais ? Tu veux bien payer pour moi aussi ?"
-                        show elusia angry at right
+                        show elusia geez
                         e "Même pas en rêve !"
                         $ rel_lulu += 2
                         $ rel_ryou +=5
@@ -224,22 +230,24 @@ label day1_matin:
                     "Accepter de venir mais payer.":
                         m "Oh, vraiment, merci !"
                         m "Je vais venir mais je ne veux pas que tu m'avances."
-                        show elusia happy at right
+                        show elusia satisfied
                         e "Comme tu voudras !"
-                        show ryou happy at left
+                        show ryou happy
                         r "Moi je veux bien que~"
-                        show elusia angry at right
+                        show elusia geez
                         e "Même pas en rêve !"
                         $ rel_lulu += 5
                         $ rel_ryou += 5
                         jump manger_dehors
             else:
+                show elusia geez
                 e "Ah... Dommage."
                 r "Bon bah tant pis. On se voit après la pause !"
                 hide ryou
-                e "Bon appétit !"
-                hide elusia
+                show elusia sad
+                e "Bon appétit."
                 m "Merci !"
+                hide elusia
                 jump RU
                 
 label manger_dehors:
@@ -351,8 +359,6 @@ label RUU:
             jump cours2
             
 label cours22:
-    hide ryou
-    hide elusia
     $ renpy.music.play("music/jour.ogg", fadein=2)
     scene black with dissolve
     "La pause de midi est terminée."
@@ -397,13 +403,13 @@ label RZ:
     m "Heu... Re !"
     e "Bien mangé ?"
     m "Oui, ça va, et vous ?"
+    show elusia satisfied
     e "Perfecto !"
-    show ryou happy at left
+    show elusia normal
+    show ryou happy
     r "Je dirais même plus, Elusia, perfectissimo !"
     "Le premier rang n'est pas aussi désagréable que ça..."
     "C'est amusant d'empêcher Ryouzanki de dormir en lui pinçant les côte..."
-    hide elusia
-    hide ryou
     $ rel_lulu += 2
     $ rel_ryou += 2
     jump fin_cours
@@ -475,11 +481,10 @@ label LV:
                 show valeth happy at right
                 v "Ha ha..."
                 $ rel_lolo += 5
-    hide valeth
-    hide laura
     jump fin_cours
     
 label fin_cours:
+    scene classroom with fade
     show prof happy
     "A la fin du cours, notre professeur principal a demandé à me parler."
     "La routine."

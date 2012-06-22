@@ -50,12 +50,12 @@ init -2 python:
         ])
     
     #### The increment function
-    ## This is what you put after your "action" keyword
+    ## This is what you put after your "action"keyword
     class incrementJournal():
         ## This defines what happens when the class is called
         ## (as in, when you click the button)
         def __call__(self):
-            ## Gotta use the "global" keyword to use any variable
+            ## Gotta use the "global"keyword to use any variable
             ## outside your function, as it's a quirk of Python 
             global current_journal_page
             ## Increment the counter variable which keeps track of
@@ -106,8 +106,8 @@ screen stats:
                 style_group "pref"
                 has vbox
                 label _("Health")
-                ## "bar" creates a bar, "value" sets it current value,
-                ## and "range" sets the maximum value, resulting in a
+                ## "bar"creates a bar, "value"sets it current value,
+                ## and "range"sets the maximum value, resulting in a
                 ## bar which is the ratio between the value and the range.
                 bar value sofie_health range 100
             frame:

@@ -1,4 +1,4 @@
-# TODO intégrer un "call day4_labo" et "call day4_labo2"
+# TODO intégrer un "call day4_labo"et "call day4_labo2"
 # 3 cas possibles : pas inscrit, lu, inscrit
 label day5:
     scene reveil with dissolve
@@ -12,16 +12,18 @@ label day5:
     m "Toujours aussi ponctuels ces deux là..."
     play sound "sound/dooropen.mp3"
     scene couloir with fade
-    show elusia normal at right
+    show elusia geez at right
     extend "Ou pas..."
+    show elusia sad
     e "Salutations !"
     m "Salut !"
     menu:
         "Et Ryouzanki ?":
             $ rel_lulu += 2
             m "Et Ryouzanki ?"
-            show elusia sad at center with move
+            show elusia geez at center with move
             e "Cet abruti ne s'est pas réveillé."
+            show elusia sad
             e "Il est en train de se préparer là."
             e "Mais plutôt qu'être tous les 3 en retard, il m'a dit de partir devant."
         "On y va ?":
@@ -35,12 +37,13 @@ label day5:
             e "Heu..."
             show elusia normal
             e "Bon, d'accord !"
+            show elusia happy
             e "Mais il va falloir courir pour arriver à l'heure !"
             m "Pas de souci."
             e "Vraiment ?"
+            show elusia satisfied
             e "Je fais pas mal de sport et Ryou, à force d'être en retard cours pas mal aussi."
             m "Ne me sous estimes pas !"
-            show elusia happy
             e "C'est ce que nous verrons !"
             scene couloir with fade
             show elusia normal
@@ -64,10 +67,14 @@ label day5:
             e "Go !"
             scene street with fade
             scene classroom with fade
+            $ vig -= 1
             if sport == 'tir à l\'arc':
                 "Je suis arrivé en retard..."
                 "Et pas eux..."
                 "J'ai fait du sport mais disons que le tir à l'arc ne m'a été d'aucune utilité."
+            elif vig < 0:
+                "Je suis épuisé[ter]..."
+                "Je n'ai pas pu arriver à l'heure car je ne dors pas assez."
             elif str_points > 0:
                 "Je suis arrivé en même temps que Ryouzanki."
                 "Heureusement que j'avais fait un peu de sport lundi..."
@@ -157,11 +164,12 @@ label day5_matin:
         show elusia normal at right
         r "Bon !"
         r "Moi je vais rentrer travailler."
-        show elusia happy
+        show elusia satisfied
         e "Travailler... Je ne pensais pas que ce mot faisait partie de ton vocabulaire !"
+        show elusia normal
         e "D'où sort cette résolution ?"
         r "Je finis tout vendredi soir pour pouvoir faire ma feignasse tout le week end !"
-        show elusia sad
+        show elusia geez
         e "Misère... Je vois..."
         show elusia normal
         e "Et toi, [j] ?"
@@ -212,7 +220,7 @@ label day5_choix:
     
         elif _return == "go home":
             "Je crois que je vais rentrer."
-            call club_home
+            call go_home
             
 label day5_end:
         $ renpy.music.play("music/joueur.ogg", fadein=2)

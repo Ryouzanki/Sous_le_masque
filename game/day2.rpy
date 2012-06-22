@@ -41,7 +41,7 @@ label route_d2:
         m "Comment tu sais ?"
         show ryou happy
         r "Je suis Dieu voyons, je sais tout !"
-        show elusia sad
+        show elusia geez
         e "Dieu, il a quand même oublié de se lever..."
         menu:
             m "Le club de science..."
@@ -53,8 +53,9 @@ label route_d2:
                 r "Y'a rien a foutre dans cette petite ville."
                 r "Il faut trouver de quoi s'occuper."
                 e "Le club de robotique à une très bonne réputation !"
-                show elusia happy
+                show elusia satisfied
                 e "Je viendrais pour vérifier que tu ne manques pas à ta parole !"
+                show elusia sad
                 e "Nous devrions y aller avant d'être en retard !"
             "Je ne risque pas d'y revenir...":
                 m "Je ne risque pas d'y revenir..."
@@ -62,13 +63,17 @@ label route_d2:
                 r "Dommage, c'est pourtant un excellent club, avec une bonne ambiance."
                 show ryou happy
                 r "Et une présidente plutot craquante !"
+                show elusia geez
                 e "Misère..."
+                show elusia sad
                 e "Non, vraiment [j], tu devrais songer à intégrer un club."
+                show elusia normal
                 e "Je vais t'accompagner pour en chercher un qui te convienne."
                 r "Clair, c'est une petite ville ici."
                 r "Il n'y a rien de bien passionant à faire."
-                show elusia normal
+                show elusia satisfied
                 e "Le club de robotique à une très bonne réputation !"
+                show elusia sad
                 e "Nous devrions y aller avant d'être en retard !"
         jump day2_matin
     elif aller_art == 1:
@@ -76,7 +81,7 @@ label route_d2:
         m "Comment tu sais ?"
         show ryou happy
         r "Je suis Dieu, je sais tout..."
-        show elusia happy
+        show elusia satisfied
         e "Ce n'est pas ce que prouvent tes notes..."
         show ryou angry
         r "Je ne fais que m'abaisser au niveau des mortels !"
@@ -87,16 +92,18 @@ label route_d2:
                 show ryou happy
                 r "C'est pas grave, tu n'as qu'à retenter ce soir !"
                 e "Oui, c'est ouvert tous les soirs."
-                show elusia sad
+                show elusia geez
                 e "Et c'est plus sain que les jeux vidéos..."
+                show elusia sad
                 show ryou normal
                 r "Pourquoi tu me regardes ainsi ?"
+                show elusia normal
                 e "Rien rien... Allons voir [j] jouer ce soir..."
                 r "D'accord."
             "J'ai gagné...":
                 m "J'ai gagné..."
                 show ryou happy
-                show elusia happy
+                show elusia surprised
                 r "Quoi ? Sérieusement ?"
                 e "Wouah, tu es vraiment très impressionant[ter] !"
                 r "Je suis libre ce soir, je viendrais constater que ce n'était pas de la chance !"
@@ -120,22 +127,29 @@ label route_d2:
         e "Vous n'auriez pas jouer à la console toute la nuit hier quand même ?"
         show ryou happy
         r "Quoi, qu'est-ce qui te fait dire ça ?"
+        show elusia geez
         e "Tu as des cernes si marquées qu'on dirait du maquillage..."
         show ryou normal
+        show elusia sad
         r "Mais non. Demande à [j] !"
         e "[j] ?"
         m "Je suis rentré[ter] tôt."
-        e "Donc tu as joué toute la nuit..."
+        show elusia geez
+        e "Donc tu as bien joué tout seul toute la nuit puisque j'entendais du bruit..."
+        show elusia sad
         show ryou angry
         r "Traître !"
         e "Tes notes ne sont plus extras, il faudrait te mettre à travailler."
         r "Pourquoi ? Si j'ai mon semestre, c'est l'essentiel non ?"
+        show elusia geez
         e "Si tu l'as..."
         show elusia normal
         e "Qu'importe. [j], ne deviens pas comme lui."
         e "Inscris toi à un club."
         m "Lequel ?"
+        show elusia happy
         e "Peu importe."
+        show elusia normal
         e "Bon, on devrait commencer à marcher en discutant ou on sera en retard."
         jump day2_matin
         
@@ -159,11 +173,13 @@ label route_d2:
     else:
         r "Bon..."
         r "Il va falloir que tu t'intègres vite !"
-        show elusia happy
+        show elusia geez
         e "Dis celui qui passe son temps sur les consoles !"
         show ryou angry
+        show elusia normal
         r "Hey, c'est pas vrai !"
         e "[j], tu devrais songer à participer à la vie associative de l'école."
+        show elusia satisfied
         e "Tu verra, c'est très plaisant !"
         show elusia normal
         e "Bon, on devrait commencer à marcher en discutant ou on sera en retard."
@@ -172,8 +188,6 @@ label route_d2:
 label day2_matin:
     scene street with fade
     scene classroom with fade
-    hide ryou
-    hide elusia
     "Encore un cours à suivre avec Elusia pendant que Ryouzanki dort."
 label day2_midi:
     scene classroom with fade
@@ -355,7 +369,7 @@ label day2_cours2:
                 $ rel_lulu += 2
                 $ rel_ryou += 2
                 jump day2_cours3
-        "Lloyd." if rel_lloy >= 5:
+        "Lloyd."if rel_lloy >= 5:
             show lloyd normal
             m "Re !"
             y "Re-bonjour [j]."
@@ -365,7 +379,7 @@ label day2_cours2:
             "Il suit le cours et regarde d'un air menaçant ceux qui parlent."
             jump day2_cours3
             
-        "Laura et Valeth." if en != 'Jeune fille' and valou != 'Jeune homme':
+        "Laura et Valeth."if en != 'Jeune fille' and valou != 'Jeune homme':
             show valeth normal at left
             show laura normal at right
             "Toujours à se chamailler ces deux là."

@@ -27,7 +27,7 @@ label science_0:
 label lloyd_menu_1:
     
     menu:
-        "Ici, c'est...?" if choix_1 :
+        "Ici, c'est...?"if choix_1 :
             $ choix_1 = False
             m "Ici, c'est...?"
             y "Le club des sciences."
@@ -39,7 +39,7 @@ label lloyd_menu_1:
                     m "Non, je demandais juste..."
                     y "Je vois."
                     jump lloyd_menu_1
-                "Moi ? Rien de spécial." if choix_2:
+                "Moi ? Rien de spécial."if choix_2:
                     m "Moi ? Rien de spécial."
                     show lloyd angry
                     m "Je ne faisais que passer."
@@ -87,7 +87,7 @@ label lloyd_menu_1:
                             y "C'est elle. Alors qu'elle n'y pouvait rien !"
                             m "Oui."
                     jump lloyd_menu_1
-        "Je suis [j]. Et toi ?" if choix_2 :
+        "Je suis [j]. Et toi ?"if choix_2 :
             $ choix_2 = False
             m "Je suis [j]. Et toi ?"
             y "Classe ?"

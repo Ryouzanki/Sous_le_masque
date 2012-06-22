@@ -67,7 +67,7 @@ label day4:
                 $ rel_ryou -= 3
                 $ rel_lulu -= 1
                 show ryou angry
-                show elusia sad
+                show elusia geez
                 r "Ah bon... Vraiment ?"
                 e "Tant pis. On te le rappellera ce soir alors."
         
@@ -99,7 +99,7 @@ label day4_labo:
         show alice geez
         a "Ah... Tout va mal... Je suppose..."
         a "Je viens de trouver les papiers des feux d'artifices pour la mairie."
-        show elusia sad
+        show elusia geez
         e "Misère... Cela veut dire qu'on ne les a pas encore envoyé ?"
         show ryou angry
         r "Je vais m'en charger ce soir dans ce cas."
@@ -107,11 +107,13 @@ label day4_labo:
         a "D'accord, je compte sur toi Ryou."
         show elusia normal
         e "Tu viens manger avec nous ?"
+        show elusia happy
         e "Il faut savoir décompresser."
         show alice angry
         a "Décompresser ? Décompresser ?"
         a "C'est tellement facile à dire."
         a "Désolée, mais je n'ai pas le temps d'aller glander en ville."
+        show elusia sad
         menu:
             "Intervenir.":
                 $ rel_ali += 2
@@ -169,7 +171,7 @@ label day4_labo:
         a "Bon, j'ai énormément de travail."
         a "Allez manger sans moi."
         scene parc with fade
-        show elusia sad at right
+        show elusia geez at right
         show ryou sad at left
         r "Il faudrait vraiment l'aider..."
         e "Oui..."

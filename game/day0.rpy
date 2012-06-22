@@ -37,7 +37,7 @@ label choix_sexe:
             $ bite = True
             $ ter = ''
         "Tssss ! Heureuse de constater que certaines choses sont immuables !":
-            centered "Attention, la route \"Fille\" comporte quelques problèmes scénaristique."
+            centered "Attention, la route \"Fille\"comporte quelques problèmes scénaristique."
             centered "Voulez vous vraiment continuer ?"
             menu:
                 "Oui.":
@@ -100,7 +100,7 @@ label sonnette:
     r "Sympa comme prénom !"
     m "Merci..."
     show ryou normal
-    r "T'es étudiant[ter] ?"    
+    r "T'es étudiant[ter] ?"   
     m "Bien sur !"
     m "Je vais à l'école juste à côté !"
     m "Enfin d'après googlemap..."
@@ -185,14 +185,18 @@ label rencontre_elusia:
     else:
         r "Je te présente ma soeur : [j] !"
         
-    e "très drôle !"
+    show elusia geez
+    e "Très drôle !"
     e "Depuis le temps que je te connais..."
     e "Je sais que tu es fils unique."
+    show elusia normal
     e "Et donc, toi tu es... [j], c'est ça ?"
     m "Oui."
+    show elusia happy
     e "Enchantée [j], moi, c'est Elusia !"
     $ fille = 'Elusia'
     $ rel_lulu += 5
+    show elusia normal
     e "Bon, vu que personne ne semble vouloir aller se coucher tout de suite..."
     e "Voulez vous venir prendre le thé ?"
     r "Nan, je préfère le café, c'est un truc d'homme !"
@@ -204,16 +208,18 @@ label rencontre_elusia:
                 show ryou happy at left
                 m "J'ai encore une longue nuit devant moi !"
                 r "On est des hommes, des vrais !"
-                show elusia sad at right
+                show elusia satisfied at right
                 e "Lui, je ne sais pas. Mais toi, Ryou, sûrement pas !"
+                show elusia normal
             "Prendre un thé.":
                 $ rel_lulu += 2
                 m "Un thé me conviendra parfaitement !"
                 show ryou angry at left
                 "Ryouzanki s'éloigne de moi."
-                show elusia sad at right
+                show elusia satisfied at right
                 e "Tu sais Ryou, il y avait de très grand samouraïs qui ne buvaient que ça !"
                 r "... Pas faux."
+                show elusia normal
                 show ryou happy at left
                 r "Je m'en contenterais !"
     else:
@@ -224,19 +230,17 @@ label rencontre_elusia:
                 show ryou angry at left
                 "Ryouzanki s'éloigna"
                 e "Non, ça ne me gêne aucunement !"
-                show elusia happy at right
+                show elusia satisfied at right
                 e "Je crois que son stéréotype de la virilité s'est éffondré !"
             "Prendre un thé.":
                 $ rel_lulu += 2
                 m "Un thé me conviendra parfaitement !"
-                show elusia happy
+                show elusia satisfied
                 e "Oui !"
                 e "Laissons ce primate avec son café !"
                 e "Qu'il ne s'étonne pas de rester éveillé toute la nuit après !"
                 
-    scene chambre e with dissolve
-    hide ryou
-    hide elusia
+    scene chambre e with fade
     "Nous avons discuté très tard dans la nuit...."
     "C'était agréable."
     "Puis, je les ai salués et j'ai continué de déballer mes affaires."

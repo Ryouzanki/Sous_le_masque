@@ -5,6 +5,8 @@ label go_home:
         jump home_1
     elif aller_home == 2:
         jump home_2
+    #elif aller_home == 3:
+        #jump home_3
     else:
         "BUG"
         return
@@ -52,6 +54,7 @@ label home_0:
                 r "Idem. A plus !"
                 $ rel_ryou -= 2
                 hide ryou
+                $ vig += 2
                 return
     else:
         show ryou angry
@@ -75,6 +78,7 @@ label home_0:
                 r "Je devrais aussi aller me reposer."
                 r "A plus !"
                 $ rel_ryou -= 2
+                $ vig += 2
                 hide ryou
                 return
         
@@ -237,6 +241,7 @@ label home_1:
                     r "Je suis inscrit, c'est déjà ça et j'y passe de temps en temps."
                     r "Pfff, si tu veux rentrer seul[ter], il fallait le dire plus tôt..."
                     hide ryou
+                    $vig += 2
                     return
                 "C'est si important que ça ?":
                     m "C'est si urgent que ça ?"
@@ -265,6 +270,7 @@ label home_1:
                     show ryou sad
                     r "OK..."
                     r "Repose toi bien !"
+                    $ vig +=2
                     hide ryou
                     return
                     
@@ -383,5 +389,10 @@ label home_2:
     r "Bon bah, on est arrivé..."
     r "A plus tard !"
     m "A plus tard."
+    $ vig += 2
     $ aller_home +=1
     return
+    
+# label home_3:
+    # scene street with dissolve
+    # 

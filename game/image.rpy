@@ -62,8 +62,3 @@ image street = "back/street.jpg"
 image gymnase = "back/gymnase.jpg"
 image gymnaseout = "back/gymnaseout.jpg"
 image salledart = "back/salledart.jpg"
-
-# Autres
-image clock = "UI/clock.png" # Short Clockhand
-image clock_1 = "UI/clock_1.png" # Long Clockhand
-image clock_2 = "UI/clock_2.png" # Clockface

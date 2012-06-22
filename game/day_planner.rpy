@@ -72,8 +72,8 @@ label day_planner(periods):
     
 label day_planner_repeat:
 
-    if renpy.has_label("dp_callback"):
-        call dp_callback
+    # if renpy.has_label("dp_callback"):
+        # call dp_callback
     
     python hide:
     
@@ -86,7 +86,7 @@ label day_planner_repeat:
         for p in periods:
 
             if p not in __periods:
-                raise Exception("Period %r was never defined." % p)
+                raise Exception("Period %r was never defined."% p)
 
             ui.window(style=style.dp_choices)
             ui.vbox(style=style.dp_choices_vbox)

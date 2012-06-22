@@ -5,14 +5,15 @@
     $ agi_max = 20
     $ int_max = 20
     $ str_max = 20
+    $ vig = 2
     
     $ rel_ryou_max = 63   # impossible a atteindre et a calculer a cause des clubs
-    $ rel_lulu_max = 67
+    $ rel_lulu_max = 67 # impossible a atteindre et a calculer a cause des clubs
     $ rel_val_max = 59
     $ rel_lolo_max = 41
     $ rel_neph_max =  100
     $ rel_lloy_max = 17
-    $ rel_ali_max = 41
+    $ rel_ali_max = 53
     $ rel_sala_max = 100
 
 # Variables affectives
