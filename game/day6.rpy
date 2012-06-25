@@ -2,7 +2,7 @@
 # a ce stade, MC a soit lu, soit n'est pas inscrit au club science.
 
 label day6:
-    scene reveil with dissolve
+    scene reveil2 with dissolve
     play sound "sound/vibre.ogg"
     m "..."
     m "Quoi..."
@@ -143,7 +143,61 @@ label day6_plan:
                 m "Mais non."
                 show elusia satisfied sport
                 e "Me voilà rassurée !"
-                # TODO
+                e "Je pensais bien que tu ne serais pas une grosse tanche comme Ryou..."
+                show elusia normal sport
+                e "Tu ne voudrais pas sortir faire un peu de sport par hasard ?"
+                e "J'allais courir un peu le long du canal en fait."
+                e "Je me demandais si cela t'intéressait de m'accompagner."
+                menu:
+                    "Je vais travailler en fait.":
+                        m "Je vais travailler en fait."
+                        show elusia geez sport
+                        e "Oh... d'accord, je te laisse travailler."
+                        show elusia normal sport
+                        e "Je cours chaque samedi alors si tu veux venir..."
+                        e "Bye bye !"
+                        m "Bon courage !"
+                        show elusia happy sport
+                        e "Merci, toi aussi !"
+                        play sound "sound/doorclose.mp3"
+                        show elusia sad sport
+                        "Elle est restée devant chez moi un petit moment sans bouger."
+                        scene reveil2 with fade
+                        m "Ou en étais-je..."
+                        m "Ah oui, mon oreiller."
+                        scene black with fade
+                        $ rel_lulu -= 2
+                        jump day6_aprem
+                    "Je préfère me reposer.":
+                        m"Je préfère me reposer."
+                        m "C'est tout."
+                        show elusia angry sport
+                        e "Tu vas devenir un légume comme Ryou."
+                        show elusia geez sport
+                        e "Bon et bien si tu changes d'avis..."
+                        show elusia normal sport
+                        e "Saches que je sors courir chaque samedi matin."
+                        m "Amuses toi bien."
+                        play sound "sound/doorclose.mp3"
+                        show elusia sad sport
+                        "Elle est restée devant chez moi un petit moment sans bouger."
+                        scene reveil2 with fade
+                        m "Ou en étais-je..."
+                        m "Ah oui, mon oreiller."
+                        scene black with fade
+                        $ rel_lulu -= 5
+                        jump day6_aprem
+                    "Je vais venir.":
+                        m "Je vais venir."
+                        show elusia happy sport
+                        e "Super !"
+                        e "Je t'attends ici !"
+                        scene chambre_m with fade
+                        scene couloir with fade
+                        show elusia normal sport
+                        e "On y va ?"
+                        m "Oui."
+                        jump day6_sport
             "Avouer":
                 m "Oui."
                 show elusia sad sport
@@ -153,14 +207,17 @@ label day6_plan:
                         m "Oui."
                         show elusia geez sport
                         e "Oh, je suis désolée de t'avoir dérangé[ter]."
-                        show elusia sad sport
+                        show elusia normal sport
                         e "J'ai cru un instant que tu étais une feignasse comme ton voisin."
                         e "Bon bah écoute, repose toi bien !"
                         e "J'étais venue te chercher pour courir un peu."
                         e "Je cours chaque samedi matin."
                         e "Tu me rejoindra quand tu en aura envie."
                         e "Bye !"
-                        scene reveil with fade
+                        play sound "sound/doorclose.mp3"
+                        show elusia sad sport
+                        "Elle est restée devant chez moi un petit moment sans bouger."
+                        scene reveil2 with fade
                         m "Ou en étais-je..."
                         m "Ah oui, mon oreiller."
                         scene black with fade
@@ -178,10 +235,41 @@ label day6_plan:
                         menu:
                             "Je préfère dormir.":
                                 m"Je préfère dormir."
-                                #TODO
+                                m "C'est tout."
+                                show elusia angry sport
+                                e "Tu vas devenir un légume comme Ryou."
+                                e "Bon et bien si tu changes d'avis..."
+                                e "Saches que je sors courir chaque samedi matin."
+                                m "Amuses toi bien."
+                                play sound "sound/doorclose.mp3"
+                                show elusia sad sport
+                                "Elle est restée devant chez moi un petit moment sans bouger."
+                                scene reveil2 with fade
+                                m "Ou en étais-je..."
+                                m "Ah oui, mon oreiller."
+                                scene black with fade
+                                $ rel_lulu -= 3
+                                jump day6_aprem
                             "Je vais venir.":
                                 m "Je vais venir."
-                                #TODO
+                                show elusia happy sport
+                                e "Super !"
+                                e "Je t'attends ici !"
+                                scene chambre_m with fade
+                                scene couloir with fade
+                                show elusia normal sport
+                                e "On y va ?"
+                                m "Oui."
+                                jump day6_sport
+                                
     if action_matin == 's':
         "Je devrais faire un peu de sport..."
+        m "C'est partit !"
+        scene couloir with fade
+        show elusia surprised sport
+        e "Oh !"
+        show elusia satisfied sport
+        e "Quel heureux hasard, j'allais justement sonner chez toi."
+        show elusia happy sport
+        e "Tu allais courir un peu ?"
     return
