@@ -14,6 +14,7 @@ label ryou_confirme:
     define v = Character('Valeth', color="#800080", show_two_window=True)
     define y = Character('Lloyd', color="#FF8C00", show_two_window=True)
     define a =  Character('Alice', color="#228B22", show_two_window=True)
+    define s = Character('Shadow', color="#778899", show_two_window=True)
     # $ eside = Character('Eileen',
                 # color="#c8ffc8",
                 # window_left_padding=160,
@@ -22,26 +23,32 @@ label ryou_confirme:
     $ action_matin = None
     $ action_aprem = None
     $ action_soir = None
-    call day_planner(["Matin", "Après midi", "Soir"])
+    #call day_planner(["Matin", "Après midi", "Soir"])
     #eside "lol"
     
     
-    scene parc with fade
-    r "Voilà un fond de parc."
-    show elusia normal at Position(xpos=0.0)
-    r "Elusia va arriver, cachons-nous."
-    show elusia normal at center with move
-    e "Il fait beau..."
-    show elusia happy
-    extend "Une journée parfaite pour aller au parc !"
-    show elusia angry
-    e "Une minute... Je parle toute seule moi ?"
-    show elusia sad
-    e "Je suis barge..."
-    hide elusia
-    r "Elle est partie."
-    
-    
+    # scene parc with fade
+    # r "Voilà un fond de parc."
+    # show elusia normal at Position(xpos=0.0)
+    # r "Elusia va arriver, cachons-nous."
+    # show elusia normal at center with move
+    # e "Il fait beau..."
+    # show elusia happy
+    # extend "Une journée parfaite pour aller au parc !"
+    # show elusia angry
+    # e "Une minute... Je parle toute seule moi ?"
+    # show elusia sad
+    # e "Je suis barge..."
+    # hide elusia
+    # r "Elle est partie."
+    # $ rel_lulu +=100
+    # $ rel_ali +=100
+    # $ rel_lloy +=100
+    # $ rel_sala +=100
+    # $ rel_neph +=100
+    # $ rel_lolo +=100
+    # $ rel_ryou +=100
+    # $ rel_val +=100
     show ryou normal at left
     show alice normal at right
     show lloyd normal at Position(xpos=0.40)
@@ -58,3 +65,4 @@ label ryou_confirme:
     l "test"
     v "test"
     y "test"
+    s "Je suis le maitre ici !"

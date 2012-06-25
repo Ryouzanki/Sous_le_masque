@@ -564,7 +564,7 @@ screen button:
          vbox:
              textbutton "Records"action ui.callsinnewcontext("record_screen")
          vbox:
-             textbutton _("Résumé") action void()# ShowMenu("stats")
+             textbutton _("Résumé") action  ShowMenu("stats")
          vbox:
              textbutton _("Aide") action void() # faire un menu d'aide qui explique les stats
 

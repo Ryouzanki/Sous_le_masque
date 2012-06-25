@@ -28,19 +28,19 @@ init python:
     register_stat("Salazard", "rel_sala", 0, rel_sala_max)
     
     dp_period("Matin", "action_matin")
-    dp_choice("Grasse mat'", "dodo")
-    dp_choice("Jogging", "jog")
-    dp_choice("Grasse mat'", "dodo")
+    dp_choice("Grasse mat'", "d")
+    dp_choice("Jogging", "s")
+    dp_choice("Travailler", "t")
     
     dp_period("Après midi", "action_aprem")
-    dp_choice("Sortir", "out")
-    dp_choice("Jouer", "game")
-    dp_choice("Travailler", "devoirs2")
+    dp_choice("Sortir", "s")
+    dp_choice("Jouer", "j")
+    dp_choice("Travailler", "t")
 
     dp_period("Soir", "action_soir")
-    dp_choice("Dormir tôt", "dodo2")
-    dp_choice("Jouer", "game2")
-    dp_choice("Travailler", "devoirs3")
+    dp_choice("Dormir tôt", "d")
+    dp_choice("Jouer", "j")
+    dp_choice("Travailler", "t")
     
 # Données persistantes
 $ mp = MultiPersistent("win")
@@ -75,7 +75,7 @@ label start:
 
 label route:
     $ weekday = "Dimanche"
-    $ day = 0
+    $ day = 1
     
     $ j = 'Moi'
     $ inc = 'Jeune homme'
@@ -84,6 +84,7 @@ label route:
     $ valou = 'Jeune homme'
     $ noble = 'Jeune homme'
     $ ali = 'Jeune fille'
+    $ sha = '???'
     
     $ m = DynamicCharacter("j", color="#58D3F7", show_two_window=True)
     $ r = DynamicCharacter("inc", color="#4169E1", show_two_window=True)
@@ -92,6 +93,7 @@ label route:
     $ v = DynamicCharacter("valou", color="#800080", show_two_window=True)
     $ y = DynamicCharacter("noble", color="#FF8C00", show_two_window=True)
     $ a = DynamicCharacter("ali", color="#228B22", show_two_window=True)
+    $ s = DynamicCharacter("sha", color="#778899", show_two_window=True)
     
     # $ a = Character('Alice',
                 # color="#228B22",
