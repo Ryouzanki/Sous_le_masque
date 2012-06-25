@@ -2,7 +2,7 @@ label day4:
     scene reveil with dissolve
     play sound "sound/clock.mp3"
     m "..."
-    m "Quand c'est l'heure..."
+    m "J'ai vraiment mal dormi..."
     stop sound
     $ renpy.music.play("music/joueur.ogg", fadein=2)
     m "Je suis prêt[ter] !"

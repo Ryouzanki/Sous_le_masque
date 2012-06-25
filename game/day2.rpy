@@ -18,7 +18,7 @@ label day2_autre:
     scene couloir with fade
     "C'est ennuyeux d'y aller seul."
     scene street with fade
-    "Ryouzanki m'aborder."
+    "Ryouzanki m'aborde."
     "Ils étaient juste derrière moi."
     jump route_d2
         
