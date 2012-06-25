@@ -23,7 +23,7 @@ label sport_0:
                     m "Elusia !"
                     $ fille = 'Elusia'
                     scene gymnaseout with dissolve
-                    show elusia happy
+                    show elusia happy sport
                     e "Bingo !"
                     $ rel_lulu += 5
                     jump lulu
@@ -31,6 +31,14 @@ label sport_0:
                     m "Ryouzanki !"
                     $ fille = 'Elusia'
                     jump troll
+                "Lloyd !" if rel_lloy >= 5:
+                    m "Lloyd !"
+                    $ fille = 'Elusia'
+                    jump troll
+                "Alice !" if rel_ali >=5:
+                    m "Alice !"
+                    $ fille = 'Elusia'
+                    jump alice
                 "Laura !"if rel_lolo >= 5:
                     m "Laura !"
                     $rel_lulu -=2
@@ -42,14 +50,19 @@ label sport_0:
                     
         else:
             jump lolo
-            
+label alice:
+    scene gymnaseout with dissolve
+    show elusia happy sport
+    e "Perdu !"
+    e "C'est moi ! Elusia !"
+    jump lulu
             
 label laura:
     e "Oh..."
     e "Tu as donc fait la connaissance de Laura..."
     $ fille = 'Elusia'
     scene gymnaseout with dissolve
-    show elusia geez
+    show elusia geez sport
     e "Je suppose qu'elle t'a recommandé de m'éviter et tout ça..."
     menu:
         "Oui...":
@@ -61,35 +74,35 @@ label laura:
             jump lolo
         "Non.":
             m "Non."
-            show elusia sad
+            show elusia sad sport
             e "Je sais qu'elle l'a fait..."
             e "Elle le fait toujours..."
-            show elusia geez
+            show elusia geez sport
             e "Bon et bien... Au revoir..."
             hide elusia
             "Elle a l'air assez triste..."
             jump lolo
         "Je m'en fiche.":
             m "Je m'en fiche."
-            show elusia sad
+            show elusia sad sport
             e "Je vois..."
             jump lulu
             
 label troll:
     scene gymnaseout with dissolve
-    show elusia sad
+    show elusia sad sport
     e "J'ai..."
     extend "J'ai une voix d'homme ?"
     menu:
         "Ouep.":
             m "Ouep."
-            show elusia angry
+            show elusia angry sport
             e "Pfff... Sympa..."
             e "Bon, j'ai tennis."
             e "Bye !"
             hide elusia
             "Je crois qu'elle est vexée..."
-            $ rel_lulu -= 2
+            $ rel_lulu -=5
             jump lolo
         "Mais non.":
             m "Mais non."
@@ -100,7 +113,7 @@ label troll:
             jump lulu
     
 label lulu:
-    show elusia normal
+    show elusia normal sport
     e "Que fais tu ici ?"
     e "T'es venu[ter] faire du sport ?"
     menu:
@@ -123,10 +136,10 @@ label lulu:
                     jump sport_solo
                 "Non merci.":
                     m "Non merci."
-                    show elusia sad
+                    show elusia sad sport
                     e "D'accord..."
                     e "Bon, j'ai tennis."
-                    show elusia normal
+                    show elusia normal sport
                     e "Bye !"
                     hide elusia
                     jump lolo
@@ -207,13 +220,13 @@ label sport_col:
                 
         "A la fin de la séance, Laura m'a indiqué le chemin pour rentrer chez moi."
         if sport == 'handball':
-            if vig >0:
+            if vig >=0:
                 $ str_points += 2
             else:
                 "J'étais trop fatigué[ter] pour être efficace."
             pass
         else:
-            if vig > 0:
+            if vig >= 0:
                 $ str_points += 1
                 $ agi_points += 1
             else:
@@ -228,7 +241,7 @@ label sport_solo:
         "C'est ainsi que je me retrouvais dans l'équipe de tir à l'arc de l'école."
         "Elusia est vraiment compétente."
         "Incroyablement calme, elle fait toujours mouche."
-        if vig > 0:
+        if vig >= 0:
             $ agi_points +=2
         else:
             "J'étais trop fatigué[ter] pour être efficace."
@@ -244,8 +257,8 @@ label sport_solo:
                 "C'est ainsi que je me retrouvais inscrite dans l'équipe féminine de tennis."
                 "J'ai joué contre diverse personne mais pas Elusia."
                 "Heureusement, car j'aurais été ridiculisée"
-        "Dur la repreise..."
-        if vig >0:
+        "Dur la reprise..."
+        if vig >=0:
             $ agi_points +=1
             $ str_points +=1
         else:
