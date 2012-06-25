@@ -65,6 +65,7 @@ label day6_mec:
     $ ali = 'Alice'
     jump day6_phone
 label day6_phone:
+    $ renpy.music.play("music/alice.ogg", fadein=2)
     a "Passons aux choses sérieuses."
     a "Ou pas !"
     a "Les autres membres du club disent que j'en fait trop."
@@ -117,5 +118,70 @@ label day6_phone:
     m "D'accord, j'y réfléchirais."
     a "Ce sera tout... Je suppose."
     a "A tout à l'heure peut être !"
+label day6_plan:
+    $ renpy.music.play("music/week.ogg", fadein=2)
     "Bon... Il est 10h... Qu'est ce que je vais faire de ma journée..."
+    $ action_matin = None
+    $ action_aprem = None
+    $ action_soir = None
     call day_planner(["Matin", "Après midi", "Soir"])
+    if action_matin == 'd':
+        "Je vais me recoucher tiens..."
+        "..."
+        play sound "sound/bell.mp3"
+        m "Quoi encore..."
+        play sound "sound/dooropen.mp3"
+        scene couloir with fade
+        show elusia normal sport
+        e "Salutations !"
+        show elusia geez sport
+        e "Misère..."
+        show elusia sad sport
+        e "Ne me dis pas que tu avais l'intention de dormir toute la matiné !"
+        menu:
+            "Mentir":
+                m "Mais non."
+                show elusia satisfied sport
+                e "Me voilà rassurée !"
+                # TODO
+            "Avouer":
+                m "Oui."
+                show elusia sad sport
+                e "Est-ce que... Tu es fatigué[ter] ou quelque chose comme ça ?"
+                menu:
+                    "Oui.":
+                        m "Oui."
+                        show elusia geez sport
+                        e "Oh, je suis désolée de t'avoir dérangé[ter]."
+                        show elusia sad sport
+                        e "J'ai cru un instant que tu étais une feignasse comme ton voisin."
+                        e "Bon bah écoute, repose toi bien !"
+                        e "J'étais venue te chercher pour courir un peu."
+                        e "Je cours chaque samedi matin."
+                        e "Tu me rejoindra quand tu en aura envie."
+                        e "Bye !"
+                        scene reveil with fade
+                        m "Ou en étais-je..."
+                        m "Ah oui, mon oreiller."
+                        scene black with fade
+                        jump day6_aprem
+                    "Non.":
+                        m "Non."
+                        show elusia geez sport
+                        e "Ah..."
+                        show elusia sad sport
+                        e "Je ne pensais pas que tu serais une feignasse comme Ryou..."
+                        show elusia normal sport
+                        e "Tu ne voudrais pas sortir faire un peu de sport par hasard ?"
+                        e "J'allais courir un peu le long du canal en fait."
+                        e "Je me demandais si cela t'intéressait de m'accompagner."
+                        menu:
+                            "Je préfère dormir.":
+                                m"Je préfère dormir."
+                                #TODO
+                            "Je vais venir.":
+                                m "Je vais venir."
+                                #TODO
+    if action_matin == 's':
+        "Je devrais faire un peu de sport..."
+    return
