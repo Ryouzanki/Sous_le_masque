@@ -25,6 +25,7 @@ label night4:
     s "[j], [j]..."
     s "As tu vraiment l'intention de devenir ami avec toutes ces personnes ?"
     s "Peux tu seulement le faire..."
+    s "Avant qu'il ne soit trop tard..."
     jump fin_night
 label night5:
 label night6:

@@ -119,7 +119,7 @@ label day6_phone:
     a "Ce sera tout... Je suppose."
     a "A tout à l'heure peut être !"
 label day6_plan:
-    $ renpy.music.play("music/week.ogg", fadein=2)
+    $ renpy.music.play("music/weekend.ogg", fadein=2)
     "Bon... Il est 10h... Qu'est ce que je vais faire de ma journée..."
     $ action_matin = None
     $ action_aprem = None
@@ -192,12 +192,13 @@ label day6_plan:
                         show elusia happy sport
                         e "Super !"
                         e "Je t'attends ici !"
-                        scene chambre_m with fade
+                        scene chambre m with fade
                         scene couloir with fade
                         show elusia normal sport
                         e "On y va ?"
                         m "Oui."
-                        jump day6_sport
+                        $ matin_sport = 1
+                        call matin_sport
             "Avouer":
                 m "Oui."
                 show elusia sad sport
@@ -255,14 +256,16 @@ label day6_plan:
                                 show elusia happy sport
                                 e "Super !"
                                 e "Je t'attends ici !"
-                                scene chambre_m with fade
+                                scene chambre m with fade
                                 scene couloir with fade
                                 show elusia normal sport
                                 e "On y va ?"
                                 m "Oui."
-                                jump day6_sport
+                                $ matin_sport = 1
+                                call matin_sport
                                 
     if action_matin == 's':
+        $ matin_sport = 1
         "Je devrais faire un peu de sport..."
         m "C'est partit !"
         scene couloir with fade
@@ -272,4 +275,135 @@ label day6_plan:
         e "Quel heureux hasard, j'allais justement sonner chez toi."
         show elusia happy sport
         e "Tu allais courir un peu ?"
+        m "Bah... Plus ou moins."
+        e "C'est génial, j'allais te proposer de venir courir avec moi !"
+        e "Tu veux bien ?"
+        menu:
+            "Accepter.":
+                $ rel_lulu += 5
+                m"Je ne vois pas de raison de refuser."
+                e "Super !"
+                e "Allons y alors !"
+                call matin_sport
+            "Refuser.":
+                m"Nan, désolé, je cours seul[ter]."
+                show elusia surprised sport
+                m"Avec ma musique dans les oreilles."
+                e "Quoi... Sérieusement ?"
+                m "Oui."
+                show elusia geez sport
+                e "Mais dis moi..."
+                show elusia sad sport
+                e "Est-ce que... Tu me détestes ?"
+                menu:
+                    "Je ne t'aime pas, non.":
+                        $ rel_lulu -= 10
+                        m "Je ne t'aime pas, non."
+                        e "Y'a... Une raison particulière à ça ?"
+                        e "Est-ce que je peux y faire quelque chose ?"
+                        m "Non. C'est comme ça."
+                        e "... D'accord. Je ne t'embêterais plus..."
+                        hide elusia
+                        scene parc with fade
+                        "Je cours seul dans le parc."
+                        $ vig -= 2
+                        if vig < 0:
+                            $ str_points += 1
+                            "Je manque de sommeil ces temps ci..."
+                            "Je n'ai pas été très efficace."
+                            "Peut-être que je devrais me coucher tôt finalement aujourd'hui..."
+                            menu:
+                                "C'est une bonne idée...":
+                                    $ action_soir = 'd'
+                                "Non, ça ira...":
+                                    pass
+                        else:
+                            $  str_points += 2
+                            "J'ai bien couru !"
+                        jump day6_aprem
+                    "Pas particulièrement.":
+                        $rel_lulu -= 5
+                        m "Pas particulièrement."
+                        e "Alors où est le problème ?"
+                        e "Laisse moi venir !"
+                        e "S'il te plait !"
+                        menu:
+                            "Non, vraiment...":
+                                $rel_lulu -= 5
+                                m "Non, vraiment..."
+                                show elusia geez sport
+                                e "..."
+                                show elusia sad sport
+                                e "Bon et bien... A plus tard..."
+                                hide elusia
+                                scene parc with fade
+                                "Je cours seul dans le parc."
+                                $ vig -= 2
+                                if vig < 0:
+                                    $ str_points += 1
+                                    "Je manque de sommeil ces temps ci..."
+                                    "Je n'ai pas été très efficace."
+                                    "Peut-être que je devrais me coucher tôt finalement aujourd'hui..."
+                                    menu:
+                                        "C'est une bonne idée...":
+                                            $ action_soir = 'd'
+                                        "Non, ça ira...":
+                                            pass
+                                else:
+                                    $  str_points += 2
+                                    "J'ai bien couru !"
+                                jump day6_aprem
+                            "Bon, d'accord !":
+                                m "Bon, d'accord !"
+                                show elusia happy sport
+                                e "Super !"
+                                show elusia satisfied sport
+                                e "Je serais sage !"
+                                call matin_sport
+                    "Mais non, je t'aime bien !":
+                        m "Mais non, je t'aime bien !"
+                        show elusia geez sport
+                        e "Alors..."
+                        show elusia sad sport
+                        e "Pourquoi est-ce que tu ne veux pas courir avec moi ?"
+                        menu:
+                            "Bon, d'accord, on va le faire.":
+                                $ rel_lulu += 3
+                                m"Bon, d'accord, on va le faire."
+                                show elusia happy sport
+                                e "Super !"
+                                show elusia satisfied sport
+                                e "Je serais sage !"
+                                call matin_sport
+                            "J'ai mes raisons, une autre fois.":
+                                $ rel_lulu += 1
+                                m"J'ai mes raisons, une autre fois."
+                                show elusia geez sport
+                                e "Très bien."
+                                show elusia sad sport
+                                e "Je n'insiste pas plus."
+                                e "A la prochaine."
+                                hide elusia
+                                scene parc with fade
+                                "Je cours seul dans le parc."
+                                $ vig -= 2
+                                if vig < 0:
+                                    $ str_points += 1
+                                    "Je manque de sommeil ces temps ci..."
+                                    "Je n'ai pas été très efficace."
+                                    "Peut-être que je devrais me coucher tôt finalement aujourd'hui..."
+                                    menu:
+                                        "C'est une bonne idée...":
+                                            $ action_soir = 'd'
+                                        "Non, ça ira...":
+                                            pass
+                                else:
+                                    $  str_points += 2
+                                    "J'ai bien couru !"
+                                jump day6_aprem
+
+
+label day6_aprem:
+    "Après midi"
     return
+    
