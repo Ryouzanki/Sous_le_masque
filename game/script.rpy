@@ -7,8 +7,8 @@
     $ str_max = 20
     $ vig = 2
     
-    $ rel_ryou_max = 63   # impossible a atteindre et a calculer a cause des clubs
-    $ rel_lulu_max = 67 # impossible a atteindre et a calculer a cause des clubs
+    $ rel_ryou_max = 71   # impossible a atteindre et a calculer a cause des clubs
+    $ rel_lulu_max = 87 # impossible a atteindre et a calculer a cause des clubs
     $ rel_val_max = 59
     $ rel_lolo_max = 41
     $ rel_neph_max =  100
@@ -104,6 +104,7 @@ label route:
     $ aller_art = 0
     $ aller_science = 0
     $ aller_home = 0
+    $ matin_sport = 1
     
     $ sport = 'aucun'
     $ club = 'aucun'

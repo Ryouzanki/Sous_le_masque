@@ -165,6 +165,7 @@ label day6_plan:
                         scene reveil2 with fade
                         m "Ou en étais-je..."
                         m "Ah oui, mon oreiller."
+                        $ vig += 2
                         scene black with fade
                         $ rel_lulu -= 2
                         jump day6_aprem
@@ -184,6 +185,7 @@ label day6_plan:
                         scene reveil2 with fade
                         m "Ou en étais-je..."
                         m "Ah oui, mon oreiller."
+                        $ vig += 2
                         scene black with fade
                         $ rel_lulu -= 5
                         jump day6_aprem
@@ -197,8 +199,8 @@ label day6_plan:
                         show elusia normal sport
                         e "On y va ?"
                         m "Oui."
-                        $ matin_sport = 1
                         call matin_sport
+                        jump day6_aprem
             "Avouer":
                 m "Oui."
                 show elusia sad sport
@@ -221,6 +223,7 @@ label day6_plan:
                         scene reveil2 with fade
                         m "Ou en étais-je..."
                         m "Ah oui, mon oreiller."
+                        $ vig += 2
                         scene black with fade
                         jump day6_aprem
                     "Non.":
@@ -248,6 +251,7 @@ label day6_plan:
                                 scene reveil2 with fade
                                 m "Ou en étais-je..."
                                 m "Ah oui, mon oreiller."
+                                $ vig += 2
                                 scene black with fade
                                 $ rel_lulu -= 3
                                 jump day6_aprem
@@ -261,11 +265,10 @@ label day6_plan:
                                 show elusia normal sport
                                 e "On y va ?"
                                 m "Oui."
-                                $ matin_sport = 1
                                 call matin_sport
-                                
-    if action_matin == 's':
-        $ matin_sport = 1
+                                jump day6_aprem
+    elif action_matin == 's':
+        
         "Je devrais faire un peu de sport..."
         m "C'est partit !"
         scene couloir with fade
@@ -285,6 +288,7 @@ label day6_plan:
                 e "Super !"
                 e "Allons y alors !"
                 call matin_sport
+                jump day6_aprem
             "Refuser.":
                 m"Nan, désolé, je cours seul[ter]."
                 show elusia surprised sport
@@ -360,6 +364,7 @@ label day6_plan:
                                 show elusia satisfied sport
                                 e "Je serais sage !"
                                 call matin_sport
+                                jump day6_aprem
                     "Mais non, je t'aime bien !":
                         m "Mais non, je t'aime bien !"
                         show elusia geez sport
@@ -375,6 +380,7 @@ label day6_plan:
                                 show elusia satisfied sport
                                 e "Je serais sage !"
                                 call matin_sport
+                                jump day6_aprem
                             "J'ai mes raisons, une autre fois.":
                                 $ rel_lulu += 1
                                 m"J'ai mes raisons, une autre fois."
@@ -401,9 +407,166 @@ label day6_plan:
                                     $  str_points += 2
                                     "J'ai bien couru !"
                                 jump day6_aprem
-
-
+    elif action_matin == 't':
+        "Je vais en profiter pour travailler tiens..."
+        "..."
+        play sound "sound/bell.mp3"
+        m "Quoi encore..."
+        play sound "sound/dooropen.mp3"
+        scene couloir with fade
+        show elusia normal sport
+        e "Salutations !"
+        show elusia geez sport
+        e "Misère..."
+        show elusia sad sport
+        e "Ne me dis pas que tu avais l'intention de dormir toute la matiné !"
+        m "Pas vraiment...."
+        show elusia satisfied sport
+        e "Me voilà rassurée !"
+        e "Je pensais bien que tu ne serais pas une grosse tanche comme Ryou..."
+        show elusia normal sport
+        e "Tu ne voudrais pas sortir faire un peu de sport par hasard ?"
+        e "J'allais courir un peu le long du canal en fait."
+        e "Je me demandais si cela t'intéressait de m'accompagner."
+        menu:
+            "Je vais travailler en fait.":
+                m "Je vais travailler en fait."
+                show elusia geez sport
+                e "Oh... d'accord, je te laisse travailler."
+                show elusia normal sport
+                e "Je cours chaque samedi alors si tu veux venir..."
+                e "Bye bye !"
+                m "Bon courage !"
+                show elusia happy sport
+                e "Merci, toi aussi !"
+                play sound "sound/doorclose.mp3"
+                show elusia sad sport
+                "Elle est restée devant chez moi un petit moment sans bouger."
+                scene reveil2 with fade
+                m "Ou en étais-je..."
+                m "Ah oui, travailler..."
+                scene black with fade
+                $ vig -= 1
+                if vig < 0:
+                    "Je suis trop fatigué pour me concentrer."
+                    $ int_points += 1
+                else:
+                    "Une matinée productive."
+                    $ int_points += 2
+                $ rel_lulu -= 1
+                jump day6_aprem
+            "Je vais venir.":
+                m "Je vais venir."
+                show elusia happy sport
+                e "Super !"
+                e "Je t'attends ici !"
+                scene chambre m with fade
+                scene couloir with fade
+                show elusia normal sport
+                e "On y va ?"
+                m "Oui."
+                call matin_sport
+                jump day6_aprem
+    else:
+        "ERROR"
 label day6_aprem:
-    "Après midi"
+    scene chambre m with fade
+    "Je me suis fait à manger."
+    "Maintenant..."
+    if action_aprem == 's':
+        if aller_science == 3:
+            jump day6_alice
+        else:
+            jump day6_salazard
+    elif action_aprem == 'j':
+        "Allons jouer au PC."
+        play sound "sound/bell.mp3"
+        m "Encore..."
+        play sound "sound/dooropen.mp3"
+        scene couloir with fade
+        show ryou normal
+        r "Salut !"
+        r "Je me demandais ce que tu faisais le week-end après midi."
+        menu:
+            "Je joue, là...":
+                $ rel_ryou += 3
+                m "Je joue là..."
+                r "Bah, j'allais faire la même chose en fait."
+                r "Je me demandais si on pouvait faire la même chose."
+                r "On peut se mettre ensemble à un jeu en ligne."
+                menu:
+                    "Ouais, si tu veux.":
+                        $ rel_ryou += 5
+                        m "Ouais, si tu veux."
+                        show ryou happy
+                        r "Je t'ai justement apporté ce CD."
+                        r "Je t'attends en ligne !"
+                        scene chambre m with fade
+                        "J'ai joué jusqu'au soir."
+                        jump day6_soir
+                    "Non, ça ira.":
+                        m "Non, ça ira."
+                        show ryou sad
+                        r "OK, tu sais ou me trouver au pire."
+                        scene chambre m with fade
+                        "J'ai joué jusqu'au soir."
+                        jump day6_soir
+            "Je travaille là.":
+                m "Je travaille là."
+                show ryou angry
+                r "Ouais ouais..."
+                r "On me la fait pas à moi..."
+                m "Heu..."
+                show ryou sad
+                r "Ca va, je plaisante."
+                r "Je te laisse travailler. Quand t'aura fini, tu sais où me trouver."
+                scene chambre m with fade
+                "J'ai joué jusqu'au soir."
+                jump day6_soir
+            "J'allais sortir.":
+                $ rel_ryou -= 4
+                m "J'allais sortir."
+                show ryou angry
+                r "Nan, sérieux ?"
+                m "Ouais..."
+                r "On me la fait pas à moi..."
+                m "Heu..."
+                show ryou sad
+                r "Ca va, je plaisante."
+                r "Je te laisse tranquille. Quand tu sera rentré, tu sais où me trouver."
+                scene chambre m with fade
+                "J'ai joué jusqu'au soir."
+                jump day6_soir
+    elif action_aprem == 't':
+        "Allons jouer au PC."
+        play sound "sound/bell.mp3"
+        m "Encore..."
+        play sound "sound/dooropen.mp3"
+        scene couloir with fade
+        show ryou normal
+        r "Salut !"
+        r "Je me demandais ce que tu faisais le week-end après midi."
+        m "Je travaille là."
+        show ryou angry
+        r "Ouais ouais..."
+        r "On me la fait pas à moi..."
+        m "Heu..."
+        show ryou sad
+        r "Ca va, je plaisante."
+        r "Je te laisse travailler. Quand t'aura fini, tu sais où me trouver."
+        scene chambre m with fade
+        "J'ai travaillé jusqu'au soir."
+        $ vig -= 1
+                if vig < 0:
+                    "Je suis trop fatigué pour me concentrer."
+                    $ int_points += 1
+                else:
+                    "Une aprem productive."
+                    $ int_points += 2
+        jump day6_soir
+    else:
+        "ERROR"
     return
-    
+label day6_alice:
+label day6_salazard:
+label day6_soir:

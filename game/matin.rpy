@@ -73,7 +73,7 @@ label matin_sport1:
             e "Au moins, j'aurais fais ce que j'ai pu pour ne pas te gêner."
             e "Si c'est ce que tu veux, je ne t'approcherais plus désormais."
             e "Au revoir... [j]..."
-            jump day6_aprem
+            return
             
 label matin_sport1_hesitation:
             show elusia sad sport
@@ -104,7 +104,7 @@ label matin_sport1_hesitation:
                             e "Je suis désolée mais je ne me sens pas assez proche de toi pour en parler."
                             show elusia sad sport
                             e "Merci et au revoir."
-                    jump day6_aprem
+                    return
                 "Tu penses des trucs pareils ?":
                     $ rel_lulu += 2
                     extend "Tu penses des trucs pareils ?"
@@ -116,7 +116,7 @@ label matin_sport1_hesitation:
                     e "Merci."
                     e "Je vais me changer, puis je vais me faire à manger."
                     e "Encore merci et au revoir !"
-                    jump day6_aprem
+                    return
                 "Ta compagnie me serait désagréable ?":
                     extend "Ta compagnie me serait désagréable ?"
                     e "Je ne sais pas..."
@@ -127,4 +127,4 @@ label matin_sport1_hesitation:
                     e "Merci."
                     e "Je vais me changer, puis je vais me faire à manger."
                     e "Encore merci et au revoir !"
-                    jump day6_aprem
+                    return
