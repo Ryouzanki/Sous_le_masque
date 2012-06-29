@@ -557,12 +557,12 @@ label day6_aprem:
         scene chambre m with fade
         "J'ai travaillé jusqu'au soir."
         $ vig -= 1
-                if vig < 0:
-                    "Je suis trop fatigué pour me concentrer."
-                    $ int_points += 1
-                else:
-                    "Une aprem productive."
-                    $ int_points += 2
+        if vig < 0:
+            "Je suis trop fatigué pour me concentrer."
+            $ int_points += 1
+        else:
+            "Une aprem productive."
+            $ int_points += 2
         jump day6_soir
     else:
         "ERROR"
