@@ -7,6 +7,7 @@ label ryou:
             return
             
 label ryou_confirme:
+    play music (joueur1) fadein 2
     define e = Character('Elusia', color="#FF69B4", show_two_window=True)
     define m = Character('Minato', color="#58D3F7", show_two_window=True)
     define r = Character('Ryouzanki', color="#4169E1", show_two_window=True)
@@ -25,7 +26,10 @@ label ryou_confirme:
     $ action_soir = None
     #call day_planner(["Matin", "Après midi", "Soir"])
     #eside "lol"
+    $ plop = renpy.random.randint(1,6)
+
     
+    call day_planner(["Matin", "event", "Soir"])
     
     # scene parc with fade
     # r "Voilà un fond de parc."
@@ -49,15 +53,18 @@ label ryou_confirme:
     # $ rel_lolo +=100
     # $ rel_ryou +=100
     # $ rel_val +=100
-    show ryou normal at left
+    
+label bam:
+    call day_planner(["Matin", "Après midi", "Soir"])
+    show shadow ombre at left
     show alice normal at right
     show lloyd normal at Position(xpos=0.40)
     show salazard evil at Position(xpos=0.60)
-    scene ru
     "fin du test"
     a "le journal va etre incrementé"
     $ unlocked_journal_pages += 1
     r "journal incrémenté"
+    play music (joueur1) fadein 2
     m "Je suis un homme !"
     $rel_lulu +=10
     $ rel_ryou -=10

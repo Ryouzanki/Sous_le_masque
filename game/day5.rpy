@@ -6,7 +6,7 @@ label day5:
     m "..."
     m "Courage, dernier jour de la semaine..."
     stop sound
-    $ renpy.music.play("music/joueur.ogg", fadein=2)
+    play music (joueur1) fadein 2
     m "Je suis prêt[ter] !"
     play sound "sound/bell.mp3"
     m "Toujours aussi ponctuels ces deux là..."
@@ -100,7 +100,7 @@ label day5_matin:
     "Soit 4 éléments au total."
     "Ce genre de choses..."
     scene classroom with fade
-    $ renpy.music.play("music/matin.ogg", fadein=2)
+    play music (matin1) fadein 2
     show ryou normal at left
     show elusia normal at right
     e "On va revoir Alice ?"
@@ -140,7 +140,7 @@ label day5_matin:
         "C'était plutôt intéressant."
 
 
-    $ renpy.music.play("music/jour.ogg", fadein=2)
+    play music (jour1) fadein 2
     scene black with dissolve
     "La pause passe si vite..."
     "Il faut retourner en cours..."
@@ -223,7 +223,7 @@ label day5_choix:
             call go_home
             
 label day5_end:
-        $ renpy.music.play("music/joueur.ogg", fadein=2)
+        play music (joueur1) fadein 2
         scene couloir with dissolve
         play sound "sound/dooropen.mp3"
         pause(1)

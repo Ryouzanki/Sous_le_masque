@@ -1,6 +1,6 @@
 label day0:
 
-    $ renpy.music.play("music/joueur.ogg", fadein=2)
+    play music (joueur1) fadein 2
     scene chambre m_cartons with dissolve
     m "Fiou..."
     m "J'ai bientôt fini de déballer mes affaires."
@@ -18,7 +18,7 @@ label day0:
     "Qui peut bien venir sonner à une heure pareille ?"
     play sound "sound/dooropen.mp3"
     scene couloir nuit with dissolve
-    $ renpy.music.play("music/ryouzanki.ogg", fadein=1)
+    play music (ryou1) fadein 1
     show ryou angry
     "J'ouvre la porte et vois un jeune homme sur le palier."
     "Il me dévisagea, les yeux plissés."
@@ -170,7 +170,7 @@ label rencontre_elusia:
     stop music fadeout 1.0
     "Il a directement sonné sans hésiter..."
     play sound "sound/dooropen.mp3"
-    $ renpy.music.play("music/elusia.ogg", fadein=2)
+    play music (elusia1) fadein 2
     show ryou normal at left with move
     show elusia angry at right
     e "Ryou ?!"

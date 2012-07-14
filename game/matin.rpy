@@ -68,6 +68,7 @@ label matin_sport1:
         "Pas moi...":
             $ rel_lulu -= 17
             show elusia geez sport
+            stop music fadeout 1.0
             e "Je vois..."
             show elusia sad sport
             e "Au moins, j'aurais fais ce que j'ai pu pour ne pas te gêner."

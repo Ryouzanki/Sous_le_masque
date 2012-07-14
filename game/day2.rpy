@@ -4,7 +4,7 @@ label day2:
     m "..."
     m "J'ai pu récupérer un peu de sommeil..."
     stop sound
-    $ renpy.music.play("music/joueur.ogg", fadein=2)
+    play music (joueur1) fadein 2
     m "Allons, c'est l'heure !"
     
     if rel_ryou >= 5:
@@ -191,7 +191,7 @@ label day2_matin:
     "Encore un cours à suivre avec Elusia pendant que Ryouzanki dort."
 label day2_midi:
     scene classroom with fade
-    $ renpy.music.play("music/matin.ogg", fadein=2)
+    play music (matin1) fadein 2
     show ryou sad at left
     show elusia normal at right
     r "Bon ! J'ai faim !"
@@ -353,7 +353,7 @@ label day2_midi:
                           
                           
 label day2_cours2:
-    $ renpy.music.play("music/jour.ogg", fadein=2)
+    play music (jour1) fadein 2
     scene black with dissolve
     "La pause de midi est terminée."
     "Il faut retourner en cours..."
@@ -434,7 +434,7 @@ label day2_passport:
         
         
 label day2_fin:
-    $ renpy.music.play("music/joueur.ogg", fadein=2)
+    play music (joueur1) fadein 2
     scene couloir with dissolve
     play sound "sound/dooropen.mp3"
     pause(1)

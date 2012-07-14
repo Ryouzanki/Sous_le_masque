@@ -4,7 +4,7 @@ label day4:
     m "..."
     m "J'ai vraiment mal dormi..."
     stop sound
-    $ renpy.music.play("music/joueur.ogg", fadein=2)
+    play music (joueur1) fadein 2
     m "Je suis prêt[ter] !"
     play sound "sound/bell.mp3"
     m "Toujours aussi ponctuels ces deux là..."
@@ -48,6 +48,20 @@ label day4:
                 r "C'est déjà ça, ça leur évite de perdre du temps pour aller chercher le matos."
                 e "Oui... Mais j'aimerais vraiment être plus utile."
                 r "Chacun fait ce qu'il peut."
+    elif choix1:
+        r "Alice t'avait demandé de venir la voir hier je crois."
+        m "J'y suis allé[ter]."
+        r "Ouais 'fin c'est pas sympa de lui refuser le coup de pouce."
+        m "D'accord, d'accord, j'y réfléchirais..."
+        r "C'est gentil de ta part."
+        r "J'aide le secrétaire de l'association des élèves à gérer les papiers."
+        r "Donc, je ne peux pas venir régulièrement."
+        show elusia sad
+        e "Je voudrais bien aider, mais a part faire les courses, je ne sers à rien d'autre."
+        r "C'est déjà ça, ça leur évite de perdre du temps pour aller chercher le matos."
+        e "Oui... Mais j'aimerais vraiment être plus utile."
+        r "Chacun fait ce qu'il peut."
+        show elusia normal
     else:
         r "Alice t'avait demandé de venir la voir hier je crois."
         r "Elle était vraiment pas contente que tu lui fausses compagnie."
@@ -74,7 +88,7 @@ label day4:
     scene classroom with fade
     "Encore un cours à suivre avec Elusia pendant que Ryouzanki dors."
     scene classroom with fade
-    $ renpy.music.play("music/matin.ogg", fadein=2)
+    play music (matin1) fadein 2
     show ryou sad at left
     show elusia normal at right
     e "On va voir comment va Alice ?"
@@ -179,7 +193,7 @@ label day4_labo:
 return
 
 label day4_cours:
-    $ renpy.music.play("music/jour.ogg", fadein=2)
+    play music (jour1) fadein 2
     scene black with dissolve
     "La pause de midi est terminée."
     "Il faut retourner en cours..."
@@ -272,7 +286,7 @@ label day4_apres:
             scene street with dissolve
             "Ah oui, Ryouzanki est allé à la réunion lui aussi..."
 
-    $ renpy.music.play("music/joueur.ogg", fadein=2)
+    play music (joueur1) fadein 2
     scene couloir with dissolve
     play sound "sound/dooropen.mp3"
     pause(1)

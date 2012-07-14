@@ -1,6 +1,6 @@
 label labo:
     
-    $ renpy.music.play("music/club.ogg", fadein=2)
+    play music (club1) fadein 2
     scene labo with dissolve
     
     if aller_science == 0:
@@ -11,6 +11,10 @@ label labo:
         jump science_1
     elif aller_science == 2:
         jump science_2
+    elif aller_science < 7:
+        jump science_3
+    elif aller_science == 7:
+        jump science_4
     else:
         "BUG"
         return
@@ -180,10 +184,21 @@ label science_1:
             a "Ne rien penser, c'est ne pas exister."
             
 label science_02:
-    show alice geez
-    a "Désolée mais je vais être directe !"
-    show alice sad
-    a "Es tu venu t'inscrire oui ou non ?"
+    if science_var == 0:
+        show alice geez
+        a "Désolée mais je vais être directe !"
+        show alice sad
+        a "Je suis plutot pressée..."
+        $ science_var += 1
+    elif science_var == 1:
+        show alice sad
+        a "Je vais te le demander une seconde fois."
+        $ science_var += 1
+        show alice geez
+    elif science_var == 2:
+        show alice geez
+        a "Je vais te le demander une dernière fois."
+    a "Es tu venu[ter] t'inscrire oui ou non ?"
     menu :
         m "Je crois bien que..."
         "J'ai bien réfléchit, je ne veux pas m'inscrire.":
@@ -259,7 +274,7 @@ label arrive_lloyd:
                 "(Rire)":
                     $ rel_ali += 3
                     m "Haha..."
-                    show alice happy
+                    show alice satisfied
                     a "Ce sera la même chose à chacune de ses apparitions."
                     a "A chaque réaction son produit."
                 "Oui, c'est vrai.":
@@ -373,6 +388,7 @@ label science_2:
     "... Une déclaration au moins un mois avant à la mairie et à la préfecture du département est nécessaire."
     "Tout est minutieusement noté sur ce carnet."
     "Les rôles de chaque membre, les lois, l'inventaire..."
+    "J'ai lu 20\%"
     show alice normal
     a "Bon, il se fait tard. On a bien travaillé aujourd'hui."
     show alice sad
@@ -426,3 +442,6 @@ label science_2:
     m "Je tâcherais de revenir."
     a "D'accord merci."
     return
+label science_3:
+    
+label science_4:

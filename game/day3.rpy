@@ -4,7 +4,7 @@ label day3:
     m "..."
     m "J'ai bien dormi..."
     stop sound
-    $ renpy.music.play("music/joueur.ogg", fadein=2)
+    play music (joueur1) fadein 2
     m "Allons, c'est l'heure !"
     play sound "sound/bell.mp3"
     m "Ils sont vraiment ponctuels ces deux là..."
@@ -20,7 +20,7 @@ label day3:
     scene classroom with fade
     "Encore un cours à suivre avec Elusia pendant que Ryouzanki dors."
     scene classroom with fade
-    $ renpy.music.play("music/matin.ogg", fadein=2)
+    play music (matin1) fadein 2
     show ryou sad at left
     show elusia happy at right
     e "Hey, pour ce midi, j'ai une superbe idée !"
@@ -189,7 +189,7 @@ label day3:
                     extend "Des articles par ci, par là."
                     $ rel_ali += 5
                     v "Oh, tu dois avoir une culture générale impressionante !"
-                    show alice happy
+                    show alice satisfied
                     a "Ha ! Ainsi s'effondrent vos illusions !"
                     a "Pourquoi lire des fictions alors que notre univers recelle de merveilles ?"
                     show elusia sad
@@ -253,7 +253,7 @@ label d3_sport:
                       l "OK."
                       show elusia sad
                       e "Il faut entretenir ton corps ou tu vas devenir un légume."
-                      show alice happy
+                      show alice satisfied
                       a "Comme baka-powa !"
                       show ryou angry
                       r "Toi..."
@@ -423,7 +423,7 @@ label d3_loisir:
                     "On a parlé de théâtre jusqu'à la fin de la pause."
 label day3_cours:
     "C'était plutôt intéressant."
-    $ renpy.music.play("music/jour.ogg", fadein=2)
+    play music (jour1) fadein 2
     scene black with dissolve
     "La pause de midi est terminée."
     "Il faut retourner en cours..."
@@ -505,7 +505,7 @@ label day3_passport:
         call go_home
         
         
-    $ renpy.music.play("music/joueur.ogg", fadein=2)
+    play music (joueur1) fadein 2
     scene couloir with dissolve
     play sound "sound/dooropen.mp3"
     pause(1)

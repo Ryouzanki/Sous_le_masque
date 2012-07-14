@@ -1,6 +1,6 @@
 label club:
 
-    $ renpy.music.play("music/club.ogg", fadein=2)
+    play music (club1) fadein 2
     scene salledart with dissolve
     
     if aller_art == 0:

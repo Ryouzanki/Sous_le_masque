@@ -7,14 +7,14 @@
     $ str_max = 20
     $ vig = 2
     
-    $ rel_ryou_max = 71   # impossible a atteindre et a calculer a cause des clubs
-    $ rel_lulu_max = 87 # impossible a atteindre et a calculer a cause des clubs
+    $ rel_ryou_max = 81
+    $ rel_lulu_max = 102 #+3 ?
     $ rel_val_max = 59
-    $ rel_lolo_max = 41
-    $ rel_neph_max =  100
-    $ rel_lloy_max = 17
-    $ rel_ali_max = 53
-    $ rel_sala_max = 100
+    $ rel_lolo_max = 51
+    $ rel_neph_max =  1000
+    $ rel_lloy_max = 31
+    $ rel_ali_max = 103 #+3 ?
+    $ rel_sala_max = 1000
 
 # Variables affectives
 init python:
@@ -34,6 +34,11 @@ init python:
     
     dp_period("Après midi", "action_aprem")
     dp_choice("Sortir", "s")
+    dp_choice("Jouer", "j")
+    dp_choice("Travailler", "t")
+    
+    dp_period("Après-midi", "action_aprem")
+    dp_choice("Sortir *EVENT*", "s")
     dp_choice("Jouer", "j")
     dp_choice("Travailler", "t")
 
@@ -103,6 +108,7 @@ label route:
     $ aller_sport = 0
     $ aller_art = 0
     $ aller_science = 0
+    $ science_var = 0
     $ aller_home = 0
     $ matin_sport = 1
     
@@ -122,6 +128,8 @@ label route:
     call day5
     call night
     call day6
+    call night
+    call day7
     call night
     
     r "Fin du jeu"

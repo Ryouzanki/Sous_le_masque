@@ -12,7 +12,7 @@ label go_home:
         return
         
 label home_0:
-    $ renpy.music.play("music/ryouzanki.ogg", fadein=2)
+    play music (ryou1) fadein 2
     scene street with dissolve
     show ryou normal at left
     r "Ah bah te voilà enfin !"
@@ -219,7 +219,7 @@ label chez_ryou_femme:
     return
     
 label home_1:
-    $ renpy.music.play("music/ryouzanki.ogg", fadein=2)
+    play music (ryou1) fadein 2
     scene street with dissolve
     show ryou normal at left
     r "Je savais que t'allais te défiler..."
@@ -336,7 +336,7 @@ label home2:  #var a changer car ambigue
         return
             
 label home_2:
-    $ renpy.music.play("music/ryouzanki.ogg", fadein=2)
+    play music (ryou1) fadein 2
     scene street with dissolve
     show ryou normal at left
     show ryou sad at center with move

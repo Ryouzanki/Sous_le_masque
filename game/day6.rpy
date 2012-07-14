@@ -65,7 +65,7 @@ label day6_mec:
     $ ali = 'Alice'
     jump day6_phone
 label day6_phone:
-    $ renpy.music.play("music/alice.ogg", fadein=2)
+    play music (weekend1) fadein 2
     a "Passons aux choses sérieuses."
     a "Ou pas !"
     a "Les autres membres du club disent que j'en fait trop."
@@ -119,12 +119,17 @@ label day6_phone:
     a "Ce sera tout... Je suppose."
     a "A tout à l'heure peut être !"
 label day6_plan:
-    $ renpy.music.play("music/weekend.ogg", fadein=2)
     "Bon... Il est 10h... Qu'est ce que je vais faire de ma journée..."
+
     $ action_matin = None
     $ action_aprem = None
     $ action_soir = None
-    call day_planner(["Matin", "Après midi", "Soir"])
+    
+    if aller_science ==3:
+        call day_planner(["Matin", "Après-midi", "Soir"])
+    else:
+        call day_planner(["Matin", "Après midi", "Soir"])
+    stop music fadeout 4.0
     if action_matin == 'd':
         "Je vais me recoucher tiens..."
         "..."
@@ -132,6 +137,7 @@ label day6_plan:
         m "Quoi encore..."
         play sound "sound/dooropen.mp3"
         scene couloir with fade
+        play music (elusia1) fadeout 2
         show elusia normal sport
         e "Salutations !"
         show elusia geez sport
@@ -155,6 +161,7 @@ label day6_plan:
                         e "Oh... d'accord, je te laisse travailler."
                         show elusia normal sport
                         e "Je cours chaque samedi alors si tu veux venir..."
+                        stop music fadeout 4.0
                         e "Bye bye !"
                         m "Bon courage !"
                         show elusia happy sport
@@ -177,6 +184,7 @@ label day6_plan:
                         show elusia geez sport
                         e "Bon et bien si tu changes d'avis..."
                         show elusia normal sport
+                        stop music fadeout 4.0
                         e "Saches que je sors courir chaque samedi matin."
                         m "Amuses toi bien."
                         play sound "sound/doorclose.mp3"
@@ -216,6 +224,7 @@ label day6_plan:
                         e "J'étais venue te chercher pour courir un peu."
                         e "Je cours chaque samedi matin."
                         e "Tu me rejoindra quand tu en aura envie."
+                        stop music fadeout 4.0
                         e "Bye !"
                         play sound "sound/doorclose.mp3"
                         show elusia sad sport
@@ -244,6 +253,7 @@ label day6_plan:
                                 e "Tu vas devenir un légume comme Ryou."
                                 e "Bon et bien si tu changes d'avis..."
                                 e "Saches que je sors courir chaque samedi matin."
+                                stop music fadeout 4.0
                                 m "Amuses toi bien."
                                 play sound "sound/doorclose.mp3"
                                 show elusia sad sport
@@ -271,6 +281,7 @@ label day6_plan:
         
         "Je devrais faire un peu de sport..."
         m "C'est partit !"
+        play music (elusia1) fadeout 2
         scene couloir with fade
         show elusia surprised sport
         e "Oh !"
@@ -302,6 +313,7 @@ label day6_plan:
                 menu:
                     "Je ne t'aime pas, non.":
                         $ rel_lulu -= 10
+                        stop music fadeout 4.0
                         m "Je ne t'aime pas, non."
                         e "Y'a... Une raison particulière à ça ?"
                         e "Est-ce que je peux y faire quelque chose ?"
@@ -334,6 +346,7 @@ label day6_plan:
                         menu:
                             "Non, vraiment...":
                                 $rel_lulu -= 5
+                                stop music fadeout 4.0
                                 m "Non, vraiment..."
                                 show elusia geez sport
                                 e "..."
@@ -385,6 +398,7 @@ label day6_plan:
                                 $ rel_lulu += 1
                                 m"J'ai mes raisons, une autre fois."
                                 show elusia geez sport
+                                stop music fadeout 4.0
                                 e "Très bien."
                                 show elusia sad sport
                                 e "Je n'insiste pas plus."
@@ -414,6 +428,7 @@ label day6_plan:
         m "Quoi encore..."
         play sound "sound/dooropen.mp3"
         scene couloir with fade
+        play music (elusia1) fadeout 2
         show elusia normal sport
         e "Salutations !"
         show elusia geez sport
@@ -435,6 +450,7 @@ label day6_plan:
                 e "Oh... d'accord, je te laisse travailler."
                 show elusia normal sport
                 e "Je cours chaque samedi alors si tu veux venir..."
+                stop music fadeout 4.0
                 e "Bye bye !"
                 m "Bon courage !"
                 show elusia happy sport
@@ -470,6 +486,7 @@ label day6_plan:
     else:
         "ERROR"
 label day6_aprem:
+    play music (weekend1) fadein 2
     scene chambre m with fade
     "Je me suis fait à manger."
     "Maintenant..."
@@ -538,7 +555,7 @@ label day6_aprem:
                 "J'ai joué jusqu'au soir."
                 jump day6_soir
     elif action_aprem == 't':
-        "Allons jouer au PC."
+        "Allons travailler."
         play sound "sound/bell.mp3"
         m "Encore..."
         play sound "sound/dooropen.mp3"
@@ -568,5 +585,468 @@ label day6_aprem:
         "ERROR"
     return
 label day6_alice:
+    m "Oh, c'est vrai, Alice m'a demandé de venir..."
+    m "Tant pis... Je mangerais ça ce soir."
+    play sound "sound/dooropen.mp3"
+    scene couloir with fade
+    scene street with fade
+    "J'ai acheté quelques petits trucs pour pas arriver les mains vides."
+    stop music fadeout 4.0
+    scene cours with fade
+    show alice geez at left
+    show lloyd normal at right
+    "Arrivé[ter] sur place, j'aperçois Alice au loin avec Lloyd."
+    "Ils n'ont pas l'air de s'amuser..."
+    play music (alice1) fadein 10
+    menu:
+        "Attendre.":
+            $ choix1 = False
+            "Je ne devrais pas me mêler de ce qui ne me regarde pas."
+            "Je vais attendre que ça passe."
+            "..."
+            "..."
+            show alice happy at center with move
+            a "[j] ! Je ne pensais pas te voir !"
+            a "Il faut que je remplisse de la paperasse, je reviens !"
+            hide alice
+            show lloyd normal at center with move
+        "Aller voir.":
+            $ choix1 = True
+            "Je vais voir de plus près ce qui se passe."
+            "Ils se disputent et les autres regardent en silence."
+            y "Comment ? Je crains que ce ne soit pas possible."
+            show alice angry
+            a "Et bien, nous allons vous montrer que c'est possible Sir !"
+            y "Le réglement stipule qu'il est interdit de manger dans les locaux."
+            show alice sad
+            a "Nous allons faire une petite entorse au réglement."
+            show lloyd angry
+            y "Hors de question. Il faut la signature d'un responsable."
+            y "Hors, tu n'étais toi même pas au courant de la situation !"
+            show alice sad
+            a "Intéressant..."
+            a "Il faut donc la signature de quelqu'un... Comme toi..."
+            show lloyd normal
+            y"..."
+            y "Je refuse de prendre la responsabilité d'un évènement aussi spontané."
+            y "Il fallait se préparer et demander l'avis du président."
+            show alice angry
+            a "S'il faut toujours demander au président, à quoi tu sers bordel ?"
+            y"Je surveille que son autorité est respectée."
+            a "Et pourquoi je peux pas signer moi ?"
+            y "... Tu peux."
+            y "Mais tu perdra probablement ton poste."
+            a "Pourquoi probablement ?"
+            y "En cas de dégradation, tu perdra ton poste."
+            a "Il n'y en aura pas. J'ai confiance en les membres de mon club."
+            y "Très bien. Tu sais où sont les papiers."
+            show alice sad at center with move
+            a "[j]... Désolée, je ne voulais pas que tu assistes à ça..."
+            a "Il faut que je remplisse de la paperasse, je reviens !"
+            hide alice
+            show lloyd normal at center with move
+    y "Cette fille n'a aucun sens des responsabilités..."
+    if choix1:
+        menu:
+            "Elle en a plus que toi.":
+                $ rel_lloy -= 2
+                m "Elle en a plus que toi."
+                show lloyd angry
+                y "Je te demande pardon ?"
+            "Elle en a juste un différent du tien.":
+                $ rel_lloy += 3
+                m "Elle en a juste un différent du tien."
+                show lloyd angry
+                y "Comment ça ?"
+                m "Il n'y a pas que la hiérarchie dans la vie."
+                m "Il y a aussi la confiance."
+                show lloyd normal
+                y "..."
+            "Elle n'en a aucun, effectivement...":
+                $ rel_lloy += 5
+                m "Elle n'en a aucun, effectivement..."
+                show lloyd happy
+                y "Si seulement tu étais à sa place !"
+    else:
+        m "Je ne sais pas. Je n'ai pas le contexte."
+        y "Je te dis juste ça comme ça."
+    show lloyd normal
+    y "Des membres de son équipe ont abusé de sa confiance pour lui voler les clefs."
+    y"Et elle refuse de découvrir les coupables."
+    menu:
+        "Complicité, elle défend ses amis.":
+            $ rel_lloy += 5
+            m "Complicité, elle défend ses amis."
+            show lloyd happy
+            y "Exactement !"
+        "En quoi est-ce important ?":
+            m "En quoi est-ce important ?"
+            y "Elle est censée être impartiale et juste."
+            y "Voler, c'est mal, peut importe la raison."
+        "C'était pour la bonne cause.":
+            $ rel_lloy += 2
+            m "C'était pour la bonne cause."
+            y "C'était pour la bonne cause ?"
+            y "..."
+            m "Tu comprendras un jour."
+    show lloyd normal at right with move
+    show alice angry at left
+    a "Les voilà tes papiers !"
+    a "Maintenant, casse toi !"
+    y "Non. Je vais rester pour surveiller."
+    a "Surveiller quoi ? On n'est plus des gosses..."
+    $ choix1 = False
+    $ choix2 = False
+    menu:
+        "Laisses le rester.":
+            $ rel_lloy += 2
+            $ rel_ali += 6
+            m"Laisses le rester."
+            show alice sad
+            a "..."
+            show alice geez
+            a "D'accord..."
+            show alice sad
+            a "Tu es bien trop gentil [j]."
+            a "C'est bien parce que c'est ta fête que j'accepte."
+            y "Je serais discret dans un coin."
+            a "..."
+            y "Mais je veille sur vous."
+            $ choix1= True # Lloyd est resté grace a Minato
+            $ choix2= True # Lloyd est la
+        "Ne rien dire.":
+            m"..."
+            y "Je serais discret dans un coin."
+            a "..."
+            y "Mais je veille sur vous."
+            $ choix2= True # Lloyd est la
+        "Tu n'as plus rien à faire ici.":
+            $ rel_lloy -= 2
+            $ rel_ali += 5
+            m"Tu n'as plus rien à faire ici."
+            show alice happy
+            a "Tu vois ?"
+            a "Même [j] le dit !"
+            show lloyd angry
+            y "Très bien, je m'en vais."
+            y "Mais vous ne vous en tirerez pas ainsi."
+            a "C'est ça ! Sayonara !"
+    hide lloyd
+    show alice geez at center with move
+    a "Il est juste mais trop trop chiant des fois l'aristo..."
+    menu:
+        "C'est pas faux...":
+            m "C'est pas faux..."
+            $ rel_ali += 5
+        "N'exagérons rien...":
+                m"N'exagérons rien..."
+                $ rel_ali += 2
+                show alice sad
+                a "Je n'exagère pas !"
+        "Il n'a pas tout à fait tort...":
+                m"Il n'a pas tout à fait tort..."
+                $ rel_ali -= 2
+                show alice sad
+                a "Tu trouves ?"
+    show alice angry
+    a"Juste que des fois, il fait chier pour rien..."
+    a "Il est trop coincé, trop à cheval sur les règles."
+    show alice sad
+    a "En même temps quand tu viens d'une école privée avec que des gens comme lui..."
+    a "J'ai un peu pitié de lui... J'aimerais qu'il nous comprenne..."
+    a "Je crois qu'il fait des effort alors je devrais en faire aussi."
+    menu:
+        "C'est un peu tard pour l'inviter.":
+            m "C'est un peu tard pour l'inviter."
+            show alice normal
+            a "Il est toujours dans le coin... Je suppose..."
+        "Invites le !" if choix2:
+            m "Invites le !"
+            show alice happy
+            a "Bonne idée !"
+            $ rel_ali += 4
+    show alice happy
+    a "Heureusement que t'es là !"
+    a "Du coup, ça m'évite d'y aller moi même !"
+    m "Hein ?"
+    play music (jeux1)
+    show alice satisfied
+    a "Pierre, feuille..."
+    m "Quoi ?!"
+    a "... Ciseaux !"
+label day6_pfc:
+    menu:
+        "Pierre":
+            pass
+        "Feuille":
+            pass
+        "Ciseaux.":
+            pass
+    $ n = renpy.random.randint(1,3)
+    if n !=1:
+        a "Egalité..."
+        a "Pierre feuille ciseaux !"
+        jump day6_pfc
+    else:
+        stop music fadeout 3.0
+        show alice geez
+        a "..."
+        play music (alice1) fadein 2.0
+       
+        m "Je crois que t'as perdu..."
+        show alice sad
+        a "Oui mais je suis ta supérieure et donc tu vas y aller pour moi."
+        menu:
+            "Oui madame la dictatrice !":
+                $ rel_ali += 5
+                m "Oui madame la dictatrice !"
+                show alice satisfied
+                a "Merci !"
+                hide alice
+                "Pas dur à trouver, Lloyd est resté à l'entrée les bras croisés."
+                show lloyd normal
+                y "Qu'est ce qu'il y a ?"
+                menu:
+                    "L'inviter à venir.":
+                        m "Tu viens avec nous ?"
+                        y "Je ne suis plus la bienvenue."
+                        menu:
+                            "Tu surveillera mieux de l'intérieur.":
+                                m"Tu surveillera mieux de l'intérieur."
+                                y"Non... J'ai mieux à faire."
+                                $ rel_lloy += 2
+                            "Alice veut te voir.":
+                                m"Alice veut te voir."
+                                m "Elle voulait s'excuser auprès de toi."
+                                y "Ce n'est pas important."
+                                y"J'ai plus important à faire."
+                                $ rel_ali += 2
+                            "Tant pis.":
+                                pass
+                        y "Je vais partir."
+                        y "A plus tard."
+                        "Il est subitement partit..."
+                    "Partir.":
+                        m"Rien, je ne faisais que passer."
+                        show lloyd angry
+                        y "Pas de bêtises, je vous ai à l'oeil..."
+                hide lloyd
+                show alice sad
+                a "Alors ?"
+                m "Il dit qu'il ne veut pas venir."
+                jump day6_postlloyd
+            "C'est pas un peu de l'abus de position ?":
+                m"C'est pas un peu de l'abus de position ?"
+                show alice geez
+                a "C'est bon, je plaisantais"
+                a "J'y vais..."
+                hide alice
+                "..."
+                show alice geez
+                a "Il ne veut pas venir."
+                jump day6_postlloyd
+label day6_postlloyd:
+    show alice sad
+    a "Bon bah tant pis..."
+    show alice normal
+    a "Allons plutot nous amuser... Je suppose..."
+    scene labo with fade
+    show alice happy
+    "Nous mangeons des plats maison des membres dans la salle de science."
+    a "Alors, ça te plait ?"
+    m "Bien sur..."
+    a "Je sais pas pourquoi mais je suis très contente de te voir ici."
+    menu:
+        "C'est beau l'amour.":
+            $rel_ali += 3
+            m"C'est beau l'amour."
+            show alice geez
+            a "Le jour où je tomberais amoureuse de quelqu'un n'est pas près d'arriver."
+            menu:
+                "Ca va, je plaisantais.":
+                    m"Ca va, je plaisantais."
+                    show alice satisfied
+                    a"Je sais."
+                "Pourquoi tu dis ça ?":
+                    $rel_ali += 3
+                    m"Pourquoi tu dis ça ?"
+                    show alice sad
+                    a "Disons que mon esprit scientifique ne croit pas en ce genre de chose."
+                    show alice happy
+                    a "Et puis il faudrait que je trouve quelqu'un de spécial."
+                    a "Quelqu'un qui sache m'apprécier à ma juste valeur !"
+        "En fait, j'avais rien de mieux à faire.":
+            m "En fait, j'avais rien de mieux à faire."
+            show alice happy
+            a "Hey ! C'est pas sympa !"
+            show alice normal
+            a"Enfin le hasard a déjà conduit à des découvertes scientifiques majeures !"
+            a "Peut importe la raison, tant que tu y prends du plaisir au final... Je suppose..."
+        "Je voulais m'intégrer au plus vite.":
+            $rel_ali += 3
+            m"Je voulais m'intégrer au plus vite."
+            show alice happy
+            a"Excellente initiative !"
+            a "C'est très facile de s'intégrer dans un club quant on a de bon résultat."
+            show alice satisfied
+            a "J'attends beaucoup de toi !"
+            m "Tu me fais peur..."
+    $ choix1 =  False
+    $ choix2 =  True
+    $ choix3 =  False
+    $ choix4 =  True
+    $ choix5 =  True
+    $ choix6 =  False
+label day6_q:
+    menu:
+        "Pourquoi tu portes une blouse ?" if choix2:
+            $ rel_ali += 4
+            m"Pourquoi tu portes une blouse ?"
+            m "Je veux dire, on est samedi..."
+            show alice geez
+            a"Je sais, c'est bizarre..."
+            show alice sad
+            a"Mais je me sens vraiment bien dans une blouse."
+            show alice happy
+            a "Je me sens nue sans..."
+            show alice satisfied
+            a "Ah mais je ne la porte pas en ville hein !"
+            a"Juste au sein de l'école."
+            $ choix1 = True
+            $ choix2 = False
+            jump day6_q
+        "Est ce que tes parents sont des scientifiques ?" if choix1:
+            $ rel_ali += 4
+            m "Est ce que tes parents sont des scientifiques ?"
+            show alice angry
+            a "Hey ho ! C'est quoi ces questions ?"
+            a "Vive les stéréotypes !"
+            show alice sad
+            a "J'aimerais dire le contraire mais..."
+            show alice geez
+            a "Mes parents ne sont pas des scientifiques."
+            $ choix1 = False
+            jump day6_q
+        "Comment as tu obtenu mon numéro ?" if choix4:
+            $ rel_ali += 2
+            m "Comment as tu obtenu mon numéro ?"
+            show alice satisfied
+            a "Tu crois qu'elle sert à quoi ta fiche d'inscription ?"
+            m "Ah oui, c'est vrai..."
+            $ choix4 = False
+            jump day6_q
+        "Pourquoi tu tiens tant que ça à me recruter ?" if choix5:
+            m"Pourquoi tu tiens tant que ça à me recruter ?"
+            show alice geez
+            a "On n'a pas assez de membre ni assez de temps..."
+            $ choix3 = True
+            $ choix6 = True
+            $ choix5 = False
+            jump day6_q
+        "Pas assez de membre... Pourquoi ?"if choix3:
+            $ rel_ali -= 2
+            m"Pas assez de membre... Pourquoi ?"
+            show alice angry
+            a "Parce qu'ils veulent leur nom écrit dans la liste du staff."
+            a "Mais refusent de mettre la main à la patte."
+            a "\"Oh non, c'est trop de travail  !\""
+            $ choix3 =  False
+            jump day6_q
+        "C'est pas un peu de ta faute si y'a pas grand monde ?"if choix6:
+            $ rel_ali -= 3
+            $ choix6 = False
+            m "C'est pas un peu de ta faute ?"
+            show alice angry
+            a "De quoi je me mêle ?"
+            a "Je gère mon équipe comme je veux !"
+            a "Si t'es pas content, tu peux démissionner !"
+            "Quel changement brutal d'atmosphère... Je ferais bien de ne plus la titiller..."
+            "Elle semble ne pas apprécier les questions sur le club et la manière dont elle le gère."
+            jump day6_q
+        "Ne rien demander.":
+            "..."
+    scene labo with fade
+    show alice happy
+    a"Bon ! On s'est bien amusé !"
+    a"Maintenant, au travail !"
+    menu:
+        "J'ai l'impression de m'être fait roulé !":
+            $ rel_ali += 4
+            m"J'ai l'impression de m'être fait roulé !"
+            show alice satisfied
+            a "Tu crois ?"
+        "D'accord...":
+            $ rel_ali += 2
+            m "D'accord."
+            a "J'apprécie ta bonne volonté."
+        "Non, je ne suis pas venu pour ça !":
+            $ rel_ali -= 4
+            m "Non, je ne suis pas venu pour ça !"
+            show alice sad
+            a "Bon bah tant pis."
+            show alice normal
+            a "Bye bye !"
+            jump day6_soir
+    show alice normal
+    a "D'ailleurs, pour vérifier que t'as bien lu..."
+    a "L'autre jour, j'ai envoyé Baka-Powa à la préfecture pour le feu d'artifice."
+    a "Pourtant, nous n'avons pas de feu d'articfices de grande puissance C4 ou T2."
+    a "Donc, on a dépassé le seuil de matière active."
+    a "Ce seuil est de combien de Kg ?"
+    $ ans = renpy.input("Le seuil en Kg est de :", "", length=2)
+    if ans == '35':
+        $ rel_ali += 8
+        show alice happy
+        a "Intéressant... Très impressionnant !"
+        show alice satisfied
+        a "On va pouvoir faire quelque chose de toi !"
+    # elif ((ans - 35)*(ans-35))<=25:
+        # $ rel_ali += 3
+        # show alice happy
+        # a "Intéressant... Presque !"
+        # show alice satisfied
+        # a "On va pouvoir faire quelque chose de toi !"
+    else:
+        show alice sad
+        a"[ans]..."
+        show alice geez
+        a "Pas vraiment nan..."
+    show alice normal
+    a "Bref, voilà le rapport."
+    a "Bonne lecture."
+    hide alice
+    "J'ai lu tout le samedi."
+    "C'est long et pas toujours intéressant."
+    "J'ai lu 60\%."
+    $ aller_science +=2
+    "J'ai beaucoup avancé et je rentre chez moi."
+    jump day6_soir
 label day6_salazard:
+    "Je vais sortir un peu..."
+    "..."
+    scene street
+    "..."
+    scene chambre m
+    "Il n'y avait rien d'intéressant à faire dehors."
+    "Ryouzanki avait raison, je ferais mieux de trouver de quoi m'occuper."
+    jump day6_soir
 label day6_soir:
+    play music (joueur1) fadeout 2
+    scene chambre m
+    "Je mange."
+    "Puis, comme convenu..."
+    if action_soir == 'd':
+        extend "je me couche tôt."
+        $ vig += 4
+    elif action_soir == 'j':
+        extend "je joue tard."
+    elif action_soir == 't':
+        extend "je travaille tard."
+        $ vig -= 1
+        if vig < 0:
+            "Je suis trop fatigué pour me concentrer."
+            $ int_points += 1
+        else:
+            "Une soirée productive."
+            $ int_points += 2
+    return
