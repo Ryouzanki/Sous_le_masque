@@ -1,12 +1,7 @@
+# TODO easin + easeout
+#            $ renpy.block_rollback()
+
 label ryou:
-    show image "back/start.jpg"
-    menu:
-        "Route bonus":
-            jump ryou_confirme
-        "Route classique":
-            return
-            
-label ryou_confirme:
     play music (joueur1) fadein 2
     define e = Character('Elusia', color="#FF69B4", show_two_window=True)
     define m = Character('Minato', color="#58D3F7", show_two_window=True)
@@ -21,15 +16,6 @@ label ryou_confirme:
                 # window_left_padding=160,
                 # show_side_image=Image("UI/rect.png", xalign=0.0, yalign=1.0), show_two_window=True)
     
-    $ action_matin = None
-    $ action_aprem = None
-    $ action_soir = None
-    #call day_planner(["Matin", "Après midi", "Soir"])
-    #eside "lol"
-    $ plop = renpy.random.randint(1,6)
-
-    
-    call day_planner(["Matin", "event", "Soir"])
     
     # scene parc with fade
     # r "Voilà un fond de parc."
@@ -54,22 +40,34 @@ label ryou_confirme:
     # $ rel_ryou +=100
     # $ rel_val +=100
     
-label bam:
-    call day_planner(["Matin", "Après midi", "Soir"])
-    show shadow ombre at left
-    show alice normal at right
+
+label pam:
+    show shadow ombre at left with moveinright
+    show alice normal at right with easeinleft
     show lloyd normal at Position(xpos=0.40)
     show salazard evil at Position(xpos=0.60)
     "fin du test"
     a "le journal va etre incrementé"
-    $ unlocked_journal_pages += 1
+    $ unlocked_journal_pages += 3
+    menu:
+        "A":
+            $testjournal="A"
+        "B":
+            $testjournal="B"
     r "journal incrémenté"
     play music (joueur1) fadein 2
     m "Je suis un homme !"
     $rel_lulu +=10
     $ rel_ryou -=10
     e "Ryou, je t'aime !"
+    $ renpy.block_rollback()
     l "test"
     v "test"
     y "test"
     s "Je suis le maitre ici !"
+    s "On va gagner elusia"
+    $ persistent.route = max(persistent.route, 1)
+    s "On a gagner elusia"
+    s "On va gagner alice"
+    $ persistent.route = max(persistent.route, 2)
+    s "On a gagner alice"

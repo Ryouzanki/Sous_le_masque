@@ -17,7 +17,7 @@ label day0:
     m "J'arrive, j'arrive !"
     "Qui peut bien venir sonner à une heure pareille ?"
     play sound "sound/dooropen.mp3"
-    scene couloir nuit with dissolve
+    scene couloir nuit with fade
     play music (ryou1) fadein 1
     show ryou angry
     "J'ouvre la porte et vois un jeune homme sur le palier."
@@ -30,6 +30,7 @@ label day0:
 label choix_sexe:
     menu:
         "Perdu, je suis un homme, un vrai ! Pour la petite tenue, reviens plus tard !":
+            $ renpy.block_rollback()
             m "Perdu, je suis un homme, un vrai ! Pour la petite tenue, reviens plus tard !"
             show ryou happy
             r "Ha ha ! Ouais mais... Nan merci !"
@@ -37,12 +38,15 @@ label choix_sexe:
             $ bite = True
             $ ter = ''
         "Tssss ! Heureuse de constater que certaines choses sont immuables !":
+            $ renpy.block_rollback()
             centered "Attention, la route \"Fille\"comporte quelques problèmes scénaristique."
             centered "Voulez vous vraiment continuer ?"
             menu:
                 "Oui.":
+                    $ renpy.block_rollback()
                     pass
                 "Non.":
+                    $ renpy.block_rollback()
                     jump choix_sexe
             m "Tssss ! Heureuse de constater que certaines choses sont immuables !"
             show ryou happy
@@ -88,8 +92,10 @@ label sonnette:
     r "[j], c'est ça ?"
     menu:
         "Ah, c'est bien, tu sais lire !":
+            $ renpy.block_rollback()
             m "Ah, c'est bien, tu sais lire !"
         "Mais non... Retourne en primaire !":
+            $ renpy.block_rollback()
             show ryou sad
             m "Mais non... Retourne en primaire !"
             "Dans le doute, je regarde une fois de plus."
@@ -122,15 +128,18 @@ label sonnette:
         
     menu :
         "Oui, je veux bien !":
+            $ renpy.block_rollback()
             m "Oui, je veux bien !"
             $ rel_ryou += 5
             jump accompagner_matin
         "Non merci, ça ira...":
+            $ renpy.block_rollback()
             m "Non merci, ça ira..."
             show ryou angry
             r "..."
             r "Bon OK. Bah, à demain !"
-            hide ryou
+            $ journal1="J'ai fait la rencontre de mon stupide voisin Ryouzanki. Rien d'autre à signaler."
+            hide ryou with easeoutright
             stop music
             return
             
@@ -140,9 +149,11 @@ label accompagner_matin:
     r "Tant qu'à faire, tu veux qu'on aille te présenter à la voisine ?"
     menu:
         "Oui, pourquoi pas...":
+            $ renpy.block_rollback()
             m "Oui, pourquoi pas..."
             jump rencontre_elusia
         "C'est pas un peu tard là ?":
+            $ renpy.block_rollback()
             m "C'est pas un peu tard là ?"
             jump rencontre_tard
             
@@ -154,8 +165,9 @@ label rencontre_tard:
     m "Oui..."
     r "Bonne nuit et à demain !"
     m "Toi aussi, à demain !"
+    $ journal1="J'ai fait la rencontre de mon voisin Ryouzanki.\nLui et mon autre voisine que je n'ai pas vu, Elusia, vont venir me chercher chaque matin désormais."
     stop music
-    hide ryou
+    hide ryou with easeoutright
     return
     
 label rencontre_elusia:
@@ -172,7 +184,7 @@ label rencontre_elusia:
     play sound "sound/dooropen.mp3"
     play music (elusia1) fadein 2
     show ryou normal at left with move
-    show elusia angry at right
+    show elusia angry at right with easeinright
     e "Ryou ?!"
     e "Qu'est ce qu'il te prend de venir sonner à une heure pareille ?"
     "Elle me remarque enfin."
@@ -203,6 +215,7 @@ label rencontre_elusia:
     if bite:
         menu:
             "Prendre un café.":
+                $ renpy.block_rollback()
                 $ rel_ryou += 2
                 m "Oui, moi aussi je prendrais bien un café si possible."
                 show ryou happy at left
@@ -212,6 +225,7 @@ label rencontre_elusia:
                 e "Lui, je ne sais pas. Mais toi, Ryou, sûrement pas !"
                 show elusia normal
             "Prendre un thé.":
+                $ renpy.block_rollback()
                 $ rel_lulu += 2
                 m "Un thé me conviendra parfaitement !"
                 show ryou angry at left
@@ -225,6 +239,7 @@ label rencontre_elusia:
     else:
         menu:
             "Prendre un café.":
+                $ renpy.block_rollback()
                 $ rel_ryou += 2
                 m "Je prendrais aussi un café si ça ne te gêne pas."
                 show ryou angry at left
@@ -233,6 +248,7 @@ label rencontre_elusia:
                 show elusia satisfied at right
                 e "Je crois que son stéréotype de la virilité s'est éffondré !"
             "Prendre un thé.":
+                $ renpy.block_rollback()
                 $ rel_lulu += 2
                 m "Un thé me conviendra parfaitement !"
                 show elusia satisfied
@@ -246,6 +262,7 @@ label rencontre_elusia:
     "Puis, je les ai salués et j'ai continué de déballer mes affaires."
     "Avant d'aller me coucher, à bout de force."
     scene black with dissolve
+    $ journal1="J'ai fait la rencontre de mes voisins Elusia et Ryouzanki.\nIls vont venir me chercher chaque matin désormais."
     stop music
     
     return

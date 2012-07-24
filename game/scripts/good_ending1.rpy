@@ -74,7 +74,12 @@ s"Donc il vaut mieux ignorer la réalité non ?"
 m "La réalité n'est pas un jeu !"
 s"..."
 s"Je devrais arrêter de parler avec des primates..."
-#arrivage
+#arrivage porte défoncée
+
+e "Tu as joué avec mon amour."
+l "Tu as joué avec ma compassion."
+v "Tu as joué avec ma fierté."
+
 
 
 s "Un jour vous verrez."

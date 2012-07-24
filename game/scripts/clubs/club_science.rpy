@@ -1,3 +1,6 @@
+# TODO easin + easeout
+#            $ renpy.block_rollback()
+
 label labo:
     
     play music (club1) fadein 2

@@ -1,3 +1,5 @@
+# TODO easin + easeout
+#            $ renpy.block_rollback()
 label day7:
     scene reveil2 with dissolve
     play sound "sound/bell.mp3"
@@ -63,7 +65,7 @@ label day7:
     $ action_matin = None
     $ action_aprem = None
     $ action_soir = None
-    call day_planner(["Matin", "Après-midi", "Soir "])
+    call day_planner(["Matin", "Après-midi", "Soir"])
     
     if action_matin == 'd':
         "Je vais reprendre des forces tiens..."
@@ -216,9 +218,13 @@ label day7_choix: # TODO imagemap
     r "C'est toi qui le dit."
     show ryou normal
     r "Je parie sur la team [j]-[choix1]."
+    show elusia sport normal
+    e "On fait en 4 jeux."
+    e "Chacun servira pendant un jeu."
+    e "En cas d'égalité, on fera un 5ème jeu en tie-break."
     l "Je commence à servir donc."
-    show elusia normal sport
-    e"Qui a dit ça ?"
+    show elusia satisfied sport
+    e"Bien essayé..."
     e"Pierre feuille ciseaux !"
     "..."
     e"J'ai gagné !"
@@ -232,19 +238,25 @@ label day7_choix: # TODO imagemap
     play music (jeux2) fadein 4
     if choix1 == 'Elusia':
         $ rel_lulu+=10
+        $ rel_lolo+=4
+        $ rel_ryou-=4
         show elusia normal sport at left with move
-        show ryou normal at Position(xpos=0.5) with move
+        show ryou angry at Position(xpos=0.5) with move
         show laura normal at right with move
     elif choix1 == 'Laura':
         $ rel_lolo+=10
+        $ rel_ryou+=4
+        $ rel_lulu+=4
         show elusia normal sport at right with move
         show ryou normal at Position(xpos=0.5) with move
         show laura normal at left with move
     elif choix1 == 'Ryouzanki':
         $ rel_ryou+=10
-        show elusia normal sport at right with move
+        $ rel_lolo-=4
+        $ rel_lulu-=4
+        show elusia sad sport at right with move
         show ryou normal at left with move
-        show laura normal at Position(xpos=0.75) with move
+        show laura sad at Position(xpos=0.75) with move
     else:
         "ERREUR : coéquipier non trouvé."
     show elusia happy sport
@@ -596,10 +608,56 @@ label day7_ryou_2_fin :
     $ equipe2 = 0
 label day7_ryou_3:
     "C'est au tour de Laura de servir."
+    show ryou angry
+    r "Bon..."
+    r "On tire que sur Laura..."
+    r "Elle va fatiguer plus vite qu'Elusia."
+    menu:
+        "C'est pas très cool ça...":
+            m "C'est pas très cool ça..."
+            r "J'sais mais j'veux pas perdre."
+            show ryou sad
+            r "Je ne peux pas te forcer à faire des trucs pas cools avec moi."
+            r "Si tu ne veux pas, ne le fais pas."
+            m "Oui, c'est mieux."
+            "..."
+            "Je crois que Ryouzanki à appliqué son plan."
+            "Nous avons perdu le set de très peu."
+            $ rel_ryou -= 5
+        "OK, ça marche...":
+            m "OK, ça marche."
+            show ryou happy
+            r "J'savais que tu comprendrais."
+            $ rel_ryou += 5
+            "..."
+            "Plus nous attaquons Laura et plus elle fatigue."
+            "Nous avons gagné le set haut la main, grâce aux fautes de Laura."
+            $ jeu += 1
+    call day7_normal
+    if jeu ==2:
+        show ryou happy
+        r "Et voilà !"
+        r "2 Jeux à 1 !!"
+    else:
+        show ryou sad
+        r "..."
+        show elusia satisfied sport
+        $ jeu2 = 3 - jeu
+        e "[jeu2] jeux à [jeu]."
+        e "Où est passé votre fierté d'homme ?"
+            
     
     jump day7_fin_tennis
 label day7_fin_tennis:
-    return 
+    call save
+    return
+label save:
+    menu:
+        "Une semaine s'est écoulée, voulez vous sauvegarder ?"
+        "Oui.":
+              $ renpy.game_menu("save_screen")
+        "Non.":
+              pass
 label day7_normal:
     show ryou normal
     show elusia normal sport

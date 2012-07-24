@@ -1,3 +1,5 @@
+# TODO easin + easeout
+#            $ renpy.block_rollback()
 label go_home:
     if aller_home == 0:
         jump home_0

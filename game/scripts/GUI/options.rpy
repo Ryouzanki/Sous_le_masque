@@ -41,42 +41,42 @@ init -1 python hide:
     ## customize the color scheme.
 
     theme.roundrect(
-        # Color scheme: Phone Operator
+        # Color scheme: Basic Blue
                                     
         ## The color of an idle widget face.
-        widget = "#59667a",
+        widget = "#003c78",
 
         ## The color of a focused widget face.
-        widget_hover = "#343e4d",
+        widget_hover = "#0050a0",
 
         ## The color of the text in a widget.
-        widget_text = "#ffffff",
+        widget_text = "#c8ffff",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
-        widget_selected = "#bed4f6",
+        widget_selected = "#ffffc8",
 
         ## The color of a disabled widget face. 
-        disabled = "#929292",
+        disabled = "#404040",
 
         ## The color of disabled widget text.
-        disabled_text = "#ababab",
+        disabled_text = "#c8c8c8",
 
         ## The color of informational labels.
-        label = "#343e4d",
+        label = "#ffffff",
 
         ## The color of a frame containing widgets.
-        frame = "#d2d2d2",
+        frame = "#6496c8",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "back/start.jpg",
+        mm_root = "#dcebff",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        gm_root = "#59667a",
+        gm_root = "#dcebff",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
@@ -238,7 +238,7 @@ init -1 python hide:
     ## Used when the window is hidden.
     config.window_hide_transition = None
 
-
+    
     #########################################
     ## This is the name of the directory where the game's data is
     ## stored. (It needs to be set early, before any other init code
@@ -268,5 +268,23 @@ init -1 python hide:
 init python hide:
     import os
     os.environ['SDL_VIDEO_CENTERED'] = '1'
-    
-    
+
+  
+# init -2 python:
+    # layout.imagemap_yesno_prompt(
+        # "UI/yesno_ground.png",
+        # "UI/yesno_idle.png",
+        # "UI/yesno_hover.png",
+        # [
+            # (80,295, 400,520, "Yes"),
+            # (400,295, 735,520, "No"),
+        # ],
+        # { 
+            # layout.ARE_YOU_SURE : "UI/yesno_are_you_sure.png",
+            # layout.DELETE_SAVE : "UI/yesno_delete_save.png",
+            # layout.OVERWRITE_SAVE : "UI/yesno_overwrite_save.png",
+            # layout.LOADING : "UI/yesno_loading.png",
+            # layout.QUIT : "UI/yesno_quit.png",
+            # layout.MAIN_MENU : "UI/yesno_main_menu.png",
+        # }
+# )

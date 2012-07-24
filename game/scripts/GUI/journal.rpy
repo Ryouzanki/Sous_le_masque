@@ -7,19 +7,20 @@
 init -2 python:
     #### Sofie(my MC)'s health
     ## Change this to whatever your character is named.
-    sofie_health = 90
+    #sofie_health = 90
     #### Her sanity
-    sofie_sanity = 100
+    #sofie_sanity = 100
     #### The date in the game
     ## Made an empty string at the beginning because you
     ## haven't yet started the game, and so you're not anywhere.
-    date_ref = ""
+    #date_ref = ""
     #### The time reference in the game
     ## For this, I usually use 3-hour chunks, unless I need
     ## something a bit more specific for a certain part.
-    time_ref = ""
+    #time_ref = ""
     #### Your current location in the game
-    loc_ref = ""
+    lieu = "DTC"
+    sante = "Bon"
     #### The curent page of the journal
     current_journal_page = 0
     #### The number of journal pages which can be accessed
@@ -43,12 +44,16 @@ init -2 python:
     ## nonesense like that, which is sort of painful until you get the
     ## hang of doing it.
     journal_entries = list([
-        "X",
-        "Y",
+        "J'ai parfois des problèmes de mémoire...\nJ'ai donc décidé de tenir une sorte de journal intime... \nMême si je n'aime pas trop cette appellation.",
+        "[journal1]",
         "Z",
-        "fefe"
+        "[testjournal]"
         ])
-    
+    class finalJournal():
+        def __call__(self):
+            global current_journal_page
+            current_journal_page = unlocked_journal_pages-1
+            renpy.restart_interaction()
     #### The increment function
     ## This is what you put after your "action"keyword
     class incrementJournal():
@@ -72,7 +77,11 @@ init -2 python:
             global current_journal_page
             current_journal_page -= 1
             renpy.restart_interaction()
-        
+    class zeroJournal():
+        def __call__(self):
+            global current_journal_page
+            current_journal_page =0
+            renpy.restart_interaction()
     #### The void function
     ## A void function that I like to use to block out buttons
     def void():
@@ -101,20 +110,20 @@ screen stats:
             frame:
                 style_group "pref"
                 has vbox
-                label _("Vitals")
+                label _("Santé")
             frame:
                 style_group "pref"
                 has vbox
-                label _("Health")
+                label _("Vigueur")
                 ## "bar"creates a bar, "value"sets it current value,
                 ## and "range"sets the maximum value, resulting in a
                 ## bar which is the ratio between the value and the range.
-                bar value sofie_health range 100
+                bar value vig range 100
             frame:
                 style_group "pref"
                 has vbox
-                label _("Sanity")
-                bar value sofie_sanity range 100
+                label _("Etat")
+                label _("[sante]")
     hbox:
         xpos 250
         xmaximum 550
@@ -129,9 +138,8 @@ screen stats:
             frame:
                 style_group "pref"
                 has vbox
-                label _("Date: [date_ref]")
-                label _("Reference time: [time_ref]")
-                label _("Location: [loc_ref]")
+                label _("Date: [weekday] [day]")
+                label _("Location: [lieu]")
             ## This is the button that brings us to our journal page.
             frame:
                 style_group "pref"
@@ -163,41 +171,50 @@ screen notes_screen:
     tag menu
     use navigation
     vbox:
-        xminimum 620
-        xmaximum 620
+        xminimum 580
+        xmaximum 580
         frame:
             yminimum 593
-            ymaximum 593
+            ymaximum 593 # taille de la page
             style_group "pref"
             has vbox
             ## This is where we display the currently-selected page of
             ## the journal, prefaced by the label "Notes:".
-            label _("Notes:")
+            label _("Notes:\n")
             label (journal_entries[current_journal_page])
     vbox:
-        xpos 607
-        xmaximum 140
+        xpos 550
+        ypos 20
+        xmaximum 170
         frame:
             style_group "pref"
             has vbox
             ## This is the control of the journal page.
-            label _("Page Nav")
+            #label _("Tourner des pages")
             ## If the currently-selected page is less than the total number
             ## of pages (minus one, as the first item in the list is at
             ## location 0, instead of location 1), make the button increment
             ## the journal page when pressed.
             if current_journal_page < (unlocked_journal_pages - 1):
-                textbutton _("Next") action incrementJournal()
+                textbutton _("Dernière") action finalJournal()
             ## Otherwise, disable the button.
             else:
-                textbutton _("Next") action void()
+                textbutton _("Dernière") action void()
+            if current_journal_page < (unlocked_journal_pages - 1):
+                textbutton _("Suivante") action incrementJournal()
+            ## Otherwise, disable the button.
+            else:
+                textbutton _("Suivante") action void()
             ## Like above, only as long as we're not on the first page
             ## (location 0 in the list), allow the player to move back a page.
             if current_journal_page >= 1:
-                textbutton _("Previous") action decrementJournal()
+                textbutton _("Précédante") action decrementJournal()
             else:
-                textbutton _("Previous") action void()
-
+                textbutton _("Précédante") action void()
+            if current_journal_page >= 1:
+                textbutton _("Première") action zeroJournal()
+            else:
+                textbutton _("Première") action void()
 init -2 python:
     style.pref_frame.xfill = True
     style.pref_frame.xmargin = 5

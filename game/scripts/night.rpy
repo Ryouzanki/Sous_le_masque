@@ -4,16 +4,8 @@ label night:
     play music (shadow1) fadeout 1.0
     if day == 4:
         jump night4
-    elif day == 5:
-        jump night5
-    elif day == 6:
-        jump night6
     elif day == 7:
         jump night7
-    elif day == 8:
-        jump night8
-    elif day == 9:
-        jump night9
     else:
         jump fin_night
 
@@ -29,11 +21,12 @@ label night4:
     s "Avant qu'il ne soit trop tard..."
     hide shadow with dissolve
     jump fin_night
-label night5:
-label night6:
 label night7:
-label night8:
-label night9:
+    show shadow ombre with dissolve
+    s "Pourquoi j'y suis allé ?"
+    s "Je ne suis pas un pion, ni une pièce de rechange..."
+    s "Je les déteste !"
+    s "Je vais les briser en miette un à un..."
     
 label fin_night:   
     stop music fadeout 1.0

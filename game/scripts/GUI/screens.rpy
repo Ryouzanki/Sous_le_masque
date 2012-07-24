@@ -176,25 +176,38 @@ screen main_menu:
 
     # This ensures that any other menu screen is replaced.
     tag menu
-
-    # The background of the main menu.
-    window:
-        style "mm_root"
-
-    # The main menu buttons.
-    frame:
-        style_group "mm"
-        xalign .98
-        yalign .98
-
-        has vbox
-
-        textbutton _("Nouvelle partie") action Start()
-        textbutton _("Charger sauvegarde") action ShowMenu("load")
-        textbutton _("Préférences") action ShowMenu("preferences")
-        # textbutton _("Aide") action Help()
-        textbutton _("Galerie de CG") action void()
-        textbutton _("Quitter") action Quit(confirm=False)
+    if not persistent.route:
+        imagemap:
+            ground "UI/mm_ground.png"
+            idle "UI/mm_idle.png"
+            hover "UI/mm_hover.png"
+            hotspot (35, 480, 170, 600) action Start()
+            hotspot (175, 480, 345, 600) action ShowMenu("load")
+            hotspot (350, 480, 525, 600) action ShowMenu("preferences")
+            hotspot (530, 480, 658, 600) action void()
+            hotspot (659, 480, 780, 600) action Quit(confirm=False)
+    elif persistent.route == 1:
+        imagemap:
+            ground "UI/mm_ground2.png"
+            idle "UI/mm_idle.png"
+            hover "UI/mm_hover.png"
+            
+            hotspot (35, 480, 170, 600) action Start()
+            hotspot (175, 480, 345, 600) action ShowMenu("load")
+            hotspot (350, 480, 525, 600) action ShowMenu("preferences")
+            hotspot (530, 480, 658, 600) action void()
+            hotspot (659, 480, 780, 600) action Quit(confirm=False)
+    elif persistent.route == 2:
+        imagemap:
+            ground "UI/mm_ground3.png"
+            idle "UI/mm_idle.png"
+            hover "UI/mm_hover.png"
+            
+            hotspot (35, 480, 170, 600) action Start()
+            hotspot (175, 480, 345, 600) action ShowMenu("load")
+            hotspot (350, 480, 525, 600) action ShowMenu("preferences")
+            hotspot (530, 480, 658, 600) action void()
+            hotspot (659, 480, 780, 600) action Quit(confirm=False)
 
 init -2 python:
 
@@ -306,7 +319,6 @@ screen file_picker:
 
                     key "save_delete"action FileDelete(i)
                     
-                    
 screen save:
 
     # This ensures that any other menu screen is replaced.
@@ -319,18 +331,17 @@ screen load:
 
     # This ensures that any other menu screen is replaced.
     tag menu
-
     use navigation
     use file_picker
 
 init -2 python:
     style.file_picker_frame = Style(style.menu_frame)
-
     style.file_picker_nav_button = Style(style.small_button)
     style.file_picker_nav_button_text = Style(style.small_button_text)
 
     style.file_picker_button = Style(style.large_button)
     style.file_picker_text = Style(style.large_button_text)
+
 
     
 
@@ -476,37 +487,64 @@ init -2 python:
 #
 # Screen that asks the user a yes or no question.
 # http://www.renpy.org/doc/html/screen_special.html#yesno-prompt
-    
 screen yesno_prompt:
-
+    
     modal True
-
-    window:
-        style "gm_root"
-
-    frame:
-        style_group "yesno"
-
-        xfill True
-        xmargin .05
-        ypos .1
-        yanchor 0
-        ypadding .05
+    
+    if message == layout.ARE_YOU_SURE:
+        imagemap:
+            ground "UI/yesno_are_you_sure.png"
+            idle "UI/yesno_idle.png"
+            hover "UI/yesno_hover.png"
         
-        has vbox:
-            xalign .5
-            yalign .5
-            spacing 30
-            
-        label _(message):
-            xalign 0.5
+            hotspot (80,295, 400,520) action yes_action
+            hotspot (400,295, 735,520) action no_action
+    
 
-        hbox:
-            xalign 0.5
-            spacing 100
-            
-            textbutton _("Yes") action yes_action
-            textbutton _("No") action no_action
+    if message == layout.OVERWRITE_SAVE:
+        imagemap:
+            ground "UI/yesno_overwrite_save.png"
+            idle "UI/yesno_idle.png"
+            hover "UI/yesno_hover.png"
+        
+            hotspot (80,295, 400,520) action yes_action
+            hotspot (400,295, 735,520) action no_action
+
+    if message == layout.DELETE_SAVE:
+        imagemap:
+            ground "UI/yesno_delete_save.png"
+            idle "UI/yesno_idle.png"
+            hover "UI/yesno_hover.png"
+        
+            hotspot (80,295, 400,520) action yes_action
+            hotspot (400,295, 735,520) action no_action
+        
+    if message == layout.LOADING:
+        imagemap:
+            ground "UI/yesno_loading.png"
+            idle "UI/yesno_idle.png"
+            hover "UI/yesno_hover.png"
+        
+            hotspot (80,295, 400,520) action yes_action
+            hotspot (400,295, 735,520) action no_action
+        
+    if message == layout.QUIT:
+        imagemap:
+            ground "UI/yesno_quit.png"
+            idle "UI/yesno_idle.png"
+            hover "UI/yesno_hover.png"
+        
+            hotspot (80,295, 400,520) action yes_action
+            hotspot (400,295, 735,520) action no_action
+
+    if message == layout.MAIN_MENU:
+        imagemap:
+            ground "UI/yesno_main_menu.png"
+            idle "UI/yesno_idle.png"
+            hover "UI/yesno_hover.png"
+        
+            hotspot (80,295, 400,520) action yes_action
+            hotspot (400,295, 735,520) action no_action
 
 
 init -2 python:    
@@ -556,7 +594,7 @@ init -2 python:
 
         
 screen button:
-    grid 5 1:
+    grid 4 1:
          vbox:
              textbutton "Stats"action ui.callsinnewcontext("stats_screen")
          vbox:
@@ -564,9 +602,9 @@ screen button:
          vbox:
              textbutton "Records"action ui.callsinnewcontext("record_screen")
          vbox:
-             textbutton _("Résumé") action  void()#ShowMenu("stats")
-         vbox:
-             textbutton _("Aide") action void() # faire un menu d'aide qui explique les stats
+             textbutton _("Résumé") action  ShowMenu("stats")
+         #vbox:
+             #textbutton _("Aide") action void() # faire un menu d'aide qui explique les stats
 
 
 label stats_screen:
@@ -590,7 +628,6 @@ label stats_screen:
         ui.bar(str_max, str_points)
         ui.text("Agilité: ")
         ui.bar(agi_max, agi_points)
-        ui.text("\nVigueur: [vig]")
         ui.close() # for the vbox
         
         ui.close() # for the hbox
@@ -644,3 +681,4 @@ label record_screen:
     if picked == "goback":
         return
         
+

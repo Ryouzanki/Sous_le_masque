@@ -1,5 +1,7 @@
-# TODO intégrer un "call day4_labo"et "call day4_labo2"
 # 3 cas possibles : pas inscrit, lu, inscrit
+# TODO easin + easeout
+#            $ renpy.block_rollback()
+
 label day5:
     scene reveil with dissolve
     play sound "sound/clock.mp3"

@@ -1,3 +1,6 @@
+# TODO easin + easeout
+#            $ renpy.block_rollback()
+
 label sport:
     if aller_sport == 0:
         jump sport_0

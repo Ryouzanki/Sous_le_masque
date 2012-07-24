@@ -1,6 +1,6 @@
 screen demo_imagemap:
     imagemap:
-        auto "imagemap_%s.jpg"
+        auto "UI/imagemap_%s.jpg"
 
         hotspot (8, 200, 78, 78) action Return("swimming")
         hotspot (204, 50, 78, 78) action Return("science")
@@ -9,7 +9,7 @@ screen demo_imagemap:
 
 
 label day1:
-    
+    $ unlocked_journal_pages += 1
     scene reveil with dissolve
     play sound "sound/clock.mp3"
     m "Argh !"
@@ -39,6 +39,7 @@ label oo:
     "Et maintenant ?"
     menu:
         "Les aborder.":
+            $ renpy.block_rollback()
             show ryou normal at left
             show elusia normal at right
             m "Salut !"
@@ -66,9 +67,10 @@ label oo:
             $ rel_lulu += 2
             jump day1_matin
         "Les suivre.":
+            $ renpy.block_rollback()
             "Je les suis jusqu'en classe."
             scene classroom with fade
-            show ryou normal
+            show ryou normal with easeinleft
             r "Hey ! Salut !"
             r "T'as trouvé le chemin !"
             m "Oui, j'ai suivi des jeunes au pif."
@@ -77,6 +79,7 @@ label oo:
             r "Tu viens avec nous ?"
             menu:
                 "Aller au premier rang.":
+                    $ renpy.block_rollback()
                     m "Oui, pourquoi pas."
                     show ryou normal
                     hide ryou
@@ -87,10 +90,11 @@ label oo:
                     $ rel_ryou += 2
                     jump day1_matin
                 "Aller au fond.":
+                    $ renpy.block_rollback()
                     m "Non merci, je préfère être au fond."
                     show ryou normal
                     r "Ah... Bah, à plus tard !"
-                    hide ryou
+                    hide ryou with easeoutright
                     "Le cour était vraiment ennuyeux."
                     "Mais c'est rassurant."
                     "Je n'ai pas accumulé énormément de retard lors de mon transfert."
@@ -145,8 +149,6 @@ label route1:
     scene street with dissolve
     "L'école est toute proche."
     scene classroom with fade
-    hide ryou
-    hide elusia
     "On s'est mis au premier rang."
     "Le cours était vraiment ennuyeux."
     "Mais c'est rassurant."
@@ -160,49 +162,52 @@ label day1_matin:
     scene classroom with fade
     play music (matin1) fadein 2
     "Pendant que je range mes affaires à la fin du cours, ils viennent devant la table."
-    show ryou normal at left
-    show elusia normal at right
+    show ryou normal at left with easeinleft
+    show elusia normal at right with easeinright
     r "Tu fais quoi pour la pause de midi ?"
     m "Je vais au RU."
     m "Comme tout le monde non ?"
-    show ryou sad at left
+    show ryou sad
     r "Bah..."
-    show elusia satisfied at right
+    show elusia satisfied
     e "Pas nous !"
     show elusia happy
     r "Il y a toujours une queue immense."
     e "Nous, on préfère acheter des sandwichs et aller déjeuner dans le parc."
     e "C'est nettement plus agréable !"
     if fille =='Jeune fille':
-        show elusia normal at right
+        show elusia normal
         e "Au fait, moi c'est Elusia !"
         $ fille = 'Elusia'
         e "Et toi ?"
         m "[j] !"
         e "Enchantée de faire ta connaissance [j] !"
         e "Je suis la voisine du dessous !"
-    show ryou normal at left
+    show ryou normal
     r "Tu veux venir manger avec nous ?"
     menu:
         "D'accord, ça m'a l'air sympa !":
+            $ renpy.block_rollback()
             m "D'accord, ça m'a l'air sympa !"
-            show ryou happy at left
-            show elusia happy at right
+            show ryou happy
+            show elusia happy
             r "C'est réglé alors !"
             r "Amène toi !"
             $ rel_lulu += 6
             $ rel_ryou += 6
             jump manger_dehors
         "Heu, je suis un peu à sec en ce moment...":
+            $ renpy.block_rollback()
             m "Heu, je suis un peu à sec en ce moment..."
-            show ryou sad at left
+            show ryou sad
             r "Ah..."
             if rel_lulu >= 5:
-                show elusia sad at right
+                show elusia sad
                 e "Ah mais si c'est simplement une question d'argent..."
                 e "Je peux t'avancer !"
                 menu:
                     "Refuser poliment":
+                        $ renpy.block_rollback()
                         m "Non merci, c'est vraiment gentil."
                         m "Mais je ne peux pas accepter."
                         show elusia geez
@@ -216,6 +221,7 @@ label day1_matin:
                         $ rel_lulu += 2
                         jump RU
                     "Accepter l'avance d'Elusia":
+                        $ renpy.block_rollback()
                         m "Oh vraiment, merci !"
                         show elusia satisfied
                         e "Tout le plaisir est pour moi voyons !"
@@ -228,6 +234,7 @@ label day1_matin:
                         $ rel_ryou +=5
                         jump manger_dehors
                     "Accepter de venir mais payer.":
+                        $ renpy.block_rollback()
                         m "Oh, vraiment, merci !"
                         m "Je vais venir mais je ne veux pas que tu m'avances."
                         show elusia satisfied
@@ -264,21 +271,24 @@ label RU:
     scene ru with dissolve
     "Comme pour venir, je suivis les flux d'étudiants pour trouver le RU."
     "Alors que je mangeais à ma table en solitaire..."
-    show laura normal
+    show laura normal with easeinleft
     l "T'es tout seul ? On peut se mettre là ?"
     menu:
         "Oui, bien sûr !":
+            $ renpy.block_rollback()
             m "Oui, bien sûr !"
             $ rel_lolo += 2
             jump RUU
         "Non, j'attends quelqu'un.":
+            $ renpy.block_rollback()
             m "Non, j'attends quelqu'un."
             show laura angry
             "Elle resta devant moi un moment, sceptique."
             "Puis, rejoins par un garçon, ils partirent."
-            hide laura
+            hide laura with easeoutright
             jump cours2
         "Non, je préfère rester seul.":
+             $ renpy.block_rollback()
              m "Non, je préfère rester seul."
              show laura angry
              "Elle posa son plateau."
@@ -288,9 +298,9 @@ label RU:
              jump RUU
              
 label RUU:
-    show laura normal at left
+    show laura normal at left with move
     l "Valeth ! Par ici !"
-    show valeth normal at right
+    show valeth normal at right with easeinright
     v "Oui, oui, j'arrive !"
     v "Salut toi !"
     v "Je suis dans ta classe, j'étais assis à l'autre boût du rang !"
@@ -316,6 +326,7 @@ label RUU:
     "Mince, je crois qu'elle s'adressait à moi..."
     menu:
         "Heu... Oui...":
+            $ renpy.block_rollback()
             m "Heu... Oui..."
             show laura happy at left
             l "Ah, tu vois ? Valeth, [sexe] est d'accord avec moi !"
@@ -327,11 +338,10 @@ label RUU:
             l "Je la hais !"
             "Je passais le reste de ma pause à entendre Laura se plaindre à propos d'Elusia."
             "C'était aussi amusant qu'embarassant."
-            hide laura
-            hide valeth
             $ rel_lolo += 5
             jump cours2
         "N'exagérons rien...":
+            $ renpy.block_rollback()
             m "N'exagérons rien..."
             show laura angry at left
             l "Je n'exagère rien !"
@@ -339,11 +349,10 @@ label RUU:
             l "Ca me mets hors de moi !"
             "Je passais le reste de ma pause à entendre Laura se plaindre à propos d'Elusia."
             "C'était aussi amusant qu'embarassant."
-            hide laura
-            hide valeth
             $ rel_lolo += 2
             jump cours2
         "Je ne la connais pas.":
+            $ renpy.block_rollback()
             m "Je ne la connais pas."
             show laura angry at left
             l "Quand ce sera le cas, tu comprendra !"
@@ -354,8 +363,6 @@ label RUU:
             l "Je la hais !"
             "Je passais le reste de ma pause à entendre Laura se plaindre à propos d'Elusia."
             "C'était aussi amusant qu'embarassant."
-            hide laura
-            hide valeth
             jump cours2
             
 label cours22:
@@ -380,10 +387,13 @@ label cours2:
         "Je pourrais m'assoir avec ..."
         menu:
             "Laura et Valeth.":
+                $ renpy.block_rollback()
                 jump LV
             "Elusia et Ryouzanki.":
+                $ renpy.block_rollback()
                 jump RZ
             "Personne.":
+                $ renpy.block_rollback()
                 "Le cours est vraiment ennuyeux..."
                 jump fin_cours
                 
@@ -391,8 +401,10 @@ label cours2:
         "Je pourrais m'assoir avec eux..."
         menu:
             "Oui.":
+                $ renpy.block_rollback()
                 jump RZ
             "Non.":
+                $ renpy.block_rollback()
                 "Le cours est vraiment ennuyeux..."
                 jump fin_cours
 
@@ -426,6 +438,7 @@ label LV:
     v "As tu l'intention de joindre un club ?"
     menu :
         "Pas pour le moment non.":
+            $ renpy.block_rollback()
             m "Pas pour le moment non."
             v "Ah... Dommage."
             v "Quand tu changera d'avis, le bâtiment des clubs, c'est le gros en rouge."
@@ -433,6 +446,7 @@ label LV:
             show valeth happy at right
             v "J'y suis presque tous les soirs."
         "Oui, le plus tôt sera la mieux !":
+            $ renpy.block_rollback()
             m "Oui, le plus tôt sera la mieux !"
             show valeth happy at right
             v "Haha, ça fait du bien de voir des gens motivés !"
@@ -451,16 +465,19 @@ label LV:
     if rel_val == 5:
         menu:
             "Non merci, je préfère les clubs calmes":
+                $ renpy.block_rollback()
                 m "Non merci, je préfère les clubs calmes"
                 show laura sad at left
                 l "Tsss... Comme tu voudra !"
                 $ rel_val += 2
             "Oui, je peux faire les deux.":
+                $ renpy.block_rollback()
                 m "Oui, je peux faire les deux."
                 show laura normal at left
                 l "Eventuellement, tu peux alterner."
                 $ rel_lolo += 2
             "Ah oui, je préfère largement les clubs de sport !":
+                $ renpy.block_rollback()
                 m "Ah oui, je préfère largement les clubs de sport !"
                 l "Tiens ! Dans les dents, l'intello !"
                 show valeth angry at right
@@ -470,10 +487,12 @@ label LV:
     else:
         menu:
             "Je n'ai pas le temps pour le moment.":
+                $ renpy.block_rollback()
                 m "Je n'ai pas le temps pour le moment."
                 show laura sad at left
                 l "OK, tant pis."
             "Bon, va pour le sport.":
+                $ renpy.block_rollback()
                 m "Bon, va pour le sport."
                 show laura happy at left
                 l "Super, je t'attends ce soir pour ton inscription."
@@ -491,7 +510,7 @@ label fin_cours:
     "Me dire qu'on ne peut choisir qu'un seul sport."
     "Il voulait aussi savoir si j'avais des difficultés à m'intégrer."
     "Demander cela dès le premier jour est assez brusque..."
-    hide prof
+    scene classroom with fade
     "..."
     "Tout le monde est parti."
     "Où pourrais-je bien aller ?"
@@ -500,23 +519,23 @@ label fin_cours:
     window show None
         
     if _return == "swimming":
-
+        $ unlocked_journal_pages += 1
         "Et si j'allais faire un peu de sport..."
         call sport
     
     elif _return == "science":
-
+        $ unlocked_journal_pages += 1
         "J'ai cru voir de l'agitation dans le bâtiment des sciences."
         "Il y a peut être des clubs là bas..."
         call labo
         
     elif _return == "art":
-
+        $ unlocked_journal_pages += 1
         "Et si j'allais faire un tour au bâtiments des clubs..."
         call club
 
     elif _return == "go home":
-        
+        $ unlocked_journal_pages += 1
         "Je crois que je vais rentrer."
         call go_home
         

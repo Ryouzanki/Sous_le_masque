@@ -8,7 +8,7 @@
     $ vig = 2
     
     $ rel_ryou_max = 81
-    $ rel_lulu_max = 102 #+3 ?
+    $ rel_lulu_max = 103 #+3 ?
     $ rel_val_max = 59
     $ rel_lolo_max = 51
     $ rel_neph_max =  1000
@@ -46,6 +46,16 @@ init python:
     dp_choice("Dormir tôt", "d")
     dp_choice("Jouer", "j")
     dp_choice("Travailler", "t")
+
+    # montrer la date
+    show_date = False
+    weekday = "Dimanche"
+    day = 1
+    # def date_overlay():
+        # if show_date:
+            # ui.text(weekday + " %d" % day, size=20, color="#ffffff")
+    # 
+    # config.overlay_functions.append(date_overlay)
     
 # Données persistantes
 $ mp = MultiPersistent("win")
@@ -64,10 +74,7 @@ $ choix_5 = True
 
 label start: 
     
-    show screen button
-    if persistent.ending == "win":
-        call ryou
-    else:
+    if persistent.ending != "win":
         $persistent.rec_ryou = 0
         $persistent.rec_lulu = 0
         $persistent.rec_val = 0
@@ -77,11 +84,22 @@ label start:
         $persistent.rec_lloy = 0
         $persistent.rec_sala = 0
         
-
+    show screen button
+    show image "back/start.jpg"
+    if not persistent.preums:
+        centered "Il semblerait que ce soit votre première partie."
+        centered "Vous devriez passer voir le tutoriel."
+        centered "Celui-ci contient des explications sur les mécanismes du jeu."
+        centered "Vous pourrez y accéder ultérieurement en lançant une nouvelle partie."
+    menu:
+        "Tutoriel":
+            call tuto
+        "Route classique":
+            pass
+        "Route bonus" if persistent.ending == "win":
+            jump ryou
+            
 label route:
-    $ weekday = "Dimanche"
-    $ day = 1
-    
     $ j = 'Moi'
     $ inc = 'Jeune homme'
     $ fille = 'Jeune fille'
@@ -90,7 +108,7 @@ label route:
     $ noble = 'Jeune homme'
     $ ali = 'Jeune fille'
     $ sha = '???'
-    
+    $ persistent.preums = True
     $ m = DynamicCharacter("j", color="#58D3F7", show_two_window=True)
     $ r = DynamicCharacter("inc", color="#4169E1", show_two_window=True)
     $ e = DynamicCharacter("fille", color="#FF69B4", show_two_window=True)
@@ -114,7 +132,7 @@ label route:
     
     $ sport = 'aucun'
     $ club = 'aucun'
-    
+    $ show_date = True
     call day0
     call night
     call day1
