@@ -78,6 +78,7 @@ label end_tuto:
     show ryou happy
     r "Voilà, j'ai fini mon travail."
     r "Bon jeu !"
+    hide ryou with easeoutright
     return
 label tuto_lulu :
     show ryou sad
@@ -96,6 +97,11 @@ label tuto_lulu :
     e "Ca commence à 0 et ça ne peut pas passer dans le négatif."
     e "Des amis auront tendance à t'aider plus souvent ou à sortir avec toi."
     e "Certaines actions nécessitent qu'une personne t'apprécie."
+    show elusia happy
+    e "Le jeu a été étudié de sorte que chaque personnage apporte son grain de sel à l'histoire."
+    e "Il est donc avantageux de se faire le plus d'ami possible."
+    show elusia sad
+    e "Bien entendu, aider un personnage implique parfois d'en abandonner un autre."
     show elusia satisfied
     e "Voilà, je crois avoir tout dit."
     show elusia happy
@@ -201,7 +207,7 @@ label tuto_sha :
     s "Gagner le jeu avec une bonne fin ou plus débloque un set de graphisme \"amélioré\"."
     s "Je ne vois rien d'autre à ajouter."
     s "Tu verra quand tu me battra..."
-    s "A suppose que cela soit possible..."
+    s "A supposer que cela soit possible..."
     hide shadow with easeoutleft
     return
 label tuto_ali :
@@ -245,5 +251,3 @@ label tuto_ali :
     a "Bien sûr que non, ma présentation était parfaite !"
     hide alice with easeoutright
     return
-    
-    

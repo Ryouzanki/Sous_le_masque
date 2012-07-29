@@ -87,13 +87,15 @@ label start:
     show screen button
     show image "back/start.jpg"
     if not persistent.preums:
-        centered "Il semblerait que ce soit votre première partie."
-        centered "Vous devriez passer voir le tutoriel."
-        centered "Celui-ci contient des explications sur les mécanismes du jeu."
-        centered "Vous pourrez y accéder ultérieurement en lançant une nouvelle partie."
+        centered "{color=#000000}{size=30}Il semblerait que ce soit votre première partie.{/size}{/color}"
+        centered "{color=#000000}{size=30}Vous devriez passer voir le tutoriel.{/size}{/color}"
+        centered "{color=#000000}{size=30}Celui-ci contient des explications sur les mécanismes du jeu.{/size}{/color}"
+        centered "{color=#000000}{size=30}Vous pourrez y accéder ultérieurement en lançant une nouvelle partie.{/size}{/color}"
+label choix_game:
     menu:
         "Tutoriel":
             call tuto
+            jump choix_game
         "Route classique":
             pass
         "Route bonus" if persistent.ending == "win":

@@ -1,4 +1,4 @@
-# TODO easin + easeout
+# TODO :
 #            $ renpy.block_rollback()
 label day7:
     scene reveil2 with dissolve
@@ -50,7 +50,7 @@ label day7:
             e "Rendez vous au gymnase d'à côté à 16h !"
             e "A plus !"
             $ rel_lulu+=5
-            hide elusia
+            hide elusia with easeoutright
         "Je ne suis pas un bouche trou...":
             m"Je ne suis pas un bouche trou..."
             show elusia geez
@@ -58,7 +58,7 @@ label day7:
             show elusia sad
             e "Excuse moi, ce n'était pas ce que je voulais dire..."
             e "Bon bah à 16h, tu saura où nous trouver."
-            hide elusia
+            hide elusia with easeoutright
     stop music fadeout 4.0
     "Bon... Qu'est ce que je vais faire de ma journée..."
     play music (weekend1) fadein 2
@@ -131,7 +131,7 @@ label day7_aprem:
         show laura normal at right
         r "Comment qu'[sexe] se la coule douce !"
         l "Salut !"
-        l "On est venu te chercher au cas où tu trouve pas le chemin !"
+        l "On est venu te chercher au cas où tu trouves pas le chemin !"
         m "Nan mais en fait..."
         if action_aprem == 't':
             m"J'allais travailler là..."
@@ -140,9 +140,6 @@ label day7_aprem:
             show ryou angry
             r "C'est quoi cette histoire ?"
             r "Donc tu viens !"
-            r "Pas de raison que je sois le seul à souffrir !"
-            "Il me prend par la main et me tire dehors."
-            "Je n'ai plus trop le choix..."
         else:
             m"J'allais jouer là..."
             show ryou angry
@@ -150,9 +147,9 @@ label day7_aprem:
             l "Avec ce temps superbe ?"
             show ryou happy
             r "T'façons, il va y avoir une coupure d'électricité donc amène toi !"
-            r "Pas de raison que je sois le seul à souffrir !"
-            "Il me prend par la main et me tire dehors."
-            "Je n'ai plus trop le choix..."
+    r "Pas de raison que je sois le seul à souffrir !"
+    "Il me prend par la main et me tire dehors."
+    "Je n'ai plus trop le choix..."
     l "Elusia nous attend déjà sur place."
     scene gymnaseout with fade
     show ryou sad at left
@@ -645,8 +642,36 @@ label day7_ryou_3:
         $ jeu2 = 3 - jeu
         e "[jeu2] jeux à [jeu]."
         e "Où est passé votre fierté d'homme ?"
+        r "C'est finit, on ne peut plus gagner..."
+        menu:
+            "On peut au moins égaliser." if jeu == 1:
+                $ rel_ryou += 4
+                m "On peut au moins égaliser."
+                show ryou sad
+                r "Pas faux."
+                show ryou happy
+                r "Pas faux du tout même !"
+                show ryou normal
+                r "Mais avec le Tie Break, il va falloir donner..."
+            "Il n'y a pas que gagner qui compte...":
+                $ rel_ryou -= 4
+                m "Il n'y a pas que gagner qui compte..."
+                show ryou angry
+                r "..."
+            "Bah tant pis...":
+                $ rel_ryou -= 2
+                m "Bah tant pis..."
+                show ryou angry
+                r "..."
+        if jeu == 0:
+            "Nous avons déjà perdu."
+            "Ryouzanki le sait, alors il joue à peine."
+            jump day7_ryou_lose
             
-    
+            
+label day7_ryou_lose:
+    jump day7_fin_tennis
+label day7_ryou_win:
     jump day7_fin_tennis
 label day7_fin_tennis:
     call save
@@ -658,6 +683,7 @@ label save:
               $ renpy.game_menu("save_screen")
         "Non.":
               pass
+    return
 label day7_normal:
     show ryou normal
     show elusia normal sport
