@@ -1,5 +1,7 @@
 # TODO :
 #            $ renpy.block_rollback()
+#            tie break (day7_ryou6)
+# lose, win, perfect
 label day7:
     scene reveil2 with dissolve
     play sound "sound/bell.mp3"
@@ -650,7 +652,7 @@ label day7_ryou_3:
                 show ryou sad
                 r "Pas faux."
                 show ryou happy
-                r "Pas faux du tout même !"
+                r "On peut même gagner !"
                 show ryou normal
                 r "Mais avec le Tie Break, il va falloir donner..."
             "Il n'y a pas que gagner qui compte...":
@@ -667,12 +669,171 @@ label day7_ryou_3:
             "Nous avons déjà perdu."
             "Ryouzanki le sait, alors il joue à peine."
             jump day7_ryou_lose
-            
-            
+label day_ryou4:
+    call day7_normal
+    "Il ne reste qu'un jeu."
+    "Ryouzanki sert."
+    "Il n'est pas très fort mais il est précis."
+    r "Mec... Tire entre les deux..."
+    m "Entre les deux ?"
+    m "Tu veux dire, entre Elusia la gauchère à gauche et Laura la droitière à droite ?"
+    m "C'est pas un peu kamikaze ?"
+    r  "Nan, t'en fais pas..."
+    menu:
+        "Je vais essayer.":
+            m "Je vais essayer."
+            $ rel_ryou += 3
+            "Nous tirons tous les deux au milieu."
+            "Nous gagnons des points faciles car aucune ne bouge."
+        "Non, c'est stupide.":
+            m "Non, c'est stupide."
+            $ rel_ryou -= 2
+            "Ryouzanki marque des points faciles en tirant au centre car aucune ne bouge."
+
+    show laura angry
+    l "Elusia, tu pourrais bouger un peu !"
+    l "Au lieu de regarder la balle passer !"
+    show elusia geez sport
+    e "Elle était sur ton terrain la balle..."
+    l "Mon terrain ?"
+    l "Tu vois bien que je suis épuisée..."
+    show elusia sad sport
+    e "Ce n'est pas ma faute si tu es si faible !"
+    menu:
+        "C'est pas la peine de vous disputer !":
+            m "C'est pas la peine de vous disputer !"
+            show ryou happy
+            r "Après, tout, vous avez déjà perdu."
+            m "C'était pas vraiment ce que je voulais dire..."
+            menu:
+                "En fait, si.":
+                    m "En fait, si."
+                    m "Vous avez perdu."
+                    show elusia angry sport
+                    e "Très bien."
+                    e "Laura, je prends tout ce qui est à ma portée."
+                    l "Bah vas-y !"
+                    $ rel_ryou += 5
+                    $ rel_lulu -= 3
+                    $ rel_lolo -= 3
+                    jump day7_ryou5
+                "Le tennis, c'est qu'un jeu.":
+                    $ rel_lulu += 2
+                    $ rel_lolo += 4
+                    m "Le tennis, c'est qu'un jeu."
+                    m "Vous avez perdu de vu le but d'un jeu, on dirait..."
+                    show elusia geez sport
+                    e "C'est vrai..."
+                    show elusia happy sport
+                    e "Perso, je me suis bien amusée."
+                    e "On n'arrête là ?"
+                    menu:
+                        "OK.":
+                            m "OK."
+                            m "Ryou ?"
+                            show ryou sad
+                            r "Je me plie à la demande de ces dames."
+                            show laura happy
+                            l "Allons quand même grignoter un coup."
+                            $ rel_lulu += 3
+                            $ rel_lolo += 3
+                            jump day7_perfect
+                        "Non, finissons.":
+                            m "Non, finissons."
+                            r "Oui, chef !"
+                            show elusia sad sport
+                            e "Bon OK..."
+                            $ rel_ryou += 3
+                            jump day7_ryou5
+                "Vous êtes toutes les deux en tort.":
+                    $ rel_lulu += 4
+                    $ rel_lolo += 2
+                    m "Vous êtes toutes les deux en tort."
+                    m "Le tennis, c'est l'équilibre entre les deux."
+                    m "C'est vrai, Elusia, tu devrais aider Laura."
+                    m "Laura, tu devrais dire à Elusia quand tu es en difficulté."
+                    show laura sad
+                    l "Désolée."
+                    show elusia geez sport
+                    e "Bon, tâchons de jouer mieux..."
+                    jump day7_ryou5
+                    
+        "Elusia, tu devrais jouer en équipe.":
+               m "Elusia, tu devrais jouer en équipe."
+               $ rel_lulu -= 4
+               $ rel_lolo += 3
+               show laura happy
+               l "Il n'y a pas que le territoire qui compte..."
+               l "Quand je suis en difficulté, tu devrais les prendre à ma place."
+               l "Tu peux même attaquer..."
+               show elusia angry sport
+               e "Tu n'as qu'à pas être en difficulté !"
+               show ryou sad
+               r "On s'en fout, jouez..."
+               jump day7_ryou5
+        "Laura, t'es juste trop faible.":
+               m "Laura, t'es juste trop faible."
+               $ rel_lolo -= 4
+               $ rel_lulu += 3
+               show elusia satisfied sport
+               e "Toujours compter sur ses coéquipiers, c'est faible..."
+               e "La performance individuelle compense ce défaut."
+               show laura angry
+               l "Dans ce cas, à quoi ça sert de jouer en couple ?"
+               show ryou sad
+               r "On s'en fout, jouez..."
+               jump day7_ryou5
+        "Vous formez un mauvais couple.":
+            m "Vous formez un mauvais couple."
+            m "Vous n'êtes pas faîtes pour vous entendre."
+            $ rel_lulu -= 3
+            $ rel_lolo -= 3
+            show laura angry
+            l "Sans déconner, tu le sais et c'est un peu toi qui nous a mises ensembles..."
+            show elusia sad sport
+            e "J'ai juste l'impression que c'était volontaire..."
+            show elusia geez sport
+            e "Moi qui voulait simplement jouer avec toi pour essayer ou avec Ryou comme d'habitude..."
+            show ryou sad
+            r "Bon, on termine quand même hein..."
+            jump day7_ryou5
+label day7_ryou5:
+    "Elusia a reprit du poil de la bête."
+    "La détermination se lit dans ses yeux."
+    "Elle a arrêté de ne contrôler que sa zone."
+    "La stratégie de Ryouzanki ne fonctionne plus."
+    "Mais il est trop tard."
+    "Nous remportons le jeu."
+    $ jeu += 1
+    if jeu == 2:
+        jump day7_ryou6
+    elif jeu < 2:
+        jump day7_ryou_lose
+    else:
+        jump day7_ryou_win
+label day7_ryou6:
+    call day7_normal
+    show elusia satisfied sport
+    e "Huh... Tie-Break hein..."
+    show elusia normal sport
+    e "Pas mal du tout..."
 label day7_ryou_lose:
+    show elusia satisfied sport
+    $ jeu2 = 4 - jeu
+    e "Bon bah voilà... [jeu2] à [jeu] !"
+    show laura happy
+    l "Vous savez ce qu'il vous reste à faire !"
+    show ryou sad
+    r "Hum... Se mettre à genou ?"
+    show elusia happy sport
+    e "Bien tenté mais non..."
+    e "Tu dois nous inviter à boire un verre."
+    l "Tu n'y échappes pas [j] !"
+    
     jump day7_fin_tennis
 label day7_ryou_win:
     jump day7_fin_tennis
+label day7_perfect:
 label day7_fin_tennis:
     call save
     return
