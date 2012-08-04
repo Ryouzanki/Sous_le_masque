@@ -1,37 +1,71 @@
 Elusia Hrist ***********************************************************************************************
 
-Rôle : Membre d'un club sportif
+Rôle : Membre d'un club sportif. Déléguée GTR et respo sport solos.
 
+<<<<<<< HEAD:scénario/personnages
 Personnalité : Elusia, c'est le clone du masque de Ryouzanki. Joviale, toujours partante et serviable. Elle aime rendre service et en conséquence, ne s'entend pas avec les gens qui ne prennent pas leur rôle au sérieux. Elle a horreur d'être seule et c'est pourquoi elle va toujours vers les autres. Calme et dynamique à la fois. Naïve, gentille, élégante et attentionnée. Manque un peu d'humour. Désintéressée. Déléguée GTR et respo sport solos. Elle veut être reconnue à sa juste valeur car ses parents en instance de divorce la traite comme un outil diplomatique.
+=======
+Personnalité : Elusia, c'est le clone du masque de Ryouzanki. Joviale, toujours partante et serviable. Elle aime rendre service et en conséquence, ne s'entend pas avec les gens qui ne prennent pas leur rôle au sérieux. Elle a horreur d'être seule et c'est pourquoi elle va toujours vers les autres. Calme et dynamique à la fois. Naïve, gentille, élégante et attentionnée. Manque un peu d'humour. Désintéressée.
+>>>>>>> Feuille de personnages:scénario/personnages.txt
 
 Aime : Chats, thé
 
 Déteste : condescendance, irresponsabilité, hypocrisie
 
-TIC : "Misère..."
+Tic : "Misère..."
 
 Relations officielles : Aime Ryouzanki comme un frère, Valeth et Alice comme des amis. Ne s'entend pas avec Laura et évite Salazard. N'aime pas Lloyd.
 
 Relations officieuses : Aucun changement notoire, elle est honnête.
 
+Représentation clair-obscur : à l'image d'un phare, elle éclaire dans toutes les directions.
+
 Alice Drezall *************************************************************************************************
 
 Rôle : présidente (ou rôle de premier plan équivalent) du club chimie / robot / info
 
-Personnalité : Timide mais elle s'enflamme vite. Elle aime beaucoup les challenges, tant personnels que d'équipe. Elle aime entraîner du monde dans son sillage, parfois trop. Elle est très entreprenante et va souvent directement voir les gens.
+Personnalité : Timide mais elle s'enflamme vite. Elle aime beaucoup les challenges, tant personnels que d'équipe. Elle aime entraîner du monde dans son sillage, parfois trop. Elle est très entreprenante et va souvent directement voir les gens. Elle pense aussi souvent à la place des gens.
 
+Aime : travailler sur quelque chose
+
+Déteste :
+
+Tic : "Intéressant..." "Je suppose..." "Comment ça, t'es pas d'accord ?"
+
+Relations officielles :
+
+<<<<<<< HEAD:scénario/personnages
 Elle est issue d'une famille pauvre alors c'est une battante qui refuse de perdre et veut réussir à tout prix. Elle n'aime pas ses parents.
 Elle n'aime pas les questions ni les remarques sur la manière dont elle gère son club et aime bien parler d'elle
 
 TIC : "Intéressant..." "Je suppose..."
+=======
+Relations officieuses :
+
+Représentation clair-obscur : comme un projecteur, elle éclaire loin, mais d'une lumière parfois aveuglante.
+>>>>>>> Feuille de personnages:scénario/personnages.txt
 
 Valeth Lezard ***************************************************************************************************
 
 Rôle : président (ou rôle de premier plan équivalent) du club de culture
 
+<<<<<<< HEAD:scénario/personnages
 Personnalité : Assez rêveur et enfermé dans sa bulle. Il aime son club et ne se préoccupe pas de ce qui se passe à l'extérieur. Il est égocentrique, en quelques sortes, mais ni méprisant, ni hautain.
+=======
+Personnalité : Assez rêveur et enfermé dans sa bulle. Il aime son club et ne se préoccupe pas de ce qui se passe à l'extérieur. Il est égocentrique, en quelques sortes, mais ni maiprisant, ni hautain. Il devient pugnace dès qu'on s'en prend à son petit espace (lui, son club, ses amis proches).
 
-TIC : "C'est possible." "Ah bon, il y a un club de [nom du club] dans l'école ?"
+Aime : le calme, thé
+
+Déteste : 
+
+Tic : "C'est possible." "Ah bon, il y a un club de [nom du club] dans l'école ?"
+>>>>>>> Feuille de personnages:scénario/personnages.txt
+
+Relations officielles :
+
+Relations officieuses :
+
+Représentation clair-obscure : un peu comme une lampe à abat-jour, il garde la lumière pour lui et n'éclaire que ce qui est proche.
 
 Lloyd ********************************************************************************************************
 
@@ -39,9 +73,17 @@ Rôle : vice-président de l'association des élèves.
 
 Personnalité : Plutôt hautain, il considère que dans l'associatif, aucune initiative ne peut se prendre autrement que par les responsables de l'AE (président, vice-président). Il n'est pas méprisant, mais il a une certaine vision du monde. Il est peu apprécié. Il doit son poste à son sérieux et à son efficacité.
 
-Relations officieuses : Il est amoureux d'Elusia.
+Aime : les endroits calmes
+
+Déteste :
 
 Tic : "Comment ? Ah, mais ça ne va pas être possible..."
+
+Relations officielles :
+
+Relations officieuses : Il est amoureux d'Elusia.
+
+Représentation clair-obscure : comme une lampe de bureau aorientée vers le plafond, il n'éclaire que dans un angle peu évident à comprendre.
 
 Le secrétaire *************************************************************************************************
 
@@ -49,13 +91,35 @@ Rôle : secrétaire de l'AE
 
 Personnalité : C'est quelqu'un d'effacé, plutôt apprécié. Personnalité neutre.
 
+Aime :
+
+Déteste :
+
+Tic :
+
+Relation officielle :
+
+Relation officieuse :
+
+Représentation clair-obscure :
+
 Laura ***************************************************************************************************************
 
 Rôle : Membre d'un club de sport
 
-Personnalité : Assez envahissante, elle a tendance à s'imposer auprès des gens, même si c'est pas bonne volonté. Elle est plutôt possessive et a tendance à parler dans le dos des gens. Autrement, c'est une fille courageuse qui travaille très bien en équipe. Elle est toutefois influençable seule.
+Personnalité : Assez envahissante, elle a tendance à s'imposer auprès des gens, même si c'est par bonne volonté. Elle est plutôt possessive et a tendance à parler dans le dos des gens. Autrement, c'est une fille courageuse qui travaille très bien en équipe. Elle est toutefois influençable seule.
+
+Aime : les edroits où il y a du monde
+
+Déteste :
+
+Tic :
+
+Relations officielles :
 
 Relations officieuses : Elle est amoureuse de Ryouzanki
+
+Représentation clair-obscure : comme une lampe de poche, elle n'éclaire pas très loin, mais sa lumière est vive, parfois trop.
 
 Ryouzanki ************************************************************************************************************
 
@@ -67,4 +131,18 @@ Rôle : Néant
 
 Personnalité : Isolé et peu aimable. Il passe peu de temps avec les autres élèves car il travaille à temps partiel. Sa sitation familiale est compliquée et il est lassé de sa situation. Il se montre méprisant et brutal car il jalouse le bonheur (même apparent) des autres élèves.
 
+<<<<<<< HEAD:scénario/personnages
 Tic : "Ouais, plains-toi !"
+=======
+Aime : la solitude
+
+Déteste :
+
+Tic : "Ouais, plains-toi !"
+
+Relations officielles :
+
+Relations officieuses :
+
+Représentation clair-obscure :
+>>>>>>> Feuille de personnages:scénario/personnages.txt
