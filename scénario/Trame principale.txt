@@ -1,37 +1,41 @@
 ﻿Pendant toute l'historie, Shadow va "parler la nuit" on va faire croire au joueur que le héros souffre de DID.
 
-Acte 1 : Lumière aveuglante
+Acte 1 *****************************************************************************************************
+Lumière aveuglante
 
-Probablement l'acte le plus long. Dans cet acte, il ne se passe rien de spécial. Le héros emmenage et fait la rencontre des personnages.
-Il noue des relations avec eux qui lui serviront plus tard. Il peut aussi s'inscrire dans des clubs et développer des capacités.
-
-Les actions du joueurs n'ont presque pas de répercussion sur l'histoire du méchant pour le moment
+Probablement l'acte le plus long. Dans cet acte, il ne se passe rien de spécial. Le héros emmenage et fait la rencontre des personnages. Il noue des relations avec eux qui lui serviront plus tard. Il peut aussi s'inscrire dans des clubs et développer des capacités. Les actions du joueurs n'ont presque pas de répercussion sur l'histoire du méchant pour le moment
+************************************************************************************************************
 
 La nuit, shadow dit des trucs louches
 
-Acte 2 : Les murmures de l'ombre
+Acte 2 *****************************************************************************************************
+Les murmures de l'ombre
 
-Dans cet acte, l'antagoniste s'intéressera aux activités préférées du joueur. Peut être par hasard ou simplement parce que ça le rend malade
-de voir le héros "heureux". Il va venir de plus en plus régulièrement pour en prendre le contrôle. Potentiellement pour isoler le joueur aussi
-pour en faire le pion parfait car en théorie, les nouveaux ont du mal à s'adapter. Le but de GM est d'isoler MC et FP pour qu'il devienne sa confidente manipulable.
+Résumé : Dans cet acte, l'antagoniste s'intéressera aux activités préférées du joueur. Peut être par hasard ou simplement parce que ça le rend malade de voir le héros "heureux". Il va venir de plus en plus régulièrement pour en prendre le contrôle. Potentiellement pour isoler le joueur aussi pour en faire le pion parfait car en théorie, les nouveaux ont du mal à s'adapter. Le but de GM est d'isoler MC et FP pour qu'il devienne sa confidente manipulable. Ici, les actions du joueur peuvent empêcher son club en question de couler mais pas les autres. Bad end de Salazard si pas de club
+
+Associatif : le but du GM est de s'imposer. Il n'a pas de pouvoir effectif, mais il est présent dans les clubs principaux (ceux auxquels le joueur peut prendre part). Il n'est pas entré dans les clubs en même temps, mais est simplement membre de chacun d'eux. Il cherche à acquérir des responsabilités et à devenir quelqu'un d'indispensable. Il fait ça dans chaque club, donc a fortiori dans celui où le joueur a décidé de s'investir. Si le joueur tente de l'aider, il refuse poliement son aide, prétextant que les nouveaux ne doivent pas s'embêter des tâches organisatrices. Fort de la dépendance qu'il a développée, il conteste l'autorité des dirigeants (président, secrétaire, trésorier...) et fait valoir son point de vue aux autres membres. Il dresse ainsi les membres des clubs contre leurs dirigeants, tout en profitant de leurs défauts. Son objectif est d'être désigné à des rôles clés des clubs. Le joueur doit s'en rendre compte et sauvegarder la situation, en agissant soit avec les dirigeants du club (?), soit avec les membres (?).
+
+Relationel : 
+
+************************************************************************************************************
 
 La nuit, shadow dit des trucs encore plus louche
 
-Ici, les actions du joueur peuvent empêcher son club en question de couler mais pas les autres. Bad end de Salazard si pas de club
-
-Acte 3 : L'appel des ténèbres
+Acte 3 *****************************************************************************************************
+L'appel des ténèbres
 
 Dans cet acte, il s'agira du "putsch" de l'antagoniste. Nous avons discuté du fait que notre evil guy soit serviable etc et aide beaucoup le
 secrétaire de l'AE. Puis avant un event genre gala, il cache les feuilles censées être envoyée à la mairie. Le secrétaire AE prend tout dans la gueule
 et qui est nommé à sa place ? Son second bien sûr. Si le côté louche du méchant n'était pas assez obvious pour le joueur dans l'acte 2,
-on va donner un coup de grâce ici. le méchant se fait toujours passé pour un gentil et promet au secrétaire de l'aider à trouver le coupable (en le menant sur de
-fausses pistes) mais en réalité, il va trouvé amusant de liguer tout le monde contre le secrétaire dont la fille principale. Le secrétaire déménage.
+on va donner un coup de grâce ici. le méchant se fait toujours passé pour un gentil et promet au secrétaire de l'aider à trouver le coupable (en le menant sur de fausses pistes) mais en réalité, il va trouvé amusant de liguer tout le monde contre le secrétaire dont la fille principale. Le secrétaire déménage.
+************************************************************************************************************
 
 La nuit, Shadow dit des trucs fourbes
 
 Si le joueur côtoie le méchant, il va s'apercevoir qu'il y a un peu trop de coïncidences. Possibilité de mini good end alice si on lance les feux d'artifices trololol
 
-Acte 4 : Dans l'obscurité
+Acte 4 *****************************************************************************************************
+Dans l'obscurité
 
 Dans cet acte, Ryouzanki va inciter (ou pas, ça reste a voir) Laura a stalker Elusia avec le téléphone pré-payé. Voyant que Lloyd se faisait accusé à sa place Laura veut arrêter alors Ryouzanki récupère le téléphone et continue secrètement.
 Avec toute cette pression, ces regards haineux blablabla, le secrétaire n'en peut plus. GM fait en sorte que Elusia lance la dernière rumeur. 
@@ -41,12 +45,14 @@ Lloyd se suicide.
 Sans regret ni scrupule face à cet imprévu, le méchant fait en sorte que la fille se sente coupable de sa mort et se jette dans ses bras réconfortant.
 
 Laura se sent coupable et va se rendre à la police.
+************************************************************************************************************
 
 La nuit, Shadow des trucs vaches sur lloyd
 
 Si le joueur est proche de la fille, il peut empêcher cela. Sinon, je propose une bad end incontournable ici.
 
-Acte 5 : Depuis les abysses
+Acte 5 *****************************************************************************************************
+Depuis les abysses
 
 Le joueur doute de lui meme (DID)
 Le joueur fait donc paire avec la fille. Ils vont chercher des indices etc et vont, si tout se passe bien, remonter jusqu'au méchant. 
@@ -58,7 +64,7 @@ Si Alice amie, alors elle prête un magnétophone pour permettre d'enregistré l
  Après l'enregistrement, Elusia ne veut pas y croire et demande a MC d'aller voir GM une dernière fois. GM l'enferme et va chercher l'enregistrement chez FP. Pour sortir, possibilité d'incendie ou fenetre etc suivit par salazard.
 
 Possibilité de s'allier au GM pour une very bad end
-
+************************************************************************************************************
 epilogue :
 
 5 ans plus tard, MC revient dans l'école, cet endroit nostalgique. Bien
