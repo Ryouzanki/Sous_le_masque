@@ -159,7 +159,6 @@ label route:
             persistent.plays = 1
         else:
             persistent.plays += 1
-            
         plays = persistent.plays
     r "Jeu gagné [plays] fois."
     
