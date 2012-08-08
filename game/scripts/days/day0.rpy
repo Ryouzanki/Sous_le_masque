@@ -90,6 +90,8 @@ label sonnette:
     else:
         $ j = renpy.input("Il y avait bien mon prénom :", "Hamuko", length=15) or "Hamuko"
     r "[j], c'est ça ?"
+    if j == "Ryouzanki":
+        jump end
     menu:
         "Ah, c'est bien, tu sais lire !":
             $ renpy.block_rollback()

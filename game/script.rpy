@@ -151,7 +151,7 @@ label route:
     call night
     call day7
     call night
-    
+label end:
     r "Fin du jeu"
     $ persistent.ending = "win"
     python:

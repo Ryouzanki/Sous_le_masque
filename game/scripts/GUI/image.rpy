@@ -109,6 +109,7 @@ image parc = "back/parc.jpg"
 
 # Autres
 image black = "#000000"
+image roue = "UI/day.png"
 
 ### Music
 
