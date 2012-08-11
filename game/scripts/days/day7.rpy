@@ -817,10 +817,29 @@ label day7_ryou6:
     e "Huh... Tie-Break hein..."
     show elusia normal sport
     e "Pas mal du tout..."
+    show laura sad
+    l "Tâchons de gagner..."
+    e "Bien entendu."
+    show elusia angry sport
+    e "Je ne peux pas me permettre de perdre maintenant."
+    e "Alors je vais aussi prendre tes balles."
+    l "..."
+    l "J'attendais que ça, tient..."
+    "Elusia a reprit du poil de la bête."
+    "La détermination se lit dans ses yeux."
+    "Elle a arrêté de ne contrôler que sa zone."
+    "La stratégie de Ryouzanki ne fonctionne plus."
+    "Les filles gagnent de peu."
+    show ryou sad
+    "Ryouzanki tombe à genou, épuisé."
+    jump day7_ryou_lose_end
 label day7_ryou_lose:
     show elusia satisfied sport
     $ jeu2 = 4 - jeu
     e "Bon bah voilà... [jeu2] à [jeu] !"
+    show ryou angry
+    "Ryouzanki lance sa raquette au sol..."
+label ay7_ryou_lose_end:
     show laura happy
     l "Vous savez ce qu'il vous reste à faire !"
     show ryou sad
@@ -829,11 +848,44 @@ label day7_ryou_lose:
     e "Bien tenté mais non..."
     e "Tu dois nous inviter à boire un verre."
     l "Tu n'y échappes pas [j] !"
-    
-    jump day7_fin_tennis
+    show elusia normal sport
+    e "Aller, je sais que tu touches un peu le fond..."
+    show elusia satisfied sport
+    e "Je vais me payer ma part moi même."
+    show laura normal
+    l "Je vais faire pareil, je n'ai jamais aimé l'idée de ce pari."
+    jump day7_pari
 label day7_ryou_win:
-    jump day7_fin_tennis
-label day7_perfect:
+    show ryou happy
+    r "Et c'est la victoire !!"
+    show elusia geez sport
+    e "Mince..."
+    show laura sad
+    l "On aura fait ce qu'on a pu..."
+    show elusia angry sport
+    e "..."
+    show ryou normal
+    r "Nan Elusia, c'est pas vraiment le moment..."
+    show elusia sad sport
+    e "Oui..."
+    show ryou happy
+    r "Aller, je suis trop gentleman pour que des filles paient ma part..."
+    show elusia geez sport
+    e "Tu n'as pas à faire ça..."
+    l "Le pari, c'est ton idée, Elusia à la base..."
+    r "Nan mais c'est bon, je vais payer juste ma part."
+    menu:
+        "Je vais payer la mienne.":
+            m "Je vais payer la mienne."
+            $ rel_lulu += 3
+            $ rel_lolo += 3
+        "Il reste juste la mienne.":
+            m "Il reste juste la mienne."
+    r "Heu... Oui..."
+    r "On y va ? j'ai soif..."
+    e "D'où l'intérêt d'apporter une bouteille d'eau..."
+label day7_pari:
+                                                                        # TODO best ending
 label day7_fin_tennis:
     call save
     return

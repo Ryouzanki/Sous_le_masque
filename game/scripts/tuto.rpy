@@ -46,11 +46,16 @@ label tuto:
     window show
     show ryou angry with easeinright
     r "Heu... Où est-ce que je suis là..."
-    show ryou happy
-    r "Ah tiens ! Un nouveau visage !"
-    show ryou normal
-    r "Je suppose que t'es là pour apprendre à jouer..."
-
+    if not persistent.preum:
+            show ryou happy
+            r "Ah tiens ! Un nouveau visage !"
+            show ryou normal
+            r "Je suppose que t'es là pour apprendre à jouer..."
+            $ persistent.preum = True
+    else:
+        r "Encore toi ?"
+        show ryou sad
+        r "Il te manque quoi cette fois..."
     $ tutorials_adjustment = ui.adjustment()
     $ tutorials_first_time = True
     

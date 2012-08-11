@@ -241,6 +241,7 @@ label sport_solo:
     hide elusia
     if sport == 'tir à l\'arc':
         $ vig -= 2
+        scene arc with fade
         "C'est ainsi que je me retrouvais dans l'équipe de tir à l'arc de l'école."
         "Elusia est vraiment compétente."
         "Incroyablement calme, elle fait toujours mouche."
@@ -249,6 +250,7 @@ label sport_solo:
         else:
             "J'étais trop fatigué[ter] pour être efficace."
     if sport == 'tennis':
+        scene tennis with fade
         $ vig -= 2
         $ agi_points +=1
         $ str_points +=1

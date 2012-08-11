@@ -291,7 +291,7 @@ label RU:
              $ renpy.block_rollback()
              m "Non, je préfère rester seul."
              show laura angry
-             "Elle posa son plateau."
+             "Elle pose son plateau."
              m "Hey !"
              l "Ce n'était pas une question !"
              m "Bien sur que si !"

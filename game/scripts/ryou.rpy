@@ -15,9 +15,8 @@ label ryou:
                 # color="#c8ffc8",
                 # window_left_padding=160,
                 # show_side_image=Image("UI/rect.png", xalign=0.0, yalign=1.0), show_two_window=True)
-    
-    show roue at Position(ypos=1100)
-    
+
+
     # scene parc with fade
     # r "Voilà un fond de parc."
     # show elusia normal at Position(xpos=0.0)

@@ -102,6 +102,8 @@ image gymnase = "back/gymnase.jpg"
 image gymnaseout = "back/gymnaseout.jpg"
 image salledart = "back/salledart.jpg"
 image cours = "back/gymnaseout.jpg"
+image tennis = "back/tennis.jpg"
+image arc = "back/arc.jpg"
 
 # Ville
 image street = "back/street.jpg"
@@ -110,6 +112,7 @@ image parc = "back/parc.jpg"
 # Autres
 image black = "#000000"
 image roue = "UI/day.png"
+image roue2 = "UI/day2.png"
 
 ### Music
 
