@@ -39,7 +39,13 @@ image ryou angry = "CG/ryou angry.png"
 image ryou sad = "CG/ryou sad.png"
 
 # Ryouzanki shadow
-image shadow ombre = "CG/shadow.png"
+image shadow ombre = "CG/shadow ombre.png"
+image shadow contraried = "CG/shadow contraried.png"
+image shadow normal = "CG/shadow normal.png"
+image shadow pity = "CG/shadow pity.png"
+image shadow smirk = "CG/shadow smirk.png"
+image shadow surprised = "CG/shadow surprised.png"
+image shadow afk = "CG/shadow idle.png"
     
 ## Valeth Lezard
 
@@ -104,6 +110,7 @@ image salledart = "back/salledart.jpg"
 image cours = "back/gymnaseout.jpg"
 image tennis = "back/tennis.jpg"
 image arc = "back/arc.jpg"
+image toit = "back/toit.jpg"
 
 # Ville
 image street = "back/street.jpg"
@@ -122,6 +129,7 @@ define ryou1 = "music/ryouzanki1.ogg"
 define alice1 = "music/alice1.mp3"
 define joueur1 = "music/joueur1.ogg"
 define shadow1 = "music/shadow1.ogg"
+define shadow3 = "music/shadow end.mp3"
 
 # Thème autres
 define matin1 = "music/matin1.ogg"

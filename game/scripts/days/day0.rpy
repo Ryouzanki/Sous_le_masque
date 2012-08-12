@@ -92,6 +92,8 @@ label sonnette:
     r "[j], c'est ça ?"
     if j == "Ryouzanki":
         jump end
+    if j == "Shadow":
+        jump ending
     menu:
         "Ah, c'est bien, tu sais lire !":
             $ renpy.block_rollback()
