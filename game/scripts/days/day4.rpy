@@ -16,7 +16,7 @@ label day4:
     show elusia normal at right
     r "Yo !"
     e "Salutations !"
-    scene street with dissolve
+    scene street with fade
     show ryou normal at left
     show elusia normal at right
     pause(1)

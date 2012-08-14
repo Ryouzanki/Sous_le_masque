@@ -29,7 +29,7 @@ label day0:
     r "Moi qui voulais tomber sur une jolie demoiselle en petite tenue..."
 label choix_sexe:
     menu:
-        "Perdu, je suis un homme, un vrai ! Pour la petite tenue, reviens plus tard !":
+        "Perdu, je suis un {b}{u}homme{/u}{/b}, un vrai ! Pour la petite tenue, reviens plus tard !":
             $ renpy.block_rollback()
             m "Perdu, je suis un homme, un vrai ! Pour la petite tenue, reviens plus tard !"
             show ryou happy
@@ -37,7 +37,7 @@ label choix_sexe:
             $ sexe = 'il'
             $ bite = True
             $ ter = ''
-        "Tssss ! Heureuse de constater que certaines choses sont immuables !":
+        "Tssss ! Tant pis si je ne suis pas la {b}{u}femme{/u}{/b} de tes rêves !":
             $ renpy.block_rollback()
             centered "Attention, la route \"Fille\"comporte quelques problèmes scénaristique."
             centered "Voulez vous vraiment continuer ?"
@@ -48,7 +48,7 @@ label choix_sexe:
                 "Non.":
                     $ renpy.block_rollback()
                     jump choix_sexe
-            m "Tssss ! Heureuse de constater que certaines choses sont immuables !"
+            m "Tssss ! Tant pis si je ne suis pas la femme de tes rêves !"
             show ryou happy
             r "Oh ça va, je plaisantais ! Ne le prends pas aussi mal !"
             $bite = False
@@ -93,6 +93,13 @@ label sonnette:
     if j == "Ryouzanki":
         jump end
     if j == "Shadow":
+        $ j = "Minato"
+        $ inc = 'Jeune homme'
+        $ fille = 'Elusia'
+        $ en = 'Jeune fille'
+        $ valou = 'Valeth'
+        $ noble = 'Jeune homme'
+        $ ali = 'Alice'
         jump ending
     menu:
         "Ah, c'est bien, tu sais lire !":

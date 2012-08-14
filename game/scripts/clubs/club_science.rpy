@@ -251,7 +251,7 @@ label arrive_lloyd:
     
             show alice geez at left with move
             a "Que faîtes vous ici Sir Lloyd ?"
-            show lloyd normal at right
+            show lloyd normal at right with easeinright
             if bite:
                 y "Je suis venu vérifier que l'inscription de mon camarade de classe se déroule correctement."
             else:
@@ -267,7 +267,7 @@ label arrive_lloyd:
             a "Vous savez comme je suis, Sir, toujous aussi négligeante..."
             a "Une simple roturière..."
             y "Très bien. Je reviens de suite."
-            hide lloyd
+            hide lloyd with easeoutright
             show alice sad at center with move
             a "L'aristo a encore brisé un moment d'émotion."
             menu:
@@ -313,10 +313,10 @@ label arrive_lloyd:
             m "Oui, c'est ça."
             show alice sad at left with move
             e "Hello ! Je suis en retard ?"
-            show elusia normal 
+            show elusia normal with easeinright
             a "Bonjour Lulu."
             e "Alice, tu vas bien ?"
-            show lloyd angry at right
+            show lloyd angry at right with easeinright
             show alice geez
             y "Voilà les papiers."
             show lloyd happy
@@ -328,9 +328,9 @@ label arrive_lloyd:
             show lloyd angry
             y "Heu... Oui... hum..."
             y "Elusia, tu n'as pas le droit de rester ici. Sortons tous les deux."
+            hide lloyd with easeoutright
             e "A plus tard !"
-            hide elusia
-            hide lloyd
+            hide elusia with easeoutright
             show alice sad at center with move
             a "Action, réaction..."
             show alice geez

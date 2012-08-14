@@ -375,9 +375,11 @@ label d3_loisir:
                     a "J'espère vraiment qu'on sera en mesure de surpasser l'équipe de l'année dernière !"
                 "Oui, je vais essayer.":
                     $ rel_ali += 3
+                    m "Oui, je vais essayer."
                     a "Intéressant. Passe me voir le plus tôt possible dans les labos pour qu'on voit ça ensemble."
                     a "J'espère vraiment qu'on sera en mesure de surpasser l'équipe de l'année dernière !"
                 "Non, je n'aime pas les responsabilités.":
+                    m "Non, je n'aime pas les responsabilités."
                     show alice geez
                     a "Tu viens d'arriver après tout... Je suppose."
                     v "Dommage Alice. Au moins t'aura essayé."

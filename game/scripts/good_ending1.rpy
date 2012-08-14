@@ -7,6 +7,7 @@ label ending:
     "Ouah, je suis complètement sonné..."
     scene toit with dissolve
     "Quand est-ce que j'ai pris une cuite ?"
+    "Je suis allongé par terre et ma tête tourne..."
     "Mon portable est devant moi..."
     "?!"
     "Je n'arrive pas à l'atteindre..."
@@ -42,11 +43,11 @@ label ending:
     $ choix23 = False
     $ choix24 = False
     $ choix25 = False
-#    $ choix26 = False
-#    $ choix27 = False
-#    $ choix28 = False
-#    $ choix29 = False
-#    $ choix30 = False
+    $ choix26 = True
+    $ choix27 = False
+    $ choix28 = False
+    $ choix29 = False
+    $ choix30 = False
     
     
     menu:
@@ -96,7 +97,7 @@ label ending:
     with hpunch
     $ renpy.play('sound/punch.mp3')
     with hpunch
-    "J'en profite pour faire tomber mon portable discrètement en bas."
+    "J'en profite pour faire tomber le portable de Shadow discrètement en bas."
     "Merde, j'espère que quelqu'un va le voir..."
     "En attendant, il faut que je gagne du temps..."
 label answer:
@@ -115,7 +116,7 @@ label answer:
             $ choix2 = False
             m "C'est amusant de jouer avec les gens ?"
             show shadow smirk
-            s "c'est amusant de jouer les petits détectives ?"
+            s "C'est amusant de jouer les petits détectives ?"
             s "Tu as mieux à faire que d'aller fouiner partout nan ?"
             s "A quoi ça rime tout ça ?"
             menu:
@@ -253,7 +254,7 @@ label answer2:
             show shadow smirk
             s "Je ne savais pas qu'il était aussi faible."
             s "Je voulais voir comme il était facile de manipuler l'opinion publique."
-            s "c'était un cobaye de qualité !"
+            s "C'était un cobaye de qualité !"
         "Pourquoi avoir fait arrêté Laura ?" if choix16:
             $choix16 = False
             m "Pourquoi avoir fait arrêté Laura ?"
@@ -319,10 +320,56 @@ label answer2:
             m "T'es vraiment qu'un salop, je ne veux pas en entendre plus..."
             show shadow smirk
             s "Comme tu voudra !"
+            "La lumière des escaliers vient de s'allumer..."
             jump answer3
     jump answer2
 label answer3:
+    
     menu:
+        "Au fond de moi, je te comprends..." if choix26 :
+            $ choix26 = False
+            m "Au fond de moi, je te comprends..."
+            show shadow surprised
+            s "On va peut être faire quelque chose de toi..."
+            show shadow smirk
+            s "Je pense qu'on peut faire des choses intéressantes à deux !"
+            $ choix27 = True
+            $ choix28 = True
+        "J'étais comme toi avant." if choix27:
+            $ choix27 = False
+            $ choix28 = False
+            m "J'étais comme toi avant."
+            show shadow surprised
+            s "Avant ?"
+            m "Oui. Mais j'ai rencontré des gens."
+            m "Ces rencontres m'ont changés."
+            m "Tu devrais aussi t'ouvrir aux autres et tu comprendrais."
+            show shadow contraried
+            s "Comprendre quoi ?"
+            s "Que les sentiments c'est pour les faibles ?"
+            s "Que se reposer sur les autres c'est bien ?"
+        "Je pense comme toi." if choix28:
+            $ choix27 = False
+            $ choix28 = False
+            m "Je pense comme toi."
+            show shadow surprised
+            s "..."
+            "Il me tend une main pour m'aider à me relever."
+            "Puis il la retire avant que je ne la prenne."
+            show shadow contraried
+            s "Qu'est ce qui me prouve que tu dis vrai ?"
+            $ choix29 = True
+        "Les autres vont arriver, détruisons les ensemble." if choix29:
+            $ choix29 = False
+            m "Les autres vont arriver, détruisons les ensemble."
+            show shadow surprised
+            s "Comment ?"
+            m "J'ai laissé tombé ton portable en bas. Ils vont venir."
+            show shadow pity
+            s "Pas mal..."
+            show shadow smirk
+            s "Ca marche !"
+            jump answer5
         "J'ai juste pitié de toi." if choix10:
             $ choix10 = False
             m "J'ai juste pitié de toi."
@@ -349,11 +396,11 @@ label answer3:
             s "Personne ne s'en rend compte."
             s "Il sont juste tous coincés parce qu'ils ne peuvent pas nier qu'en fait..."
             show shadow surprised
-            s "Ceux qui réussissent réellement dans la vie sont ceux qui sont nés avec un ticket magique nommé \"talent\""
+            s "Ceux qui réussissent réellement dans la vie sont ceux qui sont nés avec un ticket magique nommé \"talent\"."
             s "Ces gens dont un représentant est dressé devant toi."
             s "Tu es voué à l'échec."
             s "Une fois que tu réalises ça, c'est le désespoir."
-            s "L'ultime \"GAME OVER\""
+            s "L'ultime \"GAME OVER\" !"
             show shadow pity
             s"Donc il vaut mieux ignorer la réalité non ?"
             $ choix12 = True
@@ -390,77 +437,105 @@ label answer3:
             s "Lloyd est déjà mort, l'associatif aussi."
             s "Rends toi à l'évidence !"
             s "T'as rien de mieux à faire ?"
+            s "J'ai déjà gagné !!"
             jump answer4
     jump answer3
 label answer4:
+    stop music fadeout 3.0
+    "Quelqu'un vient d'essayer d'ouvrir la porte."
+    show shadow contraried
+    s "Alors les voilà..."
+    s "Toutes ces questions pour gagner du temps..."
+    m "Oui. C'est fini."
+    m "Maintenant, ils savent la vérité."
+    show shadow normal
+    s "Dis moi [j]..."
+    s "Combien de personne ont déjà réfléchit à la réalité ou à ce qui est bien ou mal ?"
+    m "..."
+    s"Pas grand monde en fait..."
+    s "Ce monde pourri ne vaut rien et vivre ne sert à rien."
+    s"La voilà, la vérité que toi, tu as toujours cherché..."
+    "La porte cède et mes amis entrent."
+    play music (verite)
+    show elusia sad at left
+    #show laura sad at Position(xpos=0.375)
+    show shadow normal 
+    #show valeth angry at Position(xpos=0.625)
+    show alice angry at right
     
-
-#arrivage porte défoncée
-
-e "Tu as joué avec mon amour."
-l "Tu as joué avec ma compassion."
-v "Tu as joué avec ma fierté."
-
-
-
-s "Un jour vous verrez."
-s "Vous serez confronté à l'ennuyante réalité qui vous confine."
-s"Honnêtement, on n'en a pas besoin."
-a "Arrete tes conneries !!"
-a "Si tu n'acceptes pas la réalité, laisse nous le faire au moins !"
-s "Les gosses comme vous sont si naïfs..."
-s"Je vois dans vos yeux cette peur de l'avenir..."
-s "Vous dissimulez vos angoisses..."
-s "Mais ce que je dis est basé sur mes propres expériences !"
-s "Je suis devenu insensible à ce monde pitoyable."
-s "C'est plutôt agréable en fait..."
-s "Etudier, sa marier, travailler, consommer, mourir..."
-s "C'est si ennuyeux..."
-
-s"Combien de personne ont déjà réfléchit à la réalité ou à ce qui est bien ou mal ?"
-s"Pas grand monde en fait..."
-s "Ce monde pourri ne vaut rien et vivre ne sert à rien."
-s"La voilà, la vérité que tu as toujours cherché..."
-m"Ce n'est pas cette vérité là !"
-s "Ola ola, je viens de te dire tout ce qu'il y a à savoir !"
-s "C'est cette stupide ignorance que vous appelez espoir qui vous rend tous si ennuyants !"
-s "L'espoir qui entraîne le desespoir..."
-m "Arrêtes tes conneries !"
-m "T'as même pas les couilles de me pousser !"
-s "Hein ?"
-m "J'en ai marre de t'entendre gémir !"
-m "Peu importe ce que tu diras, tu ne t'en tirera pas comme ça !"
-m "Tes péchers te suivront toujours !!"
-m "La voilà, la vérité !!"
-a "Ta logique tordue est celle d'un gamin égoiste et immature !"
-a "On ne peut pas vivre seul !"
-a "Si tu t'isoles et que tu coupes tes liens avec la société, il deviendra naturellement difficile d'y vivre."
-s "Qu'est ce que des pourris gâtés comme vous en savent ?!"
-a "C'est toi le pourri gâté !"
-a "Affronter la réalité est trop dur pour toi alors tu veux empêcher les autres de le faire ?"
-a "Bien sur que personne ne te comprend !"
-a "Tu piques une crise comme un sale gosse !"
-s "La ferme !!"
-a "Je vais te dire franchement !"
-a "Favorisé par le monde, mon cul !"
-a "T'es juste un lâche !!"
-a "Nous, on se bat pour ce qu'on aime !"
-s "Ta gueule ! Ta gueule ! Ta gueule !"
-s "Vous... Vous ne devriez pas être aussi confiants !!"
-s "A moins de nier en bloc tout ce que je viens de dire !!"
-a "Nous avons vu la vérité dans des choses que nous avons toujours refusé de voir."
-s"Va te faire foutre !"
-s"Un pauvre naïf comme toi ne peut pas comprendre !"
-s"As tu seulement une idée de tout ce que j'ai enduré ?!"
-m "Shadow, tu n'es pas le seul à souffrir..."
-s "Je... Je ne peux pas perdre !"
-s "Pas contre toi !!"
-"Il sort un couteau et me fonce dessus."
-"Elusia s'interpose, et bloque immédiatement son poignet."
-"Puis, elle donna un coup sec dans son plexus, lui coupant la respiration."
-m"Fais face à la vérité !!"
-"Habilement, elle le maitrise et le mets au sol et lui brise le bras."
-"Il hurle et se tortille au sol pendant qu'elle s'éloigne."
-s "Ha ha ha... Bah quoi... C'est quoi cette merde..."
-s "C'est si ennuyant... J'ai... Vraiment perdu..."
-
+    "Shadow se tourne vers eux."
+    show shadow surprised
+    s "Un jour vous verrez."
+    s "Vous serez confronté à l'ennuyante réalité qui vous confine."
+    s"Honnêtement, on n'en a pas besoin."
+    a "Arrete tes conneries !!"
+    a "Si tu n'acceptes pas la réalité, laisse nous le faire au moins !"
+    show shadow smirk
+    s "Les gosses comme vous sont si naïfs..."
+    s"Je vois dans vos yeux cette peur de l'avenir..."
+    s "Vous dissimulez vos angoisses..."
+    show shadow pity
+    s "Mais ce que je dis est basé sur mes propres expériences !"
+    s "Je suis devenu insensible à ce monde pitoyable."
+    s "C'est plutôt agréable en fait..."
+    show shadow contraried
+    s "Etudier, se marier, travailler, consommer, mourir..."
+    s "C'est si ennuyeux..."
+    m "Nous on y trouve du plaisir."
+    m "C'est toi, tu t'es perdu tout seul !"
+    show shadow pity
+    s "Ola ola, je viens de te dire tout ce qu'il y a à savoir !"
+    s "C'est cette stupide ignorance que vous appelez espoir qui vous rend tous si ennuyants !"
+    show shadow smirk
+    s "Cet espoir qui entraîne le desespoir..."
+    m "Arrêtes tes conneries !"
+    m "T'as même pas les couilles de me pousser !"
+    show shadow surprised
+    s "Hein ?"
+    m "J'en ai marre de t'entendre gémir !"
+    m "Peu importe ce que tu diras, tu ne t'en tirera pas comme ça !"
+    "J'attrape sa cheville."
+    s "Guh..."
+    "Il secoue la jambe et je lâche prise mais il recule."
+    m "Tes péchers te suivront toujours !!"
+    "Malgré mon corps engourdi, je me relève."
+    m "La voilà, la vérité !!"
+    a "Cette logique tordue est celle d'un gamin égoiste et immature !"
+    a "On ne peut pas vivre seul !"
+    a "Si tu t'isoles et que tu coupes tes liens avec la société, il deviendra naturellement difficile d'y vivre."
+    show shadow contraried
+    s "Qu'est ce que des pourris gâtés comme vous en savent ?!"
+    e "C'est toi le pourri gâté !"
+    e "Affronter la réalité est trop dur pour toi alors tu veux empêcher les autres de le faire ?"
+    e "Vivre, c'est trop dur mais tu ne veux pas mourir ?"
+    e "Bien sur que personne ne te comprend !"
+    e "Tu piques une crise comme un sale gosse !"
+    
+    s "La ferme !!"
+    v "Je vais te dire franchement !"
+    v "Favorisé par le monde, mon cul !"
+    v "T'es juste un lâche !!"
+    v "Nous, on se bat pour ce qu'on aime !"
+    
+    s "Ta gueule ! Ta gueule ! Ta gueule !"
+    s "Vous... Vous ne devriez pas être aussi confiants !!"
+    s "A moins de nier en bloc tout ce que je viens de dire !!"
+    
+    e "Nous avons vu la vérité dans des choses que nous avons toujours refusé de voir."
+    s "Va te faire foutre !"
+    s "Une pauvre naïve comme toi ne peut pas comprendre !"
+    s "As tu seulement une idée de tout ce que j'ai enduré ?!"
+    m "Shadow, tu n'es pas le seul à souffrir..."
+    s "Je... Je ne peux pas perdre !"
+    s "Pas contre toi !!"
+    "Il sort un couteau et me fonce dessus."
+    "Elusia s'interpose, et bloque immédiatement son poignet."
+    e "Fais face à la vérité !!"
+    "Puis, elle donna un coup sec dans son plexus, lui coupant la respiration."
+    "Habilement, elle le maitrise et le mets au sol et lui brise le bras."
+    "Il hurle et se tortille au sol pendant qu'elle s'éloigne."
+    s "Ha ha ha... Bah quoi... C'est quoi cette merde..."
+    s "C'est si ennuyant... J'ai... Vraiment perdu..."
+label answer5:
+        "..."
+        # todo bad end shadow

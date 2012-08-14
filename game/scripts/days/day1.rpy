@@ -153,7 +153,6 @@ label route1:
     "Le cours était vraiment ennuyeux."
     "Mais c'est rassurant."
     "Je n'ai pas accumulé énormément de retard lors de mon transfert."
-    jump day1_matin
     
 label day1_matin:
     
@@ -258,7 +257,7 @@ label day1_matin:
                 jump RU
                 
 label manger_dehors:
-    scene parc with dissolve
+    scene parc with fade
     show elusia happy at right
     show ryou happy at left
     "Nous sommes allés au parc."

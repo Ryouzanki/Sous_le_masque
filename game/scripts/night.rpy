@@ -31,34 +31,34 @@ label night7:
 label fin_night:   
     stop music fadeout 1.0
     $ renpy.pause(1.0)
-    show roue2 at RotoZoom(day*11.612903226, (day+1)*11.612903226, 4, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -340, ypos=60)
+    show roue2 at RotoZoom(day*11.612903226, (day+1)*11.612903226, 2, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -340, ypos=60)
                 #TODO Il sera possible d'actualiser les barres de stats ici mais je ne le fait pas tout de suite pour
                 #TODO aider au debuggage. On peut faire avancer les barres en simultané avec un while
     if weekday == "Dimanche":
-        show roue at RotoZoom(0, 50, 4, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
+        show roue at RotoZoom(0, 50, 2, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
         $ weekday = "Lundi"
     elif weekday == "Lundi":
-        show roue at RotoZoom(51, 101,4, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
+        show roue at RotoZoom(51, 101,2, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
         $ weekday = "Mardi"
     elif weekday == "Mardi":
-        show roue at RotoZoom(102, 152, 4, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
+        show roue at RotoZoom(102, 152, 2, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
         $ weekday = "Mercredi"
     elif weekday == "Mercredi":
-        show roue at RotoZoom(153, 203, 4, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
+        show roue at RotoZoom(153, 203, 2, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
         $ weekday = "Jeudi"
     elif weekday == "Jeudi":
-        show roue at RotoZoom(204, 254, 4, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
+        show roue at RotoZoom(204, 254, 2, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
         $ weekday = "Vendredi"
     elif weekday == "Vendredi":
-        show roue at RotoZoom(255, 305, 4, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
+        show roue at RotoZoom(255, 305, 2, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
         $ weekday = "Samedi"
     elif weekday == "Samedi":
-        show roue at RotoZoom(306, 356, 4, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
+        show roue at RotoZoom(306, 356, 2, 0, 1, 0, rot_anim_timebase=True, opaque=False, xpos = -400, ypos=-80)
         $ weekday = "Dimanche"
     else:
         $ weekday = "ERREUR"
     
-    $ renpy.pause(6.0)
+    $ renpy.pause(4.0)
     $ day += 1
     
     return
