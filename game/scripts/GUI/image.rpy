@@ -46,6 +46,7 @@ image shadow pity = "CG/shadow pity.png"
 image shadow smirk = "CG/shadow smirk.png"
 image shadow surprised = "CG/shadow surprised.png"
 image shadow afk = "CG/shadow idle.png"
+image shadow hate = "CG/shadow hate.png"
     
 ## Valeth Lezard
 

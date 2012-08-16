@@ -55,8 +55,9 @@ label ending:
             show shadow afk
             play music (shadow3)
             "Je me retourne lentement et j'aperçois Ryouzanki souriant."
-            "Il regarde loin devant lui en souriant avant de baisser les yeux sur moi."
             "Il me tient solidement le bras gauche."
+            "Il regarde loin devant lui en souriant avant de baisser les yeux sur moi."
+            show shadow normal
         "Tenter de tendre le bras plus loin.":
             $ renpy.play('sound/punch.mp3')
             with hpunch
@@ -408,7 +409,7 @@ label answer3:
         "La réalité n'est pas un jeu !" if choix12:
             $ choix12 = False
             m "La réalité n'est pas un jeu !"
-            show shadow contraried
+            show shadow hate
             s "..."
             s "Putain... Je pensais que tu comprendrais mais en fait t'es juste trop con !"
             s "Peu importe ce que tu fais, rien ne changera."
@@ -503,7 +504,7 @@ label answer4:
     a "Cette logique tordue est celle d'un gamin égoiste et immature !"
     a "On ne peut pas vivre seul !"
     a "Si tu t'isoles et que tu coupes tes liens avec la société, il deviendra naturellement difficile d'y vivre."
-    show shadow contraried
+    show shadow hate
     s "Qu'est ce que des pourris gâtés comme vous en savent ?!"
     e "C'est toi le pourri gâté !"
     e "Affronter la réalité est trop dur pour toi alors tu veux empêcher les autres de le faire ?"

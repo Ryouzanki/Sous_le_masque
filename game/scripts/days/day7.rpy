@@ -298,9 +298,50 @@ label day7_choix: # TODO imagemap
     else:
         "ERREUR : coéquipier non trouvé."
 label day7_lulu:
+    show elusia happy sport
     e "Je secoue un peu Ryou, sinon c'est pas fun."
     m "Ah bon ?"
     l "Ryou est un flemmard qui ne bouge que quand il y a une récompense à la clef."
+    show elusia normal sport
+    e "Et bien maintenant, nous sommes alliés pour cette bataille !"
+    e "Tâchons de les écraser !"
+    menu:
+        "T'en fais pas un peu trop ?":
+            m "T'en fais pas un peu trop ?"
+            $ rel_lulu -= 2
+            show elusia surprised sport
+            e "Tu trouves ?"
+            show elusia normal sport
+            e "Les sports de compétition comme le tennis..."
+            show elusia satisfied sport
+            e "Ont pour principe qu'une équipe gagne car elle a surpassé l'équipe adverse !"
+            show elusia sad sport
+            e "Je trouve dommage que tu ne comprennes pas cela."
+        "Oui...":
+            m "Oui..."
+            show elusia surprised sport
+            e "Hey ! Tu pourrais être un peu plus motivé[ter] !"
+            menu:
+                "Je vais essayer.":
+                    m "Je vais essayer."
+                    show elusia normal sport
+                    e "C'est mieux !"
+                    e "Partir avec un bon moral, c'est avoir la victoire à portée de main."
+                "Non.":
+                    $ rel_lulu -= 3
+                    m "Non."
+                    show elusia sad sport
+                    e "T'es pas cool..."
+                    e "Moi qui me faisait une joie de jouer avec toi..."
+        "C'est comme si c'était fait !":
+            $ rel_lulu += 5
+            m "C'est comme si c'était fait !"
+            show elusia happy sport
+            e "Super !"
+            e "J'aime cet état d'esprit !"
+            show elusia normal sport
+            e "Partir avec un bon moral, c'est avoir la victoire à portée de main."
+            
     jump day7_fin_tennis
 label day7_lolo:
     l "Mmmh... Elle tente de motiver Ryou..."
