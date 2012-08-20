@@ -857,7 +857,7 @@ label day6_postlloyd:
     "Nous mangeons des plats maison des membres dans la salle de science."
     a "Alors, ça te plait ?"
     m "Bien sur..."
-    a "Je sais pas pourquoi mais je suis très contente de te voir ici."
+    a "Je ne sais pas pourquoi mais je suis très contente de te voir ici."
     menu:
         "C'est beau l'amour.":
             $rel_ali += 3

@@ -217,7 +217,7 @@ label day7_choix: # TODO imagemap
     r "C'est toi qui le dit."
     show ryou normal
     r "Je parie sur la team [j]-[choix1]."
-    show elusia sport normal
+    show elusia normal sport
     e "On fait en 4 jeux."
     e "Chacun servira pendant un jeu."
     e "En cas d'égalité, on fera un 5ème jeu en tie-break."
@@ -323,6 +323,7 @@ label day7_lulu:
             e "Hey ! Tu pourrais être un peu plus motivé[ter] !"
             menu:
                 "Je vais essayer.":
+                    $ rel_lulu += 3
                     m "Je vais essayer."
                     show elusia normal sport
                     e "C'est mieux !"
@@ -341,8 +342,84 @@ label day7_lulu:
             e "J'aime cet état d'esprit !"
             show elusia normal sport
             e "Partir avec un bon moral, c'est avoir la victoire à portée de main."
-            
-    jump day7_fin_tennis
+    show elusia normal sport
+    e "Sinon, simple curiosité..."
+    e "Pourquoi moi ?"
+    menu:
+        m "Et bien..."
+        "Tu es la plus forte non ?":
+            m "Tu es la plus forte non ?"
+            $ rel_lulu += 5
+            show elusia satisfied sport
+            e "Tu as parfaitement raison."
+            show elusia happy sport
+            e "Excellent choix !"
+        "Tu es la plus jolie.":
+            m "Tu es la plus jolie."
+            $ rel_lulu += 3
+            show elusia shy sport
+            e "P...Pardon ?!"
+            menu:
+                "Ca va, je plaisante...":
+                    m "Ca va, je plaisante..."
+                    show elusia timid sport
+                    e "Si possible, j'aimerais que tu évites ce genre de plaisanterie..."
+                    menu:
+                        "Oui, désolé.":
+                            $ rel_lulu -= 1
+                            m "Oui, désolé."
+                            show elusia sad sport
+                            e "C'est pas bien grave..."
+                        "Nan, t'es mignonne quand tu rougis.":
+                            $ rel_lulu += 2
+                            m "Nan, t'es mignonne quand tu rougis."
+                            show elusia embarassed sport
+                            e "Mais qu'est ce qui te prends de dire des trucs pareils !"
+                            e "C'est pas le moment de me déconcentrer !"
+                            show elusia timid sport                    
+                "Bah oui, c'est vrai quoi...":
+                    $ rel_lulu += 4
+                    m "Bah oui, c'est vrai quoi..."
+                    show elusia embarassed sport
+                    e "Mais qu'est ce qui te prends de dire des trucs pareils !"
+                    e "C'est pas le moment de me déconcentrer !"
+                    show elusia timid sport
+                "Je t'aime, Elusia...":
+                    m "Je t'aime, Elusia..."
+                    show elusia embarassed sport
+                    e "C'est pas un peu tôt pour ce genre de chose ?"
+                    show elusia timid sport
+                    e "Tu me connais à peine..."
+        "Tu es la plus sympa.":
+            m "Tu es la plus sympa."
+            e "Ah bon..."
+            show elusia happy sport
+            e "Tant mieux alors !"
+    show ryou angry
+    r "Mais qu'est-ce qu'ils font ?"
+    show laura happy
+    l "Ils se glissent des mots doux !"
+    show ryou sad
+    r "Très marrant."
+    r "Bon, il arrive ce service ?"
+    e "On continue ?"
+    m "Bien sûr."
+    "..."
+    "Elusia est vraiment très forte."
+    "A elle seule, elle a remporté le jeu."
+    $ jeu = 1
+    jump day7_elu
+label day7_elu:
+    call day7_normal
+    show elusia satisfied sport
+    e "Et voilà !"
+    e "1 jeu à 0 !"
+    show ryou sad
+    r "Tu m'étonnes..."
+    show laura sad
+    l "..."
+    
+    
 label day7_lolo:
     l "Mmmh... Elle tente de motiver Ryou..."
     m "Ah bon ?"

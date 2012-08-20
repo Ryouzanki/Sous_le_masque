@@ -296,7 +296,7 @@ label day4_apres:
     if aller_science == 3:
         "Maintenant, je me suis engagé à venir les aider pour le gala..."
         "Ou plutôt j'ai été forcé[ter]..."
-    "3 eme jour fini."
+    "4 eme jour fini."
     scene chambre m with dissolve
     play sound "sound/doorclose.mp3"
     "Je crois que je vais dormir."

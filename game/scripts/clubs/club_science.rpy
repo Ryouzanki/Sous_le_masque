@@ -348,8 +348,8 @@ label science_2:
     a "Oh, te voilà [j]."
     a "Votre attention tout le monde !"
     a "Je vous présente [j] qui s'est joint[ter] à nous hier."
-    a "Désormais, [sexe] travaillera avec nous dans ta team [club]."
-    "Ils sont tous souriants et me souhaitent la bienvenu[ter]"
+    a "Désormais, [sexe] travaillera avec nous dans la team [club]."
+    "Ils sont tous souriants et me souhaitent la bienvenu[ter]."
     a "Mais... On n'a plus vraiment le temps de former des gens, si ?"
     show alice geez
     a "Non, effectivement, question stupide."

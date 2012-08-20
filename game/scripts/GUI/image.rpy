@@ -21,6 +21,9 @@ image elusia geez sport = "CG/elusia sport geez.png"
 image elusia blush sport = "CG/elusia sport blush.png"
 image elusia surprised sport = "CG/elusia sport surprised.png"
 image elusia satisfied sport = "CG/elusia sport satisfied.png"
+image elusia shy sport = "CG/elusia sport shy.png"
+image elusia timid sport = "CG/elusia sport timid.png"
+image elusia embarassed sport = "CG/elusia sport embarassed.png"
 
 ## Laura Meyer
 

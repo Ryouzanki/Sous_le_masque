@@ -25,6 +25,7 @@ init python:
     register_stat("Néphénie", "rel_neph", 0, rel_neph_max)
     register_stat("Lloyd", "rel_lloy", 0, rel_lloy_max)
     register_stat("Alice", "rel_ali", 0, rel_ali_max)
+    register_stat("Salazard", "rel_sala", 0, rel_ali_max)
     
     
     dp_period("Matin", "action_matin")

@@ -1,5 +1,6 @@
 # TODO easin + easeout
 #            $ renpy.block_rollback()
+#               Premiere fois a revoir a cause du différé
 label go_home:
     if aller_home == 0:
         jump home_0

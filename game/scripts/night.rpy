@@ -4,8 +4,8 @@ label night:
     play music (shadow1) fadeout 1.0
     if day == 4:
         jump night4
-    elif day == 7:
-        jump night7
+    elif day == 8:
+        jump night8
     else:
         jump fin_night
 
@@ -21,13 +21,14 @@ label night4:
     s "Avant qu'il ne soit trop tard..."
     hide shadow with dissolve
     jump fin_night
-label night7:
+label night8:
     show shadow ombre with dissolve
     s "Pourquoi j'y suis allé ?"
     s "Je ne suis pas un pion, ni une pièce de rechange..."
     s "Je les déteste !"
     s "Je vais les briser en miette un à un..."
-    
+    hide shadow with dissolve
+    jump fin_night
 label fin_night:   
     stop music fadeout 1.0
     $ renpy.pause(1.0)
