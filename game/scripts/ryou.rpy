@@ -16,6 +16,12 @@ label ryou:
                 # window_left_padding=160,
                 # show_side_image=Image("UI/rect.png", xalign=0.0, yalign=1.0), show_two_window=True)
 
+    e "de"
+    scene ru
+    show elusia normal at left
+    show ryou angry at Position(xpos=0.375)
+    show alice geez at center
+    r "Et donc ?"
 
     # scene parc with fade
     # r "Voilà un fond de parc."

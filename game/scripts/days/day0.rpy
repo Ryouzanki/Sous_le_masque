@@ -128,7 +128,7 @@ label sonnette:
     r "Moi aussi j'y suis !"
     r "Et la voisine du dessous aussi !"
     show ryou normal
-    r "T'es en GTR ?"
+    r "T'es en Télécom et Réseaux ?"
     m "Ouep."
     r "Idem. On pourra venir te chercher le matin si tu veux !"
     show ryou happy

@@ -164,7 +164,7 @@ label day1_matin:
     show ryou normal at left with easeinleft
     show elusia normal at right with easeinright
     r "Tu fais quoi pour la pause de midi ?"
-    m "Je vais au RU."
+    m "Je vais au self."
     m "Comme tout le monde non ?"
     show ryou sad
     r "Bah..."

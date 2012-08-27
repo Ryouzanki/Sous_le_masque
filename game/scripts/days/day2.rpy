@@ -255,7 +255,7 @@ label day2_midi:
             hide elusia with easeoutright
             "Ces deux là s'entendent bien."
             jump day2_cours2
-        "Nan, je vais au RU aujourd'hui.":
+        "Nan, je vais au self aujourd'hui.":
             $ renpy.block_rollback()
             r "Ok, bah à plus !"
             e "On se voit plus tard !"

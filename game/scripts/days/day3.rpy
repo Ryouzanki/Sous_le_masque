@@ -28,7 +28,7 @@ label day3:
     show elusia happy at right
     e "Hey, pour ce midi, j'ai une superbe idée !"
     r "Balance !"
-    e "Et si aujourd'hui, on allait manger avec les autres au RU pour les présenter à [j] ?"
+    e "Et si aujourd'hui, on allait manger avec les autres au self pour les présenter à [j] ?"
     e "Après tout, [sexe] n'a pas encore rencontré tout le monde !"
     r "Mouais... OK..."
     e "Alice ! Alice !"
@@ -94,7 +94,7 @@ label day3:
     e "Nous sommes aussi responsables des sections de sports."
     e "Moi les sports solos et elle les sports collectifs."
     m "C'est impressionnant qu'autant de gens influents soient dans la même promo."
-    a "Je ne suis pas en GTR."
+    a "Je ne suis pas en Télécoms-Réseaux."
     a "Je passais par hasard."
     e "En fait, nous avons formé une liste électorale pour le bureau des élèves."
     e "Et nous avons perdu de très peu alors le président de l'autre liste a été contraint de fusionner les listes."
@@ -228,7 +228,7 @@ label d3_sport:
                                 show elusia geez
                                 e "On n'est pas asociaux, sinon,ne on serait pas tous réunis ici."
                                 show laura normal
-                                l "Oui, je suis très étonnée de te voir au RU."
+                                l "Oui, je suis très étonnée de te voir au self."
                                 show elusia angry
                                 e "J'ai le droit non ?"
                             "Solo !":
