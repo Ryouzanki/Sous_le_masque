@@ -74,7 +74,7 @@ rentre chez lui, Elusia l'acceuille.
 
 Partie + : Route bonus
 
-Si le joueur gagne, il débloque une route bonus qui est un VN sans choix reprenant la route du méchant face aux choix du héros. Il débloque aussi un mode stupide avec la même histoire mais avec des CG d'animaux à la place de chaque personnage. Les CG sont bien sûr en rapport avec les caractères. Potentiellement :
+Si le joueur gagne, il débloque une route bonus qui est un VN sans choix reprenant la route du méchant face aux choix du héros et à son dédoublement de personnalité. Il débloque aussi un mode stupide avec la même histoire mais avec des CG d'animaux à la place de chaque personnage. Les CG sont bien sûr en rapport avec les caractères. Potentiellement :
 - Ryouzanki => Serpent
 - Salazard => Loup
 - Elusia => Lapin
