@@ -74,7 +74,7 @@ label choix_sexe:
         show ryou happy
         r "Pas faux..."
         
-    show ryou sad
+    show ryou surprised
     r "OK ! Moi, c'est Ryouzanki !"
     $ inc = 'Ryouzanki'
     show ryou normal
@@ -113,7 +113,7 @@ label sonnette:
             show ryou normal
             jump sonnette
             
-    show ryou happy
+    show ryou surprised
     r "Sympa comme prénom !"
     m "Merci..."
     show ryou normal

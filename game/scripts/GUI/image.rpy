@@ -40,6 +40,7 @@ image ryou normal = "CG/ryou normal.png"
 image ryou happy = "CG/ryou happy.png"
 image ryou angry = "CG/ryou angry.png"
 image ryou sad = "CG/ryou sad.png"
+image ryou surprised = "CG/ryou surprised.png"
 
 # Ryouzanki shadow
 image shadow ombre = "CG/shadow ombre.png"

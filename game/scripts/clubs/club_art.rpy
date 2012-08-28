@@ -95,7 +95,7 @@ label club_1:
     r "Et oui, [sexe] ne va faire qu'une bouchée de toi !"
     e "Misère de misère..."
     e "Ryou, à quoi cela te sert-il de débiter ce genre de stupidité ?"
-    show ryou normal
+    show ryou surprised
     r "C'est fun."
     v "Commence donc !"
     hide elusia
@@ -106,11 +106,12 @@ label club_1:
     "Il mène largement."
     "Subitement, il enchaîne les erreurs d'étourderie."
     "Je remporte la partie."
-    show ryou angry at left
+    show ryou surprised at left
     show elusia happy at right
     r "Attends... Il s'est passé quoi là ?"
     e "Hi hi, tu me dois une boîte de thé !"
     r "Nan, sérieusement, Valeth, tu as..."
+    show ryou angry
     r "T'as fait exprès, espèce de traitre !!"
     r "Combien est-ce que la déléguée t'a payé pour perdre ?"
     show elusia satisfied

@@ -16,6 +16,8 @@ Relations officieuses : Aucun changement notoire, elle est honnête.
 
 Représentation clair-obscur : à l'image d'un phare, elle éclaire dans toutes les directions.
 
+Gameplay : Les choix gentils augmente la barre et les méchants la diminue. Étant naive, les mensonges marchent.
+
 Alice Drezall *************************************************************************************************
 
 Rôle : présidente (ou rôle de premier plan équivalent) du club chimie / robot / info
@@ -33,6 +35,8 @@ Relations officielles :
 Relations officieuses :
 
 Représentation clair-obscur : comme un projecteur, elle éclaire loin, mais d'une lumière parfois aveuglante.
+
+Gameplay : Les choix objectifs, bien pensé et collectifs font monter la barre. Les choix gentils lorsqu'il n'y a pas de conséquence ou les choix de confiance font monter un peu. La paresse et les choix individuels sur les choix collectifs font baisser la barre
 
 Valeth Lezard ***************************************************************************************************
 
@@ -52,6 +56,8 @@ Relations officieuses :
 
 Représentation clair-obscur : un peu comme une lampe à abat-jour, il garde la lumière pour lui et n'éclaire que ce qui est proche.
 
+Gameplay : Les choix qui l'implique lui font monter la barre. Il se fiche du reste.
+
 Lloyd ********************************************************************************************************
 
 Rôle : vice-président de l'association des élèves.
@@ -69,6 +75,8 @@ Relations officielles :
 Relations officieuses : Il est amoureux d'Elusia.
 
 Représentation clair-obscur : comme une lampe de bureau aorientée vers le plafond, il n'éclaire que dans un angle peu évident à comprendre.
+
+Gameplay : Les choix disciplinés font monter la barre et vice versa.
 
 Le secrétaire *************************************************************************************************
 
@@ -106,9 +114,13 @@ Relations officieuses : Elle est amoureuse de Ryouzanki
 
 Représentation clair-obscure : comme une lampe de poche, elle n'éclaire pas très loin, mais sa lumière est vive, parfois trop.
 
+Gameplay : Etre à ses pieds fait monter la barre
+
 Ryouzanki ************************************************************************************************************
 
 [Voir le document "Proposition trame visual novel.pdf"]
+
+Gameplay : Les choix de manipulateur et/ou intelligent font monter la barre. Les choix extremement naifs et honnete la font monter légèrement. devant elusia, seul les choix honnete font monter la barre
 
 Salazard ******************************************************************************************************************
 

@@ -146,6 +146,7 @@ label day3:
             show ryou normal
             show elusia sad
             e "Ou du fantastique, c'est pas mal aussi !"
+            show ryou surprised
             r "Alice demande si tu lis des revues scientifiques."
             show elusia normal
             show alice normal
@@ -169,6 +170,7 @@ label day3:
                 "De la science fiction.":
                     extend "De la science fiction."
                     $ rel_ryou += 5
+                    show ryou normal
                     r "Ahlala. Je vous avais prévenu. La fin des autres genres moisis approche !"
                     show alice geez
                     a "C'est toi le moisi."
@@ -411,7 +413,7 @@ label d3_loisir:
                 "Divertissement.":
                     extend "Divertissement."
                     m "J'aime bien ce genre d'occupation."
-                    show ryou happy
+                    show ryou surprised
                     r "Un nouveau partenaire de jeu !"
                     v "Oui. [j] pourrait aussi nous parler des jeux d'où [sexe] vient."
                     $ rel_val += 5
@@ -448,6 +450,7 @@ label day3_cours:
                 show alice sad at center
                 a "Ne vous en faites pas, je n'en ai pas pour longtemps."
                 a "je vous rend [j] juste après."
+                show ryou surprised
                 r "OK, on part devant."
                 hide ryou
                 hide elusia

@@ -1,6 +1,5 @@
 # TODO easin + easeout
 #            $ renpy.block_rollback()
-#               Premiere fois a revoir a cause du différé
 label go_home:
     if aller_home == 0:
         jump home_0
@@ -17,7 +16,7 @@ label go_home:
 label home_0:
     play music (ryou1) fadein 2
     scene street with dissolve
-    show ryou normal at left
+    show ryou surprised at left
     r "Ah bah te voilà enfin !"
     show ryou normal at center with move
     r "Je t'attendais pour rentrer."
@@ -37,15 +36,16 @@ label home_0:
     r "Tant qu'à faire, tu veux passer chez moi ?"
     m "Pourquoi faire ?"
     if bite:
-        show ryou normal
+        show ryou surprised
         r "Juste récupérer les cours."
+        show ryou happy
         r "'Fin après, si tu veux jouer à la console ou sortir..."
         r "C'est comme tu veux hein !"
         menu:
             "Accepter.":
                 $ rel_ryou += 5
                 m "Ouais, OK."
-                show ryou happy
+                show ryou normal
                 r "Bon bah, par ici !"
                 jump chez_ryou_homme
             "Refuser.":
@@ -67,6 +67,7 @@ label home_0:
             "Accepter.":
                 $ rel_ryou += 5
                 m "D'accord."
+                show ryou surprised
                 r "Vraiment ?"
                 m "Bah quoi ?"
                 show ryou happy
@@ -95,7 +96,7 @@ label chez_ryou_homme:
     show ryou sad
     r "Mmmh... J'aurais du ranger un peu..."
     r "Tiens, voilà tes cours."
-    show ryou normal
+    show ryou surprised
     r "Et sinon, t'en penses quoi ?"
     menu:
         "De quoi ? Elusia ?":
@@ -112,7 +113,7 @@ label chez_ryou_homme:
                     $ rel_ryou -= 2
                 "...je ne sais pas.":
                     extend "je ne sais pas."
-                    m "Je ne suis ici que depuis 48h."
+                    m "Je ne suis ici que depuis peu."
                     m "C'est trop tôt pour juger."
                     show ryou sad
                     r "Pas faux."
@@ -325,7 +326,7 @@ label home2:  #var a changer car ambigue
                 r "On se voit plus tard !"
                 m "Hey ! Ne t'enfuis pas !"
                 scene couloir with dissolve
-                show ryou happy
+                show ryou surprised
                 r "J'y vais, à plus !"
                 hide ryou
                 m "Il est partit vite..."
@@ -355,15 +356,17 @@ label home_2:
             r "En ce moment, elle me fausse souvent compagnie..."
             r "Depuis ton arrivée en fait..."
             m "Je suis là, avec toi."
+            show ryou happy
             r "Oh, mais j'ai rien insinué."
         "Tu veux qu'on aille la chercher ?":
             $rel_ryou += 2
             m  "Tu veux qu'on aille la chercher ?"
-            show ryou normal
+            show ryou happy
             r "C'est sympa de proposer mais non."
             r "Si elle ne vient pas, c'est probablement parce qu'elle ne peut pas."
             r "On va juste la déranger en faisant ça."
     r "Je vais rentrer. Je suppose que toi aussi du coup..."
+    show ryou normal
     r "Tu te plaîs ici ?"
     m "C'est pas comme si j'avais le choix !"
     r "Oui. Comment sont tes nouveaux camarades ?"
@@ -388,8 +391,9 @@ label home_2:
             r "Les types d'où tu venais étaient des anges alors."
             $ rel_ryou += 3
     scene couloir with dissolve
-    show ryou sad
+    show ryou surprised
     r "Bon bah, on est arrivé..."
+    show ryou happy
     r "A plus tard !"
     m "A plus tard."
     $ vig += 2

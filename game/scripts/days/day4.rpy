@@ -82,7 +82,7 @@ label day4:
                 m "J'ai oublié."
                 $ rel_ryou -= 3
                 $ rel_lulu -= 1
-                show ryou angry
+                show ryou surprised
                 show elusia geez
                 r "Ah bon... Vraiment ?"
                 e "Tant pis. On te le rappellera ce soir alors."

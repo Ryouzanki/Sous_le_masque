@@ -39,10 +39,11 @@ label route_d2:
         m "De quoi ?"
         r "Le club de science ! Tu y es allé[ter] hier non ?"
         m "Comment tu sais ?"
-        show ryou happy
+        show ryou surprised
         r "Je suis Dieu voyons, je sais tout !"
         show elusia geez
         e "Dieu, il a quand même oublié de se lever..."
+        show ryou normal
         menu:
             m "Le club de science..."
             "Je vais essayer de m'y inscrire aujourd'hui.":
@@ -81,12 +82,13 @@ label route_d2:
     elif aller_art == 1:
         r "Alors, t'as fait la rencontre de ce cher Valeth ?"
         m "Comment tu sais ?"
-        show ryou happy
+        show ryou surprised
         r "Je suis Dieu, je sais tout..."
         show elusia satisfied
         e "Ce n'est pas ce que prouvent tes notes..."
         show ryou angry
         r "Je ne fais que m'abaisser au niveau des mortels !"
+        show ryou surprised
         r "As tu joué aux échecs contre lui ?"
         menu:
             "J'ai perdu.":
@@ -162,9 +164,10 @@ label route_d2:
         r "Alors le [sport], c'était comment ?"
         show elusia sad
         e "Mais... D'où tu sors ça ?"
-        show ryou happy
+        show ryou surprised
         r "J'ai des informateurs..."
         m "C'était assez fun mais je n'ai pas fait de sport depuis un bout de temps..."
+        show ryou happy
         r "Dur la reprise hein..."
         show elusia happy
         e "Dit celui qui séche tous les cours de sport..."
