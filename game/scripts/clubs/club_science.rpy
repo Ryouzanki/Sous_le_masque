@@ -109,15 +109,15 @@ label lloyd_menu_1:
                     $ noble = 'Lloyd'
                     y "Mais c'est un peu long alors appelles moi Lloyd."
                     y "Et tu es en quelle classe [j] ?"
-                    m "GTR !"
+                    m "Télécoms-Réseaux !"
                     show lloyd happy
                     y "Oh milles pardons, je ne t'avais pas reconnu[ter] !"
                     y "Nous sommes donc dans la même promotion !"
                     show lloyd normal
                     m "C'est pas grave, je viens d'arriver."
                     $ rel_lloy += 5
-                "Je suis en GTR.":
-                    m "Je suis en GTR."
+                "Je suis en Télécoms-Réseaux.":
+                    m "Je suis en Télécoms-Réseaux."
                     show lloyd normal
                     y  "Oh pardon, je ne t'avais pas reconnu[ter]."
                     y "Nous sommes donc dans la même promotion."

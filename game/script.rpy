@@ -112,7 +112,7 @@ label route:
     $ ali = 'Jeune fille'
     $ sha = '???'
     $ persistent.preums = True
-    $ m = DynamicCharacter("j", color="#58D3F7", show_two_window=True)
+    $ mm = DynamicCharacter("j", color="#58D3F7", show_two_window=True)
     $ r = DynamicCharacter("inc", color="#4169E1", show_two_window=True)
     $ e = DynamicCharacter("fille", color="#FF69B4", show_two_window=True)
     $ l = DynamicCharacter("en", color="#8B0000", show_two_window=True)
@@ -120,7 +120,6 @@ label route:
     $ y = DynamicCharacter("noble", color="#FF8C00", show_two_window=True)
     $ a = DynamicCharacter("ali", color="#228B22", show_two_window=True)
     $ s = DynamicCharacter("sha", color="#778899", show_two_window=True)
-
     
     # $ a = Character('Alice',
                 # color="#228B22",

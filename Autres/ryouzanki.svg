@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -747,6 +747,34 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4723"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4723-9"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4764"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4811"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -763,9 +791,9 @@
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="-1456.9419"
-     inkscape:cy="-643.67381"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="170.10526"
+     inkscape:cy="850.78727"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -782,111 +810,10 @@
        orientation="0,1"
        position="-1312.8133,-1004.7789"
        id="guide30639" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid5201" />
   </sodipodi:namedview>
-  <g
-     id="g3180"
-     transform="matrix(0.56761405,0,0,0.56761405,-1709.6914,2347.9568)">
-    <path
-       sodipodi:nodetypes="ccccccccc"
-       id="path12172"
-       d="m -497.73129,-504.39843 c 4.28916,11.99778 0.6474,23.76377 0.6474,23.76377 -2.13483,6.8973 3.16857,9.87256 3.16857,9.87256 4.29877,6.22106 3.00438,14.71227 3.00438,14.71227 l -0.25115,0.81145 55.13954,-15.83324 4.04331,-66.0661 -11.37584,-12.22869 -54.37621,44.96798 z"
-       style="fill:#df9f74;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       id="path12170"
-       d="m -402.17438,-573.96606 c 2.96577,19.14623 -9.01738,42.77967 -9.01738,42.77967 2.64195,-11.40856 -0.97095,-16.97273 -0.97095,-16.97273 -10.70326,14.47085 -7.15308,29.57434 -7.15308,29.57434 l -6.08592,-11.22012 c -3.41472,16.05988 -0.70498,29.56947 -0.70498,29.56947 -5.24548,-9.62622 -4.39549,-23.14549 -4.39549,-23.14549 -3.15394,9.47172 -7.69413,16.9583 -7.69413,16.9583 0.50226,-10.95935 -5.96528,-27.4104 -5.96528,-27.4104 l -93.51443,-22.49765 c -1.1978,6.74274 -11.07999,15.68802 -11.07999,15.68802 4.10546,-8.9549 5.06173,-20.66291 5.06173,-20.66291 -6.47221,5.11022 -8.45246,12.94455 -8.45246,12.94455 2.26027,-25.97594 9.93028,-37.82889 9.93028,-37.82889 l 140.04208,12.22384 z"
-       style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       sodipodi:nodetypes="ccccccccccccccc"
-       d="m -464.54995,-508.76585 c 0,0 -14.27611,7.52753 -41.62616,16.6672 0,0 -2.38393,-0.42349 -5.32797,-2.59222 0,0 -8.77244,-15.84034 -18.76243,-29.7783 0,0 -2.6196,-4.7405 -5.16926,-18.34039 0,0 -1.56768,-6.61552 -2.90994,-9.38878 0,0 -2.06973,-3.46998 -3.22413,-6.34228 0,0 -3.0431,-2.35657 -0.85911,-21.09319 l 2.56997,-11.85811 11.03143,-21.42115 43.60709,-12.91032 35.12357,16.53004 18.45012,58.21109 -10.69674,19.32412 c 0,0 -5.51912,12.75295 -13.38805,17.86237"
-       style="fill:#df9f74;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="path12141" />
-    <path
-       sodipodi:nodetypes="cccc"
-       style="fill:#ffffff;stroke:none"
-       d="m -489.14847,-563.6951 c 0,0 -5.40506,0.37145 -11.89493,-7.45186 22.42853,-10.50577 38.53541,2.96767 38.53541,2.96767 -10.61828,5.35876 -26.64048,4.48419 -26.64048,4.48419 z"
-       id="path12324" />
-    <path
-       id="path12137"
-       d="m -501.0434,-571.14696 c 22.42853,-10.50577 38.53541,2.96767 38.53541,2.96767 -10.61828,5.35876 -26.78997,4.28304 -26.78997,4.28304"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       sodipodi:nodetypes="cccc"
-       id="path12144"
-       d="m -484.48205,-525.62388 c 0,0 -14.5562,3.35397 -34.91168,2.08361 l 2.5174,4.33549 c 19.11211,-0.21236 32.9153,-6.15835 32.39428,-6.4191 z"
-       style="fill:#ffffff;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       sodipodi:nodetypes="ccccc"
-       id="path12150"
-       d="m -481.27538,-575.08841 c -3.03107,6.99978 1.02468,11.16307 1.02468,11.16307 8.36418,-0.86927 11.80514,-2.08345 11.80514,-2.08345 0.77013,-5.0274 -0.0786,-5.84025 -0.0786,-5.84025 -6.98271,-3.34016 -12.55826,-3.10105 -12.75123,-3.23937 z"
-       style="fill:#552200;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       transform="matrix(0.95528794,0.29567709,-0.29567709,0.95528794,-887.82446,-754.91568)"
-       d="m 451.86565,55.220932 c 0,1.181759 -1.10086,2.139764 -2.45885,2.139764 -1.35799,0 -2.45885,-0.958005 -2.45885,-2.139764 0,-1.181759 1.10086,-2.139764 2.45885,-2.139764 1.35799,0 2.45885,0.958005 2.45885,2.139764 z"
-       sodipodi:ry="2.1397643"
-       sodipodi:rx="2.4588521"
-       sodipodi:cy="55.220932"
-       sodipodi:cx="449.4068"
-       id="path12152"
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       sodipodi:type="arc" />
-    <path
-       id="path12154"
-       d="m -505.03167,-575.43149 c 15.6453,-16.20331 37.35459,-19.66333 37.35459,-19.66333 l 0.4265,0.0987 c 0,0 -19.98464,4.91652 -37.78109,19.56461 z"
-       style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       sodipodi:nodetypes="ccc"
-       id="path12156"
-       d="m -523.35503,-565.7916 c 0,0 -8.44536,-5.39267 -17.14539,3.86294 4.97234,4.94369 13.39629,2.99261 13.39629,2.99261"
-       style="fill:#ffffff;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       id="path12166"
-       d="m -531.26921,-567.06284 c -1.7546,4.5262 1.3329,8.38979 1.3329,8.38979 4.90785,-0.36718 6.15701,-1.35593 6.15701,-1.35593 1.29097,-4.55182 -0.38683,-6.36792 -0.38683,-6.36792 -6.2151,-1.88437 -6.9844,-0.66851 -7.10308,-0.66594 z"
-       style="fill:#552200;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       transform="matrix(1.2002336,0.37149174,-0.37149174,1.2002336,-977.70764,-803.44639)"
-       d="m 401.37472,76.412109 c 0,0.881137 -0.65547,1.595439 -1.46404,1.595439 -0.80858,0 -1.46405,-0.714302 -1.46405,-1.595439 0,-0.881136 0.65547,-1.595438 1.46405,-1.595438 0.80857,0 1.46404,0.714302 1.46404,1.595438 z"
-       sodipodi:ry="1.5954382"
-       sodipodi:rx="1.4640492"
-       sodipodi:cy="76.412109"
-       sodipodi:cx="399.91068"
-       id="path12160"
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       sodipodi:type="arc" />
-    <path
-       id="path12162"
-       d="m -527.27328,-571.72055 4.38534,5.12982 c 0.96656,2.97135 -0.70693,6.85461 -0.70693,6.85461 -1.48565,3.78422 -5.34837,9.66206 -5.34837,9.66206 -1.75889,2.12778 -0.0717,3.27874 -0.0717,3.27874 7.244,5.54306 7.51383,9.24188 7.51383,9.24188"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       sodipodi:nodetypes="ccc"
-       id="path12164"
-       d="m -527.4687,-571.21591 c -3.34819,-8.35249 -13.05784,-7.04977 -13.05784,-7.04977 9.83337,2.09024 12.9981,7.27955 13.05784,7.04977 z"
-       style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccc"
-       id="path12168"
-       d="m -415.73863,-630.41069 c 0,0 4.84298,2.12773 8.98933,18.18667 0,0 4.74063,17.18601 7.01534,30.15066 0,0 1.04516,8.81159 8.2653,22.04944 0,0 -4.98643,-2.17213 -12.12457,-11.61211 0,0 -3.66118,10.81302 -3.01221,18.87324 0,0 -6.95375,-14.09851 -10.77901,-24.08496 0,0 2.30891,18.94834 -6.68019,33.77102 0,0 2.82092,-23.33369 -6.26396,-30.54685 0,0 0.41668,1.70084 -1.40706,9.62447 0,0 -8.83899,-9.02329 -15.90203,-23.78439 0,0 -2.21313,3.0875 -2.74591,4.80884 0,0 -3.92766,-1.53005 -11.07951,-16.00425 0,0 -2.99179,6.61896 -0.75128,13.59992 0,0 -2.8006,-2.12433 -11.2913,-21.41416 0,0 -1.29095,6.20228 2.15862,16.38683 0,0 -11.63958,-11.14762 -12.89653,-25.36912 -12.85527,16.14103 -25.28713,16.6944 -25.28713,16.6944 9.56977,-5.5261 12.71866,-13.66832 12.71866,-13.66832 -15.22557,7.54803 -25.01385,24.95272 -25.01385,24.95272 1.36607,-11.5234 8.40163,-20.0345 8.40163,-20.0345 -16.12715,18.58645 -19.18726,26.44177 -19.18726,26.44177 -2.63669,-7.73233 0.28681,-13.11494 0.28681,-13.11494 -8.16943,13.19013 -13.55875,27.55513 -13.55875,27.55513 -2.21322,-10.11625 -0.85396,-17.55489 -0.85396,-17.55489 -6.0861,8.4906 -18.77065,14.93887 -18.77065,14.93887 8.66809,-7.69143 16.35934,-25.43081 16.35934,-25.43081 -4.84294,4.47414 -15.10947,4.12585 -15.10947,4.12585 11.18861,-9.74065 14.28971,-15.69705 14.28971,-15.69705 -2.52052,2.04923 -15.21197,-0.62148 -15.21197,-0.62148 18.01937,-1.33895 27.02207,-24.33114 27.02207,-24.33114 l -6.91266,1.00416 11.16131,-6.60536 c -10.39633,-1.96034 -16.988,-8.08743 -16.988,-8.08743 13.08765,3.42209 24.63834,1.65285 24.63834,1.65285 4.97274,-2.86209 18.65457,-11.51668 18.65457,-11.51668 13.10805,-8.83219 23.0058,0.83318 23.0058,0.83318 l 14.75428,-2.97828 c 2.47272,0.13659 7.82803,6.19538 7.82803,6.19538 27.82833,8.61332 46.27812,20.61132 46.27812,20.61132 z"
-       style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <g
-       transform="matrix(0.92094705,0.38968772,-0.38968772,0.92094705,-994.3064,-956.61693)"
-       id="g4640-9"
-       style="fill:#df9f74;fill-opacity:1"
-       inkscape:export-filename="/home/ryouzanki/Bureau/fregfez.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
-      <path
-         id="path4642-7"
-         d="m 669.42389,145.44502 c 1.7281,-15.84062 13.8246,-13.10451 13.8246,-13.10451 5.1842,2.5921 5.6162,13.68053 5.6162,13.68053 -2.1601,14.97658 -7.4883,21.16882 -7.4883,21.16882 -4.4642,6.04824 -9.2163,7.34429 -9.2163,7.34429 l -0.7201,-0.14401"
-         style="fill:#df9f74;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         id="path4644-4"
-         d="m 680.65639,139.97281 c -6.9123,2.5921 -7.3443,9.93638 -7.3443,9.93638 0.576,5.47221 3.7441,8.20832 3.7441,8.20832 1.7281,2.30409 -3.3121,7.34429 -3.3121,7.34429"
-         style="fill:#df9f74;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         id="path4646-8"
-         d="m 673.31209,150.62922 c 4.1762,-4.46417 8.3523,-1.29605 8.3523,-1.29605"
-         style="fill:#df9f74;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    </g>
-  </g>
   <image
      xlink:href="file:///home/ryouzanki/Bureau/toohru/elite/Adachi.Tohru.full.847772.jpg"
      width="555.93219"
@@ -5770,7 +5697,7 @@
        sodipodi:role="line">SAD</tspan></text>
   <path
      style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:0.51793057;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-     d="m -1022.4456,2021.448 c 0.4662,2.0598 2.4778,2.9217 2.4778,2.9217 3.5932,1.6352 4.5885,-1.7582 4.5885,-1.7582 0.2354,-1.6732 -0.5325,-3.8322 -0.5325,-3.8322 0,0 -4.8831,1.1164 -6.5338,2.6687 z"
+     d="m -1022.4456,2021.448 c 0.4662,2.0598 2.0801,2.7891 2.0801,2.7891 3.5932,1.6352 5.2956,-1.714 5.2956,-1.714 0.7215,-1.5406 -0.7093,-3.788 -0.7093,-3.788 0,0 -5.0157,1.1606 -6.6664,2.7129 z"
      id="path31029"
      inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/ryou sad.png"
      inkscape:export-xdpi="90"
@@ -6791,7 +6718,10 @@
        sodipodi:role="line">Surprised</tspan></text>
   <g
      id="g4994"
-     transform="translate(830,0)">
+     transform="translate(830,0)"
+     inkscape:export-filename="/home/ryouzanki/Bureau/ryouzanki.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 175.36248,683.38208 23.33453,4.24264"
@@ -6828,7 +6758,10 @@
   <path
      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="m 1074.0952,538.42519 0.7071,19.09189"
-     id="path5012" />
+     id="path5012"
+     inkscape:export-filename="/home/ryouzanki/Bureau/ryouzanki.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
   <g
      id="g5016">
     <g
@@ -6873,7 +6806,10 @@
   </g>
   <g
      transform="matrix(0.55397581,0,0,0.55397581,-1905.8467,1908.0017)"
-     id="g5016-2">
+     id="g5016-2"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/ryou normal.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
     <g
        id="g4984-1">
       <path
@@ -6916,7 +6852,10 @@
   </g>
   <g
      id="g5080"
-     transform="matrix(0.55397581,0,0,0.55397581,-1651.0967,1908.0017)">
+     transform="matrix(0.55397581,0,0,0.55397581,-1651.0967,1908.0017)"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/ryou happy.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
     <g
        id="g5082">
       <path
@@ -7080,4 +7019,173 @@
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
   </g>
+  <g
+     id="g4711">
+    <path
+       transform="matrix(0.97760954,-0.21042717,0.21042717,0.97760954,-31.477429,47.398335)"
+       d="m 225.39028,208.29471 a 5.6568542,1.1490486 0 1 1 -11.31371,0 5.6568542,1.1490486 0 1 1 11.31371,0 z"
+       sodipodi:ry="1.1490486"
+       sodipodi:rx="5.6568542"
+       sodipodi:cy="208.29471"
+       sodipodi:cx="219.73343"
+       id="path3935"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       id="path4709"
+       sodipodi:cx="219.73343"
+       sodipodi:cy="208.29471"
+       sodipodi:rx="5.6568542"
+       sodipodi:ry="1.1490486"
+       d="m 225.39028,208.29471 a 5.6568542,1.1490486 0 1 1 -11.31371,0 5.6568542,1.1490486 0 1 1 11.31371,0 z"
+       transform="matrix(0.75872428,-0.30593694,0.32707319,0.70969371,-55.686889,148.41776)" />
+  </g>
+  <g
+     transform="translate(829.97418,-0.24338403)"
+     id="g4711-1"
+     inkscape:export-filename="/home/ryouzanki/Bureau/ryouzanki.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
+    <path
+       transform="matrix(0.97760954,-0.21042717,0.21042717,0.97760954,-31.477429,47.398335)"
+       d="m 225.39028,208.29471 c 0,0.6346 -2.53266,1.14905 -5.65685,1.14905 -3.1242,0 -5.65686,-0.51445 -5.65686,-1.14905 0,-0.6346 2.53266,-1.14905 5.65686,-1.14905 3.12419,0 5.65685,0.51445 5.65685,1.14905 z"
+       sodipodi:ry="1.1490486"
+       sodipodi:rx="5.6568542"
+       sodipodi:cy="208.29471"
+       sodipodi:cx="219.73343"
+       id="path3935-8"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       id="path4709-4"
+       sodipodi:cx="219.73343"
+       sodipodi:cy="208.29471"
+       sodipodi:rx="5.6568542"
+       sodipodi:ry="1.1490486"
+       d="m 225.39028,208.29471 c 0,0.6346 -2.53266,1.14905 -5.65685,1.14905 -3.1242,0 -5.65686,-0.51445 -5.65686,-1.14905 0,-0.6346 2.53266,-1.14905 5.65686,-1.14905 3.12419,0 5.65685,0.51445 5.65685,1.14905 z"
+       transform="matrix(0.75872428,-0.30593694,0.32707319,0.70969371,-55.686889,148.41776)" />
+  </g>
+  <g
+     transform="matrix(0.55275001,0,0,0.55275001,-1905.3623,1907.9995)"
+     id="g4711-6"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/ryou normal.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
+    <path
+       transform="matrix(0.97760954,-0.21042717,0.21042717,0.97760954,-31.477429,47.398335)"
+       d="m 225.39028,208.29471 c 0,0.6346 -2.53266,1.14905 -5.65685,1.14905 -3.1242,0 -5.65686,-0.51445 -5.65686,-1.14905 0,-0.6346 2.53266,-1.14905 5.65686,-1.14905 3.12419,0 5.65685,0.51445 5.65685,1.14905 z"
+       sodipodi:ry="1.1490486"
+       sodipodi:rx="5.6568542"
+       sodipodi:cy="208.29471"
+       sodipodi:cx="219.73343"
+       id="path3935-2"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       id="path4709-3"
+       sodipodi:cx="219.73343"
+       sodipodi:cy="208.29471"
+       sodipodi:rx="5.6568542"
+       sodipodi:ry="1.1490486"
+       d="m 225.39028,208.29471 c 0,0.6346 -2.53266,1.14905 -5.65685,1.14905 -3.1242,0 -5.65686,-0.51445 -5.65686,-1.14905 0,-0.6346 2.53266,-1.14905 5.65686,-1.14905 3.12419,0 5.65685,0.51445 5.65685,1.14905 z"
+       transform="matrix(0.75872428,-0.30593694,0.32707319,0.70969371,-55.686889,148.41776)" />
+  </g>
+  <g
+     transform="matrix(0.55275001,0,0,0.55275001,-1395.6207,1908.4592)"
+     id="g4711-6-8"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/ryou angry.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
+    <path
+       transform="matrix(0.97760954,-0.21042717,0.21042717,0.97760954,-28.599111,46.438896)"
+       d="m 225.39028,208.29471 a 5.6568542,1.1490486 0 1 1 -11.31371,0 5.6568542,1.1490486 0 1 1 11.31371,0 z"
+       sodipodi:ry="1.1490486"
+       sodipodi:rx="5.6568542"
+       sodipodi:cy="208.29471"
+       sodipodi:cx="219.73343"
+       id="path3935-2-4"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       id="path4709-3-1"
+       sodipodi:cx="219.73343"
+       sodipodi:cy="208.29471"
+       sodipodi:rx="5.6568542"
+       sodipodi:ry="1.1490486"
+       d="m 225.39028,208.29471 c 0,0.6346 -2.53266,1.14905 -5.65685,1.14905 -3.1242,0 -5.65686,-0.51445 -5.65686,-1.14905 0,-0.6346 2.53266,-1.14905 5.65686,-1.14905 3.12419,0 5.65685,0.51445 5.65685,1.14905 z"
+       transform="matrix(0.75872428,-0.30593694,0.32707319,0.70969371,-55.686889,148.41776)" />
+  </g>
+  <path
+     sodipodi:type="arc"
+     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+     id="path4784"
+     sodipodi:cx="-1029.7905"
+     sodipodi:cy="2022.7086"
+     sodipodi:rx="1.9666407"
+     sodipodi:ry="0.46403882"
+     d="m -1027.8239,2022.7086 a 1.9666407,0.46403882 0 1 1 -3.9333,0 1.9666407,0.46403882 0 1 1 3.9333,0 z"
+     transform="matrix(0.93978194,-0.34177465,0.34177465,0.93978194,-744.96981,-230.59464)"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/ryou sad.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <path
+     sodipodi:type="arc"
+     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+     id="path4799"
+     sodipodi:cx="-761.99597"
+     sodipodi:cy="2018.7533"
+     sodipodi:rx="4.5078058"
+     sodipodi:ry="0.70710677"
+     d="m -757.48817,2018.7533 a 4.5078058,0.70710677 0 1 1 -9.01561,0 4.5078058,0.70710677 0 1 1 9.01561,0 z"
+     transform="matrix(0.97646308,-0.21568461,0.21568461,0.97646308,-453.17228,-116.30524)"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/ryou surprised.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <path
+     transform="matrix(0.67272731,-0.14859438,0.14859438,0.67272731,-576.88884,555.30366)"
+     d="m -757.48817,2018.7533 a 4.5078058,0.70710677 0 1 1 -9.01561,0 4.5078058,0.70710677 0 1 1 9.01561,0 z"
+     sodipodi:ry="0.70710677"
+     sodipodi:rx="4.5078058"
+     sodipodi:cy="2018.7533"
+     sodipodi:cx="-761.99597"
+     id="path4801"
+     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+     sodipodi:type="arc"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/ryou surprised.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <path
+     sodipodi:type="arc"
+     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+     id="path4799-5"
+     sodipodi:cx="-761.99597"
+     sodipodi:cy="2018.7533"
+     sodipodi:rx="4.5078058"
+     sodipodi:ry="0.70710677"
+     d="m -757.48817,2018.7533 a 4.5078058,0.70710677 0 1 1 -9.01561,0 4.5078058,0.70710677 0 1 1 9.01561,0 z"
+     transform="matrix(0.97646308,-0.21568461,0.21568461,0.97646308,-1212.8701,-116.24369)"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/ryou happy.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <path
+     transform="matrix(0.67272731,-0.14859438,0.14859438,0.67272731,-1336.5866,555.36521)"
+     d="m -757.48817,2018.7533 a 4.5078058,0.70710677 0 1 1 -9.01561,0 4.5078058,0.70710677 0 1 1 9.01561,0 z"
+     sodipodi:ry="0.70710677"
+     sodipodi:rx="4.5078058"
+     sodipodi:cy="2018.7533"
+     sodipodi:cx="-761.99597"
+     id="path4801-1"
+     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+     sodipodi:type="arc"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/ryou happy.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
 </svg>

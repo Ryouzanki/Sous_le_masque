@@ -1,6 +1,6 @@
 # 3 cas possibles : pas inscrit, lu, inscrit
 # TODO easin + easeout
-#            $ renpy.block_rollback()
+#            # $ renpy.block_rollback()
 
 label day5:
     scene reveil with dissolve

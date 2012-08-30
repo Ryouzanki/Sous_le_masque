@@ -23,9 +23,9 @@ label club_0:
     show valeth normal
     if valou == 'Jeune homme':
         v "Salut !"
-        v "T'es le nouveau dans la classe de GTR avec moi non ?"
+        v "T'es le nouveau dans la classe de Télécoms-Réseaux avec moi non ?"
         m "Je ne sais pas..."
-        m "Mais je suis bien en GTR."
+        m "Mais je suis bien en Télécoms-Réseaux."
         v "Oui je sais. Tu étais assis à l'autre boût du rang."
         v "Oh ! Mais je me présente : je suis Valeth !"
         $ valou = 'Valeth'

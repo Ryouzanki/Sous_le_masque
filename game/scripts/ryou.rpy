@@ -1,10 +1,10 @@
 # TODO easin + easeout
-#            $ renpy.block_rollback()
+#            # $ renpy.block_rollback()
 
 label ryou:
     play music (joueur1) fadein 2
     define e = Character('Elusia', color="#FF69B4", show_two_window=True)
-    define m = Character('Minato', color="#58D3F7", show_two_window=True)
+    #define m = Character('Minato', color="#58D3F7", show_two_window=True)
     define r = Character('Ryouzanki', color="#4169E1", show_two_window=True)
     define l = Character('Laura', color="#8B0000", show_two_window=True)
     define v = Character('Valeth', color="#800080", show_two_window=True)
@@ -16,12 +16,16 @@ label ryou:
                 # window_left_padding=160,
                 # show_side_image=Image("UI/rect.png", xalign=0.0, yalign=1.0), show_two_window=True)
 
+    define m = Character('Labrys',
+                 color="#58D3F7",
+                 window_left_padding=160,
+                 show_side_image=Image("CG/hamuko.png", xalign=0.03, yalign=0.97), show_two_window=True)
     e "de"
     scene ru
-    show elusia normal at left
-    show ryou angry at Position(xpos=0.375)
+    show elusia happy at left
+    show ryou surprised at Position(xpos=0.375)
     show alice geez at center
-    r "Et donc ?"
+    m "Et si je refuse ?"
 
     # scene parc with fade
     # r "Voilà un fond de parc."
@@ -68,7 +72,7 @@ label pam:
     $rel_lulu +=10
     $ rel_ryou -=10
     e "Ryou, je t'aime !"
-    $ renpy.block_rollback()
+    # $ renpy.block_rollback()
     l "test"
     v "test"
     y "test"

@@ -1,5 +1,5 @@
 # TODO :
-#            $ renpy.block_rollback()
+#            # $ renpy.block_rollback()
 #            tie break (day7_ryou6)
 # lose, win, perfect
 label day7:

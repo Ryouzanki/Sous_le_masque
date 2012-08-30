@@ -1,5 +1,5 @@
 # TODO easin + easeout
-#            $ renpy.block_rollback()
+#            # $ renpy.block_rollback()
 
 label day3:
     scene reveil with dissolve
