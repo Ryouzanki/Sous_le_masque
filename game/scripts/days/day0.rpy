@@ -2,19 +2,18 @@ label day0:
 
     play music (joueur1) fadein 2
     scene chambre m_cartons with dissolve
-    m "Fiou..."
-    m "J'ai bientôt fini de déballer mes affaires."
-    m "Il était temps, on dépasse minuit..."
+    "Fiou..."
+    "J'ai bientôt fini de déballer mes affaires."
+    "Il était temps, on dépasse minuit..."
     "Mon regard se fige sur mes cartons."
-    m "C'est difficile de déménager en pleine année scolaire..."
-    m "En plus, ces cartons ne sont pas légers... Les porter au 3ème ne fut pas une mince affaire !"
+    "C'est difficile de déménager en pleine année scolaire..."
+    "En plus, ces cartons ne sont pas légers... Les porter au 3ème ne fut pas une mince affaire !"
     "Je réfléchis."
     "Je repense à mon ancienne école."
     "Il n'y a aucun bon souvenir qui s'y attache."
     stop music fadeout 1.0
     play sound "sound/bell.mp3"
     "Je secoue ma tête, balayant mes songes."
-    m "J'arrive, j'arrive !"
     "Qui peut bien venir sonner à une heure pareille ?"
     play sound "sound/dooropen.mp3"
     scene couloir nuit with fade
@@ -24,31 +23,49 @@ label day0:
     "Il me dévisagea, les yeux plissés."
     "Soudain, il baisse la tête et frappe doucement du poing sur le cadrant de ma porte."
     r "Merde !"
-    m "Quoi ?"
+    "Qu'est-ce qu'il me veut ?"
     show ryou sad
     r "Moi qui voulais tomber sur une jolie demoiselle en petite tenue..."
 label choix_sexe:
     menu:
-        "Perdu, je suis un {b}{u}homme{/u}{/b}, un vrai ! Pour la petite tenue, reviens plus tard !":
-            $ renpy.block_rollback()
+        "Perdu, je suis un {b}{u}homme{/u}{/b} !":
+            # $ renpy.block_rollback()
+            $ m = DynamicCharacter("j",
+                 color="#58D3F7",
+                 window_left_padding=160,
+                 show_side_image=Image("CG/minato.png", xalign=0.03, yalign=0.97), show_two_window=True)
+
             m "Perdu, je suis un homme, un vrai ! Pour la petite tenue, reviens plus tard !"
             show ryou happy
             r "Ha ha ! Ouais mais... Nan merci !"
             $ sexe = 'il'
             $ bite = True
             $ ter = ''
-        "Tssss ! Tant pis si je ne suis pas la {b}{u}femme{/u}{/b} de tes rêves !":
-            $ renpy.block_rollback()
+        "Je suis une {b}{u}femme{/u}{/b} mais...":
+            # $ renpy.block_rollback()
             centered "Attention, la route \"Fille\"comporte quelques problèmes scénaristique."
             centered "Voulez vous vraiment continuer ?"
             menu:
                 "Oui.":
-                    $ renpy.block_rollback()
+                    ## $ renpy.block_rollback()
                     pass
                 "Non.":
-                    $ renpy.block_rollback()
+                    # $ renpy.block_rollback()
                     jump choix_sexe
-            m "Tssss ! Tant pis si je ne suis pas la femme de tes rêves !"
+            $ m = DynamicCharacter("j",
+                 color="#58D3F7",
+                 window_left_padding=160,
+                 show_side_image=Image("CG/hamuko.png", xalign=0.03, yalign=0.97), show_two_window=True)
+            $ ma = DynamicCharacter("j",
+                 color="#58D3F7",
+                 window_left_padding=160,
+                 show_side_image=Image("CG/hamuko angry.png", xalign=0.03, yalign=0.97), show_two_window=True)
+            $ mh = DynamicCharacter("j",
+                 color="#58D3F7",
+                 window_left_padding=160,
+                 show_side_image=Image("CG/hamuko happy.png", xalign=0.03, yalign=0.97), show_two_window=True)
+            
+            ma  "Tssss ! Tant pis si je ne suis pas la femme de tes rêves !"
             show ryou happy
             r "Oh ça va, je plaisantais ! Ne le prends pas aussi mal !"
             $bite = False
@@ -57,20 +74,20 @@ label choix_sexe:
     m "Et en fait... T'es qui toi ?"
     show ryou angry
     r "Hey ! C'est MA question !"
-    m "Quoi ?"
+    ma "Quoi ?"
     if bite:
         r "Espèce de voleur de question !"
-        m "Tu viens de sonner chez moi quand même..."
+        ma "Tu viens de sonner chez moi quand même..."
         show ryou happy
         r "Héhé, et alors ?"
-        m "Alors que j'allais sonner chez toi !"
-        m "Chacun son tour !"
+        mh "Alors que j'allais sonner chez toi !"
+        mh "Chacun son tour !"
     else:
         r "Espèce de voleuse de question !"
-        m "Tu viens de sonner chez moi quand même..."
+        ma "Tu viens de sonner chez moi quand même..."
         show ryou normal
         r "La galanterie m'oblige à laisser l'initiative aux dames !"
-        m "Oui, merci. Donc, j'ai pris l'initiative et je t'ai posé la question en première !"
+        ma "Oui, merci. Donc, j'ai pris l'initiative et je t'ai posé la question en première !"
         show ryou happy
         r "Pas faux..."
         
@@ -81,7 +98,7 @@ label choix_sexe:
     r "J'suis ton voisin ! J'habite l'appart' just' à côté !"
     r "J'entendais du bruit alors je suis venu te souhaiter la bienvenu !"
     r "Et toi, c'est comment ?"
-    m "C'est marqué au dessus de la sonnette..."
+    ma "C'est marqué au dessus de la sonnette..."
     m "Enfin je crois..."
     "Je me penchais en dehors afin de vérifier moi même."
 label sonnette:
@@ -103,12 +120,12 @@ label sonnette:
         jump ending
     menu:
         "Ah, c'est bien, tu sais lire !":
-            $ renpy.block_rollback()
-            m "Ah, c'est bien, tu sais lire !"
+            # $ renpy.block_rollback()
+            ma "Ah, c'est bien, tu sais lire !"
         "Mais non... Retourne en primaire !":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             show ryou sad
-            m "Mais non... Retourne en primaire !"
+            ma "Mais non... Retourne en primaire !"
             "Dans le doute, je regarde une fois de plus."
             show ryou normal
             jump sonnette
@@ -139,12 +156,12 @@ label sonnette:
         
     menu :
         "Oui, je veux bien !":
-            $ renpy.block_rollback()
-            m "Oui, je veux bien !"
+            # $ renpy.block_rollback()
+            mh "Oui, je veux bien !"
             $ rel_ryou += 5
             jump accompagner_matin
         "Non merci, ça ira...":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             m "Non merci, ça ira..."
             show ryou angry
             r "..."
@@ -160,12 +177,12 @@ label accompagner_matin:
     r "Tant qu'à faire, tu veux qu'on aille te présenter à la voisine ?"
     menu:
         "Oui, pourquoi pas...":
-            $ renpy.block_rollback()
-            m "Oui, pourquoi pas..."
+            # $ renpy.block_rollback()
+            mh "Oui, pourquoi pas..."
             jump rencontre_elusia
         "C'est pas un peu tard là ?":
-            $ renpy.block_rollback()
-            m "C'est pas un peu tard là ?"
+            # $ renpy.block_rollback()
+            ma "C'est pas un peu tard là ?"
             jump rencontre_tard
             
 label rencontre_tard:
@@ -175,7 +192,7 @@ label rencontre_tard:
     r "Bon bah, je vais te laisser finir tes cartons !"
     m "Oui..."
     r "Bonne nuit et à demain !"
-    m "Toi aussi, à demain !"
+    mh "Toi aussi, à demain !"
     $ journal1="J'ai fait la rencontre de mon voisin Ryouzanki.\nLui et mon autre voisine que je n'ai pas vu, Elusia, vont venir me chercher chaque matin désormais."
     stop music
     hide ryou with easeoutright
@@ -214,7 +231,7 @@ label rencontre_elusia:
     e "Je sais que tu es fils unique."
     show elusia normal
     e "Et donc, toi tu es... [j], c'est ça ?"
-    m "Oui."
+    mh "Oui."
     show elusia happy
     e "Enchantée [j], moi, c'est Elusia !"
     $ fille = 'Elusia'
@@ -226,7 +243,7 @@ label rencontre_elusia:
     if bite:
         menu:
             "Prendre un café.":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 $ rel_ryou += 2
                 m "Oui, moi aussi je prendrais bien un café si possible."
                 show ryou happy at left
@@ -236,7 +253,7 @@ label rencontre_elusia:
                 e "Lui, je ne sais pas. Mais toi, Ryou, sûrement pas !"
                 show elusia normal
             "Prendre un thé.":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 $ rel_lulu += 2
                 m "Un thé me conviendra parfaitement !"
                 show ryou angry at left
@@ -250,18 +267,18 @@ label rencontre_elusia:
     else:
         menu:
             "Prendre un café.":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 $ rel_ryou += 2
-                m "Je prendrais aussi un café si ça ne te gêne pas."
+                mh "Je prendrais aussi un café si ça ne te gêne pas."
                 show ryou angry at left
                 "Ryouzanki s'éloigna"
                 e "Non, ça ne me gêne aucunement !"
                 show elusia satisfied at right
                 e "Je crois que son stéréotype de la virilité s'est éffondré !"
             "Prendre un thé.":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 $ rel_lulu += 2
-                m "Un thé me conviendra parfaitement !"
+                mh "Un thé me conviendra parfaitement !"
                 show elusia satisfied
                 e "Oui !"
                 e "Laissons ce primate avec son café !"

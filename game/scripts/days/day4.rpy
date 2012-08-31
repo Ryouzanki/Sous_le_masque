@@ -1,5 +1,5 @@
 # TODO easin + easeout
-#            $ renpy.block_rollback()
+#            # $ renpy.block_rollback()
 label day4:
     scene reveil with dissolve
     play sound "sound/clock.mp3"
