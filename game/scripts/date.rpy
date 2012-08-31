@@ -3,7 +3,7 @@ init python:
     from random import choice
 
     class DateManager(object):
-        def __init__(self, epoch=None, year=2012, month=9, day=30, meteo=None):
+        def __init__(self, epoch=None, year=2011, month=3, day=20, meteo=None):
             self.meteo = meteo or [choice(['sunny', 'snowy', 'thunder', 'cloudy'])
                                     for i in xrange(365)]
             self.epoch = epoch or datetime(year, month, day)

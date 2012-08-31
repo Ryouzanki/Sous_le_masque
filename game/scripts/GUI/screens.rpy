@@ -594,14 +594,14 @@ init -2 python:
 
         
 screen button:
-    grid 4 1:
-         vbox:
+    #grid 4 1:
+         hbox:
              textbutton "Stats"action ui.callsinnewcontext("stats_screen")
-         vbox:
+         #vbox:
              textbutton "Relations"action ShowMenu('stat_rel')
-         vbox:
+         #vbox:
              textbutton "Records"action ui.callsinnewcontext("record_screen")
-         vbox:
+         #vbox:
              textbutton _("Résumé") action  ShowMenu("stats")
          #vbox:
              #textbutton _("Aide") action void() # faire un menu d'aide qui explique les stats

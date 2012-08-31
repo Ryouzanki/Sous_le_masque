@@ -34,6 +34,14 @@ label choix_sexe:
                  color="#58D3F7",
                  window_left_padding=160,
                  show_side_image=Image("CG/minato.png", xalign=0.03, yalign=0.97), show_two_window=True)
+            $ ma = DynamicCharacter("j",
+                 color="#58D3F7",
+                 window_left_padding=160,
+                 show_side_image=Image("CG/minato angry.png", xalign=0.03, yalign=0.97), show_two_window=True)
+            $ mh = DynamicCharacter("j",
+                 color="#58D3F7",
+                 window_left_padding=160,
+                 show_side_image=Image("CG/minato happy.png", xalign=0.03, yalign=0.97), show_two_window=True)
 
             m "Perdu, je suis un homme, un vrai ! Pour la petite tenue, reviens plus tard !"
             show ryou happy
@@ -43,15 +51,6 @@ label choix_sexe:
             $ ter = ''
         "Je suis une {b}{u}femme{/u}{/b} mais...":
             # $ renpy.block_rollback()
-            centered "Attention, la route \"Fille\"comporte quelques problèmes scénaristique."
-            centered "Voulez vous vraiment continuer ?"
-            menu:
-                "Oui.":
-                    ## $ renpy.block_rollback()
-                    pass
-                "Non.":
-                    # $ renpy.block_rollback()
-                    jump choix_sexe
             $ m = DynamicCharacter("j",
                  color="#58D3F7",
                  window_left_padding=160,

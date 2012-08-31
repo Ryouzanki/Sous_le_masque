@@ -127,9 +127,9 @@ label night:
     scene black
     "..."
     play music (shadow1) fadeout 1.0
-    if date_manager.get_day() == 3:
+    if date_manager.get_day() == 2:
         jump night4
-    elif date_manager.get_day() == 7:
+    elif date_manager.get_day() == 6:
         jump night8
     else:
         jump fin_night
@@ -157,7 +157,8 @@ label night8:
 
 label fin_night:
     stop music fadeout 1.0
-
+    window hide
+    hide screen button
     python:
         renpy.pause(1.0)
         renpy.scene()
@@ -166,5 +167,6 @@ label fin_night:
         renpy.show('calendar', what=CalendarWidget(date_manager))
         renpy.with_statement(Fade(0.5, 0.0, 0.5))
         renpy.pause(8.0)
-
+    window show
+    show screen button
     return
