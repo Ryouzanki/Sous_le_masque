@@ -255,13 +255,13 @@ label rencontre_elusia:
                 # $ renpy.block_rollback()
                 $ rel_lulu += 2
                 m "Un thé me conviendra parfaitement !"
-                show ryou angry at left
+                show ryou angry
                 "Ryouzanki s'éloigne de moi."
-                show elusia satisfied at right
+                show elusia satisfied
                 e "Tu sais Ryou, il y avait de très grand samouraïs qui ne buvaient que ça !"
                 r "... Pas faux."
                 show elusia normal
-                show ryou happy at left
+                show ryou happy
                 r "Je m'en contenterais !"
     else:
         menu:

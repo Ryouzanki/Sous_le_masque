@@ -40,8 +40,11 @@ label oo:
     menu:
         "Les aborder.":
             # $ renpy.block_rollback()
-            show ryou normal at left
-            show elusia normal at right
+            show ryou normal:
+                left
+            show elusia normal:
+                right
+            with easeinright
             m "Salut !"
             r "Hey ! Salut !"
             r "T'as trouvé le chemin !"
@@ -81,7 +84,6 @@ label oo:
                 "Aller au premier rang.":
                     # $ renpy.block_rollback()
                     m "Oui, pourquoi pas."
-                    show ryou normal
                     hide ryou
                     "On s'est mis au premier rang."
                     "Le cour était vraiment ennuyeux."
@@ -518,22 +520,26 @@ label fin_cours:
     window show None
         
     if _return == "swimming":
+        # $ renpy.block_rollback()
         $ unlocked_journal_pages += 1
         "Et si j'allais faire un peu de sport..."
         call sport
     
     elif _return == "science":
+        # $ renpy.block_rollback()
         $ unlocked_journal_pages += 1
         "J'ai cru voir de l'agitation dans le bâtiment des sciences."
         "Il y a peut être des clubs là bas..."
         call labo
         
     elif _return == "art":
+        # $ renpy.block_rollback()
         $ unlocked_journal_pages += 1
         "Et si j'allais faire un tour au bâtiments des clubs..."
         call club
 
     elif _return == "go home":
+        # $ renpy.block_rollback()
         $ unlocked_journal_pages += 1
         "Je crois que je vais rentrer."
         call go_home
