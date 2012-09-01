@@ -40,7 +40,7 @@ init -1 python hide:
     ## The theme function takes a number of parameters that can
     ## customize the color scheme.
 
-    theme.diamond(
+    theme.roundrect(
         # Color scheme: Colorblind
                                     
         ## The color of an idle widget face.
@@ -244,7 +244,7 @@ init -1 python hide:
     ## stored. (It needs to be set early, before any other init code
     ## is run, so the persisten information can be found by the init code.)
 python early:
-    config.save_directory = "Kidnapping-1337126835"
+    config.save_directory = "SLM-1337126835"
 
 init -1 python hide:
     #########################################

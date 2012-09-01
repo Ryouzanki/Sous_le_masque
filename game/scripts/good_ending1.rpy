@@ -58,7 +58,7 @@ label ending:
             "Il me tient solidement le bras gauche."
             "Il regarde loin devant lui en souriant avant de baisser les yeux sur moi."
             show shadow normal
-            r"Mmmh ?"
+            r "Mmmh ?"
         "Tenter de tendre le bras plus loin.":
             $ renpy.play('sound/punch.mp3')
             with hpunch
@@ -69,12 +69,12 @@ label ending:
             "Puis il s'approche de moi."
     menu:
         "C'est toi le responsable de tout, Shadow ?":
-            m "Alors c'est toi le responsable de tout : Shadow..."
+            ma "Alors c'est toi le responsable de tout : Shadow..."
             show shadow pity
             s "Bravo Sherlock !"
             s "Est-ce que t'as trouvé tout seul ou est-ce que Watson t'a aidé ?"
         "Qu'est-ce qui se passe ici ?":
-            m "Qu'est-ce qui se passe ici ?"
+            ma "Qu'est-ce qui se passe ici ?"
             $ renpy.play('sound/punch.mp3')
             with hpunch
             "Il me frappe au sol."
@@ -90,7 +90,7 @@ label ending:
     show shadow surprised
     s "Je suis étonné que tu te sois réveillé."
     s "J'ai pourtant mis une sacrée dose de somniphère..."
-    m "..."
+    ma "..."
     "Cela explique donc pourquoi mon corps est si lourd..."
     show shadow pity
     s "T'endors pas ! Tu vas gâcher ma scène finale !"
@@ -106,7 +106,7 @@ label answer:
     menu:
         "Pourquoi t'as fait tout ça ?" if choix1:
             $ choix1 = False
-            m "Shadow... Mais pourquoi t'as fait tout ça ? Dans quel but ?"
+            ma "Shadow... Mais pourquoi t'as fait tout ça ? Dans quel but ?"
             show shadow normal
             s "Pourquoi ? Dans quel but ?" 
             s "Mmmh... Je n'ai pas vraiment de but."
@@ -116,14 +116,14 @@ label answer:
             $ choix9 = True
         "C'est amusant de jouer avec les gens ?" if choix2:
             $ choix2 = False
-            m "C'est amusant de jouer avec les gens ?"
+            ma "C'est amusant de jouer avec les gens ?"
             show shadow smirk
             s "C'est amusant de jouer les petits détectives ?"
             s "Tu as mieux à faire que d'aller fouiner partout nan ?"
             s "A quoi ça rime tout ça ?"
             menu:
                 "C'est ma justice.":
-                    m "C'est ma justice."
+                    ma "C'est ma justice."
                     show shadow pity
                     s "Gahahaha !"
                     s "Mon cul, ouais..."
@@ -133,7 +133,7 @@ label answer:
                     s "On est pareil tous les deux !"
                     s "Tu me pourchasses pour rendre ta pitoyable vie excitante !"
                 "J'aide mes amis.":
-                    m "J'aide mes amis."
+                    ma "J'aide mes amis."
                     show shadow surprised
                     s "Aider tes amis ?"
                     show shadow pity
@@ -144,7 +144,7 @@ label answer:
                     $ choix4 = True
         "Tu as détruit des gens qui t'aimaient." if choix3:
             $ choix3 = False
-            m "Tu as détruit des gens qui t'aimaient."
+            ma "Tu as détruit des gens qui t'aimaient."
             show shadow normal
             s "Et alors ?"
             s "Ce monde n'est pas régit par des gens naïfs comme vous."
@@ -156,7 +156,7 @@ label answer:
             $ choix5 = True
         "Tu n'as plus d'ami..." if choix4:
             $ choix4 = False
-            m "Tu n'as plus d'ami..."
+            ma "Tu n'as plus d'ami..."
             show shadow pity
             s "Les amis ? Ca me sert à rien ce truc..."
             s "Sans eux, tu es si faible, regardes toi !"
@@ -166,7 +166,7 @@ label answer:
             $ choix7 = True
         "Tu te prends pour un être supérieur ?" if choix5:
             $ choix5 = False
-            m "Tu te prends pour un être supérieur ?"
+            ma "Tu te prends pour un être supérieur ?"
             s "Tu ne sais pas quand t'arrêter hein, avec tes questions débiles..."
             show shadow contraried
             s "Je ne suis pas vraiment un être supérieur."
@@ -175,7 +175,7 @@ label answer:
             s "La gentillesse ne nourira pas ta famille, tu sais..."
         "Et tu ne regrettes aucun de tes actes ?" if choix6:
             $ choix6 = False
-            m "Et tu ne regrettes aucun de tes actes ?"
+            ma "Et tu ne regrettes aucun de tes actes ?"
             show shadow normal
             s "Peu importe à présent..."
             s "Tout ce qui est fait, ne peut être défait."
@@ -186,7 +186,7 @@ label answer:
             s "J'avais sous-estimé votre relation..."
         "Avec mes amis, nous sommes plus forts que toi." if choix7:
             $ choix7 = False
-            m "Avec mes amis, nous sommes plus forts que toi."
+            ma "Avec mes amis, nous sommes plus forts que toi."
             show shadow pity
             s "Ah ouais ?"
             s "Mais dis moi... Ou sont-ils maintenant que t'as besoin d'eux ?"
@@ -195,14 +195,14 @@ label answer:
             s "Alors travailles bien, trouve une épouse charmante et fonde un foyer."
             s "A l'école, joue avec tes amis tant que c'est possible."
             s "Puis jettes les lorsqu'ils deviennent obsolètes !"
-            m "Ca ne sert à rien de discuter avec toi, des amis, tu n'en as plus."
+            ma "Ca ne sert à rien de discuter avec toi, des amis, tu n'en as plus."
             $ choix8 = True
         "Comment peux tu comprendre alors que tu es seul..." if choix8:
             $ choix8 = False
-            m "Comment peux tu comprendre alors que tu es seul..."
+            ma "Comment peux tu comprendre alors que tu es seul..."
             show shadow pity
             s "Tu t'es vu ? Monsieur le héros solitaire !!"
-            m "Qui est solitaire ici ?"
+            ma "Qui est solitaire ici ?"
             show shadow contraried
             s "Qu- Quoi ?!"
             s "Espèce d'enfoiré arrogant !"
@@ -210,7 +210,7 @@ label answer:
             s"Tu ne fais que flaner autour de l'école et jouer aux devinettes."
         "Pourquoi avoir détruit l'associatif ?"if choix9:
             $ choix9 = False
-            m "Pourquoi avoir détruit l'associatif ?"
+            ma "Pourquoi avoir détruit l'associatif ?"
             show shadow smirk
             s "T'es stupide ou quoi ?"
             $ renpy.play('sound/punch.mp3')
@@ -220,7 +220,7 @@ label answer:
             "Il me frappe encore et encore..."
             s "Je t'ai déjà dit que c'était pour me divertir !"
         "J'en ai assez d'entendre tes conneries...":
-            m "J'en ai assez d'entendre tes conneries..."
+            ma "J'en ai assez d'entendre tes conneries..."
             show shadow normal
             s "..."
             jump answer2
@@ -229,7 +229,7 @@ label answer2:
     menu:
         "Pourquoi avoir tué Lloyd ?" if choix15:
             $choix15 = False
-            m "Pourquoi avoir tué Lloyd ?"
+            ma "Pourquoi avoir tué Lloyd ?"
             show shadow surprised
             s "Tuer Lloyd ?"
             s "Je ne l'ai pas vraiment tué..."
@@ -240,7 +240,7 @@ label answer2:
             $ choix23 = True
         "Pourquoi vouloir éliminer Lloyd ?" if choix22:
             $ choix22 = False
-            m "Pourquoi vouloir éliminer Lloyd ?"
+            ma "Pourquoi vouloir éliminer Lloyd ?"
             show shadow smirk
             s "Ceux qui s'opposent à moi, je les élimine !"
             s "Il n'arrêtait pas de se mettre contre moi lors des conseils étudiants !"
@@ -248,7 +248,7 @@ label answer2:
             s "Alors, je voulais qu'il dégage !"
         "Ca ne te fais rien que Lloyd soit mort ?" if choix23:
             $ choix23 = False
-            m "Ca ne te fais rien que Lloyd soit mort ?"
+            ma "Ca ne te fais rien que Lloyd soit mort ?"
             show shadow normal
             s "Je n'avais pas prévu que cela arrive."
             show shadow pity
@@ -259,13 +259,13 @@ label answer2:
             s "C'était un cobaye de qualité !"
         "Pourquoi avoir fait arrêté Laura ?" if choix16:
             $choix16 = False
-            m "Pourquoi avoir fait arrêté Laura ?"
+            ma "Pourquoi avoir fait arrêté Laura ?"
             s "Je ne l'ai pas fait arrêtée."
             s "Je ne suis jamais allé voir la police."
             $ choix24 = True
         "Alors pourquoi on a arrêté Laura ?" if choix24:
             $ choix24 = False
-            m "Alors pourquoi on a arrêté Laura ?"
+            ma "Alors pourquoi on a arrêté Laura ?"
             show shadow surprised
             s "Parce qu'elle s'est rendue !"
             show shadow surprised
@@ -275,7 +275,7 @@ label answer2:
             $ choix25 = True
         "Qu'as tu fait à Laura ?" if choix25:
             $ choix25 = False
-            m "Qu'as tu fait à Laura ?"
+            ma "Qu'as tu fait à Laura ?"
             show shadow surprised
             s "Je ne voulais pas que la police remonte jusqu'à moi."
             s "La seule faille dans mon plan était ma complice."
@@ -285,7 +285,7 @@ label answer2:
             s "Et cette idiote y a tellement cru qu'elle s'est rendue à la police !"
         "Pourquoi avoir pourri Nephenie ?" if choix17:
             $choix17 = False
-            m "Pourquoi avoir pourri Nephenie ?"
+            ma "Pourquoi avoir pourri Nephenie ?"
             show shadow contraried
             s "T'es vraiment trop con..."
             show shadow pity
@@ -293,7 +293,7 @@ label answer2:
             s "Personne ne l'aime, c'est le maillon faible à remplacer !"
         "Aimais tu vraiment Elusia ?" if choix18:
             $choix18 = False
-            m "Aimais tu vraiment Elusia ?"
+            ma "Aimais tu vraiment Elusia ?"
             show shadow normal
             s "Je ne sais pas."
             s "Elle est si faible..."
@@ -301,17 +301,17 @@ label answer2:
             s "J'aurais pu en faire le pion parfait !"
         "Pourquoi avoir diffamé Alice ?" if choix19:
             $choix19 = False
-            m "Pourquoi avoir diffamé Alice ?"
+            ma "Pourquoi avoir diffamé Alice ?"
             show shadow smirk
             s "Pour le plaisir !"
         "Pourquoi avoir diffamé Valeth ?" if choix20:
             $choix20 = False
-            m "Pourquoi avoir diffamé Valeth ?"
+            ma "Pourquoi avoir diffamé Valeth ?"
             show shadow smirk
             s "Pour le plaisir !"
         "Quelle relation as-tu avec Salazard ?" if choix21:
             $choix21 = False
-            m "Quelle relation as-tu avec Salazard ?"
+            ma "Quelle relation as-tu avec Salazard ?"
             show shadow normal
             s "Je lui propose des petites commission payées."
             show shadow pity
@@ -319,7 +319,7 @@ label answer2:
             s "Tout ça pour sauver des gens à qui il ne doit rien..."
             s "Des gens qui ne lui sont d'aucune utilité !"
         "T'es vraiment qu'un salop, je ne veux pas en entendre plus...":
-            m "T'es vraiment qu'un salop, je ne veux pas en entendre plus..."
+            ma "T'es vraiment qu'un salop, je ne veux pas en entendre plus..."
             show shadow smirk
             s "Comme tu voudra !"
             "La lumière des escaliers vient de s'allumer..."
@@ -340,12 +340,12 @@ label answer3:
         "J'étais comme toi avant." if choix27:
             $ choix27 = False
             $ choix28 = False
-            m "J'étais comme toi avant."
+            ma "J'étais comme toi avant."
             show shadow surprised
             s "Avant ?"
-            m "Oui. Mais j'ai rencontré des gens."
-            m "Ces rencontres m'ont changés."
-            m "Tu devrais aussi t'ouvrir aux autres et tu comprendrais."
+            ma "Oui. Mais j'ai rencontré des gens."
+            ma "Ces rencontres m'ont changés."
+            ma "Tu devrais aussi t'ouvrir aux autres et tu comprendrais."
             show shadow contraried
             s "Comprendre quoi ?"
             s "Que les sentiments c'est pour les faibles ?"
@@ -363,7 +363,7 @@ label answer3:
             $ choix29 = True
         "Les autres vont arriver, détruisons les ensemble." if choix29:
             $ choix29 = False
-            m "Les autres vont arriver, détruisons les ensemble."
+            mh "Les autres vont arriver, détruisons les ensemble."
             show shadow surprised
             s "Comment ?"
             m "J'ai laissé tombé ton portable en bas. Ils vont venir."
@@ -374,7 +374,7 @@ label answer3:
             jump answer5
         "J'ai juste pitié de toi." if choix10:
             $ choix10 = False
-            m "J'ai juste pitié de toi."
+            ma "J'ai juste pitié de toi."
             show shadow contraried
             s "Hey ? Les gens naïfs comme toi m'emmerdent !"
             s "Leur existence même m'emmerde !!"
@@ -388,7 +388,7 @@ label answer3:
             $ choix11 = True
         "Il n'y a pas que ton monde qui existe." if choix11:
             $ choix11 = False
-            m "Il n'y a pas que ton monde qui existe."
+            ma "Il n'y a pas que ton monde qui existe."
             show shadow normal
             s "Il n'y a rien d'intéressant dans ce monde terne et ennuyeux."
             s "Je n'ai rien à gagner à le préserver."
@@ -409,7 +409,7 @@ label answer3:
             $ choix13 = True
         "La réalité n'est pas un jeu !" if choix12:
             $ choix12 = False
-            m "La réalité n'est pas un jeu !"
+            ma "La réalité n'est pas un jeu !"
             show shadow hate
             s "..."
             s "Putain... Je pensais que tu comprendrais mais en fait t'es juste trop con !"
@@ -424,14 +424,14 @@ label answer3:
             $ choix14 = True
         "Ignorer la réalité, c'est lâche." if choix13:
             $ choix13 = False
-            m "Ignorer la réalité, c'est lâche."
+            ma "Ignorer la réalité, c'est lâche."
             show shadow contraried
             s "Lâche ?"
             show shadow pity
             s "Dans ce monde, les lâches survivent bien souvent !"
         "Je vais changer cette réalité, tu verra !" if choix14:
             $ choix14 = False
-            m "Je vais changer cette réalité, tu verra !"
+            ma "Je vais changer cette réalité, tu verra !"
             show shadow pity
             s "C'est de la stupidité ou du troll ?"
             s "Pourquoi essayer de changer des choses fixées ?"
@@ -483,25 +483,25 @@ label answer4:
     show shadow contraried
     s "Etudier, se marier, travailler, consommer, mourir..."
     s "C'est si ennuyeux..."
-    m "Nous on y trouve du plaisir."
-    m "C'est toi, tu t'es perdu tout seul !"
+    ma "Nous on y trouve du plaisir."
+    ma "C'est toi, tu t'es perdu tout seul !"
     show shadow pity
     s "Ola ola, je viens de te dire tout ce qu'il y a à savoir !"
     s "C'est cette stupide ignorance que vous appelez espoir qui vous rend tous si ennuyants !"
     show shadow smirk
     s "Cet espoir qui entraîne le desespoir..."
-    m "Arrêtes tes conneries !"
-    m "T'as même pas les couilles de me pousser !"
+    ma "Arrêtes tes conneries !"
+    ma "T'as même pas les couilles de me pousser !"
     show shadow surprised
     s "Hein ?"
-    m "J'en ai marre de t'entendre gémir !"
-    m "Peu importe ce que tu diras, tu ne t'en tirera pas comme ça !"
+    ma "J'en ai marre de t'entendre gémir !"
+    ma "Peu importe ce que tu diras, tu ne t'en tirera pas comme ça !"
     "J'attrape sa cheville."
     s "Guh..."
     "Il secoue la jambe et je lâche prise mais il recule."
-    m "Tes péchers te suivront toujours !!"
+    ma "Tes péchers te suivront toujours !!"
     "Malgré mon corps engourdi, je me relève."
-    m "La voilà, la vérité !!"
+    ma "La voilà, la vérité !!"
     a "Cette logique tordue est celle d'un gamin égoiste et immature !"
     a "On ne peut pas vivre seul !"
     a "Si tu t'isoles et que tu coupes tes liens avec la société, il deviendra naturellement difficile d'y vivre."
