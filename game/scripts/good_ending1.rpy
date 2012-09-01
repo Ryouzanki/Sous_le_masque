@@ -58,6 +58,7 @@ label ending:
             "Il me tient solidement le bras gauche."
             "Il regarde loin devant lui en souriant avant de baisser les yeux sur moi."
             show shadow normal
+            r"Mmmh ?"
         "Tenter de tendre le bras plus loin.":
             $ renpy.play('sound/punch.mp3')
             with hpunch
