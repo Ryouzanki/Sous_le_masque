@@ -44,7 +44,7 @@ init -1 python hide:
         # Color scheme: Colorblind
                                     
         ## The color of an idle widget face.
-        widget = "#222222",
+        widget = "#393939",  #222222
 
         ## The color of a focused widget face.
         widget_hover = "#464646",

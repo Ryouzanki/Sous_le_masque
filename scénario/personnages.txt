@@ -1,84 +1,92 @@
-Elusia Hrist ***********************************************************************************************
+﻿Elusia Hrist ***********************************************************************************************
 
-Rôle : Membre d'un club sportif. Déléguée GTR et respo sport solos.
+Rôle : Membre d'un club sportif. Déléguée GTR et respo sport solos (Tennis et tir à l'arc).
 
-Personnalité : Elusia, c'est le clone du masque de Ryouzanki. Joviale, toujours partante et serviable. Elle aime rendre service et en conséquence, ne s'entend pas avec les gens qui ne prennent pas leur rôle au sérieux. Elle a horreur d'être seule et c'est pourquoi elle va toujours vers les autres. Calme et dynamique à la fois. Naïve, gentille, élégante et attentionnée. Manque un peu d'humour. Désintéressée. Elle veut être reconnue à sa juste valeur car ses parents en instance de divorce la traite comme un outil diplomatique.
+Personnalité : Elusia, c'est le clone féminin de Ryouzanki. Joviale, toujours partante et serviable. Elle aime rendre service et en conséquence, ne s'entend pas avec les gens qui ne prennent pas leur rôle au sérieux. Elle a horreur d'être seule et c'est pourquoi elle va toujours vers les autres. Calme et dynamique à la fois. Naïve, gentille, élégante et attentionnée. Manque totalement d'humour et a tendance a prendre au premier degré les plaisanteries. Désintéressée.
 
-Aime : Chats, thé
+BG : Parents en instance de divorce qui la traite comme un outil diplomatique.
+
+Aime : Chats, thé, le sport et tout autre activité qui l'empêche de penser
 
 Déteste : condescendance, irresponsabilité, hypocrisie
 
 Petite phrase : "Misère..."
 
-Relations officielles : Aime Ryouzanki comme un frère, Valeth et Alice comme des amis. Ne s'entend pas avec Laura et évite Salazard. N'aime pas Lloyd.
+Relations officielles : Aime Ryouzanki comme un frère, Valeth et Alice comme des amis. Ne s'entend pas avec Laura et évite Salazard. N'aime pas particulièrement Lloyd.
 
-Relations officieuses : Aucun changement notoire, elle est honnête.
+Relations officieuses : Aucun changement notoire, elle est honnête avec ses sentiments
 
 Représentation clair-obscur : à l'image d'un phare, elle éclaire dans toutes les directions.
 
-Gameplay : Les choix gentils augmente la barre et les méchants la diminue. Étant naive, les mensonges marchent.
+Gameplay : Les choix gentils augmentent la barre et les méchants la diminue. Étant naive, les mensonges marchent.
 
 Alice Drezall *************************************************************************************************
 
 Rôle : présidente (ou rôle de premier plan équivalent) du club chimie / robot / info
 
-Personnalité : Timide mais elle s'enflamme vite. Elle aime beaucoup les challenges, tant personnels que d'équipe. Elle aime entraîner du monde dans son sillage, parfois trop. Elle est très entreprenante et va souvent directement voir les gens. Elle pense aussi souvent à la place des gens. Elle est issue d'une famille pauvre alors c'est une battante qui refuse de perdre et veut réussir à tout prix. Elle n'aime pas ses parents. Elle n'aime pas les questions ni les remarques sur la manière dont elle gère son club et aime bien parler d'elle.
+Personnalité : Plutot calme mais elle s'enflamme vite. Elle aime beaucoup les challenges, tant personnels que d'équipe. Elle aime entraîner du monde dans son sillage, parfois trop. Elle est très entreprenante et va souvent directement voir les gens. Elle pense aussi souvent à la place des gens et ne leur demande pas leur avis. Parfois hautaine et tyrannique.
 
-Aime : travailler sur quelque chose
+BG : Elle est issue d'une famille pauvre alors c'est une battante qui refuse de perdre et veut réussir à tout prix. Elle n'aime pas ses parents. Elle n'aime pas les questions ni les remarques sur la manière dont elle gère son club et aime bien parler d'elle. A connu brièvement Ryouzanki en primaire.
 
-Déteste :
+Aime : travailler sur quelque chose, obtenir des résultats concrets.
+
+Déteste : L'échec, les gens individuels.
 
 Petite phrase : "Intéressant..." "Je suppose..." "Comment ça, t'es pas d'accord ?"
 
-Relations officielles :
+Relations officielles : Semble n'aimer personne en particulier, ni détester personne non plus. Par diplomatie, elle ignore Salazard et traine avec Ryouzanki.
 
-Relations officieuses :
+Relations officieuses : Apprécie Salazard. N'aime pas vraiment Ryouzanki
 
-Représentation clair-obscur : comme un projecteur, elle éclaire loin, mais d'une lumière parfois aveuglante.
+Représentation clair-obscur : comme un projecteur, elle éclaire loin et droit, mais d'une lumière parfois aveuglante.
 
 Gameplay : Les choix objectifs, bien pensé et collectifs font monter la barre. Les choix gentils lorsqu'il n'y a pas de conséquence ou les choix de confiance font monter un peu. La paresse et les choix individuels sur les choix collectifs font baisser la barre
 
 Valeth Lezard ***************************************************************************************************
 
-Rôle : président (ou rôle de premier plan équivalent) du club de culture
+Rôle : président (ou rôle de premier plan équivalent) du club de jeux, théâtre et autres arts
 
-Personnalité : Assez rêveur et enfermé dans sa bulle. Il aime son club et ne se préoccupe pas de ce qui se passe à l'extérieur. Il est égocentrique, en quelques sortes, mais ni maiprisant, ni hautain. Il devient pugnace dès qu'on s'en prend à son petit espace (lui, son club, ses amis proches).
+Personnalité : Assez rêveur et enfermé dans sa bulle. Il aime son club et ne se préoccupe pas de ce qui se passe à l'extérieur. Ce que les autres pensent, il s'en fiche. Il est égocentrique, en quelques sortes, mais ni méprisant, ni hautain. Il devient pugnace dès qu'on s'en prend à son petit espace (lui, son club, ses amis proches).
 
-Aime : le calme, thé
+BG : 
 
-Déteste : 
+Aime : le calme, les échecs (le jeu)
 
-Petite phrase : "C'est possible." "Ah bon, il y a un club de [nom du club] dans l'école ?"
+Déteste : les joyeux lurons
 
-Relations officielles :
+Petite phrase : "C'est possible." "Ah bon, il y a un tel club dans l'école ?"
 
-Relations officieuses :
+Relations officielles : Apprécie fortement Alice car leur clubs sont voisins. Apprécie fortement Laura car c'est son binome. Apprécie Elusia et Ryouzanki
+
+Relations officieuses : Aucun changement
 
 Représentation clair-obscur : un peu comme une lampe à abat-jour, il garde la lumière pour lui et n'éclaire que ce qui est proche.
 
-Gameplay : Les choix qui l'implique lui font monter la barre. Il se fiche du reste.
+Gameplay : Les choix qui l'implique lui font monter ou baisser la barre. Il se fiche du reste.
 
-Lloyd ********************************************************************************************************
+Lloyd Baptiste Reeds de Bellato ********************************************************************************************************
 
 Rôle : vice-président de l'association des élèves.
 
 Personnalité : Plutôt hautain, il considère que dans l'associatif, aucune initiative ne peut se prendre autrement que par les responsables de l'AE (président, vice-président). Il n'est pas méprisant, mais il a une certaine vision du monde. Il est peu apprécié. Il doit son poste à son sérieux et à son efficacité.
 
-Aime : les endroits calmes
+BG : Vient d'un lycée d'aristocrates et n'est donc pas doué pour le social. Famille riche qui lui met la pression en permanence et marche sur ses sentiments
 
-Déteste :
+Aime : les endroits calmes, l'art
+
+Déteste : les rebelles
 
 Petite phrase : "Comment ? Ah, mais ça ne va pas être possible..."
 
-Relations officielles :
+Relations officielles : asocial. Parle parfois avec Alice (relation hierarchique uniquement) et Valeth (club de peinture)
 
-Relations officieuses : Il est amoureux d'Elusia.
+Relations officieuses : Il est amoureux d'Elusia. (amour a sens unique)
 
 Représentation clair-obscur : comme une lampe de bureau aorientée vers le plafond, il n'éclaire que dans un angle peu évident à comprendre.
 
 Gameplay : Les choix disciplinés font monter la barre et vice versa.
 
-Le secrétaire *************************************************************************************************
+Néphénie Cora *************************************************************************************************
 
 Rôle : secrétaire de l'AE
 
@@ -94,35 +102,53 @@ Relation officielle :
 
 Relation officieuse :
 
-Représentation clair-obscure :
+Représentation clair-obscure : Bougie qui éclaire peu et est vulnérable
 
-Laura ***************************************************************************************************************
+Laura Sartova ***************************************************************************************************************
 
-Rôle : Membre d'un club de sport, présidente d'un club de sport/des sports collectifs
+Rôle : Membre d'un club de sport, présidente d'un club de sport/des sports collectifs (handball et volley)
 
 Personnalité : Assez envahissante, elle a tendance à s'imposer auprès des gens, même si c'est par bonne volonté. Elle est plutôt possessive et a tendance à parler dans le dos des gens. Autrement, c'est une fille courageuse qui travaille très bien en équipe. Elle est toutefois influençable seule.
 
-Aime : les edroits où il y a du monde
+BG : 
 
-Déteste :
+Aime : les endroits où il y a du monde, animés
 
-Petite phrase :
+Déteste : les réunions ennuyeuses
 
-Relations officielles :
+Petite phrase : "Je te sers le thé avec ?"
 
-Relations officieuses : Elle est amoureuse de Ryouzanki
+Relations officielles : Déteste Elusia et Lloyd. Neutre avec Salazard et Alice. Apprécie Valeth et Ryouzanki.
 
-Représentation clair-obscure : comme une lampe de poche, elle n'éclaire pas très loin, mais sa lumière est vive, parfois trop.
+Relations officieuses : Elle est amoureuse de Ryouzanki. 
+
+Représentation clair-obscure : comme une lampe de poche, elle n'éclaire pas très loin, mais sa lumière est vive, parfois trop. Maniable
 
 Gameplay : Etre à ses pieds fait monter la barre
 
-Ryouzanki ************************************************************************************************************
+Ryouzanki Zeldar ************************************************************************************************************
 
-[Voir le document "Proposition trame visual novel.pdf"]
+Rôle : aucun
 
-Gameplay : Les choix de manipulateur et/ou intelligent font monter la barre. Les choix extremement naifs et honnete la font monter légèrement. devant elusia, seul les choix honnete font monter la barre
+Personnalité : Plutot discret et ne parle jamais de lui. Assez mou mais gentil et attentionné. Il fait de son mieux pour s'entendre avec tout le monde. Passe beaucoup de temps chez lui sur l'ordinateur
 
-Salazard ******************************************************************************************************************
+Aime : la sci-fi, les gadgets, gagner les paris d'Elusia
+
+Déteste : le sport, perdre les paris d'Elusia
+
+Petite phrase : "Nan, sérieusement..." "Wait... What ?!"
+
+Relations officielles : Essaie de s'entendre avec tout le monde.
+
+Relations officieuses : Il veut que sa relation avec Elusia aille plus loin.
+
+Représentation clair-obscure : La lune sur l'eau.
+
+BG : inconnu
+
+Gameplay : Les choix intelligent font monter la barre. Les choix extremement naifs et honnete la font monter légèrement. Devant elusia, seul les choix honnete font monter la barre
+
+Salazard Zelgius ******************************************************************************************************************
 
 Rôle : Néant
 
@@ -134,8 +160,12 @@ Déteste :
 
 Petite phrase : "Ouais, plains-toi !"
 
-Relations officielles :
+Relations officielles : déteste tout le monde
 
-Relations officieuses :
+Relations officieuses : apprécie la compagnie d'Alice
 
-Représentation clair-obscure :
+Représentation clair-obscure : lampadaire solitaire
+
+Shadow ******************************************************************************************************************
+
+[voir le PDF du scénario]

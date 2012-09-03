@@ -1,4 +1,4 @@
-﻿Pendant toute l'historie, Shadow va "parler la nuit" on va faire croire au joueur que le héros souffre de DID.
+﻿Pendant toute l'histoire, Shadow va "parler la nuit" on va faire croire au joueur que le héros souffre de DID.
 
 Acte 1 *****************************************************************************************************
 Lumière aveuglante
@@ -62,6 +62,11 @@ Le joueur fait donc paire avec la fille. Ils vont chercher des indices etc et vo
 Shadow est révélé
 Si Alice amie, alors elle prête un magnétophone pour permettre d'enregistré l'aveux du méchant, poussé à bout par son orgueil.
  Après l'enregistrement, Elusia ne veut pas y croire et demande a MC d'aller voir GM une dernière fois. GM l'enferme et va chercher l'enregistrement chez FP. Pour sortir, possibilité d'incendie ou fenetre etc suivit par salazard.
+
+Acte final *****************************************************************************************************
+Le roi des ombres
+
+Face a face final avec Shadow
 
 Possibilité de s'allier au GM pour une very bad end
 ************************************************************************************************************

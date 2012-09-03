@@ -241,7 +241,7 @@ screen navigation:
         textbutton _("Charger") action ShowMenu("load")
         textbutton _("Menu principal") action MainMenu()
         textbutton _("Aide") action Help()
-        textbutton _("Relations") action ShowMenu('stat_rel')
+        #textbutton _("Relations") action ShowMenu('stat_rel')
         textbutton _("Quitter") action Quit()
 
 init -2 python:

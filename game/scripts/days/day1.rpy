@@ -270,7 +270,7 @@ label manger_dehors:
     
 label RU:
     scene ru with dissolve
-    "Comme pour venir, je suivis les flux d'étudiants pour trouver le RU."
+    "Comme pour venir, je suivis les flux d'étudiants pour trouver le self."
     "Alors que je mangeais à ma table en solitaire..."
     show laura normal with easeinleft
     l "T'es tout seul ? On peut se mettre là ?"
