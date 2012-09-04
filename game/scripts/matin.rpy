@@ -1,7 +1,3 @@
-# TODO easin + easeout
-#            # $ renpy.block_rollback()
-# ma mh
-# sexe
 label matin_sport:
     if matin_sport == 1:
         jump matin_sport1
@@ -23,8 +19,10 @@ label matin_sport1:
         "Peut-être que je devrais me coucher tôt finalement aujourd'hui..."
         menu:
             "C'est une bonne idée...":
+                # $ renpy.block_rollback()
                 $ action_soir = 'd'
             "Non, ça ira...":
+                # $ renpy.block_rollback()
                 pass
     else:
         $ str_points += 3
@@ -35,6 +33,7 @@ label matin_sport1:
     e "Est-ce que j'ai l'air d'une sportive ?"
     menu:
         "Bien sur !":
+            # $ renpy.block_rollback()
             $ rel_lulu += 2
             m "Bien sur !"
             show elusia happy sport
@@ -42,6 +41,7 @@ label matin_sport1:
             show elusia normal sport
             e "Je le suis plus ou moins devenue récemment."
         "Pas vraiment.":
+            # $ renpy.block_rollback()
             m "Pas vraiment."
             show elusia satisfied sport
             e "Hé hé, je vois..."
@@ -58,18 +58,22 @@ label matin_sport1:
     e "Je ne sais pas pour toi mais moi, j'étais vraiment très contente d'avoir pu courir avec toi !"
     menu:
         "Le plaisir est réciproque !":
+            # $ renpy.block_rollback()
             $rel_lulu += 5
-            m "Le plaisir est réciproque !"
+            mh "Le plaisir est réciproque !"
             show elusia happy sport
             e "Je suis vraiment heureuse de te l'entendre dire !"
             jump matin_sport1_hesitation
         "Oui oui...":
+            # $ renpy.block_rollback()
             m "Oui oui..."
             $ rel_lulu += 2
             show elusia normal sport
             e "Je suis contente de te l'entendre dire !"
             jump matin_sport1_hesitation
         "Pas moi...":
+            # $ renpy.block_rollback()
+            m "Pas moi..."
             $ rel_lulu -= 17
             show elusia geez sport
             stop music fadeout 1.0
@@ -88,6 +92,7 @@ label matin_sport1_hesitation:
             menu:
                 m "Mais pourquoi..."
                 "Tu manques autant de confiance en toi ?":
+                    # $ renpy.block_rollback()
                     $rel_lulu += 5
                     extend "Tu manques autant de confiance en toi ?"
                     m "Tu doutes toujours..."
@@ -95,14 +100,16 @@ label matin_sport1_hesitation:
                     e "Est-ce que... Est-ce qu'on peut en parler une autre fois ?"
                     menu:
                         "Bien sur.":
+                            # $ renpy.block_rollback()
                             $rel_lulu += 3
                             m "Bien sur."
-                            m "J'habite juste à côté, tu viens quand tu veux hein."
+                            m "J'habite juste à côté, tu viens quand tu veux."
                             show elusia happy sport
                             e "Merci ! J'apprécie, vraiment !"
                             e "Je vais me changer, puis je vais me faire à manger."
                             e "Encore merci et au revoir !"
                         "Nan, je veux savoir.":
+                            # $ renpy.block_rollback()
                             m "Nan, je veux savoir."
                             e "Mais... C'est d'ordre privé..."
                             show elusia geez sport
@@ -111,25 +118,18 @@ label matin_sport1_hesitation:
                             e "Merci et au revoir."
                     return
                 "Tu penses des trucs pareils ?":
+                    # $ renpy.block_rollback()
                     $ rel_lulu += 2
                     extend "Tu penses des trucs pareils ?"
-                    e "Je ne sais pas..."
-                    e "Je suis comme ça."
-                    m "Tu ne devrais pas."
-                    m "Tu es quelqu'un de bien alors arrêtes de te dénigrer..."
-                    show elusia normal sport
-                    e "Merci."
-                    e "Je vais me changer, puis je vais me faire à manger."
-                    e "Encore merci et au revoir !"
-                    return
                 "Ta compagnie me serait désagréable ?":
+                    # $ renpy.block_rollback()
                     extend "Ta compagnie me serait désagréable ?"
-                    e "Je ne sais pas..."
-                    e "Je suis comme ça."
-                    m "Tu ne devrais pas."
-                    m "Tu es quelqu'un de bien alors arrêtes de te dénigrer..."
-                    show elusia normal sport
-                    e "Merci."
-                    e "Je vais me changer, puis je vais me faire à manger."
-                    e "Encore merci et au revoir !"
-                    return
+            e "Je ne sais pas..."
+            e "Je suis comme ça."
+            m "Tu ne devrais pas."
+            m "Tu es quelqu'un de bien alors arrêtes de te dénigrer..."
+            show elusia normal sport
+            e "Merci."
+            e "Je vais me changer, puis je vais me faire à manger."
+            e "Encore merci et au revoir !"
+            return

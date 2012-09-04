@@ -1,7 +1,5 @@
-# TODO easin + easeout
-#            $ renpy.block_rollback()
-# ma mh
-# sexe
+# TODO
+
 label club:
 
     play music (club1) fadein 2
@@ -28,7 +26,7 @@ label club_0:
         v "T'es le nouveau dans la classe de Télécoms-Réseaux avec moi non ?"
         m "Je ne sais pas..."
         m "Mais je suis bien en Télécoms-Réseaux."
-        v "Oui je sais. Tu étais assis à l'autre boût du rang."
+        v "Oui je sais. Tu étais assis[ter] à l'autre boût du rang."
         v "Oh ! Mais je me présente : je suis Valeth !"
         $ valou = 'Valeth'
     elif rel_val >= 5:
@@ -45,11 +43,12 @@ label club_0:
     v "Des questions ?"
     m "Non, c'est bon."
     v "Tu sais jouer aux échecs ?"
-    m "Oui, bien sûr. Mais je ne suis pas très compétent !"
+    m "Oui, bien sûr. Mais je ne suis pas très compétent[ter] !"
     v "Ce n'est pas très important."
     v "Je te défie !"
     menu:
         "Accepter.":
+            $ renpy.block_rollback()
             m "OK, c'est partit !"
             "C'était stressant."
             "Valeth n'a pas dit grand mot de la partie."
@@ -60,11 +59,13 @@ label club_0:
             $ rel_val += 5
             $ int_points += 2
         "Refuser.":
+            $ renpy.block_rollback()
             m "Nan merci, ça ira."
             v "Ah..."
             v "Tu veux jouer à autre chose ?"
             menu:
                 "Et si j'essayais un de leur jeu ?":
+                    $ renpy.block_rollback()
                     $ rel_val += 2
                     $ int_points += 1
                     m "Je crois que je vais essayer autre chose."
@@ -74,6 +75,7 @@ label club_0:
                     "C'était divertissant."
                     "Au moment de partir, Valeth m'a montré[ter] le chemin du retour."
                 "Non, je venais juste voir.":
+                    $ renpy.block_rollback()
                     m "Non, ça ira."
                     m "Je venais juste regarder."
                     v "Ah... Comme tu voudra..."
@@ -128,16 +130,19 @@ label club_1:
     menu:
         "Heu Valeth..."
         "Tu m'as offert la victoire n'est-ce pas ?":
+            $ renpy.block_rollback()
             $ rel_val += 3
             m "Tu m'as offert la victoire n'est-ce pas ?"
             show valeth happy
             v "Allons, qu'est-ce qui te fais dire ça ?"
             menu:
                 "Merci.":
+                    $ renpy.block_rollback()
                     m "Merci."
                     show valeth normal
                     v "Ho, c'est pas grand chose."
                 "Tu n'aurais pas du...":
+                    $ renpy.block_rollback()
                     $ rel_val += 3
                     m "Tu n'aurais pas du..."
                     show valeth normal
@@ -147,6 +152,7 @@ label club_1:
                     show valeth happy
                     v "Vraiment ? Nous sommes pareil alors..."
         "Merci pour la partie.":
+            $ renpy.block_rollback()
             v "Oh, tout le plaisir est pour moi."
             v "J'espère pouvoir jouer de nouveau contre toi !"
             
@@ -160,9 +166,10 @@ label club_2:
     $ aller_art += 1
     show valeth normal
     v "Oh, bonjour [j] !"
-    v "Tu es venu[ter] m'écrabouiller à nouveau ?"
+    v "Tu es revenu[ter] m'écrabouiller à nouveau ?"
     menu:
         "Je veux rejouer.":
+            $ renpy.block_rollback()
             $ rel_val += 5
             m "Oui, je vais rejouer contre toi."
             v "Très bien. Je vais pouvoir tenter de prendre ma revanche !"
@@ -177,11 +184,13 @@ label club_2:
             v "C'est possible."
             jump art3_fin
         "Non, pas cette fois.":
+            $ renpy.block_rollback()
             m "Non, pas cette fois Valeth."
             v "Oh... Dommage."
             v "Tu veux faire un jeu de plateau à la place ?"
             menu:
                 "Oui":
+                    $ renpy.block_rollback()
                     m "Oui, pourquoi pas !"
                     v "C'est partit."
                     "J'ai joué à divers jeux de réflexion avec Valeth."
@@ -190,6 +199,7 @@ label club_2:
                     $ rel_val += 2
                     jump art3_fin
                 "Non":
+                    $ renpy.block_rollback()
                     m "Non, merci, une autre fois."
                     m "Je vais rentrer."
                     v "Déjà ? Tu viens juste d'arriver..."
@@ -210,6 +220,7 @@ label art3_fin:
             menu:
                 m "Que penses-tu de :"
                 "Elusia ?":
+                    $ renpy.block_rollback()
                     extend "Elusia ?"
                     v "Elusia... C'est une chouette fille."
                     v "Toujours en duo inséparable avec Ryou."
@@ -217,6 +228,7 @@ label art3_fin:
                     v "Aussi serviable qu'attentionnée."
                     v "On dirait qu'elle a peur de la solitude..."
                 "Ryouzanki ?":
+                    $ renpy.block_rollback()
                     extend "Ryouzanki ?"
                     v "Je ne sais pas..."
                     v "C'est quelqu'un de très gentil et de plutôt présent."
@@ -224,6 +236,7 @@ label art3_fin:
                     v "Personnellement, je l'aime bien."
                     v "Il y a quelque chose qui cloche avec lui."
                 "Laura ?":
+                    $ renpy.block_rollback()
                     extend "Laura ?"
                     v "Je l'aime bien."
                     v "Même si elle paraît méchante, ce n'est pas le cas."
@@ -232,6 +245,7 @@ label art3_fin:
                     v "Alors elle ne prend pas son rôle très à coeur."
                     v "D'où cette animosité avec Elusia."
                 "Lloyd ?":
+                    $ renpy.block_rollback()
                     extend "Lloyd ?"
                     v "Il est clairement issu d'un autre monde que nous celui-là."
                     v "Il est né dans un cocon loin de tous."
@@ -239,6 +253,7 @@ label art3_fin:
                     v "Du coup il a du mal à comprendre qu'on peut ne pas être d'accord avec lui."
                     v "Mais c'est pas quelqu'un de méchant, il fait vraiment des efforts pour changer."
                 "Alice ?":
+                    $ renpy.block_rollback()
                     extend "Alice ?"
                     v "Je l'aime beaucoup !"
                     v "C'est mon miroir."
@@ -248,12 +263,14 @@ label art3_fin:
                     v "Elle ne croit qu'en ce qu'elle voit."
                     v "Si je croyais au destin, je le remercirais de nous avoir mis à des postes en opposition !"
                 "Moi ?":
+                    $ renpy.block_rollback()
                     extend "Moi ?"
                     $ rel_val += 2
                     v "Haha, ne t'en fais pas."
                     v "Je pense que comme moi, tout le monde t'apprécie."
                     v "Désolé si on t'agresse un peu mais on est tous très curieux !"
                 "Rien, oublie...":
+                    $ renpy.block_rollback()
                     extend "Rien, oublie..."
                     show valeth happy
                     v "Hey, je mords pas tu sais !"

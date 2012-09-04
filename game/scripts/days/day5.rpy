@@ -1,8 +1,4 @@
 # 3 cas possibles : pas inscrit, lu, inscrit
-# TODO easin + easeout
-#            # $ renpy.block_rollback()
-# ma mh
-# sexe
 label day5:
     scene reveil with fade
     play sound "sound/clock.mp3"
@@ -14,14 +10,17 @@ label day5:
     play sound "sound/bell.mp3"
     m "Toujours aussi ponctuels ces deux là..."
     play sound "sound/dooropen.mp3"
-    scene couloir with fade
-    show elusia geez at right
+    scene couloir
+    show elusia geez:
+        right
+    with fade
     extend "Ou pas..."
     show elusia sad
     e "Salutations !"
     m "Salut !"
     menu:
         "Et Ryouzanki ?":
+            # $ renpy.block_rollback()
             $ rel_lulu += 2
             m "Et Ryouzanki ?"
             show elusia geez at center with move
@@ -30,10 +29,12 @@ label day5:
             e "Il est en train de se préparer là."
             e "Mais plutôt qu'être tous les 3 en retard, il m'a dit de partir devant."
         "On y va ?":
+            # $ renpy.block_rollback()
             $ rel_lulu -= 2
             jump day5_solo
     menu:
         "Attendre.":
+            # $ renpy.block_rollback()
             $rel_ryou += 4
             $rel_lulu += 5
             m "Personnellement, je voudrais bien l'attendre."
@@ -46,7 +47,7 @@ label day5:
             e "Vraiment ?"
             show elusia satisfied
             e "Je fais pas mal de sport et Ryou, à force d'être en retard cours pas mal aussi."
-            m "Ne me sous estimes pas !"
+            mh "Ne me sous estimes pas !"
             e "C'est ce que nous verrons !"
             scene couloir with fade
             show elusia normal
@@ -54,12 +55,14 @@ label day5:
             e "Que fait-on ?"
             menu:
                 "Sonner.":
+                    # $ renpy.block_rollback()
                     play sound "sound/bell.mp3"
                     "Je sonne..."
                 "Attendre.":
+                    # $ renpy.block_rollback()
                     pass
             play sound "sound/dooropen.mp3"
-            show ryou angry at right
+            show ryou angry at right with easeinright
             "Soudain, la porte s'ouvre sur Ryouzanki qui nous dévisage en silence."
             show ryou happy
             r "J'arriverai avant vous !!"
@@ -87,6 +90,7 @@ label day5:
                 "Je suis arrivé en retard..."
             jump day5_matin
         "Partir.":
+            # $ renpy.block_rollback()
             jump day5_solo
 
 label day5_solo:
@@ -102,19 +106,26 @@ label day5_matin:
     "Le sang est composé de 54 \% de plasma, 45 \% de globules rouges et 1 \% de globules blancs et de plaquettes."
     "Soit 4 éléments au total."
     "Ce genre de choses..."
-    scene classroom with fade
     play music (matin1) fadein 2
-    show ryou normal at left
-    show elusia normal at right
+    scene classroom
+    show ryou normal:
+        left
+    show elusia normal:
+        right
+    with fade
     e "On va revoir Alice ?"
     r "Bien sur !"
     if choix2:
         call day4_labo
     else:
-        scene labo with fade
-        show ryou normal at left
-        show elusia normal at center
-        show lloyd normal at right
+        scene labo
+        show ryou normal:
+            left
+        show elusia normal:
+            center
+        show lloyd normal:
+            right
+        with fade
         e "Salut Lloyd !"
         e "Tu ne saurais pas où se trouve Alice par hasard ?"
         y "Oui. Elle est partie s'acheter des sandwichs."
@@ -130,9 +141,12 @@ label day5_matin:
             y "Alice m'a demandé de te dire de passer de toute urgence ce soir au club."
             y "Elle a dit que c'était d'importance capitale."
             y "Ne rate pas ce rendez-vous."
-        scene parc with fade
-        show elusia happy at right
-        show ryou happy at left
+        scene parc
+        show elusia happy:
+            right
+        show ryou happy:
+            left
+        with fade
         e "Tu sais, malgré les apparences, Lloyd et Alice s'entendent plutôt bien !"
         show ryou normal
         r "Tant qu'il ne s'agit pas d'obligations..."
@@ -141,7 +155,6 @@ label day5_matin:
         e "Et Alice est quelqu'un de plutôt méticuleux qui respecte ces règles."
         "Nous avons discuté de la hierarchie de l'AE pendant la pause."
         "C'était plutôt intéressant."
-
 
     play music (jour1) fadein 2
     scene black with fade
@@ -162,9 +175,12 @@ label day5_matin:
         call labo
         jump day5_end
     else:
-        scene classroom with fade
-        show ryou sad at left
-        show elusia normal at right
+        scene classroom
+        show ryou sad:
+            left
+        show elusia normal:
+            right
+        with fade
         r "Bon !"
         r "Moi je vais rentrer travailler."
         show elusia satisfied
@@ -206,15 +222,18 @@ label day5_choix:
         window show None
             
         if _return == "swimming":
+            # $ renpy.block_rollback()
             "Vendredi, pas sport ..."
             jump day5_choix
         
         elif _return == "science":
+            # $ renpy.block_rollback()
             "Les locaux sont fermés."
             "Il n'y a personne."
             jump day5_choix
             
         elif _return == "art":
+            # $ renpy.block_rollback()
             if aller_art >= 1:
                 "Allons tenter de battre Valeth !"
             else:
@@ -222,6 +241,7 @@ label day5_choix:
             call club
     
         elif _return == "go home":
+            # $ renpy.block_rollback()
             "Je crois que je vais rentrer."
             call go_home
             

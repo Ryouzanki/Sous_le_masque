@@ -1,7 +1,4 @@
-# TODO easin + easeout
-#            $ renpy.block_rollback()
-# ma mh
-# sexe
+# TODO 
 label go_home:
     if aller_home == 0:
         jump home_0
@@ -22,15 +19,15 @@ label home_0:
     r "Ah bah te voilà enfin !"
     show ryou normal at center with move
     r "Je t'attendais pour rentrer."
-    m "Oh, c'est bien gentil de ta part."
+    mh "Oh, c'est bien gentil de ta part."
     if bite:
         r "Ce serait bête que tu te perdes pour rentrer."
-        m "Très drôle. Merci quand même."
+        mh "Très drôle. Merci quand même."
         r "Ne t'en fais pas pour ça."
     else:
         r "Je ne peux pas te laisser rentrer seule."
         r "C'est contre mes principes."
-        m "Oui oui..."
+        mh "Oui oui..."
     
     scene couloir with fade
     show ryou happy
@@ -45,12 +42,14 @@ label home_0:
         r "C'est comme tu veux hein !"
         menu:
             "Accepter.":
+                # $ renpy.block_rollback()
                 $ rel_ryou += 5
                 m "Ouais, OK."
                 show ryou normal
                 r "Bon bah, par ici !"
                 jump chez_ryou_homme
             "Refuser.":
+                # $ renpy.block_rollback()
                 m "Non, ce n'est pas urgent."
                 show ryou sad
                 r "OK."
@@ -58,7 +57,7 @@ label home_0:
                 m "Je vais me reposer."
                 r "Idem. A plus !"
                 $ rel_ryou -= 2
-                hide ryou
+                hide ryou with easeoutright
                 $ vig += 2
                 return
     else:
@@ -67,6 +66,7 @@ label home_0:
         r "Rien de particulier hein !"
         menu:
             "Accepter.":
+                # $ renpy.block_rollback()
                 $ rel_ryou += 5
                 m "D'accord."
                 show ryou surprised
@@ -77,6 +77,7 @@ label home_0:
                 r "Allons y!"
                 jump chez_ryou_femme
             "Refuser.":
+                # $ renpy.block_rollback()
                 m "Pas aujourd'hui."
                 m "Je suis épuisée, désolée !"
                 show ryou sad
@@ -85,7 +86,7 @@ label home_0:
                 r "A plus !"
                 $ rel_ryou -= 2
                 $ vig += 2
-                hide ryou
+                hide ryou with easeoutright
                 return
         
 label chez_ryou_homme:
@@ -102,11 +103,13 @@ label chez_ryou_homme:
     r "Et sinon, t'en penses quoi ?"
     menu:
         "De quoi ? Elusia ?":
+            # $ renpy.block_rollback()
             m "De quoi ? Elusia ?"
             r "........ Ouais !"
             m "Je crois que..."
             menu :
                 "...je l'aime beaucoup !":
+                    # $ renpy.block_rollback()
                     extend "je l'aime beaucoup !"
                     show ryou sad
                     r "Sérieusement ?"
@@ -114,18 +117,21 @@ label chez_ryou_homme:
                     r "C'est un peu tôt nan ?"
                     $ rel_ryou -= 2
                 "...je ne sais pas.":
+                    # $ renpy.block_rollback()
                     extend "je ne sais pas."
                     m "Je ne suis ici que depuis peu."
                     m "C'est trop tôt pour juger."
                     show ryou sad
                     r "Pas faux."
                 "...elle me met mal à l'aise.":
+                    # $ renpy.block_rollback()
                     extend "elle me met mal à l'aise."
                     show ryou sad
                     r "Sérieusement ?"
                     $ rel_ryou -= 4
             menu:
                 "Et toi ?":
+                    # $ renpy.block_rollback()
                     $ rel_ryou += 2
                     m "Et toi ?"
                     show ryou angry
@@ -142,9 +148,10 @@ label chez_ryou_homme:
                     r "On joue ?"
                     "J'ai passé la soirée à jouer aux jeux vidéos avec Ryouzanki."
                     "Le temps est passé si vite..."
-                    hide ryou
+                    hide ryou with easeoutright
                     return
                 "Vous vous connaissez depuis longtemps ?":
+                    # $ renpy.block_rollback()
                     m "Vous vous connaissez depuis~"
                     show ryou sad
                     r "Le lycée."
@@ -156,11 +163,12 @@ label chez_ryou_homme:
                     r "On joue ?"
                     "J'ai passé la soirée à jouer aux jeux vidéos avec Ryouzanki."
                     "Le temps est passé si vite..."
-                    hide ryou
+                    hide ryou with easeoutright
                     return                
 
             
         "De quoi ? L'école ?":
+            # $ renpy.block_rollback()
             m "De quoi ? L'école ?"
             r "Bah ouais..."
             r "Tu croyais quoi ? Que je te demandais d'Elusia ?"
@@ -194,15 +202,18 @@ label chez_ryou_femme:
     m "Maintenant que tu parles d'Elusia..."
     menu:
         "Vous êtes frère et soeur ?":
+            # $ renpy.block_rollback()
             m "Vous êtes frère et soeur ?"
             show ryou angry
             r "Nan... Tu plaisantes ?"
             r "Pas du tout nan..."
         "Vous vous connaissez depuis longtemps ?":
+            # $ renpy.block_rollback()
             m "Vous vous connaissez depuis longtemps ?"
             r "Ouep."
             $ rel_ryou +=2
         "Vous sortez ensemble ?":
+            # $ renpy.block_rollback()
             m "Vous sortez ensemble ?"
             show ryou angry
             r "Pardon ?"
@@ -235,27 +246,31 @@ label home_1:
     m "Mais..."
     menu:
         "Et toi, t'es à un club peut être ?":
+            # $ renpy.block_rollback()
             $ rel_ryou -= 2
-            m "Et toi, t'es à un club peut être ?"
+            ma "Et toi, t'es à un club peut être ?"
             show ryou angry
             r "Bien sûr."
             r "Je suis dans tous les clubs en fait..."
             menu:
                 "T'es pas un membre fictif par hasard ?":
+                    # $ renpy.block_rollback()
                     $ rel_ryou -=2
-                    m "T'es pas un membre fictif par hasard ?"
+                    mh "T'es pas un membre fictif par hasard ?"
                     r "Je suis inscrit, c'est déjà ça et j'y passe de temps en temps."
                     r "Pfff, si tu veux rentrer seul[ter], il fallait le dire plus tôt..."
-                    hide ryou
+                    hide ryou with easeoutright
                     $vig += 2
                     return
                 "C'est si important que ça ?":
-                    m "C'est si urgent que ça ?"
+                    # $ renpy.block_rollback()
+                    ma "C'est si urgent que ça ?"
                     r "Bah non, pas pour moi mais quand même..."
                     r "On rentre ?"
                     r "Je voulais justement te parler."
                     jump home2
         "Je suis HS. Je vais me reposer aujourd'hui.":
+            # $ renpy.block_rollback()
             m "Je suis HS. Je vais me reposer aujourd'hui."
             show ryou sad
             r "Ah... D'accord."
@@ -265,19 +280,21 @@ label home_1:
             r "Tu as un peu de temps devant toi ?"
             menu:
                 "Oui, si c'est rapide":
+                    # $ renpy.block_rollback()
                     $rel_ryou +=5
                     m "Oui, si c'est rapide"
                     show ryou happy
                     r "Oui, t'inquiète !"
                     jump home2
                 "Non, vraiment pas maintenant...":
+                    # $ renpy.block_rollback()
                     m "Non, vraiment pas maintenant..."
                     $rel_ryou -=2
                     show ryou sad
                     r "OK..."
                     r "Repose toi bien !"
                     $ vig +=2
-                    hide ryou
+                    hide ryou with easeoutright
                     return
                     
 label home2:  #var a changer car ambigue
@@ -296,9 +313,10 @@ label home2:  #var a changer car ambigue
         r "Tu aiderai deux amis à sortir ensemble ?"
         menu:
             "Oh, tu parles de toi et Elusia ?":
+                # $ renpy.block_rollback()
                 $ rel_ryou +=2
                 $ aller_home += 1
-                m "Oh, tu parles de toi et~"
+                mh "Oh, tu parles de toi et~"
                 show ryou happy
                 r "Ta ta ta ! Pas de conclusions hative !"
                 r "J'ai posé une question assez gênante..."
@@ -306,17 +324,18 @@ label home2:  #var a changer car ambigue
                 r "Oh, je n'avais pas vu l'heure !"
                 r "Il faut que j'aille faire ma lessive avant que ça ferme."
                 r "On se voit plus tard !"
-                m "Hey ! Ne t'enfuis pas !"
+                mh "Hey ! Ne t'enfuis pas !"
                 scene couloir with fade
                 show ryou happy
                 r "J'y vais, à plus !"
-                hide ryou
-                m "Il est partit vite..."
+                hide ryou with easeoutright
+                mh "Il est partit vite..."
                 return
             "Bien sûr que je les aiderai.":
+                # $ renpy.block_rollback()
                 $ rel_ryou +=1
                 $ aller_home += 1
-                m "Bien sûr que je les aiderai."
+                mh "Bien sûr que je les aiderai."
                 r "OK..."
                 m "..."
                 show ryou happy
@@ -326,12 +345,12 @@ label home2:  #var a changer car ambigue
                 r "Oh, je n'avais pas vu l'heure !"
                 r "Il faut que j'aille faire ma lessive avant que ça ferme."
                 r "On se voit plus tard !"
-                m "Hey ! Ne t'enfuis pas !"
+                mh "Hey ! Ne t'enfuis pas !"
                 scene couloir with fade
                 show ryou surprised
                 r "J'y vais, à plus !"
-                hide ryou
-                m "Il est partit vite..."
+                hide ryou with easeoutright
+                mh "Il est partit vite..."
                 return
                 
     else:
@@ -349,6 +368,7 @@ label home_2:
     r "El~... Ah, c'est toi [j]."
     menu:
         "Perdu ! T'es déçu ?":
+            # $ renpy.block_rollback()
             m "Perdu ! T'es déçu ?"
             show ryou normal
             if bite :
@@ -361,8 +381,9 @@ label home_2:
             show ryou happy
             r "Oh, mais j'ai rien insinué."
         "Tu veux qu'on aille la chercher ?":
+            # $ renpy.block_rollback()
             $rel_ryou += 2
-            m  "Tu veux qu'on aille la chercher ?"
+            mh  "Tu veux qu'on aille la chercher ?"
             show ryou happy
             r "C'est sympa de proposer mais non."
             r "Si elle ne vient pas, c'est probablement parce qu'elle ne peut pas."
@@ -374,21 +395,25 @@ label home_2:
     r "Oui. Comment sont tes nouveaux camarades ?"
     menu:
         "Je les aime tous.":
-            m "Je les aime tous."
+            # $ renpy.block_rollback()
+            mh "Je les aime tous."
             $ rel_ryou += 5
             r "Je vois."
             r "Content de savoir que tu t'es adapté[ter]."
         "J'en aime beaucoup.":
-            m "J'en aime beaucoup."
+            # $ renpy.block_rollback()
+            mh "J'en aime beaucoup."
             r "OK."
             r "C'est assez normal de ne pas tous les aimer."
         "Ils ne sont pas tous très intéressants.":
+            # $ renpy.block_rollback()
             m "Ils ne sont pas tous très intéressants."
             r "Ah bon..."
             r "Ils ont tous leur bon et mauvais côté."
             $ rel_ryou += 1
         "Ils sont ennuyeux.":
-            m "Ils sont ennuyeux."
+            # $ renpy.block_rollback()
+            ma "Ils sont ennuyeux."
             r "Carrément..."
             r "Les types d'où tu venais étaient des anges alors."
             $ rel_ryou += 3

@@ -1,8 +1,3 @@
-# TODO easin + easeout
-#            $ renpy.block_rollback()
-# ma mh
-# sexe
-
 label sport:
     if aller_sport == 0:
         jump sport_0
@@ -25,6 +20,7 @@ label sport_0:
             e "Devine qui c'est !"
             menu:
                 "Elusia !":
+                    # $ renpy.block_rollback()
                     m "Elusia !"
                     $ fille = 'Elusia'
                     scene gymnaseout with fade
@@ -33,22 +29,27 @@ label sport_0:
                     $ rel_lulu += 5
                     jump lulu
                 "Ryouzanki !":
+                    # $ renpy.block_rollback()
                     m "Ryouzanki !"
                     $ fille = 'Elusia'
                     jump troll
                 "Lloyd !" if rel_lloy >= 5:
+                    # $ renpy.block_rollback()
                     m "Lloyd !"
                     $ fille = 'Elusia'
                     jump troll
                 "Alice !" if rel_ali >=5:
+                    # $ renpy.block_rollback()
                     m "Alice !"
                     $ fille = 'Elusia'
                     jump alice
                 "Laura !"if rel_lolo >= 5:
+                    # $ renpy.block_rollback()
                     m "Laura !"
                     $rel_lulu -=2
                     jump laura
                 "Valeth !"if rel_lolo >= 5:
+                    # $ renpy.block_rollback()
                     m "Valeth !"
                     $ fille = 'Elusia'
                     jump troll
@@ -71,6 +72,7 @@ label laura:
     e "Je suppose qu'elle t'a recommandé de m'éviter et tout ça..."
     menu:
         "Oui...":
+            # $ renpy.block_rollback()
             m "Oui..."
             e "Et bien... Au revoir..."
             hide elusia
@@ -78,6 +80,7 @@ label laura:
             $ rel_lulu -= 5
             jump lolo
         "Non.":
+            # $ renpy.block_rollback()
             m "Non."
             show elusia sad sport
             e "Je sais qu'elle l'a fait..."
@@ -88,6 +91,7 @@ label laura:
             "Elle a l'air assez triste..."
             jump lolo
         "Je m'en fiche.":
+            # $ renpy.block_rollback()
             m "Je m'en fiche."
             show elusia sad sport
             e "Je vois..."
@@ -100,7 +104,8 @@ label troll:
     extend "J'ai une voix d'homme ?"
     menu:
         "Ouep.":
-            m "Ouep."
+            # $ renpy.block_rollback()
+            mh "Ouep."
             show elusia angry sport
             e "Pfff... Sympa..."
             e "Bon, j'ai tennis."
@@ -110,12 +115,12 @@ label troll:
             $ rel_lulu -=5
             jump lolo
         "Mais non.":
+            # $ renpy.block_rollback()
             m "Mais non."
             m "Je plaisantais."
             e "Ah..."
             e "Navrée, je n'ai pas un sens de l'humour très développé."
             e "Et donc ?"
-            jump lulu
     
 label lulu:
     show elusia normal sport
@@ -123,38 +128,42 @@ label lulu:
     e "T'es venu[ter] faire du sport ?"
     menu:
         "Oui.":
+            # $ renpy.block_rollback()
             m "Oui."
             e "Je vois."
             e "Est ce que ça t'intéresse du tennis ou du tir à l'arc ?"
             menu:
                 "J'aime bien le tennis.":
-                    m "J'aime bien le tennis."
+                    # $ renpy.block_rollback()
+                    mh "J'aime bien le tennis."
                     $ sport = 'tennis'
                     $ sport2 = 'solo'
                     $ rel_lulu += 5
                     jump sport_solo         
                 "Le tir à l'arc, c'est intéressant.":
-                    m "Le tir à l'arc, c'est intéressant."
+                    # $ renpy.block_rollback()
+                    mh "Le tir à l'arc, c'est intéressant."
                     $ sport = 'tir à l\'arc'
                     $ sport2= 'solo'
                     $ rel_lulu += 5
                     jump sport_solo
                 "Non merci.":
+                    # $ renpy.block_rollback()
                     m "Non merci."
                     show elusia sad sport
                     e "D'accord..."
                     e "Bon, j'ai tennis."
                     show elusia normal sport
                     e "Bye !"
-                    hide elusia
+                    hide elusia with easeoutright
                     jump lolo
         "Pas vraiment non.":
+            # $ renpy.block_rollback()
             m "Pas vraiment non."
             e "Je vois."
             e "Bon, j'ai tennis."
             e "Bye !"
-            hide elusia
-            jump lolo
+            hide elusia with easeoutright
                     
 label lolo:
     scene gymnase with fade
@@ -175,12 +184,13 @@ label lolo:
          
     else:
         l "Ah, je dois avouer que je ne m'attendais pas à te voir ici !"
-        m "Pourtant je suis là !"
+        mh "Pourtant je suis là !"
         l "Oui oui..."
         l "Et t'es vraiment venu pour faire du sport ou ...?"
         menu:
             "Je suis venu pour ça !":
-                m "Je suis venu pour ça !"
+                # $ renpy.block_rollback()
+                mh "Je suis venu pour ça !"
                 show laura happy
                 l "Super !"
                 l "Tu veux faire quoi ?"
@@ -188,22 +198,24 @@ label lolo:
                 $ rel_lolo += 5
                 jump sport_collectif
             "Je ne faisais que passer.":
+                # $ renpy.block_rollback()
                 m "Je ne faisais que~"
                 show laura angry
                 l "Non non non !"
                 l "Le sport est obligatoire."
                 l "Puisque tu es là, on va t'inscrire tout de suite."
                 l "Handball ou volley ?"
-                jump sport_collectif
                 
 label sport_collectif:
     menu:
         "Va pour le handball":
+            # $ renpy.block_rollback()
             m "Va pour le handball"
             $ sport = 'handball'
             $ sport2 = 'multi'
             jump sport_col
         "Le volley me tente bien...":
+            # $ renpy.block_rollback()
             m "Le volley me tente bien..."
             $ sport = 'volley'
             $ sport2 = 'multi'
@@ -211,7 +223,7 @@ label sport_collectif:
         
 label sport_col:
     
-        hide laura
+        hide laura with easeoutright
         if bite:
                 "C'est ainsi que je me retrouvais inscrit dans l'équipe masculine de [sport]."
                 "Laura est un manager impitoyable."
@@ -240,7 +252,7 @@ label sport_col:
         return
         
 label sport_solo:
-    hide elusia
+    hide elusia with easeoutright
     if sport == 'tir à l\'arc':
         $ vig -= 2
         scene arc with fade

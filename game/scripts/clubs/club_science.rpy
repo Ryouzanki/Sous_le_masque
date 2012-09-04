@@ -1,8 +1,4 @@
-# TODO easin + easeout
-#            $ renpy.block_rollback()
-# ma mh
-# sexe
-
+# TODO 
 label labo:
     
     play music (club1) fadein 2
@@ -37,6 +33,7 @@ label lloyd_menu_1:
     
     menu:
         "Ici, c'est...?"if choix_1 :
+            # $ renpy.block_rollback()
             $ choix_1 = False
             m "Ici, c'est...?"
             y "Le club des sciences."
@@ -45,19 +42,22 @@ label lloyd_menu_1:
             y "Que désires tu ?"
             menu:
                 "Non, je demandais juste..."if choix_2 == False:
+                    # $ renpy.block_rollback()
                     m "Non, je demandais juste..."
                     y "Je vois."
                     jump lloyd_menu_1
                 "Moi ? Rien de spécial."if choix_2:
+                    # $ renpy.block_rollback()
                     m "Moi ? Rien de spécial."
                     show lloyd angry
                     m "Je ne faisais que passer."
                     y "Alors passe."
-                    m "Je vois qu'on ne veut pas de moi ici..."
+                    ma "Je vois qu'on ne veut pas de moi ici..."
                     "Est-ce possible d'être aussi désagréable ?"
                     "Maintenant je sais que oui."
                     return
                 "Je peux m'inscrire ?":
+                    # $ renpy.block_rollback()
                     m "Je peux m'inscrire ?"
                     show lloyd angry
                     y "Je viens de te dire que je ne fais pas partie du club !"
@@ -66,6 +66,7 @@ label lloyd_menu_1:
                     y "Quel manque de responsabilité n'est-ce pas ?"
                     menu:
                         "Effectivement.":
+                            # $ renpy.block_rollback()
                             m "Effectivement."
                             show lloyd happy
                             y "Ha !"
@@ -77,6 +78,7 @@ label lloyd_menu_1:
                             y "Sous un prétexte aussi ridicule..."
                             $ rel_lloy += 5                            
                         "Elle a peut être des choses importantes à faire.":
+                            # $ renpy.block_rollback()
                             m "Elle a peut être des choses importantes à faire."
                             y "Dans ce cas, il ne fallait pas prendre ce poste."
                             m "Ah..."
@@ -90,6 +92,7 @@ label lloyd_menu_1:
                             show lloyd angry
                             y "Moi, au moins..."
                         "Honnêtement, on s'en fiche.":
+                            # $ renpy.block_rollback()
                             m "Honnêtement, on s'en fiche."
                             y "Non, c'est important !"
                             y "S'il y a de la casse, qui va assumer les conséquences ?"
@@ -97,12 +100,14 @@ label lloyd_menu_1:
                             m "Oui."
                     jump lloyd_menu_1
         "Je suis [j]. Et toi ?"if choix_2 :
+            # $ renpy.block_rollback()
             $ choix_2 = False
             m "Je suis [j]. Et toi ?"
             y "Classe ?"
             menu:
                 "J'ai posé une question avant toi...":
-                    m "J'ai posé une question avant toi..."
+                    # $ renpy.block_rollback()
+                    ma "J'ai posé une question avant toi..."
                     show lloyd happy
                     y "C'est vrai !"
                     show lloyd normal
@@ -119,6 +124,7 @@ label lloyd_menu_1:
                     m "C'est pas grave, je viens d'arriver."
                     $ rel_lloy += 5
                 "Je suis en Télécoms-Réseaux.":
+                    # $ renpy.block_rollback()
                     m "Je suis en Télécoms-Réseaux."
                     show lloyd normal
                     y  "Oh pardon, je ne t'avais pas reconnu[ter]."
@@ -130,6 +136,7 @@ label lloyd_menu_1:
                     $ rel_lloy += 2
             jump lloyd_menu_1
         "Au revoir !":
+            # $ renpy.block_rollback()
             m "Au revoir !"
             if choix_2 == False:
                 y "Au revoir [j]."
@@ -138,9 +145,8 @@ label lloyd_menu_1:
                 y "Au revoir."
             if choix_1 == False:
                 y "Ah, et... Reviens demain si tu veux t'inscrire."
-                m "D'accord, merci !"
-        
-            hide lloyd
+                mh "D'accord, merci !"
+
             "J'ai réussi à retouver le chemin de mon studio."
             return
             
@@ -166,6 +172,7 @@ label science_1:
     menu:
         m "Mais tu sais..."
         "Je préfère parler peu mais bien.":
+            # $ renpy.block_rollback()
             m "Je préfère parler peu mais bien."
             a "Vraiment... Tant mieux alors..."
             a "Le sage parle parce qu'il a quelque chose à dire."
@@ -173,19 +180,21 @@ label science_1:
             a "Je suppose..."
             $ rel_ali +=5
         "Comme tous les geeks.":
+            # $ renpy.block_rollback()
             m "Comme tous les geeks."
             show alice geez
-            a "Pfff... Encore un imbécile ancré dans les stéréotypes."
+            a "Pfff... Encore un[ter] imbécile ancré[ter] dans les stéréotypes."
             a "Je ne suis pas la présidente parce que je suis la plus compétente."
             a "Je le suis parce que je suis douée en communication, coordination."
             a "Du moins... Parmis les membres du club.."
             show alice sad
             a "Ce n'est qu'un titre honorifique."
         "Je n'ai rien dit !":
+            # $ renpy.block_rollback()
             $ rel_ali +=2
-            m "Je n'ai rien dit !"
+            mh "Je n'ai rien dit !"
             a "Ne pas dire des choses ne signifie pas ne pas les penser."
-            m "Je n'ai rien penser non plus..."
+            mh "Je n'ai rien penser non plus..."
             a "Ne rien penser, c'est ne pas exister."
             
 label science_02:
@@ -207,6 +216,7 @@ label science_02:
     menu :
         m "Je crois bien que..."
         "J'ai bien réfléchit, je ne veux pas m'inscrire.":
+            # $ renpy.block_rollback()
             m "J'ai bien réfléchit, je ne veux pas m'inscrire."
             show alice normal
             a "Donc non."
@@ -219,6 +229,7 @@ label science_02:
             "Quoiqu'il en soit, je suis sorti[ter] et rentré[ter] chez moi."
             return
         "Je vais encore y réfléchir.":
+            # $ renpy.block_rollback()
             m "Je vais encore y réfléchir."
             show alice normal
             a "Ma question est binaire."
@@ -227,11 +238,13 @@ label science_02:
             a "Je réitère donc ma question. Oui ou non ?"
             menu:
                 "Oui.":
+                    # $ renpy.block_rollback()
                     m "Oui."
                     a "Et bah voilà."
                     a "La prochaine fois, clarifie donc tes objectifs avant d'agir."
                     jump arrive_lloyd
                 "Non.":
+                    # $ renpy.block_rollback()
                     m "Non."
                     a "Et bah voilà."
                     a "La prochaine fois, clarifie donc tes objectifs avant d'agir."
@@ -243,6 +256,7 @@ label science_02:
                     "Quoiqu'il en soit, je suis sorti[ter] et rentré[ter] chez moi."
                     return
         "Oui, je veux venir.":
+            # $ renpy.block_rollback()
             $ rel_ali += 3
             $ aller_science += 1
             m "Oui, je veux venir."
@@ -274,15 +288,18 @@ label arrive_lloyd:
             a "L'aristo a encore brisé un moment d'émotion."
             menu:
                 "N'exagérons rien.":
+                    # $ renpy.block_rollback()
                     m "N'exagérons rien."
                     a "Oui..."
                 "(Rire)":
+                    # $ renpy.block_rollback()
                     $ rel_ali += 3
-                    m "Haha..."
+                    mh "Haha..."
                     show alice satisfied
                     a "Ce sera la même chose à chacune de ses apparitions."
                     a "A chaque réaction son produit."
                 "Oui, c'est vrai.":
+                    # $ renpy.block_rollback()
                     $ rel_ali +=1
                     m "Oui, c'est vrai."
                     show alice sad
@@ -301,18 +318,21 @@ label arrive_lloyd:
             menu:
                 m "Je vais prendre..."
                 "Chimie.":
+                    # $ renpy.block_rollback()
                     m "Chimie."
                     $ club = 'chimie'
                 "Robotique.":
+                    # $ renpy.block_rollback()
                     m "Robotique."
                     $ club = 'robot'
                 "Informatique.":
+                    # $ renpy.block_rollback()
                     m "Informatique."
                     $ club = 'info'
                     
             show alice happy
             a "Club [club] donc..."
-            m "Oui, c'est ça."
+            mh "Oui, c'est ça."
             show alice sad at left with move
             e "Hello ! Je suis en retard ?"
             show elusia normal with easeinright
@@ -403,17 +423,20 @@ label science_2:
     a "Tu n'as pas lu grand chose on dirait..."
     menu:
         "Je fais ce que je peux hein !":
+            # $ renpy.block_rollback()
             m "Je fais ce que je peux hein !"
             show alice normal
             a "Je plaisantais."
             $ rel_ali += 2
         "Je fais ce que je veux hein !":
-            m "Je fais ce que je veux hein !"
+            # $ renpy.block_rollback()
+            ma "Je fais ce que je veux hein !"
             show alice geez
             a "Mais non, mais non..."
             a "Fallait pas le prendre comme ça..."
             a "Je plaisantais."
         "Désolé[ter]":
+            # $ renpy.block_rollback()
             m "Désolé[ter]."
             show alice geez
             a "Mais non, mais non..."
@@ -426,17 +449,20 @@ label science_2:
     a "Tu sais, je me sens assez coupable de t'avoir forcé la main..."
     menu:
         "Oui tu peux...":
+            # $ renpy.block_rollback()
             m "Oui, tu peux..."
             show alice geez
             a "Désolée... Je suis sous pression..."
         "Non, ne t'en fais pas...":
+            # $ renpy.block_rollback()
             $  rel_ali += 3
             m "Non ne t'en fais pas..."
             show alice sad
             a "Oui... J'espère sincèrement que tu ne regrettera pas d'être parmi nous."
         "Je voulais venir de toutes façons.":
+            # $ renpy.block_rollback()
             $  rel_ali += 5
-            m "Je voulais venir de toutes façons."
+            mh "Je voulais venir de toutes façons."
             show alice geez
             a "Quel soulagement..."
             show alice sad
