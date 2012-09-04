@@ -1,10 +1,12 @@
 # TODO easin + easeout
 #            $ renpy.block_rollback()
+# ma mh
+# sexe
 
 label labo:
     
     play music (club1) fadein 2
-    scene labo with dissolve
+    scene labo with fade
     
     if aller_science == 0:
         jump science_0
@@ -105,7 +107,7 @@ label lloyd_menu_1:
                     y "C'est vrai !"
                     show lloyd normal
                     y "Excuse moi, je suis un peu sur les nerfs."
-                    y "Je suis Lloyd Baptiste Reeds de Bellato"
+                    y "Je suis Lloyd Baptiste Reeds de Bellato."
                     $ noble = 'Lloyd'
                     y "Mais c'est un peu long alors appelles moi Lloyd."
                     y "Et tu es en quelle classe [j] ?"

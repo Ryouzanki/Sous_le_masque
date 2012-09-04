@@ -1,7 +1,7 @@
 label day0:
 
     play music (joueur1) fadein 2
-    scene chambre m_cartons with dissolve
+    scene chambre m_cartons with fade
     "Fiou..."
     "J'ai bientôt fini de déballer mes affaires."
     "Il était temps, on dépasse minuit..."
@@ -288,7 +288,7 @@ label rencontre_elusia:
     "C'était agréable."
     "Puis, je les ai salués et j'ai continué de déballer mes affaires."
     "Avant d'aller me coucher, à bout de force."
-    scene black with dissolve
+    scene black with fade
     $ journal1="J'ai fait la rencontre de mes voisins Elusia et Ryouzanki.\nIls vont venir me chercher chaque matin désormais."
     stop music
     

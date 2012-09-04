@@ -1,9 +1,11 @@
 # TODO easin + easeout
 #            $ renpy.block_rollback()
+# ma mh
+# sexe
 label club:
 
     play music (club1) fadein 2
-    scene salledart with dissolve
+    scene salledart with fade
     
     if aller_art == 0:
         jump club_0

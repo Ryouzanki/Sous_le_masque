@@ -1,5 +1,7 @@
 # TODO easin + easeout
 #            $ renpy.block_rollback()
+# ma mh
+# sexe
 label go_home:
     if aller_home == 0:
         jump home_0
@@ -15,7 +17,7 @@ label go_home:
         
 label home_0:
     play music (ryou1) fadein 2
-    scene street with dissolve
+    scene street with fade
     show ryou surprised at left
     r "Ah bah te voilà enfin !"
     show ryou normal at center with move
@@ -30,7 +32,7 @@ label home_0:
         r "C'est contre mes principes."
         m "Oui oui..."
     
-    scene couloir with dissolve
+    scene couloir with fade
     show ryou happy
     r "Nous y voilà !"
     r "Tant qu'à faire, tu veux passer chez moi ?"
@@ -89,7 +91,7 @@ label home_0:
 label chez_ryou_homme:
     $ aller_home += 1
     play sound "sound/dooropen.mp3"
-    scene chambre r with dissolve
+    scene chambre r with fade
     show ryou happy
     r "Bienvenu chez moi"
     play sound "sound/doorclose.mp3"
@@ -174,7 +176,7 @@ label chez_ryou_homme:
 label chez_ryou_femme:
     $ aller_home += 1
     play sound "sound/dooropen.mp3"
-    scene chambre r with dissolve
+    scene chambre r with fade
     show ryou happy
     r "Bienvenu chez moi"
     play sound "sound/doorclose.mp3"
@@ -224,7 +226,7 @@ label chez_ryou_femme:
     
 label home_1:
     play music (ryou1) fadein 2
-    scene street with dissolve
+    scene street with fade
     show ryou normal at left
     r "Je savais que t'allais te défiler..."
     show ryou normal at center with move
@@ -280,7 +282,7 @@ label home_1:
                     
 label home2:  #var a changer car ambigue
     play sound "sound/dooropen.mp3"
-    scene chambre r with dissolve
+    scene chambre r with fade
     show ryou happy
     r "Bienvenu chez moi"
     play sound "sound/doorclose.mp3"
@@ -305,7 +307,7 @@ label home2:  #var a changer car ambigue
                 r "Il faut que j'aille faire ma lessive avant que ça ferme."
                 r "On se voit plus tard !"
                 m "Hey ! Ne t'enfuis pas !"
-                scene couloir with dissolve
+                scene couloir with fade
                 show ryou happy
                 r "J'y vais, à plus !"
                 hide ryou
@@ -325,7 +327,7 @@ label home2:  #var a changer car ambigue
                 r "Il faut que j'aille faire ma lessive avant que ça ferme."
                 r "On se voit plus tard !"
                 m "Hey ! Ne t'enfuis pas !"
-                scene couloir with dissolve
+                scene couloir with fade
                 show ryou surprised
                 r "J'y vais, à plus !"
                 hide ryou
@@ -341,7 +343,7 @@ label home2:  #var a changer car ambigue
             
 label home_2:
     play music (ryou1) fadein 2
-    scene street with dissolve
+    scene street with fade
     show ryou normal at left
     show ryou sad at center with move
     r "El~... Ah, c'est toi [j]."
@@ -390,7 +392,7 @@ label home_2:
             r "Carrément..."
             r "Les types d'où tu venais étaient des anges alors."
             $ rel_ryou += 3
-    scene couloir with dissolve
+    scene couloir with fade
     show ryou surprised
     r "Bon bah, on est arrivé..."
     show ryou happy
@@ -401,5 +403,5 @@ label home_2:
     return
     
 # label home_3:
-    # scene street with dissolve
+    # scene street with fade
     # 

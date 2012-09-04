@@ -1,5 +1,7 @@
 # TODO easin + easeout
 #            $ renpy.block_rollback()
+# ma mh
+# sexe
 
 label sport:
     if aller_sport == 0:
@@ -13,10 +15,10 @@ label sport:
 label sport_0:
         $ aller_sport +=1
         if rel_lulu > 2:
-            scene gymnaseout with dissolve
+            scene gymnaseout with fade
             pause(1)
             $ fille = '???'
-            scene black with dissolve
+            scene black with fade
             m "Qu'est ce que..."
             "Quelqu'un m'a mis les mains devant les yeux..."
             e "Te voilà toi !"
@@ -25,7 +27,7 @@ label sport_0:
                 "Elusia !":
                     m "Elusia !"
                     $ fille = 'Elusia'
-                    scene gymnaseout with dissolve
+                    scene gymnaseout with fade
                     show elusia happy sport
                     e "Bingo !"
                     $ rel_lulu += 5
@@ -54,7 +56,7 @@ label sport_0:
         else:
             jump lolo
 label alice:
-    scene gymnaseout with dissolve
+    scene gymnaseout with fade
     show elusia happy sport
     e "Perdu !"
     e "C'est moi ! Elusia !"
@@ -64,7 +66,7 @@ label laura:
     e "Oh..."
     e "Tu as donc fait la connaissance de Laura..."
     $ fille = 'Elusia'
-    scene gymnaseout with dissolve
+    scene gymnaseout with fade
     show elusia geez sport
     e "Je suppose qu'elle t'a recommandé de m'éviter et tout ça..."
     menu:
@@ -92,7 +94,7 @@ label laura:
             jump lulu
             
 label troll:
-    scene gymnaseout with dissolve
+    scene gymnaseout with fade
     show elusia sad sport
     e "J'ai..."
     extend "J'ai une voix d'homme ?"
@@ -155,7 +157,7 @@ label lulu:
             jump lolo
                     
 label lolo:
-    scene gymnase with dissolve
+    scene gymnase with fade
     show laura normal
     if en == 'Jeune fille':
         

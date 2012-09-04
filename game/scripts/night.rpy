@@ -135,7 +135,7 @@ label night:
         jump fin_night
 
 label night4:
-    show shadow ombre with dissolve
+    show shadow ombre with fade
     s "Je n'arrive pas à dormir..."
     s "Des nouveaux visages..."
     s "Je déteste ça !"
@@ -144,15 +144,15 @@ label night4:
     s "As tu vraiment l'intention de devenir ami avec toutes ces personnes ?"
     s "Peux tu seulement le faire..."
     s "Avant qu'il ne soit trop tard..."
-    hide shadow with dissolve
+    hide shadow with fade
     jump fin_night
 label night8:
-    show shadow ombre with dissolve
+    show shadow ombre with fade
     s "Pourquoi j'y suis allé ?"
     s "Je ne suis pas un pion, ni une pièce de rechange..."
     s "Je les déteste !"
     s "Je vais les briser en miette un à un..."
-    hide shadow with dissolve
+    hide shadow with fade
     jump fin_night
 
 label fin_night:

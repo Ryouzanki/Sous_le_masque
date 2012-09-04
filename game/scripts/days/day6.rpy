@@ -2,9 +2,10 @@
 # a ce stade, MC a soit lu, soit n'est pas inscrit au club science.
 # TODO easin + easeout
 #            # $ renpy.block_rollback()
-
+# ma mh
+# sexe
 label day6:
-    scene reveil2 with dissolve
+    scene reveil2 with fade
     play sound "sound/vibre.ogg"
     m "..."
     m "Quoi..."

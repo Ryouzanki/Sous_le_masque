@@ -1,5 +1,7 @@
 # TODO easin + easeout
 #            # $ renpy.block_rollback()
+# ma mh
+# sexe
 label matin_sport:
     if matin_sport == 1:
         jump matin_sport1

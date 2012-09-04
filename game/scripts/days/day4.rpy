@@ -1,7 +1,10 @@
-# TODO easin + easeout
+# TODO 
+# easin + easeout
 #            # $ renpy.block_rollback()
+# ma mh
+# sexe
 label day4:
-    scene reveil with dissolve
+    scene reveil with fade
     play sound "sound/clock.mp3"
     m "..."
     m "J'ai vraiment mal dormi..."
@@ -103,7 +106,7 @@ label day4:
     
 label day4_labo:
     $ choix2 = True
-    scene labo with dissolve
+    scene labo with fade
     show ryou normal at left
     show elusia normal at center
     if choix1 and aller_science > 1:
@@ -196,10 +199,10 @@ return
 
 label day4_cours:
     play music (jour1) fadein 2
-    scene black with dissolve
+    scene black with fade
     "La pause de midi est terminée."
     "Il faut retourner en cours..."
-    scene classroom with dissolve
+    scene classroom with fade
     "Comme toujours, Ryouzanki et Elusia se sont mis au premier rang."
     "Laura et Valeth sont au dernier rang."
     menu:
@@ -223,7 +226,7 @@ label day4_cours:
             show valeth normal at left
             show laura sad at right
             "Valeth passe son temps à dessiner en relevant la tête parfois pour suivre le cours."
-            "Laura est très perplexe. On dirait qu'elle est ailleurs."
+            "Laura est très perplexe. On dirait qu'elle est ailleurs."# a changer
             $ rel_val += 2
             $ rel_lolo += 2
             "A la fin du cours, Alice est venue me voir."
@@ -285,11 +288,11 @@ label day4_apres:
     
         elif _return == "go home":
             "Je crois que je vais rentrer."
-            scene street with dissolve
+            scene street with fade
             "Ah oui, Ryouzanki est allé à la réunion lui aussi..."
 
     play music (joueur1) fadein 2
-    scene couloir with dissolve
+    scene couloir with fade
     play sound "sound/dooropen.mp3"
     pause(1)
     "Ouf, je suis épuisé[ter]..."
@@ -297,7 +300,7 @@ label day4_apres:
         "Maintenant, je me suis engagé à venir les aider pour le gala..."
         "Ou plutôt j'ai été forcé[ter]..."
     "4 eme jour fini."
-    scene chambre m with dissolve
+    scene chambre m with fade
     play sound "sound/doorclose.mp3"
     "Je crois que je vais dormir."
     stop music

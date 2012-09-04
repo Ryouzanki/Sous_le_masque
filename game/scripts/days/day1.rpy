@@ -10,10 +10,10 @@ screen demo_imagemap:
 
 label day1:
     $ unlocked_journal_pages += 1
-    scene reveil with dissolve
+    scene reveil with fade
     play sound "sound/clock.mp3"
-    m "Argh !"
-    m "Maudit réveil !!"
+    ma "Argh !"
+    ma "Maudit réveil !!"
     m "Se lever à 7h après s'être couché aussi tard, c'est dur..."
     stop sound
     play music (joueur1) fadein 2
@@ -31,7 +31,7 @@ label oo:
     play sound "sound/doorclose.mp3"
     scene couloir with fade
     "Je ne sais pas où aller."
-    scene street with dissolve
+    scene street with fade
     "J'ai une idée géniale : Suivre le flux d'étudiants"
     "Un peu plus loin, j'aperçois une silhouette familière."
     "Ryouzanki est devant moi, accompagné d'une jeune fille."
@@ -106,9 +106,12 @@ label os:
     play sound "sound/bell.mp3"
     pause(1)
     play sound "sound/dooropen.mp3"
-    scene couloir with fade
-    show ryou normal at left
-    show elusia normal at right
+    scene couloir
+    show ryou normal:
+        left
+    show elusia normal:
+        right
+    with fade
     r "Yo !"
     e "Salutations !"
     e "Enchantée de faire ta connaissance [j] !"
@@ -125,30 +128,33 @@ label ss:
     play sound "sound/bell.mp3"
     pause(1)
     play sound "sound/dooropen.mp3"
-    scene couloir with fade
-    show ryou normal at left
-    show elusia normal at right
+    scene couloir
+    show ryou normal:
+        left
+    show elusia normal:
+        right
+    with fade
     r "Yo !"
     e "Salutations !"
     e "Bien dormi ?"
     m "Oui mais pas assez !"
     if rel_ryou == 7:
-        show elusia satisfied at right
+        show elusia satisfied
         e "Il ne fallait pas prendre de café..."
         e "Ca t'apprendra !"
     else:
-        show ryou happy at left
+        show ryou happy
         r "Pourtant, [sexe] a pris un thé."
-        show elusia geez at right
+        show elusia geez 
         e "A force de te gorger de caféine, tu y es immunisé."
-        show ryou normal at left
+        show ryou normal
         
-    show elusia sad at right
+    show elusia sad
     e "Bref, allons-y avant d'être en retard..."
     jump route1
     
 label route1:
-    scene street with dissolve
+    scene street with fade
     "L'école est toute proche."
     scene classroom with fade
     "On s'est mis au premier rang."
@@ -189,7 +195,7 @@ label day1_matin:
     menu:
         "D'accord, ça m'a l'air sympa !":
             # $ renpy.block_rollback()
-            m "D'accord, ça m'a l'air sympa !"
+            mh "D'accord, ça m'a l'air sympa !"
             show ryou happy
             show elusia happy
             r "C'est réglé alors !"
@@ -199,7 +205,7 @@ label day1_matin:
             jump manger_dehors
         "Heu, je suis un peu à sec en ce moment...":
             # $ renpy.block_rollback()
-            m "Heu, je suis un peu à sec en ce moment..."
+            ma "Heu, je suis un peu à sec en ce moment..."
             show ryou sad
             r "Ah..."
             if rel_lulu >= 5:
@@ -223,7 +229,7 @@ label day1_matin:
                         jump RU
                     "Accepter l'avance d'Elusia":
                         # $ renpy.block_rollback()
-                        m "Oh vraiment, merci !"
+                        mh "Oh vraiment, merci !"
                         show elusia satisfied
                         e "Tout le plaisir est pour moi voyons !"
                         show elusia normal
@@ -236,7 +242,7 @@ label day1_matin:
                         jump manger_dehors
                     "Accepter de venir mais payer.":
                         # $ renpy.block_rollback()
-                        m "Oh, vraiment, merci !"
+                        mh "Oh, vraiment, merci !"
                         m "Je vais venir mais je ne veux pas que tu m'avances."
                         show elusia satisfied
                         e "Comme tu voudras !"
@@ -259,18 +265,24 @@ label day1_matin:
                 jump RU
                 
 label manger_dehors:
-    scene parc with fade
-    show elusia happy at right
-    show ryou happy at left
+    scene parc
+    show elusia happy:
+        right
+    show ryou happy:
+        left
+    with fade
     "Nous sommes allés au parc."
     "Il faisait beau et nous avons mangé nos sandwichs en papotant, assis dans l'herbe."
+    r "... C'était donc une si grande ville que ça..."
+    show ryou surprised
+    r "Désolé, ici c'est plutôt petit et y'a pas grand chose à faire."
     "Ils m'ont surtout posé des questions sur l'endroit d'où je viens."
     "C'était très agréable."
     jump cours22
     
 label RU:
-    scene ru with dissolve
-    "Comme pour venir, je suivis les flux d'étudiants pour trouver le self."
+    scene ru with fade
+    "Je suivis les flux d'étudiants pour trouver le self."
     "Alors que je mangeais à ma table en solitaire..."
     show laura normal with easeinleft
     l "T'es tout seul ? On peut se mettre là ?"
@@ -288,14 +300,14 @@ label RU:
             "Puis, rejoins par un garçon, ils partirent."
             hide laura with easeoutright
             jump cours2
-        "Non, je préfère rester seul.":
+        "Non, je préfère rester seul[ter].":
              # $ renpy.block_rollback()
-             m "Non, je préfère rester seul."
+             m "Non, je préfère rester seul[ter]."
              show laura angry
              "Elle pose son plateau."
-             m "Hey !"
+             ma "Hey !"
              l "Ce n'était pas une question !"
-             m "Bien sur que si !"
+             ma "Bien sur que si !"
              jump RUU
              
 label RUU:
@@ -368,20 +380,19 @@ label RUU:
             
 label cours22:
     play music (jour1) fadein 2
-    scene black with dissolve
+    scene black with fade
     "La pause de midi est terminée."
     "Il faut retourner en cours..."
-    scene classroom with dissolve
-    "Le premier rang n'est pas aussi désagréable que ça..."
-    "C'est amusant d'empêcher Ryouzanki de dormir en lui pinçant les côte..."
+    scene classroom with fade
+    "Nous avons discrètement bavardé des plats que l'on savait cuisiner."
     jump fin_cours
     
 label cours2:
     play music (jour1) fadein 2
-    scene black with dissolve
+    scene black with fade
     "La pause de midi est terminée."
     "Il faut retourner en cours..."
-    scene classroom with dissolve
+    scene classroom with fade
     "En entrant dans la salle, j'aperçois Ryouzanki et Elusia au premier rang."
     if rel_lolo > 0:
         "Et aussi Laura et Valeth au fond de la classe."
@@ -421,8 +432,29 @@ label RZ:
     show elusia normal
     show ryou happy
     r "Je dirais même plus, Elusia, perfectissimo !"
-    "Le premier rang n'est pas aussi désagréable que ça..."
-    "C'est amusant d'empêcher Ryouzanki de dormir en lui pinçant les côte..."
+    show ryou normal
+    r "Honnêtement, la prochaine fois, tu devrais venir avec nous !"
+    e "D'ailleurs, on a parlé des clubs en pensant à toi."
+    e "As tu songé à joindre un club ?"
+    menu :
+        "Pas pour le moment non.":
+            # $ renpy.block_rollback()
+            m "Pas pour le moment non."
+            e "Ah... Dommage."
+            r "Quand tu changera d'avis, le bâtiment des clubs, c'est le gros en rouge."
+            m "D'accord."
+        "Oui, le plus tôt sera la mieux !":
+            # $ renpy.block_rollback()
+            mh "Oui, le plus tôt sera la mieux !"
+            r "Le bâtiment des clubs, c'est le gros en rouge !"
+            r "Les inscriptions doivent être encore ouverte mais dépêches toi."
+            m "D'accord !"
+            e "Après les cours bien sur."
+    show elusia satisfied
+    e "Sinon, si tu veux un club de sport, je t'attends cet après-midi au gymnase."
+    show ryou sad
+    r "Le sport ça intéresse personne..."
+    
     $ rel_lulu += 2
     $ rel_ryou += 2
     jump fin_cours
@@ -448,7 +480,7 @@ label LV:
             v "J'y suis presque tous les soirs."
         "Oui, le plus tôt sera la mieux !":
             # $ renpy.block_rollback()
-            m "Oui, le plus tôt sera la mieux !"
+            mh "Oui, le plus tôt sera la mieux !"
             show valeth happy at right
             v "Haha, ça fait du bien de voir des gens motivés !"
             v "Le bâtiment des clubs, c'est le gros en rouge !"
@@ -479,7 +511,7 @@ label LV:
                 $ rel_lolo += 2
             "Ah oui, je préfère largement les clubs de sport !":
                 # $ renpy.block_rollback()
-                m "Ah oui, je préfère largement les clubs de sport !"
+                mh "Ah oui, je préfère largement les clubs de sport !"
                 l "Tiens ! Dans les dents, l'intello !"
                 show valeth angry at right
                 v "..."
@@ -504,6 +536,7 @@ label LV:
     jump fin_cours
     
 label fin_cours:
+    "Le cours se déroula sans encombre."
     scene classroom with fade
     show prof happy
     "A la fin du cours, notre professeur principal a demandé à me parler."
@@ -547,12 +580,12 @@ label fin_cours:
         
 label day1_fin:
     play music (joueur1) fadein 2
-    scene couloir with dissolve
+    scene couloir with fade
     play sound "sound/dooropen.mp3"
     pause(1)
     "Ouf, je suis épuisé[ter]..."
     "Et ce n'est que le premier jour..."
-    scene chambre m with dissolve
+    scene chambre m with fade
     play sound "sound/doorclose.mp3"
     "Je crois que je vais dormir."
     stop music

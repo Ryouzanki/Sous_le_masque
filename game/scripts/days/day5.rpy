@@ -1,9 +1,10 @@
 # 3 cas possibles : pas inscrit, lu, inscrit
 # TODO easin + easeout
 #            # $ renpy.block_rollback()
-
+# ma mh
+# sexe
 label day5:
-    scene reveil with dissolve
+    scene reveil with fade
     play sound "sound/clock.mp3"
     m "..."
     m "Courage, dernier jour de la semaine..."
@@ -110,7 +111,7 @@ label day5_matin:
     if choix2:
         call day4_labo
     else:
-        scene labo with dissolve
+        scene labo with fade
         show ryou normal at left
         show elusia normal at center
         show lloyd normal at right
@@ -143,14 +144,14 @@ label day5_matin:
 
 
     play music (jour1) fadein 2
-    scene black with dissolve
+    scene black with fade
     "La pause passe si vite..."
     "Il faut retourner en cours..."
-    scene classroom with dissolve
+    scene classroom with fade
     "Un cours bien difficile et un contrôle la semaine prochaine..."
     "Ce week end, je ferais mieux de travailler un peu..."
     "Juste un peu..."
-    scene classroom with dissolve
+    scene classroom with fade
     if aller_science == 2:
         show alice sad
         a "Salut !"
@@ -226,12 +227,12 @@ label day5_choix:
             
 label day5_end:
         play music (joueur1) fadein 2
-        scene couloir with dissolve
+        scene couloir with fade
         play sound "sound/dooropen.mp3"
         pause(1)
         "Ouf, je suis épuisé[ter]..."
         "5 eme jour fini."
-        scene chambre m with dissolve
+        scene chambre m with fade
         play sound "sound/doorclose.mp3"
         "Je crois que je vais dormir."
         stop music

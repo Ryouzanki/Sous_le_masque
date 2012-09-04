@@ -5,7 +5,7 @@ label ending:
     stop music
     "Ou... Ou suis-je..."
     "Ouah, je suis complètement sonné..."
-    scene toit with dissolve
+    scene toit with fade
     "Quand est-ce que j'ai pris une cuite ?"
     "Je suis allongé par terre et ma tête tourne..."
     "Mon portable est devant moi..."

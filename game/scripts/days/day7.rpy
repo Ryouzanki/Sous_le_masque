@@ -2,8 +2,10 @@
 #            # $ renpy.block_rollback()
 #            tie break (day7_ryou6)
 # lose, win, perfect
+# ma mh
+# sexe
 label day7:
-    scene reveil2 with dissolve
+    scene reveil2 with fade
     play sound "sound/bell.mp3"
     m "..."
     m "Un dimanche matin..."

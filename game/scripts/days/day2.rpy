@@ -1,5 +1,5 @@
 label day2:
-    scene reveil with dissolve
+    scene reveil with fade
     play sound "sound/clock.mp3"
     m "..."
     m "J'ai pu récupérer un peu de sommeil..."
@@ -241,12 +241,15 @@ label day2_midi:
                 hide lloyd with easeoutright
             $ rel_lulu += 4
             $ rel_ryou += 4
-            scene parc with dissolve
-            show elusia happy at right
-            show ryou happy at left
+            scene parc
+            show elusia happy:
+                right
+            show ryou happy:
+                left
+            with fade
             "Nous sommes allés au parc."
             "Il faisait beau et nous avons mangé nos sandwichs en papotant, assis dans l'herbe."
-            "Ils m'ont surtout posé des questions sur l'endroit d'où je viens."
+            "Ils m'ont surtout parlé de cette école."
             if rel_lloy >= 5:
                 "J'en sais un peu plus sur Lloyd."
                 "Il n'est pas très apprécié car il a un air hautain."
@@ -329,19 +332,22 @@ label day2_midi:
                       $ rel_lolo -= 2
                       v "Ah... Bon bah, à tout à l'heure."
                       l "..."
-                      scene ru with dissolve
+                      scene ru with fade
                       "Pourquoi est-ce que j'ai refusé d'ailleurs..."
                       jump day2_cours2
                   "Accepter":
                       # $ renpy.block_rollback()
                       $rel_val +=5
                       $ rel_lolo += 5
-                      m "OK."
+                      mh "OK."
                       v "Très bien."
                       l "Allons y !"
-                      scene ru with dissolve
-                      show valeth normal at left
-                      show laura normal at right
+                      scene ru
+                      show valeth normal:
+                          left
+                      show laura normal:
+                          right
+                      with fade
                       if rel_lloy >= 5:
                           v "D'ailleurs, on a vu Lloyd venir vers toi."
                           m "Heu... C'est si spécial ?"
@@ -368,10 +374,10 @@ label day2_midi:
                           
 label day2_cours2:
     play music (jour1) fadein 2
-    scene black with dissolve
+    scene black with fade
     "La pause de midi est terminée."
     "Il faut retourner en cours..."
-    scene classroom with dissolve
+    scene classroom with fade
     "Des visages familiers..."
     menu:
         "Et si j'allais voir..."
@@ -379,8 +385,7 @@ label day2_cours2:
                 # $ renpy.block_rollback()
                 show ryou sad at left
                 show elusia normal at right
-                "Le premier rang n'est pas aussi désagréable que ça..."
-                "C'est amusant d'empêcher Ryouzanki de dormir en lui pinçant les côte..."
+                "Le cours a été suivit en silence."
                 $ rel_lulu += 2
                 $ rel_ryou += 2
                 jump day2_cours3
@@ -396,7 +401,6 @@ label day2_cours2:
             jump day2_cours3
             
         "Laura et Valeth."if en != 'Jeune fille' and valou != 'Jeune homme':
-            # $ renpy.block_rollback()
             show valeth normal at left
             show laura normal at right
             "Toujours à se chamailler ces deux là."
@@ -426,10 +430,12 @@ label day2_passport:
     window show None
         
     if _return == "swimming":
+        # $ renpy.block_rollback()
         "Il n'y a pas sport aujourd'hui..."
         jump day2_passport
     
     elif _return == "science":
+        # $ renpy.block_rollback()
         if aller_science == 1:
             "Allons nous inscire..."
         else:
@@ -438,6 +444,7 @@ label day2_passport:
         call labo
         
     elif _return == "art":
+        # $ renpy.block_rollback()
         if aller_art == 1:
             "Allons tenter de battre Valeth !"
         else:
@@ -445,6 +452,7 @@ label day2_passport:
         call club
 
     elif _return == "go home":
+        # $ renpy.block_rollback()
         
         "Je crois que je vais rentrer."
         call go_home
@@ -452,14 +460,14 @@ label day2_passport:
         
 label day2_fin:
     play music (joueur1) fadein 2
-    scene couloir with dissolve
+    scene couloir with fade
     play sound "sound/dooropen.mp3"
     pause(1)
     "Ouf, je suis épuisé[ter]..."
     "2 eme jour fini."
-    scene chambre m with dissolve
+    scene chambre m with fade
     play sound "sound/doorclose.mp3"
-    "Je crois que je vais dormir."
+    "Je vais dormir tôt."
     stop music
     return
     
