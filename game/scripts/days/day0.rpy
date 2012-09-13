@@ -16,9 +16,10 @@ label day0:
     "Je secoue ma tête, balayant mes songes."
     "Qui peut bien venir sonner à une heure pareille ?"
     play sound "sound/dooropen.mp3"
-    scene couloir nuit with fade
+    scene couloir nuit
     play music (ryou1) fadein 1
     show ryou angry
+    with fade
     "J'ouvre la porte et vois un jeune homme sur le palier."
     "Il me dévisagea, les yeux plissés."
     "Soudain, il baisse la tête et frappe doucement du poing sur le cadrant de ma porte."
@@ -199,8 +200,9 @@ label rencontre_tard:
     
 label rencontre_elusia:
     "Nous descendons d'un étage."
-    scene couloir nuit with fade
+    scene couloir nuit
     show ryou happy
+    with fade
     r "Voila on y est !"
     r "Pile en dessous de chez toi !"
     show ryou normal

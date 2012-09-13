@@ -20,6 +20,8 @@ Représentation clair-obscur : à l'image d'un phare, elle éclaire dans toutes 
 
 Gameplay : Les choix gentils augmentent la barre et les méchants la diminue. Étant naive, les mensonges marchent.
 
+Dialogue : Personnage naif et crédule mais gentille
+
 Alice Drezall *************************************************************************************************
 
 Rôle : présidente (ou rôle de premier plan équivalent) du club chimie / robot / info
@@ -41,6 +43,8 @@ Relations officieuses : Apprécie Salazard. N'aime pas vraiment Ryouzanki
 Représentation clair-obscur : comme un projecteur, elle éclaire loin et droit, mais d'une lumière parfois aveuglante.
 
 Gameplay : Les choix objectifs, bien pensé et collectifs font monter la barre. Les choix gentils lorsqu'il n'y a pas de conséquence ou les choix de confiance font monter un peu. La paresse et les choix individuels sur les choix collectifs font baisser la barre
+
+Dialogues : Personnage très intelligent mais qui ne dit pas ce qu'il pense et manipule ouvertement
 
 Valeth Lezard ***************************************************************************************************
 
@@ -64,6 +68,8 @@ Représentation clair-obscur : un peu comme une lampe à abat-jour, il garde la 
 
 Gameplay : Les choix qui l'implique lui font monter ou baisser la barre. Il se fiche du reste.
 
+Dialogues : Personnage calme et osef-mode
+
 Lloyd Baptiste Reeds de Bellato ********************************************************************************************************
 
 Rôle : vice-président de l'association des élèves.
@@ -86,6 +92,8 @@ Représentation clair-obscur : comme une lampe de bureau aorientée vers le plaf
 
 Gameplay : Les choix disciplinés font monter la barre et vice versa.
 
+Dialogues : Personnage hautain et discipliné
+
 Néphénie Cora *************************************************************************************************
 
 Rôle : secrétaire de l'AE
@@ -103,6 +111,8 @@ Relation officielle :
 Relation officieuse :
 
 Représentation clair-obscure : Bougie qui éclaire peu et est vulnérable
+
+Dialogues : personnage timide et discret. Parle peu.
 
 Laura Sartova ***************************************************************************************************************
 
@@ -126,6 +136,8 @@ Représentation clair-obscure : comme une lampe de poche, elle n'éclaire pas tr
 
 Gameplay : Etre à ses pieds fait monter la barre
 
+Dialogue : Boule de feu, parle beaucoup.
+
 Ryouzanki Zeldar ************************************************************************************************************
 
 Rôle : aucun
@@ -148,6 +160,8 @@ BG : inconnu
 
 Gameplay : Les choix intelligent font monter la barre. Les choix extremement naifs et honnete la font monter légèrement. Devant elusia, seul les choix honnete font monter la barre
 
+Dialogue : Personage plutot calme. plutot gentil et se donne l'air stupide sans pour autant l'être. ne manipule pas ouvertement et trop de hasard tue le hasard
+
 Salazard Zelgius ******************************************************************************************************************
 
 Rôle : Néant
@@ -165,6 +179,8 @@ Relations officielles : déteste tout le monde
 Relations officieuses : apprécie la compagnie d'Alice
 
 Représentation clair-obscure : lampadaire solitaire
+
+Dialogue : Parle peu et aggressif
 
 Shadow ******************************************************************************************************************
 

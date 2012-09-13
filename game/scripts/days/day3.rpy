@@ -77,7 +77,7 @@ label day3:
     show elusia satisfied
     e "Et là, à point nommé, arrive Valeth !"
     show alice normal
-    show valeth normal at Position(xpos=0.4) with easeinleft
+    show valeth normal at Position(xpos=0.4) with easeinright
     $ valou = 'Valeth'
     v "Salut !"
     show elusia happy
@@ -110,12 +110,13 @@ label day3:
     $ rel_val += 3
     $ rel_lolo += 3
     $ rel_ali += 3
-    scene ru with fade
+    scene ru
     show elusia normal at left
     show ryou normal at Position(xpos=0.375)
     show alice normal at center
     show valeth normal at Position(xpos=0.625)
     show laura normal at right 
+    with fade
     "Ils se sont tous assis autour de moi."
     show alice geez
     a "Assise à côté de baka-powa..."

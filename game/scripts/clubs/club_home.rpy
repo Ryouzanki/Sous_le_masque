@@ -186,7 +186,7 @@ label chez_ryou_femme:
     play sound "sound/dooropen.mp3"
     scene chambre r with fade
     show ryou happy
-    r "Bienvenu chez moi"
+    r "Bienvenu chez moi !"
     play sound "sound/doorclose.mp3"
     show ryou sad
     r "Mmmh... J'aurais du ranger un peu..."

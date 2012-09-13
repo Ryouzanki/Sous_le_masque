@@ -299,6 +299,11 @@ label answer2:
             s "Elle est si faible..."
             show shadow smirk
             s "J'aurais pu en faire le pion parfait !"
+            s "Et puis l'amour..."
+            show shadow pity
+            s "C'est juste le plus gros mensonge de l'humanité mon pauvre..."
+            s "\"Regarde moi, reste auprès de moi !\"..."
+            s "Il ne s'agit que de désir et de besoin de réconfort."
         "Pourquoi avoir diffamé Alice ?" if choix19:
             $choix19 = False
             ma "Pourquoi avoir diffamé Alice ?"

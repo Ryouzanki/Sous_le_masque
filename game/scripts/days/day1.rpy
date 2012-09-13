@@ -537,8 +537,9 @@ label LV:
     
 label fin_cours:
     "Le cours se déroula sans encombre."
-    scene classroom with fade
+    scene classroom
     show prof happy
+    with fade
     "A la fin du cours, notre professeur principal a demandé à me parler."
     "La routine."
     "Me dire qu'on ne peut choisir qu'un seul sport."

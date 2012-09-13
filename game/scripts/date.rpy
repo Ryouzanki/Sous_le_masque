@@ -26,4 +26,4 @@ init python:
             return new_manager
 
 
-    date_manager = DateManager(meteo=['sunny', 'sunny', 'sunny', 'cloudy', 'sunny', 'cloudy', 'thunder', 'thunder', 'thunder', 'cloudy', 'thunder', 'snowy'])
+    date_manager = DateManager(meteo=['sunny', 'sunny', 'sunny', 'cloudy', 'cloudy',  'sunny', 'sunny', 'sunny', 'sunny', 'sunny', 'sunny', 'sunny','thunder', 'thunder', 'thunder', 'cloudy', 'thunder', 'snowy'])

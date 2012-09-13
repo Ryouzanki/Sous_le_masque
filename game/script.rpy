@@ -1,6 +1,4 @@
 ﻿init:
-    $ center_left = Position(xpos=0.375, xanchor='center')
-    $ center_right = Position(xpos=0.625, xanchor='center')
     $ int_points = 0 
     $ str_points = 0 
     $ agi_points = 0

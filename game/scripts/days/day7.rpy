@@ -253,6 +253,7 @@ label day7_choix: # TODO imagemap
     e "Honneur aux dames ?"
     show ryou angry
     r "OK, ça marche."
+    show ryou happy
     "Ryouzanki me regarde en souriant."
     show elusia happy sport
     e "En position !"
@@ -453,8 +454,161 @@ label day7_elu:
     r "Tu m'étonnes..."
     show laura sad
     l "..."
-    
-    
+    menu:
+        "T'es vraiment forte !":
+            # $ renpy.block_rollback()
+            $ rel_lulu += 3
+            mh "T'es vraiment forte !"
+            show elusia happy sport
+            e "Merci, espérons que tu fasses aussi bien !"
+        "Je vais faire mieux !":
+            # $ renpy.block_rollback()
+            mh "Je vais faire mieux !"
+            show elusia normal sport
+            e "Ah bon... Nous verrons."
+    e "Ne les sous estimes pas !"
+    e "Laura est plutôt adroite."
+    e "Et Ryou n'en a pas l'air mais il est précis et fourbe."
+    m "OK."
+    "C'est à Laura de servir."
+    "Elle sert sur Elusia."
+    "Son service est mou et sans effet."
+    "Elusia attaque sur le service et marque le point."
+    show elusia normal sport
+    e "Hé...."
+    show laura happy
+    l "0 - 15."
+    show laura normal
+    "Elle va servir."
+    menu:
+        "Attaquer sur le service.":
+            # $ renpy.block_rollback()
+            $ rel_lulu -= 2
+            "Je décide d'attaquer sur son service."
+            "Elle frappe."
+            "La balle va bien plus vite que prévu."
+            "En la heurtant, ma raquette dévie !"
+            "La balle fini dans le filet."
+            show laura happy
+            l "15 A !"
+        "Défendre sur le service.":
+            # $ renpy.block_rollback()
+            "Je décide de défendre sur son service."
+            "Elle frappe."
+            "La balle va bien plus vite que prévu."
+            "Adoptant une attitude défensive, j'arrive à renvoyer la balle."
+            "Ryouzanki au filet intercepte immédiatement la balle et me la renvoie dessus."
+            "Je l'avais oublié lui..."
+            "De si près, il m'est impossible de l'arrêter."
+            "L'équipe adverse marque le point."
+            show ryou happy
+            r "15 A !"
+    show elusia sad sport
+    e "..."
+    $ choix1 = True
+label day7_elu_2:
+    menu:
+        "Désolé[ter].":
+            # $ renpy.block_rollback()
+            $ rel_lulu += 2
+            m "Désolé[ter]."
+            e "Tu fais ce que tu peux hein..."
+            e "Je t'avais prévenu qu'ils étaient forts."
+            menu:
+                "Je n'ai pas été assez prudent[ter].":
+                    # $ renpy.block_rollback()
+                    $ rel_lulu += 2
+                    m "Je n'ai pas été assez prudent[ter]."
+                    e "Je vois ça."
+                "Oui je sais merci.":
+                    # $ renpy.block_rollback()
+                    ma "Oui je sais merci."
+                    e "C'est juste vrai."
+            show elusia geez sport
+            e "Espérons que cela ne se reproduise pas."
+        "Ils sont fourbes !":
+            # $ renpy.block_rollback()
+            m "Ils sont fourbes !"
+            show elusia normal sport
+            e "Que veux tu dire ?"
+            menu:
+                m "Et bien..."
+                "Ils cachent bien leur jeu...":
+                    # $ renpy.block_rollback()
+                    $ rel_lulu -= 2
+                    m "Ils cachent bien leur jeu..."
+                    show elusia geez sport
+                    e "Je t'avais prévenu qu'ils étaient forts."
+                    e "Espérons que cela ne se reproduise pas."
+                "Ils me visent intentionnellement...":
+                    # $ renpy.block_rollback()
+                    $ rel_lulu -= 4
+                    m "Ils me visent intentionnellement..."
+                    show elusia geez sport
+                    e "Tu ne serais pas un peu parano sur les bords ?"
+        "..." if choix1:
+            # $ renpy.block_rollback()
+            $ rel_lulu -= 2
+            $ choix1 = False
+            m "..."
+            e "Tu n'as donc rien à me dire ?"
+            jump day7_elu_2
+        "Je n'ai rien à te dire." if not choix1:
+            # $ renpy.block_rollback()
+            $ rel_lulu -= 4
+            m "Je n'ai rien à te dire."
+            show elusia angry sport
+            e "Ah..."
+    l "J'arrive !"
+    "Laura sert de nouveau sur Elusia."
+    "C'est assez visible, Laura \"donne\" le service."
+    "Elusia marque le point."
+    "Ryouzanki paraît inactif. Il suivait à peine la balle du regard."
+    show elusia happy
+    e "15 - 30 !"
+    "Laura doit servir sur moi."
+    "Elle se concentre."
+    "Je regarde Ryouzanki furtivement."
+    "Il est concentré, les yeux rivés sur le tamis de ma raquette."
+    "Laura sert."
+    $ equipe1 = 15
+    $ equipe2 = 30
+    $ choix1 = True
+label day7_elu_3:
+    menu:
+        "Que faire ?"
+        "Défendre.":
+            # $ renpy.block_rollback()
+            "En jouant défensif, je renvoie aisément la balle."
+            "Celle-ci atterrit entre les deux."
+            l "Ryou !"
+            r "Arg !"
+            "Ryouzanki la frappe de justesse mais perd l'équilibre."
+            "Elusia l'attaque en retour et déséquilibré, il sort la balle."
+            $ equipe1 = 30
+        "Attaquer sur Ryouzanki.":
+            # $ renpy.block_rollback()
+            "J'attaque sur Ryouzanki."
+            "Force contre force, je n'ai pas pu envoyer une attaque digne de ce nom."
+            "Il smash aux pieds d'Elusia qui, à cette distance ne peux pas contrer."
+            $ equipe2 = 30
+        "Attaquer sur Laura." if choix1:
+            # $ renpy.block_rollback()
+            "J'attaque sur Laura."
+            "Force contre force, je n'ai pas pu envoyer une attaque digne de ce nom."
+            "Laura attaque de nouveau sur moi."
+            $ choix1 = False
+            jump day7_elu_3
+        "Encore attaquer Laura" if not choix1:
+            # $ renpy.block_rollback()
+            "J'attaque encore sur Laura."
+            "Laura renvoie encore la balle sur moi."
+            "Cette fois, je la rate."
+            $ equipe2 = 30
+            
+            
+            
+
 label day7_lolo:
     l "Mmmh... Elle tente de motiver Ryou..."
     m "Ah bon ?"

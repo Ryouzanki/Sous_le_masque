@@ -198,10 +198,13 @@ label day2_matin:
     scene classroom with fade
     "Encore un cours à suivre avec Elusia pendant que Ryouzanki dort."
 label day2_midi:
-    scene classroom with fade
     play music (matin1) fadein 2
-    show ryou sad at left
-    show elusia normal at right
+    scene classroom 
+    show ryou sad:
+        left
+    show elusia normal:
+        right
+    with fade
     r "Bon ! J'ai faim !"
     e "Oui, moi aussi. On va acheter des sandwichs ?"
     r "Bien sûr ! Tu viens [j] ?"
@@ -265,8 +268,9 @@ label day2_midi:
             # $ renpy.block_rollback()
             r "Ok, bah à plus !"
             e "On se voit plus tard !"
-            hide ryou with easeoutright
-            hide elusia with easeoutright
+            hide ryou
+            hide elusia
+            with easeoutright
             if rel_lloy >= 5:
                 show lloyd normal with easeinleft
                 y "Bonjour !"
@@ -289,9 +293,12 @@ label day2_midi:
                 y "A plus tard !"
                 m "Bon appétit !"
                 hide lloyd with easeoutright
-                    
-            show valeth normal at left with easeinright
-            show laura normal at right with easeinleft
+            m "..."
+            show valeth normal:
+                left
+            show laura normal:
+                right
+            with easeinleft
             if en == 'Jeune fille' and valou == 'Jeune homme':
                 v "Hey ! Salut !"
                 v "Moi c'est Valeth !"
@@ -310,7 +317,7 @@ label day2_midi:
                 l "Je te présente Valeth !"
                 $ valou = 'Valeth'
                 v "Yo !"
-                v "Plutot que de manger seul[ter]"
+                v "Plutot que de manger seul[ter]."
                 v "Tu veux te joindre à nous [j] ?"
             elif en == 'Jeune fille' and valou == 'Valeth':
                 v "Salut [j] !"
@@ -318,7 +325,7 @@ label day2_midi:
                 v "Je te présente Laura !"
                 $ en = 'Laura'
                 l "Yo !"
-                v "Plutot que de manger seul[ter]"
+                v "Plutot que de manger seul[ter]."
                 v "Tu veux te joindre à nous [j] ?"
             else:
                 v "Salut !"
@@ -386,6 +393,7 @@ label day2_cours2:
                 show ryou sad at left
                 show elusia normal at right
                 "Le cours a été suivit en silence."
+                "Il est rare de voir Ryouzanki suivre un cours avec une telle attention..."
                 $ rel_lulu += 2
                 $ rel_ryou += 2
                 jump day2_cours3
@@ -415,8 +423,9 @@ label day2_cours2:
             jump day2_cours3
     
 label day2_cours3:
-    scene classroom with fade
+    scene classroom
     show prof normal
+    with fade
     "A la fin de cours, le prof m'a encore retenu[ter]."
     "Cette fois pour me dire que les clubs sont ouverts tous les jours."
     "Sauf le sport qui n'est ouvert que lundi et jeudi."

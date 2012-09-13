@@ -127,9 +127,9 @@ label night:
     scene black
     "..."
     play music (shadow1) fadeout 1.0
-    if date_manager.get_day() == 2:
+    if date_manager.get_day() == 3:
         jump night4
-    elif date_manager.get_day() == 6:
+    elif date_manager.get_day() == 7:
         jump night8
     else:
         jump fin_night
@@ -141,14 +141,14 @@ label night4:
     s "Je déteste ça !"
     s "De nouveaux paramètres inconnus dans l'équation..."
     s "[j], [j]..."
-    s "As tu vraiment l'intention de devenir ami avec toutes ces personnes ?"
+    s "As tu vraiment l'intention de devenir ami[ter] avec toutes ces personnes ?"
     s "Peux tu seulement le faire..."
     s "Avant qu'il ne soit trop tard..."
     hide shadow with fade
     jump fin_night
 label night8:
     show shadow ombre with fade
-    s "Pourquoi j'y suis allé ?"
+    s "Pourquoi j'y suis allé[ter] ?"
     s "Je ne suis pas un pion, ni une pièce de rechange..."
     s "Je les déteste !"
     s "Je vais les briser en miette un à un..."
