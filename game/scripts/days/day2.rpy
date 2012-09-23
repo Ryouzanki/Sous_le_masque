@@ -234,9 +234,9 @@ label day2_midi:
                         show lloyd happy
                         y "C'est exact."
                         y "Madame la présidente sera là cet après midi si tu veux."
-                    "T'en fais pas":
+                    "T'en fais pas.":
                         # $ renpy.block_rollback()
-                        m "T'en fais pas"
+                        m "T'en fais pas."
                         
                 y "Je vais rentrer chez moi déjeuner."
                 y "A plus tard !"
@@ -285,9 +285,9 @@ label day2_midi:
                         show lloyd happy
                         y "C'est exact."
                         y "Madame la présidente sera là cet après midi si tu veux."
-                    "T'en fais pas":
+                    "T'en fais pas.":
                         # $ renpy.block_rollback()
-                        m "T'en fais pas"
+                        m "T'en fais pas."
                         
                 y "Je vais rentrer chez moi déjeuner."
                 y "A plus tard !"
