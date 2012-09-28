@@ -184,7 +184,7 @@ label day7_aprem:
     play music (thinking1) fadein 4
     "Voyons voir..."
 label day7_choix: # TODO imagemap
-    m"Qui choisir..."
+    m "Qui choisir..."
     menu:
         "Elusia...":
             # $ renpy.block_rollback()
@@ -605,10 +605,18 @@ label day7_elu_3:
             "Laura renvoie encore la balle sur moi."
             "Cette fois, je la rate."
             $ equipe2 = 30
-            
-            
-            
-
+    menu:
+        "Ils me visent intentionnellement !":
+            # $ renpy.block_rollback()
+            ma "Ils me visent intentionnellement !"
+        "Elusia, tu ne remarques rien d'anormal ?":
+            # $ renpy.block_rollback()
+            $ rel_lulu +=3
+            m "Elusia, tu ne remarques rien d'anormal ?"
+    show elusia sad sport
+    e "Désolée... Je ne voulais pas y croire."
+    show elusia geez sport
+    e "Ca ressemble à une tactique de Ryou tout craché..."
 label day7_lolo:
     l "Mmmh... Elle tente de motiver Ryou..."
     m "Ah bon ?"
@@ -1188,7 +1196,7 @@ label day7_ryou_lose:
     e "Bon bah voilà... [jeu2] à [jeu] !"
     show ryou angry
     "Ryouzanki lance sa raquette au sol..."
-label ay7_ryou_lose_end:
+label day7_ryou_lose_end:
     show laura happy
     l "Vous savez ce qu'il vous reste à faire !"
     show ryou sad
@@ -1236,7 +1244,7 @@ label day7_ryou_win:
     r "On y va ? j'ai soif..."
     e "D'où l'intérêt d'apporter une bouteille d'eau..."
 label day7_pari:
-                                                                        # TODO best ending
+                                                                        # TODO best ending au bar
 label day7_fin_tennis:
     call save
     return
