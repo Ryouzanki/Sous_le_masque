@@ -50,9 +50,11 @@ Valeth Lezard ******************************************************************
 
 Rôle : président (ou rôle de premier plan équivalent) du club de jeux, théâtre et autres arts
 
-Personnalité : Assez rêveur et enfermé dans sa bulle. Il aime son club et ne se préoccupe pas de ce qui se passe à l'extérieur. Ce que les autres pensent, il s'en fiche. Il est égocentrique, en quelques sortes, mais ni méprisant, ni hautain. Il devient pugnace dès qu'on s'en prend à son petit espace (lui, son club, ses amis proches).
+Aspect : petit, blond et joufflu
 
-BG : 
+Personnalité : Assez rêveur et enfermé dans sa bulle. Il aime son club et ne se préoccupe pas de ce qui se passe à l'extérieur. Ce que les autres pensent, il s'en fiche. Il est égocentrique, en quelques sortes, mais ni méprisant, ni hautain. Il est accueillant, mais son caractère autharcique est très rapidement insupportable. Il ne fera rien contre shadow tant que celui-ci ne le menace pas directement. Même si le joueur le prévient, il ne sera pas intéressé. Par contre, il devient pugnace dès qu'on s'en prend à son petit espace (lui, son club, ses amis proches). Ce n'est que dès que le joueur lui montre les risques que son club encourt, avec quelques exemples à l'appui, qu'il deviendra un appui inconditionnel.
+
+BG : ce garçon calme et chétif, seul rejeton d'une famille modeste, a grandi en fuyant les multiples problèmes qui se sont opposés à lui. Enfant, on lui a vite appris à s'amuser seul quand ses parents avaient des choses à faire, c'est-à-dire tout le temps. À la petite école, il évitait les plus costauds que lui en jouant en classe aux récréations. Le jeu est apparu pour lui comme un échappatoire commode qui lui permettait d'éviter les problèmes, même si cette stratégie n'a pas toujours fonctionné. Au secondaire, les clubs de jeu qu'il avait joint l'écartaient des filles et des problèmles sentimentaux. Arrivé en école d'ingénieur par de très bons résultats et une sélection absolument aléatoire, il est très rapidement entré au club de jeu et s'y est senti comme chez lui. À part les salles de cours et le local de son club, il ne connait rien de l'école. Il ne ressent cependant aucun vide existentiel : la vie est pour lui un jeu pas drole et les jeux et occupations diverses sont le moyen de la substituer par quelque chose de mieux.
 
 Aime : le calme, les échecs (le jeu)
 
@@ -60,7 +62,7 @@ Déteste : les joyeux lurons
 
 Petite phrase : "C'est possible." "Ah bon, il y a un tel club dans l'école ?"
 
-Relations officielles : Apprécie fortement Alice car leur clubs sont voisins. Apprécie fortement Laura car c'est son binome. Apprécie Elusia et Ryouzanki
+Relations officielles : Apprécie fortement Alice car leur clubs sont voisins (le club de robotique, il ne connait pas l'existence du club de chimie). Apprécie fortement Laura car c'est son binome. Apprécie Elusia et Ryouzanki. 
 
 Relations officieuses : Aucun changement
 
@@ -68,15 +70,15 @@ Représentation clair-obscur : un peu comme une lampe à abat-jour, il garde la 
 
 Gameplay : Les choix qui l'implique lui font monter ou baisser la barre. Il se fiche du reste.
 
-Dialogues : Personnage calme et osef-mode
+Dialogues : Personnage calme et osef-mode. Beaucoup d'innocence et de franchise dans ses paroles, ce qui le rend insupportable. À certains moments, il est tout simplement chiant.
 
 Lloyd Baptiste Reeds de Bellato ********************************************************************************************************
 
-Rôle : vice-président de l'association des élèves.
+Rôle : vice-président de l'association des élèves et trésorier (de loin) du club orchestre
 
-Personnalité : Plutôt hautain, il considère que dans l'associatif, aucune initiative ne peut se prendre autrement que par les responsables de l'AE (président, vice-président). Il n'est pas méprisant, mais il a une certaine vision du monde. Il est peu apprécié. Il doit son poste à son sérieux et à son efficacité.
+Personnalité : Plutôt hautain, il considère que dans l'associatif, aucune initiative ne peut se prendre autrement que par les responsables de l'AE (président, vice-président). Il n'est pas méprisant, mais il a une certaine vision du monde. Il est peu apprécié. Il doit son poste à son sérieux et à son efficacité. Il jouait de la clarinette dans l'orchestre avant la dispersion du club.
 
-BG : Vient d'un lycée d'aristocrates et n'est donc pas doué pour le social. Famille riche qui lui met la pression en permanence et marche sur ses sentiments
+BG : Issu de bonne famille, il a fait sa scolarité dans des écoles d'aristocrates et n'est donc pas doué pour le social. Famille riche qui lui met la pression en permanence et marche sur ses sentiments. Il joue de la musique comme tout enfant bien éduqué, depuis l'âge de 6 ans. Très responsable, il s'est naturellement proposé dans la gestion des activités associatives. Conscient de ses faiblesses relationneles avec les gens du peuple, il a préféré agir dans la vice-présidence où il avait plus de travail important et moins de visibilité.
 
 Aime : les endroits calmes, l'art
 
@@ -110,7 +112,7 @@ Relation officielle :
 
 Relation officieuse :
 
-Représentation clair-obscure : Bougie qui éclaire peu et est vulnérable
+Représentation clair-obscure : Bougie qui éclaire peu et qui est vulnérable
 
 Dialogues : personnage timide et discret. Parle peu.
 
@@ -140,7 +142,7 @@ Dialogue : Boule de feu, parle beaucoup.
 
 Ryouzanki Zeldar ************************************************************************************************************
 
-Rôle : aucun
+Rôle : aucun (mais en accumule durant le jeu)
 
 Personnalité : Plutot discret et ne parle jamais de lui. Assez mou mais gentil et attentionné. Il fait de son mieux pour s'entendre avec tout le monde. Passe beaucoup de temps chez lui sur l'ordinateur
 
