@@ -96,6 +96,7 @@ label choix_game:
     menu:
         "Tutoriel":
             call tuto
+            play music (main_menu1) fadein 2
             jump choix_game
         "Route classique":
             pass

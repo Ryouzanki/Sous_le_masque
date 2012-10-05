@@ -96,11 +96,11 @@ label choix_sexe:
     $ inc = 'Ryouzanki'
     show ryou normal
     r "J'suis ton voisin ! J'habite l'appart' just' à côté !"
-    r "J'entendais du bruit alors je suis venu te souhaiter la bienvenu !"
+    r "J'entendais du bruit alors je suis venu te souhaiter la bienvenue !"
     r "Et toi, c'est comment ?"
     ma "C'est marqué au dessus de la sonnette..."
     m "Enfin je crois..."
-    "Je me penchais en dehors afin de vérifier moi même."
+    "Je me penchais en dehors afin de vérifier moi-même."
 label sonnette:
     if bite:
        $ j = renpy.input("Il y avait bien mon prénom :", "Minato", length=15) or "Minato"
@@ -150,7 +150,7 @@ label sonnette:
     r "Idem. On pourra venir te chercher le matin si tu veux !"
     show ryou happy
     if bite:
-        r "Tu verra, la voisine, elle est mignonne et gentille."
+        r "Tu verras, la voisine, elle est mignonne et gentille."
     else :
         r "Il est de mon devoir de chevalier de t'accompagner à l'école !"
         
@@ -239,7 +239,7 @@ label rencontre_elusia:
     $ rel_lulu += 5
     show elusia normal
     e "Bon, vu que personne ne semble vouloir aller se coucher tout de suite..."
-    e "Voulez vous venir prendre le thé ?"
+    e "Voulez-vous venir prendre le thé ?"
     r "Nan, je préfère le café, c'est un truc d'homme !"
     if bite:
         menu:
