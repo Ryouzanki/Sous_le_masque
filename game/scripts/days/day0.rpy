@@ -34,15 +34,15 @@ label choix_sexe:
             $ m = DynamicCharacter("j",
                  color="#58D3F7",
                  window_left_padding=160,
-                 show_side_image=Image("CG/minato.png", xalign=0.03, yalign=0.97), show_two_window=True)
+                 show_side_image=Image("minato.png", xalign=0.03, yalign=0.97), show_two_window=True)
             $ ma = DynamicCharacter("j",
                  color="#58D3F7",
                  window_left_padding=160,
-                 show_side_image=Image("CG/minato angry.png", xalign=0.03, yalign=0.97), show_two_window=True)
+                 show_side_image=Image("minato angry.png", xalign=0.03, yalign=0.97), show_two_window=True)
             $ mh = DynamicCharacter("j",
                  color="#58D3F7",
                  window_left_padding=160,
-                 show_side_image=Image("CG/minato happy.png", xalign=0.03, yalign=0.97), show_two_window=True)
+                 show_side_image=Image("minato happy.png", xalign=0.03, yalign=0.97), show_two_window=True)
 
             m "Perdu, je suis un homme, un vrai ! Pour la petite tenue, reviens plus tard !"
             show ryou happy
@@ -55,15 +55,15 @@ label choix_sexe:
             $ m = DynamicCharacter("j",
                  color="#58D3F7",
                  window_left_padding=160,
-                 show_side_image=Image("CG/hamuko.png", xalign=0.03, yalign=0.97), show_two_window=True)
+                 show_side_image=Image("hamuko.png", xalign=0.03, yalign=0.97), show_two_window=True)
             $ ma = DynamicCharacter("j",
                  color="#58D3F7",
                  window_left_padding=160,
-                 show_side_image=Image("CG/hamuko angry.png", xalign=0.03, yalign=0.97), show_two_window=True)
+                 show_side_image=Image("hamuko angry.png", xalign=0.03, yalign=0.97), show_two_window=True)
             $ mh = DynamicCharacter("j",
                  color="#58D3F7",
                  window_left_padding=160,
-                 show_side_image=Image("CG/hamuko happy.png", xalign=0.03, yalign=0.97), show_two_window=True)
+                 show_side_image=Image("hamuko happy.png", xalign=0.03, yalign=0.97), show_two_window=True)
             
             ma  "Tssss ! Tant pis si je ne suis pas la femme de tes rêves !"
             show ryou happy

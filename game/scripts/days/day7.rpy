@@ -585,13 +585,13 @@ label day7_elu_3:
             r "Arg !"
             "Ryouzanki la frappe de justesse mais perd l'équilibre."
             "Elusia l'attaque en retour et déséquilibré, il sort la balle."
-            $ equipe1 = 30
+            $ equipe2 = 40
         "Attaquer sur Ryouzanki.":
             # $ renpy.block_rollback()
             "J'attaque sur Ryouzanki."
             "Force contre force, je n'ai pas pu envoyer une attaque digne de ce nom."
             "Il smash aux pieds d'Elusia qui, à cette distance ne peux pas contrer."
-            $ equipe2 = 30
+            $ equipe1 = 30
         "Attaquer sur Laura." if choix1:
             # $ renpy.block_rollback()
             "J'attaque sur Laura."
@@ -604,7 +604,7 @@ label day7_elu_3:
             "J'attaque encore sur Laura."
             "Laura renvoie encore la balle sur moi."
             "Cette fois, je la rate."
-            $ equipe2 = 30
+            $ equipe1 = 30
     menu:
         "Ils me visent intentionnellement !":
             # $ renpy.block_rollback()
@@ -616,7 +616,72 @@ label day7_elu_3:
     show elusia sad sport
     e "Désolée... Je ne voulais pas y croire."
     show elusia geez sport
-    e "Ca ressemble à une tactique de Ryou tout craché..."
+    e "Ca ressemble à un stratagème de Ryou tout craché..."
+    e "Exceptionnellement, je vais t'aider."
+    menu:
+        "Tu es censée m'aider, on est une équipe...":
+            # $ renpy.block_rollback()
+            $ rel_lulu -= 4
+            m "Tu es censée m'aider, on est une équipe..."
+            show elusia normal sport
+            e "Possible..."
+            e "Mais tu es censé[ter] être assez compétent[ter] pour ne pas avoir besoin de moi."
+        "Pourquoi exceptionnellement ?":
+            # $ renpy.block_rollback()
+            m "Pourquoi exceptionnellement ?"
+            show elusia normal sport
+            e "Parce que je veux gagner face à Laura sur son terrain."
+        "D'accord, merci !":
+            # $ renpy.block_rollback()
+            $ rel_lulu += 2
+            m "D'accord, merci !"
+            show elusia normal sport
+            e "Maintenant, ensemble, gagnons cette partie !"
+    "J'ai fait de mon mieux pour renvoyer les balles et Elusia a été très agressive."
+    "Après plusieurs échanges, notre dur labeur est récompensé."
+    show ryouzanki angry
+    show laura sad
+    show elusia happy sport
+    e "Yes !"
+    show elusia normal sport
+    e "2 jeux à 0 donc !"
+    r  "Tss !"
+    l "..."
+    "Par la suite, l'équipe adverse a perdu toute volonté de jouer."
+    "Ils étaient mous et sans énergie."
+    "Ils nous ont \"offert\" la victoire."
+    show elusia happy sport
+    show laura sad
+    show ryou sad
+    e "Et c'est la victoire !"
+    show elusia satisfied sport
+    e "Une écrasante victoire 4-0 !"
+    e "Vous savez ce qu'il vous reste à faire !"
+    r "Hum... Se mettre à genou ?"
+    show elusia happy sport
+    e "Bien tenté mais non..."
+    show elusia sad sport
+    e "Faites pas ces têtes là, je gagne."
+    show elusia normal sport
+    e "Je m'octroie donc le droit d'annuler le gage !"
+    call day7_normal
+    l "Ca ne te ressemble pas..."
+    e "Je sais que Ryou touche le fond et je pense que tu ne nous aurais pas fait payer."
+    e "Parce que [j] joue pour la première fois avec nous."
+    show laura happy
+    l "Oui..."
+    r "Merci."
+    show ryou normal
+    r "Par contre, j'irais quand même au bar, j'ai soif..."
+    show elusia happy sport
+    e "D'où l'intérêt d'apporter une bouteille d'eau..."
+    show laura normal
+    l "Oui enfin autant finir la journée ensemble."
+    show laura happy
+    l "Je suis partante !"
+    
+    
+        
 label day7_lolo:
     l "Mmmh... Elle tente de motiver Ryou..."
     m "Ah bon ?"

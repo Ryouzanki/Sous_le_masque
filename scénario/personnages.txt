@@ -18,7 +18,7 @@ Relations officieuses : Aucun changement notoire, elle est honnête avec ses sen
 
 Représentation clair-obscur : à l'image d'un phare, elle éclaire dans toutes les directions.
 
-Gameplay : Les choix gentils augmentent la barre et les méchants la diminue. Étant naive, les mensonges marchent.
+Gameplay : Les choix gentils augmentent la barre et les méchants la diminue. Étant naive, les mensonges marchent. Aime se sentir appréciée et importante.
 
 Dialogue : Personnage naif et crédule mais gentille
 
@@ -78,7 +78,7 @@ Rôle : vice-président de l'association des élèves et trésorier (de loin) du
 
 Personnalité : Plutôt hautain, il considère que dans l'associatif, aucune initiative ne peut se prendre autrement que par les responsables de l'AE (président, vice-président). Il n'est pas méprisant, mais il a une certaine vision du monde. Il est peu apprécié. Il doit son poste à son sérieux et à son efficacité. Il jouait de la clarinette dans l'orchestre avant la dispersion du club.
 
-BG : Issu de bonne famille, il a fait sa scolarité dans des écoles d'aristocrates et n'est donc pas doué pour le social. Famille riche qui lui met la pression en permanence et marche sur ses sentiments. Il joue de la musique comme tout enfant bien éduqué, depuis l'âge de 6 ans. Très responsable, il s'est naturellement proposé dans la gestion des activités associatives. Conscient de ses faiblesses relationneles avec les gens du peuple, il a préféré agir dans la vice-présidence où il avait plus de travail important et moins de visibilité.
+BG : Issu de bonne famille, il a fait sa scolarité dans des écoles d'aristocrates et n'est donc pas doué pour le social. Famille riche qui lui met la pression en permanence et marche sur ses sentiments. Il joue de la musique comme tout enfant bien éduqué, depuis l'âge de 6 ans. Très responsable, il s'est naturellement proposé dans la gestion des activités associatives. Conscient de ses faiblesses relationnelles avec les gens du peuple, il a préféré agir dans la vice-présidence où il avait plus de travail important et moins de visibilité.
 
 Aime : les endroits calmes, l'art
 
@@ -90,7 +90,7 @@ Relations officielles : asocial. Parle parfois avec Alice (relation hierarchique
 
 Relations officieuses : Il est amoureux d'Elusia. (amour a sens unique)
 
-Représentation clair-obscur : comme une lampe de bureau aorientée vers le plafond, il n'éclaire que dans un angle peu évident à comprendre.
+Représentation clair-obscur : comme une lampe de bureau orientée vers le plafond, il n'éclaire que dans un angle peu évident à comprendre.
 
 Gameplay : Les choix disciplinés font monter la barre et vice versa.
 
