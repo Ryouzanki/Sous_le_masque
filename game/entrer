@@ -1,0 +1,42 @@
+﻿init python:
+   
+    max_love=100
+    current_love_Robin=5
+    current_love_McKenzie=15
+    current_love_Olivia=5
+    show_stats=False
+   
+    def stats_overlay():
+        if show_stats:
+            ui.frame()
+            ui.vbox()
+            ui.text("Robin")
+            ui.bar(max_love,current_love_Robin, xmaximum=150)
+
+            ui.text("McKenzie")
+            ui.bar(max_love,current_love_McKenzie, xmaximum=150)
+
+            ui.text("Olivia")
+            ui.bar(max_love,current_love_Olivia, xmaximum=150)
+            ui.close()
+                       
+    config.overlay_functions.append(stats_overlay)
+   
+init:
+    # Declare images below this line, using the image statement.
+    # eg. image eileen happy = "eileen_happy.png"
+
+    # Declare characters used by this game.
+    $ e = Character('Eileen', color="#c8ffc8")
+
+
+# The game starts here.
+# label start:
+   
+    $ show_stats=True
+    "Game start"
+    $ current_love_Olivia+=10
+    "Increase Olivia love point"
+    $ current_love_McKenzie-=10
+    "Decrease McKenzie love point"
+    $ show_stats=False
