@@ -46,7 +46,9 @@ label day3:
     r "Baka powa ?"
     e "Non, plus de gens que ça !"
     e "Lloyd ! Tu veux bien déjeuner avec nous pour une fois ?"
-    show lloyd normal at Position(xpos=0.6) with easeinright
+    show lloyd normal at Position(xpos=0.65) with easeinright
+    hide alice
+    show alice sad at Position(xpos=0.4)
     $ noble = 'Lloyd'
     y "En quel honneur ?"
     e "Mmmh... l'arrivée de [j] !"
@@ -60,8 +62,6 @@ label day3:
     $ rel_lloy += 2
     y "Au revoir et bon appétit."
     hide lloyd with easeoutright
-    show alice sad
-    show elusia sad
     e "Tant pis."
     r "On vient de rater monsieur le vice président de l'Association des Elèves."
     a "Messire Lloyd Baptiste Reeds de Bellato."

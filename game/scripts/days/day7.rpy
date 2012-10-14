@@ -1,5 +1,7 @@
 # TODO :
-# lose, win, perfect
+# remise au max des relations
+# rééquilibrage relationnel
+# ending bar
 
 label day7:
     scene reveil2 with fade
@@ -679,14 +681,192 @@ label day7_elu_3:
     l "Oui enfin autant finir la journée ensemble."
     show laura happy
     l "Je suis partante !"
-    
-    
-        
+    jump day7_pari
 label day7_lolo:
     l "Mmmh... Elle tente de motiver Ryou..."
     m "Ah bon ?"
     l "Ryou est un flemmard qui ne bouge que quand il y a une récompense à la clef."
-    jump day7_fin_tennis
+    menu:
+        m "Ce pari..."
+        "C'est une bonne idée...":
+            # $ renpy.block_rollback()
+            $ rel_lolo += 2
+            mh "C'est une bonne idée..."
+            l "Tu trouves ?"
+        "Je ne veux pas être impliqué[ter].":
+            # $ renpy.block_rollback()
+            $ rel_lolo += 4
+            ma "Je ne veux pas être impliqué[ter]."
+            l "Bah... Moi non plus..."
+            l "Mais ne t'en fais pas."
+        "...":
+            # $ renpy.block_rollback()
+            m "..."
+            l "Qu'y a t'il ?"
+            l "Le pari te dérange, c'est ça ?"
+    l "De toutes façons, je ne crois pas qu'Elusia te fasse payer."
+    l "Je pense que ce sont juste des paroles en l'air."
+    menu:
+        "OK":
+            # $ renpy.block_rollback()
+            m "OK."
+        "Ca me rassure.":
+            # $ renpy.block_rollback()
+            $ rel_lolo += 2
+            m "Ca me rassure."
+            show laura happy
+            l "A ce point là ?"
+            l "Tu vas pouvoir jouer l'esprit tranquille !"
+        "Dommage.":
+            # $ renpy.block_rollback()
+            $ rel_lolo += 4
+            m "Dommage."
+            l "Tout à fait."
+            l "Rien ne t'empêches de payer ma part si on perd !"
+            mh "Tu pourrais faire exprès de perdre !"
+            l "Mince !"
+    l "Commençons la partie alors !"
+    show ryou angry
+    r "Mais qu'est-ce qu'ils font ?"
+    show elusia geez sport
+    e "Ils se glissent des mots doux !"
+    show ryou sad
+    r "Très marrant."
+    r "Bon, sert leur dessus !"
+    "Elusia sert sur Laura."
+    l "Tu rêves !"
+    "Laura renvoie la balle sur Ryouzanki."
+    "Ce dernier attaque sur moi."
+    "J'entends Laura crier \"J'ai !\""
+    menu:
+        "Laisser passer.":
+            # $ renpy.block_rollback()
+            $ rel_lolo += 4
+            "Je laisse passer la balle."
+            "J'entends une frappe derrière moi et la balle va rebondir dans un coin du camp adverse."
+            "Laura vient de marquer le point."
+            l "Bravo partenaire !"
+            menu:
+                "Bravo à toi !":
+                    # $ renpy.block_rollback()
+                    $ rel_lolo += 2
+                    m "Bravo à toi !"
+                    show laura sad
+                    l "Non..."
+                    l "C'est du travail d'équipe !"
+                "Excellent travail d'équipe.":
+                    # $ renpy.block_rollback()
+                    $ rel_lolo += 4
+                    m "Excellent travail d'équipe."
+                    show laura happy
+                    l "Exactement !"
+                "J'ai rien fait...":
+                    # $ renpy.block_rollback()
+                    m "J'ai rien fait..."
+                    show laura sad
+                    l "Mais si..."
+                    l "C'était du travail d'équipe !"
+            show laura happy
+            l "Une chose qu'en face, ils ne connaissent pas !"
+            l "C'est pourquoi on devrait gagner !"
+            l "Tu as eut confiance en moi."
+        "Attaquer.":
+            # $ renpy.block_rollback()
+            $ rel_lolo -= 2
+            "Je décide d'attaquer sur Ryouzanki."
+            "Il me renvoie une balle molle."
+            l "N'attaque surtout pas !"
+            menu:
+                "Rattaquer.":
+                    # $ renpy.block_rollback()
+                    $ rel_lolo -= 4
+                    "Laura ne chercherait pas à prendre mon moment de gloire ?"
+                    "Je rattaque."
+                    "Grave erreur, c'était un effet très bien placé et je touche le filet."
+                "Défendre.":
+                    # $ renpy.block_rollback()
+                    $ rel_lolo -= 2
+                    "Je défends."
+                    "C'était une bonne idée."
+                    "La balle possédait un effet monstrueux."
+                    "Elusia attaque sur moi et je n'ai pas la force de renvoyer la balle."
+                "Laisser passer.":
+                    # $ renpy.block_rollback()
+                    "Je laisse passer la balle."
+                    "Laura la frappe."
+                    "Mais elle n'attaque pas."
+                    "Elusia attaque en retour sur moi."
+                    "Je n'ai pas le force de contrer ce coup et la balle passe."
+            show ryou happy
+            r "Héhéhé... Point pour nous !"
+            e "Effectivement !"
+            e "Il est où le travail d'équipe ?"
+            show laura sad
+            l "Très drôle..."
+            l "[j]... Si tu ne me fais pas confiance, nous ne gagnerons pas."
+    show laura normal
+    l "J'ai l'habitude de jouer contre eux avec Alice alors je les connais comme ma poche."
+    l "Normalement, avec Alice..."
+    show laura sad
+    l "..."
+    menu:
+        "Tu préfères jouer avec Alice ?":
+            # $ renpy.block_rollback()
+            $ rel_lolo += 4
+            m "Tu préfères jouer avec Alice ?"
+            show laura sad
+            l "Pas vraiment non..."
+            show laura happy
+            l "En fait non."
+            l "Elle est meilleure que toi mais c'est ennuyeux de jouer ave elle."
+            menu:
+                "Parce qu'elle est trop forte ?":
+                    # $ renpy.block_rollback()
+                    m "Parce qu'elle est trop forte ?"
+                    show laura normal
+                    l "Non, pas plus que ça..."
+                    l "Juste qu'on ne se déteste pas mais..."
+                    l "On ne se connait pas non plus."
+                    l "Et nos centres d'intérêts sont trop distants."
+                "Parce que c'est une geek ?":
+                    # $ renpy.block_rollback()
+                    $ rel_lolo += 4
+                    m "Parce que c'est une geek ?"
+                    l "... Ha ha !"
+                    show laura normal
+                    l "Peut être que c'est ça..."
+                    l "En fait, c'est surtout parce qu'elle ne parle pas du tout."
+                    l "Du coup, les parties muettes sont si ennuyantes..."
+        "Quelque chose te tracasse ?":
+            # $ renpy.block_rollback()
+            m "Quelque chose te tracasse ?"
+            show laura normal
+            l "Non non..."
+            l "Rien du tout."
+    scene gymnaseout with fade
+    call day7_normal
+    "Malgré ma faiblesse, nous avons réussi à leur tenir tête grâce au travail d'équipe."
+    "Laura a été très attentive et gentille avec moi."
+    show elusia satisfied sport
+    show ryou happy
+    "Nous avons perdu de peu au tie-break."
+    e "Je dois vous féliciter."
+    e "Je ne m'attendais pas à une telle résistance de votre part !"
+    r "Dommage..."
+    show elusia normal sport
+    e "Pour vous remercier de cette superbe partie, je lève le gage."
+    l "Merci."
+    r "Par contre, j'ai soif. On va quand même au bar ?"
+    show elusia happt sport
+    e "D'où l'intérêt d'apporter une bouteille d'eau..."
+    l "Ca va ?"
+    m "Oui."
+    l "Fait pas cette tête, c'est pas grave !"
+    show laura happy
+    l "Tu as fait un coéquipier formidable !"
+    l "Je suis vraiment contente d'avoir pu jouer avec toi."
+    l "On les aura la prochaine fois !"
+    jump day7_pari
 label day7_ryou:
     show ryou angry
     r "Mec, me laisse pas tomber..."
@@ -1309,7 +1489,7 @@ label day7_ryou_win:
     r "On y va ? j'ai soif..."
     e "D'où l'intérêt d'apporter une bouteille d'eau..."
 label day7_pari:
-                                                                        # TODO best ending au bar
+    
 label day7_fin_tennis:
     call save
     return

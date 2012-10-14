@@ -761,7 +761,10 @@ label day6_alice:
             show alice geez
             a "D'accord..."
             show alice sad
-            a "Tu es bien trop gentil [j]."
+            if bite:
+                a "Tu es bien trop gentil [j]."
+            else:
+                a "Tu es bien trop gentille [j]."
             a "C'est bien parce que c'est ta fête que j'accepte."
             y "Je serais discret dans un coin."
             a "..."
@@ -878,17 +881,17 @@ label day6_pfc:
                         y "Je ne suis plus la bienvenue."
                         menu:
                             "Tu surveillera mieux de l'intérieur.":
+                                $ rel_lloy += 2
                                 # $ renpy.block_rollback()
                                 m "Tu surveillera mieux de l'intérieur."
                                 y "Non... J'ai mieux à faire."
-                                $ rel_lloy += 2
                             "Alice veut te voir.":
                                 # $ renpy.block_rollback()
+                                $ rel_ali += 2
                                 m "Alice veut te voir."
                                 m "Elle voulait s'excuser auprès de toi."
                                 y "Ce n'est pas important."
                                 y "J'ai plus important à faire."
-                                $ rel_ali += 2
                             "Tant pis.":
                                 # $ renpy.block_rollback()
                                 pass
