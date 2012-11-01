@@ -118,6 +118,7 @@ image toit = "back/toit.jpg"
 # Ville
 image street = "back/street.jpg"
 image parc = "back/parc.jpg"
+image pub = "back/bar.jpg"
 
 # Autres
 image black = "#000000"
@@ -131,7 +132,7 @@ define elusia1 = "music/elusia1.mp3"
 define ryou1 = "music/ryouzanki1.mp3"
 define alice1 = "music/alice1.mp3"
 define joueur1 = "music/joueur1.mp3"
-define shadow1 = "music/shadow1.ogg"
+define shadow1 = "music/shadow1.wav"
 define shadow3 = "music/shadow end.mp3"
 
 # Thème autres
@@ -140,7 +141,9 @@ define jour1 = "music/jour1.ogg"
 define club1 = "music/club1.mp3"
 define main_menu1 = "music/game.ogg"
 define weekend1 = "music/weekend1.mp3"
-define jeux1 = "music/jeux1.mp3"
+define jeux1 = "music/jeux1.wav"
 define jeux2 = "music/jeux2.mp3"
 define thinking1 = "music/thinking1.wav"
+define thinking2 = "music/thinking2.wav"
 define verite = "music/verite.mp3"
+define pub = "music/bar.mp3"

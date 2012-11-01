@@ -7,13 +7,13 @@
     $ str_max = 20
     $ vig = 2
     
-    $ rel_ryou_max = 81
-    $ rel_lulu_max = 103 #+3 ?
-    $ rel_val_max = 59
-    $ rel_lolo_max = 51
+    $ rel_ryou_max = 131#81
+    $ rel_lulu_max = 200#103 #+3 ?
+    $ rel_val_max = 200#59
+    $ rel_lolo_max = 200#51
     $ rel_neph_max =  1000
-    $ rel_lloy_max = 31
-    $ rel_ali_max = 103 #+3 ?
+    $ rel_lloy_max = 200#31
+    $ rel_ali_max = 200#103 #+3 ?
     $ rel_sala_max = 1000
 
 # Variables affectives
@@ -112,6 +112,7 @@ label route:
     $ noble = 'Jeune homme'
     $ ali = 'Jeune fille'
     $ sha = '???'
+    $ pnjj = 'osef'
     $ persistent.preums = True
     $ mm = DynamicCharacter("j", color="#58D3F7", show_two_window=True)
     $ r = DynamicCharacter("inc", color="#4169E1", show_two_window=True)
@@ -121,6 +122,7 @@ label route:
     $ y = DynamicCharacter("noble", color="#FF8C00", show_two_window=True)
     $ a = DynamicCharacter("ali", color="#228B22", show_two_window=True)
     $ s = DynamicCharacter("sha", color="#778899", show_two_window=True)
+    $ pnj = DynamicCharacter("pnjj", color="#FFFFFF", show_two_window=True)
     
     # $ a = Character('Alice',
                 # color="#228B22",
@@ -152,6 +154,8 @@ label route:
     call day6
     call night
     call day7
+    call night
+    call day8
     call night
 label end:
     r "Fin du jeu"

@@ -187,6 +187,7 @@ label day5_matin:
         e "Travailler... Je ne pensais pas que ce mot faisait partie de ton vocabulaire !"
         show elusia normal
         e "D'où sort cette résolution ?"
+        r "Je compte réviser le contrôle de lundi."
         r "Je finis tout vendredi soir pour pouvoir faire ma feignasse tout le week end !"
         show elusia geez
         e "Misère... Je vois..."

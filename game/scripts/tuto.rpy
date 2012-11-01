@@ -35,7 +35,7 @@ screen tutorials:
                 
         bar adjustment adj style "vscrollbar" 
 label tuto:
-    play music (thinking1) fadein 2
+    play music (thinking2) fadein 2
     define e = Character('Elusia', color="#FF69B4", show_two_window=True)
     define r = Character('Ryouzanki', color="#4169E1", show_two_window=True)
     define l = Character('Laura', color="#8B0000", show_two_window=True)

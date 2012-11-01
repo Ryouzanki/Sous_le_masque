@@ -1,8 +1,3 @@
-# TODO :
-# remise au max des relations
-# rééquilibrage relationnel
-# ending bar
-
 label day7:
     scene reveil2 with fade
     play sound "sound/bell.mp3"
@@ -451,6 +446,7 @@ label day7_elu:
     call day7_normal
     show elusia satisfied sport
     e "Et voilà !"
+    $ choix6 = True
     e "1 jeu à 0 !"
     show ryou sad
     r "Tu m'étonnes..."
@@ -566,7 +562,7 @@ label day7_elu_2:
     "C'est assez visible, Laura \"donne\" le service."
     "Elusia marque le point."
     "Ryouzanki paraît inactif. Il suivait à peine la balle du regard."
-    show elusia happy
+    show elusia happy sport
     e "15 - 30 !"
     "Laura doit servir sur moi."
     "Elle se concentre."
@@ -641,7 +637,7 @@ label day7_elu_3:
             e "Maintenant, ensemble, gagnons cette partie !"
     "J'ai fait de mon mieux pour renvoyer les balles et Elusia a été très agressive."
     "Après plusieurs échanges, notre dur labeur est récompensé."
-    show ryouzanki angry
+    show ryou angry
     show laura sad
     show elusia happy sport
     e "Yes !"
@@ -685,6 +681,7 @@ label day7_elu_3:
 label day7_lolo:
     l "Mmmh... Elle tente de motiver Ryou..."
     m "Ah bon ?"
+    $ choix6 = True
     l "Ryou est un flemmard qui ne bouge que quand il y a une récompense à la clef."
     menu:
         m "Ce pari..."
@@ -843,7 +840,6 @@ label day7_lolo:
             show laura normal
             l "Non non..."
             l "Rien du tout."
-    scene gymnaseout with fade
     call day7_normal
     "Malgré ma faiblesse, nous avons réussi à leur tenir tête grâce au travail d'équipe."
     "Laura a été très attentive et gentille avec moi."
@@ -857,7 +853,7 @@ label day7_lolo:
     e "Pour vous remercier de cette superbe partie, je lève le gage."
     l "Merci."
     r "Par contre, j'ai soif. On va quand même au bar ?"
-    show elusia happt sport
+    show elusia happy sport
     e "D'où l'intérêt d'apporter une bouteille d'eau..."
     l "Ca va ?"
     m "Oui."
@@ -1438,6 +1434,7 @@ label day7_ryou6:
 label day7_ryou_lose:
     show elusia satisfied sport
     $ jeu2 = 4 - jeu
+    $ choix6 = True
     e "Bon bah voilà... [jeu2] à [jeu] !"
     show ryou angry
     "Ryouzanki lance sa raquette au sol..."
@@ -1461,6 +1458,7 @@ label day7_ryou_win:
     show ryou happy
     r "Et c'est la victoire !!"
     show elusia geez sport
+    $ choix6 = False
     e "Mince..."
     show laura sad
     l "On aura fait ce qu'on a pu..."
@@ -1489,8 +1487,355 @@ label day7_ryou_win:
     r "On y va ? j'ai soif..."
     e "D'où l'intérêt d'apporter une bouteille d'eau..."
 label day7_pari:
-    
+    scene pub
+    show ryou happy:
+        left
+    show laura normal:
+        right
+    show elusia happy sport:
+        center
+    with fade
+    $ choix1 = "none" # boisson prise
+    $ choix2 = True # anti repetition
+    $ choix3 = False # les autres ont commandé
+    $ choix4 = False # j'ai une courbature
+    play music (pub) fadeout 2
+    $ pnjj = "Serveur"
+    "On a à peine le temps de s'assoir qu'un serveur prend notre commande."
+    pnj "Bonsoir ! Je vous sers quoi les jeunes ?"
+    e "Tu prends quoi ?"
+    m "Je ne sais pas..."
+label day7bar:
+    menu:
+        "Y'a quoi ?" if choix2:
+            # $ renpy.block_rollback()
+            $ choix2 = False
+            $ rel_ryou -= 2
+            $ rel_lolo -= 2
+            m "Y'a quoi ?"
+            show ryou angry
+            r "T'es jamais allé[ter] dans un bar ou quoi ?"
+            l "Y'a tout ce qu'il y a d'habitude dans les bars."
+            jump day7bar
+        "Commandez avant.":
+            # $ renpy.block_rollback()
+            m "Commandez avant."
+            jump day7commandeautre
+        "Je vais prendre...":
+            # $ renpy.block_rollback()
+            m "Je vais prendre..."
+            $ rel_lulu += 3
+            $ rel_lolo += 4
+label day7commandemoi:
+    menu:
+        "Vous vendez quoi comme softdrink ?":
+            # $ renpy.block_rollback()
+            m "Vous vendez quoi comme softdrink ?"
+            pnj "Thé, café, sirop, milkshake et sodas... Tout est là !"
+            menu:
+                m "Alors va pour..."
+                "Un thé.":
+                    # $ renpy.block_rollback()
+                    mh "Un thé."
+                    $ rel_lulu += 3
+                    show ryou happy
+                    show laura happy
+                    r "Baaaah ! Des buveurs de thé !"
+                    l "Fuyons !!!"
+                    $ choix1 = "thé"
+                "Un café.":
+                    # $ renpy.block_rollback()
+                    $ rel_ryou += 3
+                    mh "Un café."
+                    show ryou happy
+                    r "Le repos du guerrier..."
+                    $ choix1 = "café"
+                "De l'eau.":
+                    # $ renpy.block_rollback()
+                    mh "De l'eau."
+                    $ rel_lulu += 2
+                    $ rel_lolo += 2
+                    pnj "Quoi ? tout ça pour ça ?"
+                    show laura happy
+                    l "Au moins, c'est diététique !"
+                    show elusia surprised sport
+                    e "Nan mais sinon, j'avais ma bouteille hein..."
+                    show ryou surprised
+                    r "Wouh... Un baiser indirecte de la belle Elusia..."
+                    show elusia embarrased
+                    e "N'importe quoi !"
+                    $ choix1 = "eau"
+                "Un sirop.":
+                    # $ renpy.block_rollback()
+                    mh "Un sirop."
+                    $ rel_lulu += 2
+                    $ rel_lolo += 1
+                    show ryou sad
+                    r "Roooh"
+                    r "Tu viens pas dans un bar pour prendre du sirop..."
+                    show elusia geez
+                    e "Bah, [sexe] boit ce qu'[sexe] veut hein..."
+                    $ choix1 = "sirop"
+                "Un milkshake.":
+                    # $ renpy.block_rollback()
+                    mh "Un milkshake."
+                    $ rel_lulu += 1
+                    $ rel_lolo += 3
+                    show ryou happy
+                    r "C'est trop meugnon !"
+                    $ choix1 = "milkshake"
+                "Un soda.":
+                    # $ renpy.block_rollback()
+                    $ rel_ryou += 2
+                    $ rel_lolo += 1
+                    mh "Un soda."
+                    show laura happy
+                    l "Oh, un autre drogué !"
+                    show ryou angry
+                    r "Hey, j'ai arrêté d'en boire !"
+                    show elusia satisfied
+                    e "Le café, c'est pas forcément mieux..."
+                    $ choix1 = "soda"
+        "Vous vendez de l'alcool ?":
+            # $ renpy.block_rollback()
+            m "Vous vendez de l'alcool ?"
+            show elusia surprised
+            e "J'en connais qui vont se plaindre de courbatures après..."
+            $ choix4 = True
+            pnj "Bien sûr !"
+            pnj "Bières sous pression, apéro-digestifs, vins..."
+            menu:
+                m "Alors va pour..."
+                "Un demi de bière.":
+                    # $ renpy.block_rollback()
+                    mh "Un demi de bière."
+                    $ rel_ryou += 1
+                    show ryou happy
+                    r "Barbare va !"
+                    $ choix1 = "demi"
+                "Un apéritif.":
+                    # $ renpy.block_rollback()
+                    mh "Un apéritif."
+                    $ rel_lolo += 1
+                    show laura happy
+                    l "Y'en a qui osent..."
+                    $ choix1 = "apéritif"
+                "Un verre de vin.":
+                    # $ renpy.block_rollback()
+                    mh "Un verre de vin."
+                    $ rel_lulu += 1
+                    show ryou happy
+                    r "Bah voyons..."
+                    show ryou happy
+                    r "Il te manque plus que le monocle..."
+                    $ choix1 = "verre de vin"
+label day7commandeautre:
+    if choix3:
+        jump day7fincommande
+    $ choix3 = True
+    show ryou surprised
+    r "Moi je vais prendre..."
+    show ryou happy
+    r "Un café, pour changer !"
+    show elusia geez sport
+    e "\"Pour changer\""
+    show elusia normal sport
+    e "Quant à moi, je prendrais un thé vert, s'il vous plaît."
+    pnj "Oui mademoiselle."
+    l "Et moi, un milkshake fraise."
+    if choix1 == "none":
+        jump day7commandemoi
+label day7fincommande:
+    pnj "J'en ai pour une minute !"
+    "Le serveur part."
+    "Il revient rapidement avec nos boissons."
+    "Enfin vient mon tour."
+    pnj "Et pour finir, votre [choix1]."
+    $ choix1 = False # J'aime le tennis, c'est certain
+    mh "Merci."
+    show elusia happy sport
+    e "Cet après midi sportive t'as plu ?"
+    e "J'ai tort ?"
+    menu:
+        "Non non, j'aime bien !":
+            # $ renpy.block_rollback()
+            mh "Non non, j'aime bien !"
+            $ rel_ryou += 1
+            $ rel_lulu += 3
+            $ rel_lolo += 2
+            $ choix1 = True
+            jump day7bartennis
+        "Oui... J'aime pas trop...":
+            # $ renpy.block_rollback()
+            m "Oui... J'aime pas trop..."
+            $ rel_ryou += 2
+            $ rel_lolo += 1
+            show elusia surprised
+            e "Oh, mais pourquoi ?"
+            menu:
+                m "Eh bien..."
+                "J'aime pas le sport en général.":
+                    # $ renpy.block_rollback()
+                    $ rel_ryou += 3
+                    $ rel_lolo -= 2
+                    $ rel_lulu -= 2
+                    m "J'aime pas le sport en général."
+                    show elusia sad sport
+                    e "Oh mais je pensais qu'en jouant avec des amis, ça changerait..."
+                    show laura normal
+                    l "Oui, moi je n'aime jouer qu'avec mes amis en fait."
+                "J'aime pas le tennis, c'est tout.":
+                    # $ renpy.block_rollback()
+                    $ rel_lolo += 1
+                    $ rel_ryou += 1
+                    m "J'aime pas le tennis, c'est tout."
+                    show elusia sad sport
+                    e "C'est vraiment regrettable..."
+                    show laura normal
+                    l "Oh bah on va essayer un autre sport ?"
+                    e "On ne peut pas. Pas le matériel."
+            e "Bon et bien, tant pis..."
+            show elusia satisfied sport
+            e "Si tu changes d'avis, tu saura où nous trouver !"
+            e "On joue chaque dimanche."
+            jump day7_fin_tennis
+label day7bartennis:
+    show elusia happy sport
+    e "Super !"
+    show elusia satisfied sport
+    e "Je suis vraiment contente que ça t'aie plu !"
+    e "Aimes tu le tennis ?"
+    show ryou surprised
+    r "Quelle question bizarre !"
+    show laura normal
+    l "Nan, [sexe] peut avoir apprécié d'avoir jouer avec nous sans apprécier le tennis !"
+    show ryou normal
+    r "Ah oui..."
+    menu:
+        "J'aime le tennis.":
+            # $ renpy.block_rollback()
+            $ rel_ryou += 1
+            $ rel_lulu += 4
+            $ rel_lolo += 2
+            mh "J'aime le tennis."
+            show elusia surprised sport
+            e "Vraiment ?"
+            show elusia happy sport
+            e "Je suis folle de tennis !"
+            show ryou happy
+            r "Ca, on avait compris !"
+            show elusia normal sport
+            e "T'en faisais avant ?"
+            menu:
+                "Oui.":
+                    # $ renpy.block_rollback()
+                    $ rel_lolo += 2
+                    $ rel_lulu += 4
+                    mh "Oui."
+                    e "Je veux absolument rejouer avec toi quand tu aura repris la main !"
+                    show ryou sad
+                    r "Oh bah ça promet..."
+                "Non.":
+                    # $ renpy.block_rollback()
+                    $ rel_lulu += 3
+                    $ rel_lolo += 4
+                    mh "Non."
+                    show laura normal
+                    l "Impressionnant !"
+                    l "T'es pas mal pour un[ter] débutant[ter]!"
+                    show elusia happy sport
+                    e "Je confirme !"
+                "Maintenant oui !":
+                    # $ renpy.block_rollback()
+                    $ rel_ryou += 3
+                    $ rel_lulu += 2
+                    $ rel_lolo += 2
+                    mh "Maintenant oui !"
+                    show laura normal
+                    l "Impressionnant !"
+                    l "T'es pas mal pour un[ter] débutant[ter]!"
+                    show elusia happy sport
+                    e "Je confirme !"
+                    show ryou happy
+                    r "C'était vraiment cool de jouer avec nous."
+        "Non, mais avec vous...":
+            # $ renpy.block_rollback()
+            $ rel_ryou += 2
+            $ rel_lulu += 3
+            $ rel_lolo += 3
+            show elusia surprised sport
+            e "Vraiment ?"
+            show elusia happy sport
+            e "Je suis vraiment trop contente de l'entendre !"
+            show laura happy
+            l "Moi aussi !"
+            show ryou normal
+            r "Mais dis moi..."
+            r "T'en avais déjà fait avec des amis ?"
+            menu:
+                "Oui et ça m'avait plus.":
+                    # $ renpy.block_rollback()
+                    $ rel_ryou += 1
+                    $ rel_lulu += 2
+                    $ rel_lolo += 3
+                    mh "Oui et ça m'avait plus."
+                    show elusia normal sport
+                    e "Moi qui pensait être pionnière !"
+                    show ryou normal
+                    r "Bah... C'est pas comme si on était ses premiers amis..."
+                    show ryou happy
+                    r "Enfin, j'espère pour toi !"
+                "Oui mais ce n'était pas fun...":
+                    # $ renpy.block_rollback()
+                    $ rel_ryou += 1
+                    $ rel_lulu += 2
+                    $ rel_lolo += 2
+                    m "Oui mais ce n'était pas fun..."
+                    show elusia surprised sport
+                    e "Oh, je vois..."
+                    show elusia normal sport
+                    e "Et bien, contente que cette fois, ça te plaise."
+                    show ryou surprised
+                    r "On est donc si différents que ça ?"
+                "Non, jamais.":
+                    # $ renpy.block_rollback()
+                    $ rel_ryou += 1
+                    $ rel_lulu += 3
+                    $ rel_lolo += 1
+                    m "Non, jamais."
+                    show elusia surprised sport
+                    e "Oh, alors nous sommes les premiers !"
+                    show elusia happy sport
+                    e "J'espère qu'avec nous, tu te plaira !"
+                    show ryou sad
+                    r "C'est pas comme si [sexe] avait le choix..."
+    show laura happy
+    l "Bon, quoi qu'il en soit, maintenant, tu sais ce qu'on fait le dimanche."
 label day7_fin_tennis:
+    l "Tu nous rejoins quand tu veux !"
+    show elusia happy sport
+    if choix6:
+        e "Histoire que vous puissiez avoir votre revanche !"
+    else:
+        e "Histoire qu'on ait notre revanche !"
+    mh "OK."
+    show elusia normal sport
+    e "Bon ! Il se fait tard et j'irais bien prendre une bonne douche glacée moi !"
+    show ryou normal
+    r "Idem."
+    l "On va se quitter là alors !"
+    scene chambre m with fade
+    m "Oh... Je suis si fatigué[ter] que je n'ai pas vu que j'étais arrivé[ter]..."
+    m "Je n'ai qu'une envie : dodo."
+    menu:
+        "Aller dormir.":
+            m "Tant pis pour la douche, je ferais ça demain."
+            $ choix4 = True
+        "Prendre une douche glacée avant.":
+            m "Une douche glacée s'impose."
+            scene chambre m with fade
+    mh "Maintenant, au lit !"
+    scene black with dissolve
     call save
     return
 label save:

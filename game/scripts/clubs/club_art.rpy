@@ -11,9 +11,8 @@ label club:
         jump club_1
     elif aller_art == 2:
         jump club_2
-    #elif aller_art == 3:
-        #$ aller_art += 1
-        #jump club_3
+    elif aller_art == 3:
+        jump club_3
     else:
         "BUG"
         return
@@ -281,25 +280,57 @@ label art3_fin:
             v "Bon bah, à demain !"
             return
             
-# label club_3:
-    # # le +1 à aller_club est deja fait
-    # show lloyd normal
-    # "On dirait que Valeth n'est pas là..."
-    # menu:
-        # "Que faire..."
-        # "Rentrer chez moi":
-            # "Je vais rentrer chez moi."
-            # return
-        # "Attendre en silence.":
-            # "..."
-            # "Bon, et maintenant ?"
-            # jump club_3
-        # "Parler à Lloyd.":
-            # $ rel_lloy += 5
-            # m "Salut !"
-            # y "Bien le bonjour [j]"
-            # m "Qu'est ce que tu fais là ?"
-            # y "Je suis venu jouer."
-            # y "Comme tout le monde non ?"
-            # m "Heu... T'as l'air"
-            # 
+label club_3:
+    show lloyd normal
+    "On dirait que Valeth n'est pas là..."
+    menu:
+        "Que faire..."
+        "Rentrer chez moi":
+            "Je vais rentrer chez moi."
+            return
+        "Attendre en silence.":
+            "..."
+            "Bon, et maintenant ?"
+            jump club_3
+        "Parler à Lloyd.":
+            $ rel_lloy += 5
+            m "Salut !"
+            y "Bien le bonjour [j]"
+            m "Qu'est ce que tu fais là ?"
+            y "Je suis venu jouer."
+            y "Comme tout le monde non ?"
+            m "Heu... T'as l'air de rien faire en fait."
+            show lloyd happy
+            y "Vraiment ?"
+            y "Alors que dirais tu d'y remédier ?"
+            $ choix1 = True
+label club_3_1:
+    menu:
+        "Oui pourquoi pas ?":
+            $ rel_lloy += 5
+            mh "Oui pourquoi pas ?"
+            show lloyd normal
+            y "Je suppose que Valeth t'a déjà initié au plaisir des échecs ?"
+        "En fait je cherche Valeth..." if choix1:
+            $ choix1 = False
+            m "En fait je cherche Valeth..."
+            show lloyd normal
+            y "Valeth est en réunion."
+            m "En réunion ?"
+            y "Oui. Il doit répartir les subventions de l'école pour les clubs entre ses différents sous-club à lui."
+            y "Es-tu inscrit[ter] dans un de ces sous-clubs ?"
+            m "Non..."
+            y "A cause du peu de subventions pour les clubs d'arts, il n'y en a plus que 3..."
+            y "Il ne reste que l'orchestre, le théâtre et la peinture."
+            y "On peut jouer en attendant Valeth si tu veux..."
+            jump club_3_1
+        "Non, je suis occupé[ter].":
+            m "Non, je suis occupé[ter]."
+            y "Je comprends."
+            y "Je vais donc te laisser prendre congé."
+            m "Au revoir !"
+            return
+    menu:
+        "Oui."
+        "Oui mais je suis faible..."
+        "Pas vraiment..."
