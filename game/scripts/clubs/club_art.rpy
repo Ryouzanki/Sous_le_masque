@@ -331,6 +331,9 @@ label club_3_1:
             m "Au revoir !"
             return
     menu:
-        "Oui."
-        "Oui mais je suis faible..."
-        "Pas vraiment..."
+        "Oui.":
+            "frfrsfgrsgs"
+        "Oui mais je suis faible...":
+            "frfrsfgrsgs"
+        "Pas vraiment...":
+            "frfrsfgrsgs"

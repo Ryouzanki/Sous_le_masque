@@ -134,6 +134,7 @@ define alice1 = "music/alice1.mp3"
 define joueur1 = "music/joueur1.mp3"
 define shadow1 = "music/shadow1.wav"
 define shadow3 = "music/shadow end.mp3"
+define prof1 = "music/prof1.mp3"
 
 # Thème autres
 define matin1 = "music/matin1.mp3"
