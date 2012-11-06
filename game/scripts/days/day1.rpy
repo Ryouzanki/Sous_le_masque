@@ -311,7 +311,7 @@ label RU:
              jump RUU
              
 label RUU:
-    show laura normal at left with move
+    show laura happy at left with move
     l "Valeth ! Par ici !"
     show valeth normal at right with easeinright
     v "Oui, oui, j'arrive !"
@@ -537,16 +537,37 @@ label LV:
     
 label fin_cours:
     "Le cours se déroula sans encombre."
-    scene classroom
-    show prof happy
-    with fade
-    "A la fin du cours, notre professeur principal a demandé à me parler."
-    "La routine."
-    "Me dire qu'on ne peut choisir qu'un seul sport."
-    "Il voulait aussi savoir si j'avais des difficultés à m'intégrer."
-    "Demander cela dès le premier jour est assez brusque..."
+    play music (prof1) fadein 2
     scene classroom with fade
+    show prof happy with easeinleft
+    "Le professeur me barre la route avant que je ne sorte de la salle."
+    p "Alors [j], est-ce que tout se passe bien ?"
+    p "As tu des difficultés à t'intégrer ?"
+    m "Heu non, tout va bien..."
+    "Il est débile ou quoi ?"
+    "Pourquoi il me demande ça le premier jour ?"
+    menu:
+        "C'est pas un peu tôt pour demander ?":
+            m "C'est pas un peu tôt pour demander ?"
+            p "Je fais simplement mon devoir de prof."
+            p "Je dois poser cette question."
+            m "Oui mais pourquoi maintenant ?"
+            p "Parce que tu ne peux pas me répondre que ça va mal dès le premier jour."
+            m "Ah..."
+        "...":
+            m "..."
+    p "N'oublie pas de t'inscrire à un club de sport."
+    p "On ne peut en choisir qu'un mais c'est obligatoire."
+    m "Oui monsieur."
+    show prof normal at left with move
+    p "Tu peux y aller."
+    m "Merci. Au revoir."
+    stop music fadeout 2.0
+    scene classroom with fade
+    "Il est vraiment bizarre ce type..."
+    "Dire que je devrais le supporter toute un semestre..."
     "..."
+    play music (jour1) fadein 2
     "Tout le monde est parti."
     "Où pourrais-je bien aller ?"
     window hide None

@@ -423,16 +423,28 @@ label day2_cours2:
             jump day2_cours3
     
 label day2_cours3:
-    scene classroom
-    show prof normal
-    with fade
-    "A la fin de cours, le prof m'a encore retenu[ter]."
-    "Cette fois pour me dire que les clubs sont ouverts tous les jours."
-    "Sauf le sport qui n'est ouvert que lundi et jeudi."
-    "Des choses qui sont marquées sur des panneaux en face des bâtiments en questions."
+    scene classroom with fade
+    play music (prof1) fadein 2
+    show prof normal with easeinleft
+    p "[j]..."
+    p "Hier j'ai oublier de te dire que les clubs sont ouvert tous les jours."
+    p "Sauf le sport qui n'est ouvert que lundi et jeudi."
+    "Ces choses sont marquées sur des panneaux en face des bâtiments en questions."
+    p "Sur ce, bonne journée."
     hide prof with easeoutright
     "Tout le monde est parti."
-    "A croire qu'il le fait exprès."
+    if sport == 'aucun':
+        show prof normal with easeinright
+        p "J'oubliais..."
+        p "Tu n'es pas allé[ter] en sport hier."
+        p "Il faut t'inscrire le plus tôt possible."
+        p "C'est à dire jeudi dans notre cas."
+        p "Je n'ai pas l'intention de te fliquer."
+        p "T'es censé[ter] être assez grand[ter] pour y aller avant d'avoir 0."
+        m "Oui monsieur."
+        hide prof with easeoutright
+    play music (jour1) fadein 2
+    "Que faire...."
 label day2_passport:
     window hide None
     call screen demo_imagemap

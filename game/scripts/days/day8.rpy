@@ -193,4 +193,14 @@ label day8:
     l "Je peux venir ? Il doit y avoir une sacrée queue au self..."
     show elusia happy
     e "Oui bien sûr !"
+    r "Allons y..."
+    scene parc
+    show ryou normal:
+            left
+    show elusia normal:
+            center
+    show laura normal:
+            right
+    with fade
+    
     return
