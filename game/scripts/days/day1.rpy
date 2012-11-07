@@ -542,7 +542,7 @@ label fin_cours:
     show prof happy with easeinleft
     "Le professeur me barre la route avant que je ne sorte de la salle."
     p "Alors [j], est-ce que tout se passe bien ?"
-    p "As tu des difficultés à t'intégrer ?"
+    p "Avez vous des difficultés à vous intégrer ?"
     m "Heu non, tout va bien..."
     "Il est débile ou quoi ?"
     "Pourquoi il me demande ça le premier jour ?"
@@ -550,22 +550,22 @@ label fin_cours:
         "C'est pas un peu tôt pour demander ?":
             m "C'est pas un peu tôt pour demander ?"
             p "Je fais simplement mon devoir de prof."
-            p "Je dois poser cette question."
+            p "Je dois vous poser cette question."
             m "Oui mais pourquoi maintenant ?"
-            p "Parce que tu ne peux pas me répondre que ça va mal dès le premier jour."
+            p "Parce que vous ne pouvez pas me répondre que ça va mal dès le premier jour."
             m "Ah..."
         "...":
             m "..."
-    p "N'oublie pas de t'inscrire à un club de sport."
+    p "N'oubliez pas de vous inscrire à un club de sport."
     p "On ne peut en choisir qu'un mais c'est obligatoire."
     m "Oui monsieur."
     show prof normal at left with move
-    p "Tu peux y aller."
+    p "Vous pouvez y aller."
     m "Merci. Au revoir."
     stop music fadeout 2.0
     scene classroom with fade
     "Il est vraiment bizarre ce type..."
-    "Dire que je devrais le supporter toute un semestre..."
+    "Dire que je devrais le supporter tout un semestre..."
     "..."
     play music (jour1) fadein 2
     "Tout le monde est parti."

@@ -90,6 +90,7 @@ image salazard evil = "CG/salazard evil.png"
 # Un prof
 image prof normal = "CG/prof normal.png"
 image prof happy = "CG/prof happy.png"
+image prof annoyed = "CG/prof annoyed.png"
 
 ## background
 
@@ -135,6 +136,7 @@ define joueur1 = "music/joueur1.mp3"
 define shadow1 = "music/shadow1.wav"
 define shadow3 = "music/shadow end.mp3"
 define prof1 = "music/prof1.mp3"
+define prof2 = "music/prof2.mp3"
 
 # Thème autres
 define matin1 = "music/matin1.mp3"

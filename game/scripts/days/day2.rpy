@@ -427,7 +427,7 @@ label day2_cours3:
     play music (prof1) fadein 2
     show prof normal with easeinleft
     p "[j]..."
-    p "Hier j'ai oublier de te dire que les clubs sont ouvert tous les jours."
+    p "Hier j'ai oublier de vous dire que les clubs sont ouvert tous les jours."
     p "Sauf le sport qui n'est ouvert que lundi et jeudi."
     "Ces choses sont marquées sur des panneaux en face des bâtiments en questions."
     p "Sur ce, bonne journée."
@@ -436,11 +436,11 @@ label day2_cours3:
     if sport == 'aucun':
         show prof normal with easeinright
         p "J'oubliais..."
-        p "Tu n'es pas allé[ter] en sport hier."
-        p "Il faut t'inscrire le plus tôt possible."
+        p "Vous n'êtes pas allé[ter] en sport hier."
+        p "Il faut vous inscrire le plus tôt possible."
         p "C'est à dire jeudi dans notre cas."
-        p "Je n'ai pas l'intention de te fliquer."
-        p "T'es censé[ter] être assez grand[ter] pour y aller avant d'avoir 0."
+        p "Je n'ai pas l'intention de vous fliquer."
+        p "Vous êtes censé[ter] être assez grand[ter] pour y aller avant d'avoir 0."
         m "Oui monsieur."
         hide prof with easeoutright
     play music (jour1) fadein 2
