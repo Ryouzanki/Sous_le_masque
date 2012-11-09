@@ -2,7 +2,7 @@
 #            # $ renpy.block_rollback()
 
 label ryou:
-    play music (joueur1) fadein 2
+    play music (credit)
     define e = Character('Elusia', color="#FF69B4", show_two_window=True)
     #define m = Character('Minato', color="#58D3F7", show_two_window=True)
     define r = Character('Ryouzanki', color="#4169E1", show_two_window=True)
@@ -19,10 +19,10 @@ label ryou:
     define m = Character('Labrys',
                  color="#58D3F7",
                  window_left_padding=160,
-                 show_side_image=Image("CG/hamuko.png", xalign=0.03, yalign=0.97), show_two_window=True)
+                 show_side_image=Image("hamuko.png", xalign=0.03, yalign=0.97), show_two_window=True)
     e "de"
     scene ru
-    show elusia happy at left
+    show elusia happy at left with entrerinright
     show ryou surprised at Position(xpos=0.375)
     show alice geez at center
     m "Et si je refuse ?"

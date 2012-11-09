@@ -28,8 +28,10 @@ init -1 python hide:
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
     config.name = "Sous le masque"
-    config.version = "0.0"
+    config.version = "1.0"
 
+    # RANDOM
+    layout.button_menu()
     #########################################
     # Themes
     
@@ -288,3 +290,5 @@ init python hide:
             # layout.MAIN_MENU : "UI/yesno_main_menu.png",
         # }
 # )
+
+

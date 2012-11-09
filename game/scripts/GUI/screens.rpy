@@ -184,7 +184,7 @@ screen main_menu:
             hotspot (35, 480, 170, 600) action Start()
             hotspot (175, 480, 345, 600) action ShowMenu("load")
             hotspot (350, 480, 525, 600) action ShowMenu("preferences")
-            hotspot (530, 480, 658, 600) action void()
+            hotspot (530, 480, 658, 600) action ShowMenu("gallery")
             hotspot (659, 480, 780, 600) action Quit(confirm=False)
     elif persistent.route == 1:
         imagemap:
@@ -195,7 +195,7 @@ screen main_menu:
             hotspot (35, 480, 170, 600) action Start()
             hotspot (175, 480, 345, 600) action ShowMenu("load")
             hotspot (350, 480, 525, 600) action ShowMenu("preferences")
-            hotspot (530, 480, 658, 600) action void()
+            hotspot (530, 480, 658, 600) action ShowMenu("gallery")
             hotspot (659, 480, 780, 600) action Quit(confirm=False)
     elif persistent.route == 2:
         imagemap:
@@ -206,7 +206,7 @@ screen main_menu:
             hotspot (35, 480, 170, 600) action Start()
             hotspot (175, 480, 345, 600) action ShowMenu("load")
             hotspot (350, 480, 525, 600) action ShowMenu("preferences")
-            hotspot (530, 480, 658, 600) action void()
+            hotspot (530, 480, 658, 600) action ShowMenu("gallery")
             hotspot (659, 480, 780, 600) action Quit(confirm=False)
 
 init -2 python:

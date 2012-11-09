@@ -286,13 +286,16 @@ label club_3:
     menu:
         "Que faire..."
         "Rentrer chez moi":
+            # $ renpy.block_rollback()
             "Je vais rentrer chez moi."
             return
         "Attendre en silence.":
+            # $ renpy.block_rollback()
             "..."
             "Bon, et maintenant ?"
             jump club_3
         "Parler à Lloyd.":
+            # $ renpy.block_rollback()
             $ rel_lloy += 5
             m "Salut !"
             y "Bien le bonjour [j]"
@@ -307,11 +310,13 @@ label club_3:
 label club_3_1:
     menu:
         "Oui pourquoi pas ?":
+            # $ renpy.block_rollback()
             $ rel_lloy += 5
             mh "Oui pourquoi pas ?"
             show lloyd normal
             y "Je suppose que Valeth t'a déjà initié au plaisir des échecs ?"
         "En fait je cherche Valeth..." if choix1:
+            # $ renpy.block_rollback()
             $ choix1 = False
             m "En fait je cherche Valeth..."
             show lloyd normal
@@ -325,6 +330,7 @@ label club_3_1:
             y "On peut jouer en attendant Valeth si tu veux..."
             jump club_3_1
         "Non, je suis occupé[ter].":
+            # $ renpy.block_rollback()
             m "Non, je suis occupé[ter]."
             y "Je comprends."
             y "Je vais donc te laisser prendre congé."
@@ -332,8 +338,26 @@ label club_3_1:
             return
     menu:
         "Oui.":
-            "frfrsfgrsgs"
+            # $ renpy.block_rollback()
+            $ rel_lloyd += 2
+            m "Oui."
+            m "J'ai fait quelques parties contre lui."
+            m "Je n'ai encore jamais gagné."
+            show lloyd happy
+            y "Nous sommes donc deux !"
         "Oui mais je suis faible...":
-            "frfrsfgrsgs"
+            # $ renpy.block_rollback()
+            m "Oui mais je suis faible..."
+            show lloyd happy
+            y "Ce n'est rien."
+            y "Je ne suis moi même pas très compétent !"
         "Pas vraiment...":
-            "frfrsfgrsgs"
+            # $ renpy.block_rollback()
+            $ rel_lloyd -= 2
+            m "Pas vraiment..."
+            show lloyd normal
+            y "Ah bon..."
+            y "C'est étonnant de sa part..."
+           
+            
+            # TODO

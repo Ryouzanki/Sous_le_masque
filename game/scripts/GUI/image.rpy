@@ -125,6 +125,31 @@ image pub = "back/bar.jpg"
 image black = "#000000"
 image roue = "UI/day.png"
 image roue2 = "UI/day2.png"
+image start = "back/start.jpg"
+
+# Miniature personnage
+image elusia = "UI/elusia.png"
+image vincent = "UI/vincent.png"
+
+# Splash
+image elusia_bar = "UI/elusia_bar.png"
+image elusia_bar2 = "UI/elusia_bar2.png"
+image elusia white = "UI/elusiaW.png"
+image ryou_bar = "UI/ryou_bar.png"
+image ryou_bar2 = "UI/ryou_bar2.png"
+image ryou white = "UI/ryouW.png"
+image alice_bar = "UI/alice_bar.png"
+image alice_bar2 = "UI/alice_bar2.png"
+image alice white = "UI/aliceW.png"
+image lloyd_bar = "UI/lloyd_bar.png"
+image lloyd_bar2 = "UI/lloyd_bar2.png"
+image lloyd white = "UI/lloydW.png"
+image laura_bar = "UI/laura_bar.png"
+image laura_bar2 = "UI/laura_bar2.png"
+image laura white = "UI/lauraW.png"
+image prof_bar = "UI/prof_bar.png"
+image prof_bar2 = "UI/prof_bar2.png"
+image prof white = "UI/profW.png"
 
 ### Music
 
@@ -150,3 +175,4 @@ define thinking1 = "music/thinking1.wav"
 define thinking2 = "music/thinking2.wav"
 define verite = "music/verite.mp3"
 define pub = "music/bar.mp3"
+define credit = "music/credit.mp3"

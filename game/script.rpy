@@ -1,4 +1,6 @@
 ﻿init:
+    $ define.move_transitions('entrer', 2.5, subpixel=True)
+    
     $ int_points = 0 
     $ str_points = 0 
     $ agi_points = 0
@@ -18,6 +20,8 @@
 
 # Variables affectives
 init python:
+    
+    
     register_stat("Ryouzanki", "rel_ryou", 0, rel_ryou_max)
     register_stat("Elusia", "rel_lulu", 0, rel_lulu_max)
     register_stat("Valeth", "rel_val", 0, rel_val_max)
@@ -159,6 +163,7 @@ label route:
     call night
     call day8
     call night
+    call day9
 label end:
     r "Fin du jeu"
     $ persistent.ending = "win"
