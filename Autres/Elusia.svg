@@ -27,7 +27,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -8814,9 +8814,9 @@
      inkscape:window-height="695"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="0.2525"
-     inkscape:cx="2460.3434"
-     inkscape:cy="919.27831"
+     inkscape:zoom="0.35708893"
+     inkscape:cx="-224.05027"
+     inkscape:cy="886.59712"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -8832,6 +8832,17 @@
        type="xygrid"
        id="grid14859" />
   </sodipodi:namedview>
+  <rect
+     style="color:#000000;fill:#ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     id="rect11905"
+     width="400"
+     height="400"
+     x="452.26828"
+     y="83.934113"
+     ry="3.693795"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/elusia.png"
+     inkscape:export-xdpi="22.5"
+     inkscape:export-ydpi="22.5" />
   <g
      id="g9633"
      style="display:none">
@@ -56042,4 +56053,14 @@
      d="m 481.615,430.69415 c 18.76042,15.24284 29.99195,40.9741 29.99195,40.9741 l -6.83456,25.1215 c -13.88797,-8.41961 -15.04741,-23.14379 -22.57112,-34.71568 L 469.59661,447.69578 481.615,430.69415 z"
      style="opacity:0.15438597;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter8847-8)"
      sodipodi:nodetypes="cccccc" />
+  <text
+     xml:space="preserve"
+     style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+     x="523.45172"
+     y="161.69182"
+     id="text11901"><tspan
+       sodipodi:role="line"
+       id="tspan11903"
+       x="523.45172"
+       y="161.69182">Elusia</tspan></text>
 </svg>

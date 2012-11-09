@@ -1,4 +1,4 @@
-laura en sport
+﻿laura en sport
 ryou en sport
 intégrer nouveaux CG
 intégrer nouveau BG
@@ -6,9 +6,15 @@ faire des grands CG
 story
 OP
 
+image elusia animated:
+	"elusia happy.png"
+	pause .5
+	"elusia normal.png"
+	pause .5
+	repeat
 
 
-
+wipeup
 
 je connais la verite
 
@@ -16,3 +22,5 @@ vincent laroijesea
 
 troll tuer ou sauver
 troll manger le chat
+
+flora hrist, age d'elusia +6, boutique de fleuriste. Vincent l'aime

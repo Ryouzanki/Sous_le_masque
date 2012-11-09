@@ -2324,9 +2324,9 @@
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="-1102.0972"
-     inkscape:cy="-565.58077"
+     inkscape:zoom="0.7071068"
+     inkscape:cx="284.3815"
+     inkscape:cy="1196.5334"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -2361,6 +2361,17 @@
        position="-1522.75,-510.46875"
        id="guide9253" />
   </sodipodi:namedview>
+  <rect
+     style="color:#000000;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     id="rect5188"
+     width="400"
+     height="400"
+     x="28.20101"
+     y="26.998571"
+     ry="0"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/ryouzanki.png"
+     inkscape:export-xdpi="22.5"
+     inkscape:export-ydpi="22.5" />
   <g
      id="g29039"
      transform="translate(829.76466,-1.1171875e-5)"
@@ -15059,4 +15070,14 @@
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
   </g>
+  <text
+     xml:space="preserve"
+     style="font-size:53.15514374px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+     x="57.661545"
+     y="83.580048"
+     id="text5190"><tspan
+       sodipodi:role="line"
+       id="tspan5192"
+       x="57.661545"
+       y="83.580048">Ryouzanki</tspan></text>
 </svg>

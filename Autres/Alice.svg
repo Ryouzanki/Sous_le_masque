@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="210mm"
@@ -751,6 +752,13 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective10393"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -759,9 +767,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.58527515"
-     inkscape:cx="253.59198"
-     inkscape:cy="-907.37955"
+     inkscape:zoom="1.1705503"
+     inkscape:cx="-1301.6766"
+     inkscape:cy="746.78977"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -792,6 +800,36 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4781"
+       width="800"
+       height="600"
+       x="-1783.246"
+       y="232.47684"
+       ry="0"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/alice_bar2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="240.54076"
+       x="-1784.7937"
+       id="image10395"
+       height="600"
+       width="800"
+       xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/back/labo.jpg" />
+    <rect
+       style="color:#000000;fill:#008000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4778"
+       width="399.89999"
+       height="400"
+       x="-227.24321"
+       y="-0.32271454"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/alice.png"
+       inkscape:export-xdpi="22.499996"
+       inkscape:export-ydpi="22.499996" />
     <g
        id="g4109"
        transform="translate(0,-12.776716)"
@@ -4970,7 +5008,7 @@
     <g
        id="g15851"
        transform="translate(-0.63249181,-3.5477398)"
-       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/alice normal.png"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/aliceW.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <g
@@ -9610,5 +9648,31 @@
          id="tspan15689"
          x="-75.178314"
          y="1322.3207">ancien pose 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="-145.23085"
+       y="71.626884"
+       id="text4780"><tspan
+         sodipodi:role="line"
+         id="tspan4782"
+         x="-145.23085"
+         y="71.626884">Alice</tspan></text>
+    <path
+       style="fill:#008000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m -1852.1203,286.91024 967.06649,150.35663 -17.08598,160.60822 -949.98051,181.1114 c 0,0 -20.5032,153.77383 -3.4172,150.35663 17.086,-3.4172 980.73528,-10.25159 980.73528,-10.25159 l 13.66878,-762.03475 -1018.32446,-10.25159 27.3376,140.10505 z"
+       id="path5555"
+       sodipodi:nodetypes="ccccscccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="-1504.6024"
+       y="535.00043"
+       id="text5557"
+       transform="matrix(0.98811107,0.15374168,-0.15374168,0.98811107,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5559"
+         x="-1504.6024"
+         y="535.00043">Alice Drezall</tspan></text>
   </g>
 </svg>

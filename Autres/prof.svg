@@ -3903,6 +3903,13 @@
          id="path6035"
          sodipodi:nodetypes="ccc" />
     </clipPath>
+    <inkscape:perspective
+       id="perspective10351"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -3911,9 +3918,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="1813.3709"
-     inkscape:cy="959.64738"
+     inkscape:zoom="4"
+     inkscape:cx="2120.453"
+     inkscape:cy="1082.9694"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -3954,6 +3961,17 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4060"
+       width="400"
+       height="400"
+       x="1066.317"
+       y="1.8239486"
+       ry="4.6641202"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/vincent.png"
+       inkscape:export-xdpi="22.5"
+       inkscape:export-ydpi="22.5" />
     <text
        xml:space="preserve"
        style="font-size:4;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
@@ -3980,16 +3998,16 @@
     <text
        xml:space="preserve"
        style="font-size:36px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
-       x="1191.4285"
-       y="44.56271"
+       x="1208.399"
+       y="-28.976395"
        id="text14586"
        inkscape:export-filename="/home/ryouzanki/Bureau/prof.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan14588"
-         x="1191.4285"
-         y="44.56271">Smiling</tspan></text>
+         x="1208.399"
+         y="-28.976395">Smiling</tspan></text>
     <g
        id="g7233"
        inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/prof happy.png"
@@ -7926,5 +7944,50 @@
          d="m 1798.5261,258.63482 c -30.2288,-3.18198 -34.825,0.70711 -34.825,0.70711"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="1098.844"
+       y="72.31218"
+       id="text4062"><tspan
+         sodipodi:role="line"
+         id="tspan4064"
+         x="1098.844"
+         y="72.31218">Vincent</tspan></text>
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4391"
+       width="800"
+       height="600"
+       x="2056"
+       y="-65.637817"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/prof_bar2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="-61.637817"
+       x="2056"
+       id="image10353"
+       height="600"
+       width="800"
+       xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/back/ecole_classe.JPG"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/prof_bar2.png" />
+    <path
+       style="fill:#666666;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 2898,-5.637819 -906,107.999999 22,208 952,228 -32,44 c 0,0 -898,20 -898,10 0,-10 -14,-698 -14,-698 l 890,22 -14,78.000001 z"
+       id="path4393" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="2041.0024"
+       y="290.73557"
+       id="text4395"
+       transform="matrix(0.99427572,-0.10684467,0.10684467,0.99427572,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan4397"
+         x="2041.0024"
+         y="290.73557">Vincent Laroijesea</tspan></text>
   </g>
 </svg>

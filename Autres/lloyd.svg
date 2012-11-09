@@ -4862,6 +4862,13 @@
          inkscape:export-xdpi="90"
          inkscape:export-ydpi="90" />
     </clipPath>
+    <inkscape:perspective
+       id="perspective10365"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -4879,9 +4886,9 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-to-guides="true"
-     inkscape:zoom="1"
-     inkscape:cx="-189.62466"
-     inkscape:cy="-918.5577"
+     inkscape:zoom="4"
+     inkscape:cx="-1528.7022"
+     inkscape:cy="917.85588"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -4895,6 +4902,17 @@
        position="-278.15125,-810.92434"
        id="guide9881" />
   </sodipodi:namedview>
+  <rect
+     style="color:#000000;fill:#d9d900;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     id="rect4725"
+     width="536"
+     height="536"
+     x="-10"
+     y="-104.19788"
+     ry="4.6641202"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/lloyd.png"
+     inkscape:export-xdpi="16.791044"
+     inkscape:export-ydpi="16.791044" />
   <g
      id="g3286">
     <path
@@ -7816,7 +7834,7 @@
      transform="matrix(0.38777527,0,0,0.38777527,-646.6326,2080.1006)"
      width="498.82999"
      height="1269.8021"
-     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/lloyd normal.png"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/lloydW.png"
      inkscape:export-xdpi="90"
      inkscape:export-ydpi="90" />
   <g
@@ -11480,4 +11498,58 @@
        id="tspan12522"
        x="-114.55129"
        y="2040.5485">angry</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+     x="128"
+     y="-32.197876"
+     id="text5499"><tspan
+       sodipodi:role="line"
+       id="tspan5501"
+       x="128"
+       y="-32.197876">Lloyd</tspan></text>
+  <rect
+     style="opacity:1;color:#000000;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.10000000000000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     id="rect4728"
+     width="800"
+     height="600"
+     x="-2293.8545"
+     y="-215.49556"
+     ry="0"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/lloyd_bar2.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <image
+     y="-208.62256"
+     x="-2296.4604"
+     id="image10367"
+     height="600"
+     width="800"
+     xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/back/street.jpg" />
+  <path
+     style="fill:#d9d900;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+     d="m -1436.841,-104.81346 c -48.0832,5.656853 -941.8662,206.47518 -941.8662,206.47518 l 19.799,65.05382 975.8074,243.24474 -42.4264,67.88225 -922.0673,-11.31371 0,-701.44993 998.4348,0 -87.6813,130.10765 z"
+     id="path5502" />
+  <text
+     xml:space="preserve"
+     style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+     x="-2233.2007"
+     y="-513.14075"
+     id="text5510"
+     transform="matrix(0.97772103,-0.20990854,0.20990854,0.97772103,0,0)"><tspan
+       sodipodi:role="line"
+       id="tspan5512"
+       x="-2233.2007"
+       y="-513.14075">Lloyd Baptiste</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+     x="-2186.8391"
+     y="-443.92841"
+     id="text5514"
+     transform="matrix(0.97595208,-0.21798516,0.21798516,0.97595208,0,0)"><tspan
+       sodipodi:role="line"
+       id="tspan5516"
+       x="-2186.8391"
+       y="-443.92841">Reeds de Bellato</tspan></text>
 </svg>
