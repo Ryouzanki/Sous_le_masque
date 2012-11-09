@@ -451,4 +451,3 @@ label day8_fin:
     "Je vais dormir tôt."
     stop music
     return
-    return
