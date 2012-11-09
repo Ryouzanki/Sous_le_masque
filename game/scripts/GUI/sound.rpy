@@ -83,8 +83,11 @@ screen music_room:
                 has vbox
             # The button that lets the user exit the music room.
                 textbutton "Menu principal" action ShowMenu("main_menu")
+                label _("Volume musique ")
+                bar value Preference("music volume")
 
     # Start the music playing on entry to the music room.
+    on "replace" action mr.Stop()
     
     # Restore the main menu music upon leaving.
     on "replaced" action mr.Play("music/Game.ogg")
