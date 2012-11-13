@@ -102,10 +102,10 @@ label day7:
         $ vig -= 1
         if vig < 0:
             "Je suis trop fatigué pour me concentrer."
-            $ int_points += 1
+            $ int_points += 2
         else:
             "Une matinée productive."
-            $ int_points += 2
+            $ int_points += 4
         jump day7_aprem
     else:
         "ERROR."
@@ -163,6 +163,12 @@ label day7_aprem:
     "Je n'ai plus trop le choix..."
     l "Elusia nous attend déjà sur place."
     scene gymnaseout
+    show ryou sad:
+        left
+    show laura normal:
+        right
+    with fade
+    scene tennis
     show ryou sad:
         left
     show laura normal:

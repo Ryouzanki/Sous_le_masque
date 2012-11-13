@@ -35,4 +35,5 @@ label splashscreen:
     scene prof_bar2
     show prof normal at right
     with Dissolve(2.5)
+    pause(5)
     return

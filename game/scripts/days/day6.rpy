@@ -501,10 +501,10 @@ label day6_plan:
                 $ vig -= 1
                 if vig < 0:
                     "Je suis trop fatigué pour me concentrer."
-                    $ int_points += 1
+                    $ int_points += 2
                 else:
                     "Une matinée productive."
-                    $ int_points += 2
+                    $ int_points += 4
                 $ rel_lulu -= 1
                 jump day6_aprem
             "Je vais venir.":
@@ -618,10 +618,10 @@ label day6_aprem:
         $ vig -= 1
         if vig < 0:
             "Je suis trop fatigué pour me concentrer."
-            $ int_points += 1
+            $ int_points += 2
         else:
             "Une aprem productive."
-            $ int_points += 2
+            $ int_points += 4
         jump day6_soir
     else:
         "ERROR"
@@ -1134,8 +1134,8 @@ label day6_soir:
         $ vig -= 1
         if vig < 0:
             "Je suis trop fatigué pour me concentrer."
-            $ int_points += 1
+            $ int_points += 2
         else:
             "Une soirée productive."
-            $ int_points += 2
+            $ int_points += 4
     return

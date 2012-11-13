@@ -164,6 +164,8 @@ label route:
     call day8
     call night
     call day9
+    call night
+    call day10
 label end:
     r "Fin du jeu"
     $ persistent.ending = "win"

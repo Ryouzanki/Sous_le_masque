@@ -65,11 +65,11 @@ label day8:
     play music (thinking2) fadein 2
     scene classroom with fade
     "Le contrôle..."
-    if int_points < 2:
+    if int_points < 3:
         "C'est la débâcle !"
         "Je n'étais vraiment pas au point..."
         $ choix1 = 0
-    elif int_points == 2:
+    elif int_points < 6:
         "C'était difficile mais je m'en suis sortie..."
         "Pas brillant mais pas catastrophique non plus..."
         $ choix1 = 1
