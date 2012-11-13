@@ -1,24 +1,25 @@
 Codage / programation :
 - Ryouzanki
-- Atsuo
+- [Atsuo]
 
 Scénario :
 - Ryouzanki
-- Nagul
+- (Nagul)
 - Neraste
 
 Dialogues :
 - Ryouzanki
-- Nagul
+- (Nagul)
 - (Elusia)
 
 Graphismes :
 - Ryouzanki
 - Neraste
-- Dreamy
+- [Dreamy]
 - (Elusia)
 - (Hao)
 
 Musique :
-- Connor Leary
+- [Connor Leary]
 - Angelfinal
+- (Hyksos)
