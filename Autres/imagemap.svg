@@ -15,7 +15,7 @@
    inkscape:version="0.47 r22583"
    width="800"
    height="600"
-   sodipodi:docname="imagemap_ground.jpg">
+   sodipodi:docname="imagemap.svg">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -58,6 +58,34 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2850-4"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2864"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2878"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2892"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -72,31 +100,21 @@
      inkscape:window-height="695"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="0.55625733"
-     inkscape:cx="1359.1164"
-     inkscape:cy="365.09398"
+     inkscape:zoom="1.1125147"
+     inkscape:cx="460.36768"
+     inkscape:cy="334.38866"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <image
-     xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/UI/imagemap_ground.jpg"
+     xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/UI/imagemap_ground.png"
      width="800"
      height="600"
      id="image12"
      x="0"
      y="0"
-     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/imagemap_ground.jpg.png"
-     inkscape:export-xdpi="90"
-     inkscape:export-ydpi="90" />
-  <image
-     y="3.0844266"
-     x="805.78925"
-     id="image2828"
-     height="600"
-     width="800"
-     xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/UI/imagemap_hover.jpg"
-     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/imagemap_hover.jpg.png"
+     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/imagemap_hover.png"
      inkscape:export-xdpi="90"
      inkscape:export-ydpi="90" />
   <rect
@@ -251,4 +269,32 @@
        x="1407.5396"
        id="tspan2916"
        sodipodi:role="line">Rentrer</tspan></text>
+  <image
+     y="78.809738"
+     x="451.78009"
+     id="image2852"
+     height="77"
+     width="78"
+     xlink:href="file:///home/ryouzanki/Bureau/fdsgvs%20(copie).png" />
+  <image
+     y="313.91339"
+     x="602.78937"
+     id="image2866"
+     height="76"
+     width="78"
+     xlink:href="file:///home/ryouzanki/Bureau/fdsgvs.png" />
+  <image
+     y="197.45985"
+     x="7.7409954"
+     id="image2880"
+     height="77"
+     width="78"
+     xlink:href="file:///home/ryouzanki/Bureau/fefds.png" />
+  <image
+     y="50.046082"
+     x="204.59233"
+     id="image2894"
+     height="77"
+     width="78"
+     xlink:href="file:///home/ryouzanki/Bureau/fze.png" />
 </svg>
