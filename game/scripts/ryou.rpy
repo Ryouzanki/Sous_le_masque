@@ -21,6 +21,10 @@ label ryou:
                  window_left_padding=160,
                  show_side_image=Image("hamuko.png", xalign=0.03, yalign=0.97), show_two_window=True)
     e "de"
+    $ choix1= 4
+    $ choix2 = choix1
+    $ choix1 = 6
+    m "choix2 = [choix2]"
     scene ru
     show elusia happy at left with entrerinright
     show ryou surprised at Position(xpos=0.375)

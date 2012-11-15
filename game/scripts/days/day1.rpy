@@ -2,10 +2,10 @@ screen demo_imagemap:
     imagemap:
         auto "UI/imagemap_%s.png"
 
-        hotspot (8, 200, 78, 78) action Return("swimming")
-        hotspot (204, 50, 78, 78) action Return("science")
-        hotspot (452, 79, 78, 78) action Return("art")
-        hotspot (602, 316, 78, 78) action Return("go home")
+        hotspot (8, 200, 78, 78) action Return("science")
+        hotspot (204, 50, 78, 78) action Return("swimming")
+        hotspot (452, 79, 78, 78) action Return("go home")
+        hotspot (602, 316, 78, 78) action Return("art")
 
 
 label day1:

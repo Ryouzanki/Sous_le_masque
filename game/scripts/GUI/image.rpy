@@ -10,6 +10,9 @@ image elusia sad = "CG/elusia sad.png"
 image elusia geez = "CG/elusia geez.png"
 image elusia surprised = "CG/elusia surprised.png"
 image elusia satisfied = "CG/elusia satisfied.png"
+image elusia embarassed = "CG/elusia embarassed.png"
+image elusia shy  = "CG/elusia shy.png"
+image elusia timid  = "CG/elusia timid.png"
 
 # Elusia en tenue de sport
 image elusia normal sport = "CG/elusia sport normal.png"
@@ -91,6 +94,8 @@ image salazard evil = "CG/salazard evil.png"
 image prof normal = "CG/prof normal.png"
 image prof happy = "CG/prof happy.png"
 image prof annoyed = "CG/prof annoyed.png"
+image prof dark = "CG/prof dark.png"
+image prof naughty = "CG/prof naughty.png"
 
 ## background
 
@@ -130,6 +135,7 @@ image start = "back/start.jpg"
 # Miniature personnage
 image elusia = "UI/elusia.png"
 image vincent = "UI/vincent.png"
+# Le reste est défini dans la gallerie CG
 
 # Splash
 image elusia_bar = "UI/elusia_bar.png"
@@ -162,6 +168,7 @@ define shadow1 = "music/shadow1.wav"
 define shadow3 = "music/shadow end.mp3"
 define prof1 = "music/prof1.mp3"
 define prof2 = "music/prof2.mp3"
+define prof3 = "music/prof3.mp3"
 
 # Thème autres
 define matin1 = "music/matin1.mp3"

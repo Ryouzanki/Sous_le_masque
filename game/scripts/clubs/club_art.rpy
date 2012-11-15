@@ -339,7 +339,7 @@ label club_3_1:
     menu:
         "Oui.":
             # $ renpy.block_rollback()
-            $ rel_lloyd += 2
+            $ rel_lloy += 2
             m "Oui."
             m "J'ai fait quelques parties contre lui."
             m "Je n'ai encore jamais gagné."

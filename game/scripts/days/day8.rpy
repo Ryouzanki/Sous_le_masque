@@ -87,6 +87,7 @@ label day8:
         "Je fais vraiment n'importe quoi."
         "Je ne suis pas sûr[ter] du tout..."
     $ pnjj = "Surveillant"
+    $ choix6 = choix1
     pnj "C'est l'heure !"
     pnj "Terminez votre phrase et posez vos stylos."
     scene classroom with fade
@@ -127,12 +128,12 @@ label day8:
             m "J'ai fait ce que j'ai pu."
             show elusia happy
             show ryou normal
-            m "J'aurais une note pas trop mal."
+            m "J'aurais une note pas trop mauvaise."
             e "Tu fera mieux la prochaine fois hein !"
         "Mentir" if choix1 < 2:
             # $ renpy.block_rollback()
-            $ rel_ryou -= 2
-            $ rel_lulu += 3
+            $ rel_ryou -= 4
+            $ rel_lulu -= 6
             "J'ai assez honte..."
             "Je préfère lâcher un petit mensonge."
             m "Moi, ça s'est assez bien passé en fait."
@@ -351,7 +352,7 @@ label day8:
     show prof happy
     p "Tant mieux, je commençais à m'ennuyer."
     stop music fadeout 2.0
-    m "Un jeune fille va à l'enterrement de sa mère et y rencontre un inconnu très séduisant."
+    m "Une jeune fille va à l'enterrement de sa mère et y rencontre un inconnu très séduisant."
     m "Une semaine plus tard la jeune fille tue sa soeur."
     m "Pourquoi ?"
     show prof annoyed

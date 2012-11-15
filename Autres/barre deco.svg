@@ -42,6 +42,13 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective23691"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -50,9 +57,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="180.1696"
-     inkscape:cy="312.29183"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="598.35663"
+     inkscape:cy="516.41981"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -69,7 +76,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -155,5 +162,40 @@
          id="tspan2824"
          x="-76.758911"
          y="369.31192">Ryouzanki Zeldar</tspan></text>
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4391"
+       width="800"
+       height="600"
+       x="1132.3478"
+       y="170.14197"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/prof_bar2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="174.14197"
+       x="1132.3478"
+       id="image10353"
+       height="600"
+       width="800"
+       xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/back/ecole_classe.JPG"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/prof_bar2.png" />
+    <path
+       style="fill:#666666;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1974.3478,230.14196 -906,108 22,208 952,228 -32,44 c 0,0 -898,20 -898,10 0,-10 -14,-698 -14,-698 l 890,22 -14,78 z"
+       id="path4393" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="1097.4456"
+       y="426.47836"
+       id="text4395"
+       transform="matrix(0.99427572,-0.10684467,0.10684467,0.99427572,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan4397"
+         x="1097.4456"
+         y="426.47836">Vincent Laroijesea</tspan></text>
   </g>
 </svg>

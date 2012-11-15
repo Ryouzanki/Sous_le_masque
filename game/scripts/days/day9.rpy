@@ -33,6 +33,7 @@ label day9:
     scene classroom 
     show elusia angry at left
     show ryou normal at right
+    with fade
     e "\"Et je pourrais me délecter de vos mines décomposées devant vos notes catastrophiques.\""
     show elusia geez
     e "Misère..."
@@ -56,7 +57,7 @@ label day9:
     r "OK, on va manger ?"
     m "Laura vient ?"
     r "Je ne sais pas, va donc lui demander."
-    scene classroom with fade
+    scene classroom
     show laura normal at left
     show valeth normal at right
     with fade
@@ -115,6 +116,7 @@ label day9:
     "Il n'a pas remarqué que le professeur l'interrogeait..."
     "Il s'inquiète probablement pour ses clubs."
     scene classroom with fade
+    "Que pourrais-je bien faire de mon après midi..."
 label day9map:
     window hide None
     call screen demo_imagemap
