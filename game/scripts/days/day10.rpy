@@ -301,36 +301,16 @@ label day10q:
     show elusia sad at right
     with fade
     e "Alors ?"
-    ################## Raconter ou pas
-label day10map:
-    window hide None
-    call screen demo_imagemap
-    window show None
-        
-    if _return == "swimming":
-        # $ renpy.block_rollback()
-        $ unlocked_journal_pages += 1
-        "Il n'y a pas sport mardi."
-        jump day9map
-    
-    elif _return == "science":
-        # $ renpy.block_rollback()
-        $ unlocked_journal_pages += 1
-        "J'irais bien voir Alice."
-        call labo
-        
-    elif _return == "art":
-        # $ renpy.block_rollback()
-        $ unlocked_journal_pages += 1
-        "Et si j'allais voir Valeth..."
-        call club
-
-    elif _return == "go home":
-        # $ renpy.block_rollback()
-        $ unlocked_journal_pages += 1
-        "Je crois que je vais rentrer."
-        call go_home
-    
+    m "Et bien..."
+    menu:
+        m "Il m'a posé des questions..."
+        "Assez bizarres...":
+            # $ renpy.block_rollback()
+            extend "Assez bizarres..."
+        "Scolaires, rien d'intéressants.":
+            # $ renpy.block_rollback()
+            extend "Scolaires, rien d'intéressants."
+         
 label day10_fin:
     play music (joueur1) fadein 2
     scene couloir with fade

@@ -520,7 +520,7 @@ label day3_passport:
     call screen demo_imagemap
     window show None
         
-    if _return == "swimming":
+    if _return == "gymnase":
         # $ renpy.block_rollback()
         "Il n'y a pas sport aujourd'hui..."
         jump day3_passport
@@ -540,7 +540,7 @@ label day3_passport:
             "Et si j'allais faire un tour au bâtiments des clubs..."
         call club
 
-    elif _return == "go home":
+    elif _return == "rentrer":
         # $ renpy.block_rollback()
         $ rel_ali -= 5
         $ choix1 = False

@@ -118,6 +118,7 @@ label route:
     $ sha = '???'
     $ pnjj = 'osef'
     $ proftroll = 'Professeur Laroijesea'
+    $ boul = 'Jeune femme'
     $ persistent.preums = True
     $ mm = DynamicCharacter("j", color="#58D3F7", show_two_window=True)
     $ r = DynamicCharacter("inc", color="#4169E1", show_two_window=True)
@@ -129,7 +130,10 @@ label route:
     $ s = DynamicCharacter("sha", color="#778899", show_two_window=True)
     $ pnj = DynamicCharacter("pnjj", color="#FFFFFF", show_two_window=True)
     $ p = DynamicCharacter("proftroll", color="#2b2a64", show_two_window=True)
-    
+    $ n = DynamicCharacter("boul", color="#fd5f6e", show_two_window=True)
+    $ weekday2='Dimanche'
+    $ day2='20'
+    $ month2='Mars'
     # $ a = Character('Alice',
                 # color="#228B22",
                 # window_left_padding=110,

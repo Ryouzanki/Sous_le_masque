@@ -122,7 +122,7 @@ label day9map:
     call screen demo_imagemap
     window show None
         
-    if _return == "swimming":
+    if _return == "gymnase":
         # $ renpy.block_rollback()
         $ unlocked_journal_pages += 1
         "Il n'y a pas sport mardi."
@@ -140,7 +140,7 @@ label day9map:
         "Et si j'allais voir Valeth..."
         call club
 
-    elif _return == "go home":
+    elif _return == "rentrer":
         # $ renpy.block_rollback()
         $ unlocked_journal_pages += 1
         "Je crois que je vais rentrer."

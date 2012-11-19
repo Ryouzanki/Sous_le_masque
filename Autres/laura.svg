@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3163,9 +3163,9 @@
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="-155.0954"
-     inkscape:cy="-220.03409"
+     inkscape:zoom="0.1767767"
+     inkscape:cx="-882.31191"
+     inkscape:cy="-105.59119"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -13907,35 +13907,11 @@
        x="158.39192"
        y="121.58961">Laura</tspan></text>
   <rect
-     style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-     id="rect5155"
-     width="800"
-     height="600"
-     x="-914"
-     y="1110"
-     inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/laura_bar2.png"
-     inkscape:export-xdpi="90"
-     inkscape:export-ydpi="90" />
-  <image
-     y="1116"
-     x="-918"
-     id="image10381"
-     height="600"
-     width="800"
-     xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/back/ru.JPG" />
-  <path
-     style="fill:#800000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
-     d="m -938,1200 c 24,0 848,44 848,44 l 10,192 -870,224 6,78 888,-12 -18,-688 -854,52 -10,110 z"
-     id="path5158" />
-  <text
-     xml:space="preserve"
-     style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
-     x="-732.40009"
-     y="1225.1202"
-     id="text5160"
-     transform="matrix(0.99830527,0.05819434,-0.05819434,0.99830527,0,0)"><tspan
-       sodipodi:role="line"
-       id="tspan5162"
-       x="-732.40009"
-       y="1225.1202">Laura Meyer</tspan></text>
+     style="color:#000000;fill:#8b0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     id="rect23845"
+     width="272.94321"
+     height="195.16147"
+     x="-410.12195"
+     y="-41.044949"
+     ry="2.8284271" />
 </svg>

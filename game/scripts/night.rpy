@@ -21,16 +21,14 @@ init python:
             config = {'substitute': False, 'xalign': 0.5,
                       'color': '#121212', 'bold': False, 'size': 120}
 
-            self.month_text = Text(old_date.strftime('%B'),
+            self.month_text = Text(DateManager.MONTHS[old_date.month-1],
                                    **config)
-            self.month_text2 = Text(new_date.strftime('%B'),
+            self.month_text2 = Text(DateManager.MONTHS[new_date.month-1],
                                     **config)
 
             config['size'] = 400
-            self.day_text = Text(old_date.strftime('%d'),
-                                 **config)
-            self.day_text2 = Text(new_date.strftime('%d'),
-                                  **config)
+            self.day_text = Text('%d' % old_date.day, **config)
+            self.day_text2 = Text('%d' % new_date.day, **config)
             self.background = renpy.displayable('UI/calendar.png')
             self.days_widgets = [DayWidget(day, date_manager.get_meteo(day))
                                     for day in days]
@@ -90,7 +88,8 @@ init python:
             renpy.Displayable.__init__(self, **kwargs)
 
             date = date or datetime(2012, 1, 1)
-            self.text = Text(date.strftime('%a.\n%d'), slow=False,
+            text = '%s\n%02d' % (DateManager.WEEKDAYS_SHORT[date.weekday()],date.day)
+            self.text = Text(text, slow=False,
                              substitute = False,
                              color='#f2f2f2',
                              xalign=0.5,
@@ -156,6 +155,12 @@ label night8:
     jump fin_night
 
 label fin_night:
+    # $ dayyy = date_manager.datetime.day
+    # $ monthh = date_manager.datetime.month
+    # $ jourrr = date_manager.datetime.weekday()
+    # "[jourrr] [dayyy] [monthh]"
+    # # weekday est un int de 0 à 6
+    
     stop music fadeout 1.0
     window hide
     hide screen button
@@ -164,9 +169,32 @@ label fin_night:
         renpy.scene()
         renpy.show('black')
         date_manager = date_manager.next_day()
+        # date_manager = date_manager.next_day(4)
         renpy.show('calendar', what=CalendarWidget(date_manager))
         renpy.with_statement(Fade(0.5, 0.0, 0.5))
         renpy.pause(8.0)
     window show
     show screen button
+    $ weekday2 = date_manager.datetime.weekday()
+    if weekday2 == 0:
+        $weekday2 = 'Lundi'
+    if weekday2 == 1:
+        $weekday2 = 'Mardi'
+    if weekday2 == 2:
+       $ weekday2 = 'Mercredi'
+    if weekday2 == 3:
+        $weekday2 = 'Jeudi'
+    if weekday2 == 4:
+        $weekday2 = 'Vendredi'
+    if weekday2 == 5:
+        $weekday2 = 'Samedi'
+    if weekday2 ==6:
+        $weekday2 = 'Dimanche'
+        
+    
+    $ day2 = date_manager.datetime.day
+    
+    $ month2 =  date_manager.datetime.month
+    if month2 ==3:
+        $month2 = 'Mars'
     return

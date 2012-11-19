@@ -3987,20 +3987,20 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.1767767"
-     inkscape:cx="1775.4745"
-     inkscape:cy="192.81562"
+     inkscape:zoom="0.50000001"
+     inkscape:cx="1510.2122"
+     inkscape:cy="1010.03"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-to-guides="false"
-     inkscape:window-width="731"
-     inkscape:window-height="487"
-     inkscape:window-x="678"
-     inkscape:window-y="131"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="695"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
      inkscape:snap-grids="false">
     <sodipodi:guide
        orientation="0,1"
@@ -4022,7 +4022,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4030,6 +4030,21 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <path
+       sodipodi:nodetypes="csccc"
+       id="path4466"
+       d="m 3554.5727,765.98393 c 0,0 -5.6568,-47.37614 -0.7071,-60.10407 4.9498,-12.72792 -27.5771,31.1127 -27.5771,31.1127 l 16.9705,29.69848 11.3137,-0.70711 z"
+       style="fill:#141d1b;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:#141d1b;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 2954.5727,765.98393 c 0,0 -5.6568,-47.37614 -0.7071,-60.10407 4.9498,-12.72792 -27.5771,31.1127 -27.5771,31.1127 l 16.9705,29.69848 11.3137,-0.70711 z"
+       id="path4464"
+       sodipodi:nodetypes="csccc" />
+    <path
+       sodipodi:nodetypes="csccc"
+       id="path4462"
+       d="m 2434.5727,765.98393 c 0,0 -5.6568,-47.37614 -0.7071,-60.10407 4.9498,-12.72792 -27.5771,31.1127 -27.5771,31.1127 l 16.9705,29.69848 11.3137,-0.70711 z"
+       style="fill:#141d1b;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
        id="path4078"
        d="m 1128.6105,759.97353 c -0.3536,1.76776 2.4749,23.68808 2.4749,23.68808 0,0 7.071,-3.53554 6.7175,-5.30331 -0.3536,-1.76776 -6.7175,-15.55635 -6.7175,-15.55635 l -2.4749,-2.82842 z"
@@ -8324,7 +8339,10 @@
        d="m 136.12761,206.81378 a 7.6348419,2.5178735 0 1 1 -15.26968,0 7.6348419,2.5178735 0 1 1 15.26968,0 z"
        transform="matrix(0.71749829,0.10254541,0.06708364,0.62995447,2694.493,51.0728)" />
     <g
-       id="g27196">
+       id="g27196"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/CG/prof dark.png"
+       inkscape:export-xdpi="48"
+       inkscape:export-ydpi="48">
       <g
          id="g24546">
         <path
@@ -9293,7 +9311,7 @@
     <path
        sodipodi:nodetypes="ccccc"
        id="use25996"
-       d="m 2875.0155,191.05728 c 2.0328,6.64264 -2.5596,8.89638 -2.5596,8.89638 -4.4417,1.42348 -6.2862,-1.04377 -6.2862,-1.04377 -3.1243,-5.38535 -0.7528,-8.39827 -0.7528,-8.39827 2.982,-4.78179 8.7176,-3.26585 9.5986,0.54566 z"
+       d="m 2875.0155,191.80728 c 2.0328,6.64264 -2.5596,8.89638 -2.5596,8.89638 -4.4417,1.42348 -6.2862,-1.04377 -6.2862,-1.04377 -3.1243,-5.38535 -0.7528,-8.39827 -0.7528,-8.39827 2.982,-4.78179 8.7176,-3.26585 9.5986,0.54566 z"
        style="fill:#000000;stroke:#000000;stroke-width:0.55313432px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
        transform="matrix(0.71749829,0.10254541,0.06708364,0.62995447,2758.731,49.5113)"
@@ -9314,8 +9332,8 @@
        id="rect26002"
        width="543.05798"
        height="1063.4886"
-       x="2573.8687"
-       y="5.8441467"
+       x="2557.3687"
+       y="30.844147"
        ry="4.1159029" />
     <text
        xml:space="preserve"
@@ -10361,5 +10379,13 @@
          id="tspan27028"
          x="3340"
          y="20.362183">naughty</tspan></text>
+    <rect
+       style="color:#000000;fill:#2b2a64;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect24977"
+       width="166"
+       height="76"
+       x="1116"
+       y="-163.63779"
+       ry="4.6641202" />
   </g>
 </svg>

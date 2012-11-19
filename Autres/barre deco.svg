@@ -49,6 +49,90 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective12712"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective24374"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective24396"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective24942"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective12712-5"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5165"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective25497"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective25522"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective26074"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective26099"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective26645"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective27836"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -57,9 +141,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="598.35663"
-     inkscape:cy="516.41981"
+     inkscape:zoom="0.185"
+     inkscape:cx="-2868.1125"
+     inkscape:cy="609.80385"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -76,7 +160,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -85,6 +169,17 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(28.571402,-203.79077)">
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.9000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect27848"
+       width="800"
+       height="600"
+       x="-4075.6997"
+       y="175.07457"
+       ry="57.294144"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/nephie_bar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <rect
        style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect2816"
@@ -149,7 +244,7 @@
          sodipodi:role="line"
          id="tspan2820"
          x="-1060.2654"
-         y="433.50568">Elusia hrist</tspan></text>
+         y="433.50568">Elusia Hrist</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
@@ -197,5 +292,358 @@
          id="tspan4397"
          x="1097.4456"
          y="426.47836">Vincent Laroijesea</tspan></text>
+    <rect
+       style="color:#000000;fill:#ff69b4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect23069"
+       width="288.61429"
+       height="172.68304"
+       x="-745.1687"
+       y="-232.84514"
+       ry="7.7363682" />
+    <rect
+       style="color:#000000;fill:#8b0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect23845"
+       width="248.69954"
+       height="162.83659"
+       x="2828.6682"
+       y="-171.75946"
+       ry="2.3599505" />
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect5155"
+       width="800"
+       height="600"
+       x="2354.7144"
+       y="177.21933"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/laura_bar2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="183.21933"
+       x="2350.7144"
+       id="image10381"
+       height="600"
+       width="800"
+       xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/back/ru.JPG" />
+    <path
+       style="fill:#800000;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 2330.7143,267.21934 c 24,0 848,44 848,44 l 10,192 -870,224 6,78 888,-12 -18,-688 -854,52 -10,110 z"
+       id="path5158" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="2476.4922"
+       y="103.6997"
+       id="text5160"
+       transform="matrix(0.99830527,0.05819434,-0.05819434,0.99830527,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5162"
+         x="2476.4922"
+         y="103.6997">Laura Meyer</tspan></text>
+    <rect
+       style="color:#000000;fill:#008080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect5188"
+       width="400"
+       height="400"
+       x="53.763248"
+       y="-392.11826"
+       ry="0"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/ryouzanki.png"
+       inkscape:export-xdpi="22.5"
+       inkscape:export-ydpi="22.5" />
+    <rect
+       style="color:#000000;fill:#4169e1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect24422"
+       width="207.88939"
+       height="130.10765"
+       x="555.08411"
+       y="-169.29218" />
+    <rect
+       style="color:#000000;fill:#ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect11905"
+       width="400"
+       height="400"
+       x="-1251.4285"
+       y="-419.06641"
+       ry="3.693795"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/elusia.png"
+       inkscape:export-xdpi="22.5"
+       inkscape:export-ydpi="22.5" />
+    <rect
+       style="color:#000000;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect5152"
+       width="399.29999"
+       height="400"
+       x="2320.3499"
+       y="-413.35208"
+       ry="3.382596"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/laura.png"
+       inkscape:export-xdpi="22.5"
+       inkscape:export-ydpi="22.5" />
+    <rect
+       style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4060"
+       width="400"
+       height="400"
+       x="1194.2858"
+       y="-347.7641"
+       ry="4.6641202"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/vincent.png"
+       inkscape:export-xdpi="22.5"
+       inkscape:export-ydpi="22.5" />
+    <rect
+       style="color:#000000;fill:#2b2a64;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect24977"
+       width="222.56854"
+       height="108.32488"
+       x="1680.3546"
+       y="-76.83992"
+       ry="6.6478982" />
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4728"
+       width="800"
+       height="600"
+       x="-2721.3496"
+       y="146.8345"
+       ry="0"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/lloyd_bar2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="153.7075"
+       x="-2723.9556"
+       id="image10367"
+       height="600"
+       width="800"
+       xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/back/street.jpg" />
+    <path
+       style="fill:#d9d900;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -1864.3362,257.5166 c -48.0832,5.65685 -941.8661,206.47518 -941.8661,206.47518 l 19.799,65.05382 975.8073,243.24474 -42.4264,67.88225 -922.0672,-11.31371 0,-701.44993 998.4347,0 -87.6813,130.10765 z"
+       id="path5502" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="-2727.2278"
+       y="-248.61792"
+       id="text5510"
+       transform="matrix(0.97772103,-0.20990854,0.20990854,0.97772103,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5512"
+         x="-2727.2278"
+         y="-248.61792">Lloyd Baptiste</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="-2683.0364"
+       y="-183.49919"
+       id="text5514"
+       transform="matrix(0.97595208,-0.21798516,0.21798516,0.97595208,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5516"
+         x="-2683.0364"
+         y="-183.49919">Reeds de Bellato</tspan></text>
+    <rect
+       style="color:#000000;fill:#d9d900;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4725"
+       width="536"
+       height="536"
+       x="-2743.9102"
+       y="-569.73859"
+       ry="4.6641202"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/lloyd.png"
+       inkscape:export-xdpi="16.791044"
+       inkscape:export-ydpi="16.791044" />
+    <rect
+       style="color:#000000;fill:#ff8c00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect25554"
+       width="398.86292"
+       height="142.94414"
+       x="-2112.6365"
+       y="-182.14014"
+       ry="2.6883411" />
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4781"
+       width="800"
+       height="600"
+       x="3558.4785"
+       y="121.02253"
+       ry="0"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/alice_bar2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="129.08646"
+       x="3556.9307"
+       id="image10395"
+       height="600"
+       width="800"
+       xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/back/labo.jpg" />
+    <path
+       style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 3489.604,175.45593 967.0665,150.35663 -17.086,160.60822 -949.9805,181.1114 c 0,0 -20.5032,153.77383 -3.4172,150.35663 17.086,-3.4172 980.7353,-10.2516 980.7353,-10.2516 L 4480.5909,45.602471 3462.2664,35.350881 3489.604,175.45593 z"
+       id="path5555"
+       sodipodi:nodetypes="ccccscccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="3756.4792"
+       y="-396.37448"
+       id="text5557"
+       transform="matrix(0.98811107,0.15374168,-0.15374168,0.98811107,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5559"
+         x="3756.4792"
+         y="-396.37448">Alice Drezall</tspan></text>
+    <rect
+       style="color:#000000;fill:#008000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4778"
+       width="399.89999"
+       height="400"
+       x="3667.1218"
+       y="-437.82172"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/alice.png"
+       inkscape:export-xdpi="22.499996"
+       inkscape:export-ydpi="22.499996" />
+    <rect
+       style="color:#000000;fill:#228b22;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect26125"
+       width="420.31512"
+       height="136.68785"
+       x="4133.5234"
+       y="-194.45743" />
+    <rect
+       style="color:#000000;fill:#58d3f7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect26662"
+       width="529.63593"
+       height="184.58008"
+       x="4992.4932"
+       y="-223.73058" />
+    <rect
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#040503;stroke-width:2.6413455;stroke-miterlimit:4;stroke-opacity:0.73507463;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect27174"
+       width="596.45514"
+       height="208.12157"
+       x="6691.3735"
+       y="-248.60356" />
+    <rect
+       style="color:#000000;fill:#800080;fill-opacity:1;fill-rule:nonzero;stroke:#040503;stroke-width:2.41365743;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.73507463;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect27176"
+       width="462.11588"
+       height="179.27319"
+       x="5934.6265"
+       y="-231.34862" />
+    <rect
+       style="color:#000000;fill:#fd5f6e;fill-opacity:1;fill-rule:nonzero;stroke:#040503;stroke-width:2.55815053;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.73507463;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect27178"
+       width="412.77045"
+       height="178.48471"
+       x="-3446.3853"
+       y="-162.59445" />
+    <rect
+       y="-463.35364"
+       x="-4222.4736"
+       height="495.3316"
+       width="495.3316"
+       id="rect27180"
+       style="color:#000000;fill:#fd5f6e;fill-opacity:1;fill-rule:nonzero;stroke:#040503;stroke-width:4.66839266;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.73507463;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <rect
+       style="color:#000000;fill:#552200;fill-opacity:1;fill-rule:nonzero;stroke:#040503;stroke-width:3.90000010000000019;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.73507462999999995;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect27195"
+       width="596.263"
+       height="229.33192"
+       x="5496.3218"
+       y="-1135.2783"
+       transform="translate(-28.571402,203.79077)"
+       ry="3.693795" />
+    <rect
+       style="color:#000000;fill:#348f8f;fill-opacity:1;fill-rule:nonzero;stroke:#040503;stroke-width:3.90000010000000019;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.73507462999999984;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect27197"
+       width="703.28461"
+       height="206.39874"
+       x="6505.3823"
+       y="-1142.9226"
+       transform="translate(-28.571402,203.79077)"
+       ry="3.693795" />
+    <text
+       xml:space="preserve"
+       style="font-size:90.44437408px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="6831.0854"
+       y="-822.79572"
+       id="text27199"><tspan
+         sodipodi:role="line"
+         id="tspan27201"
+         x="6831.0854"
+         y="-822.79572">Flora</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:90.44437408px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="5559.8169"
+       y="-794.8725"
+       id="text27203"><tspan
+         sodipodi:role="line"
+         id="tspan27205"
+         x="5559.8169"
+         y="-794.8725">Salazard</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:90.44437408px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="5105.1533"
+       y="-130.34169"
+       id="text27207"><tspan
+         sodipodi:role="line"
+         id="tspan27209"
+         x="5105.1533"
+         y="-130.34169">MC</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:90.44437408px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="6022.4443"
+       y="-107.4085"
+       id="text27211"><tspan
+         sodipodi:role="line"
+         id="tspan27213"
+         x="6022.4443"
+         y="-107.4085">Valeth</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:90.44437408px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="6913.0161"
+       y="-137.98608"
+       id="text27215"><tspan
+         sodipodi:role="line"
+         id="tspan27217"
+         x="6913.0161"
+         y="-137.98608">pnj</tspan></text>
+    <image
+       y="175.08167"
+       x="-4074.949"
+       id="image27838"
+       height="600"
+       width="800"
+       xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/back/salledart.jpg"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/nephie_bar2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="fill:#348f8f;fill-opacity:1" />
+    <path
+       style="fill:#fd5f6e;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m -4086.4865,32.432433 c 132.4324,16.216216 1005.4054,118.918917 1005.4054,118.918917 l -29.7297,224.32433 -1002.7027,148.64864 8.1081,105.40541 1089.1892,2.7027 c 0,0 -16.2162,-721.621619 -40.5406,-716.216213 -24.3243,5.405405 -1013.5135,0 -1013.5135,0 l -16.2162,116.216216 z"
+       id="path27842"
+       transform="translate(-28.571402,203.79077)" />
+    <text
+       xml:space="preserve"
+       style="font-size:62.10401917px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="-3807.8486"
+       y="776.34802"
+       id="text27844"
+       transform="matrix(0.98972248,0.14300143,-0.14300143,0.98972248,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan27846"
+         x="-3807.8486"
+         y="776.34802">Néphénie Hrist</tspan></text>
   </g>
 </svg>

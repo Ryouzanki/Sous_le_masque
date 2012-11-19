@@ -3,6 +3,11 @@ init python:
     from random import choice
 
     class DateManager(object):
+        WEEKDAYS = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche']
+        WEEKDAYS_SHORT = ['Lun.', 'Mar.', 'Mer.', 'Jeu.', 'Ven.', 'Sam.', 'Dim.']
+        MONTHS = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+                'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']
+                
         def __init__(self, epoch=None, year=2011, month=3, day=20, meteo=None):
             self.meteo = meteo or [choice(['sunny', 'snowy', 'thunder', 'cloudy'])
                                     for i in xrange(365)]
@@ -26,4 +31,6 @@ init python:
             return new_manager
 
 
-    date_manager = DateManager(meteo=['sunny', 'sunny', 'sunny', 'cloudy', 'cloudy',  'sunny', 'sunny', 'sunny', 'sunny', 'sunny', 'sunny', 'sunny','thunder', 'thunder', 'thunder', 'cloudy', 'thunder', 'snowy'])
+    date_manager = DateManager(meteo=['sunny', 'sunny', 'sunny', 'cloudy', 'cloudy', 
+        'sunny', 'sunny', 'sunny', 'sunny', 'sunny', 'sunny', 'sunny','thunder', 'thunder', 
+        'thunder', 'cloudy', 'thunder', 'snowy'])

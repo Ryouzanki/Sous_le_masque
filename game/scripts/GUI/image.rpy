@@ -97,6 +97,10 @@ image prof annoyed = "CG/prof annoyed.png"
 image prof dark = "CG/prof dark.png"
 image prof naughty = "CG/prof naughty.png"
 
+# Une boulangère
+image nephie normal = "CG/nephie normal.png"
+
+
 ## background
 
 # Cité universitaire
@@ -156,6 +160,9 @@ image laura white = "UI/lauraW.png"
 image prof_bar = "UI/prof_bar.png"
 image prof_bar2 = "UI/prof_bar2.png"
 image prof white = "UI/profW.png"
+image nephie_bar = "UI/nephie_bar.png"
+image nephie_bar2 = "UI/nephie_bar2.png"
+image nephie white = "UI/nephieW.png"
 
 ### Music
 

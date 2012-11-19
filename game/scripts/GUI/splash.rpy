@@ -35,5 +35,12 @@ label splashscreen:
     scene prof_bar2
     show prof normal at right
     with Dissolve(2.5)
+    scene nephie_bar
+    show nephie white at left with entrerinright
+    scene nephie_bar2
+    show nephie normal at left
+    with Dissolve(2.5)
+    
+    
     pause(5)
     return

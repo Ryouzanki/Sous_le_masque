@@ -222,7 +222,7 @@ label day5_choix:
         call screen demo_imagemap
         window show None
             
-        if _return == "swimming":
+        if _return == "gymnase":
             # $ renpy.block_rollback()
             "Vendredi, pas sport ..."
             jump day5_choix
@@ -241,7 +241,7 @@ label day5_choix:
                 "Et si j'allais faire un tour au bâtiments des clubs..."
             call club
     
-        elif _return == "go home":
+        elif _return == "rentrer":
             # $ renpy.block_rollback()
             "Je crois que je vais rentrer."
             call go_home

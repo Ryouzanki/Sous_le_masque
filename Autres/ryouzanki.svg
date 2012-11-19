@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2325,8 +2325,8 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:zoom="0.7071068"
-     inkscape:cx="284.3815"
-     inkscape:cy="1196.5334"
+     inkscape:cx="376.45155"
+     inkscape:cy="1253.1019"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -15080,4 +15080,11 @@
        id="tspan5192"
        x="57.661545"
        y="83.580048">Ryouzanki</tspan></text>
+  <rect
+     style="color:#000000;fill:#4169e1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     id="rect24422"
+     width="207.88939"
+     height="130.10765"
+     x="569.92804"
+     y="7.3880401" />
 </svg>

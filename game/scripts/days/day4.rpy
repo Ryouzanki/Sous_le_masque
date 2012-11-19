@@ -287,7 +287,7 @@ label day4_apres:
         call screen demo_imagemap
         window show None
             
-        if _return == "swimming":
+        if _return == "gymnase":
             # $ renpy.block_rollback()
             "Si j'en profitais pour faire du sport..."
             call sport
@@ -310,7 +310,7 @@ label day4_apres:
                 "Et si j'allais faire un tour au bâtiments des clubs..."
             call club
     
-        elif _return == "go home":
+        elif _return == "rentrer":
             # $ renpy.block_rollback()
             "Je crois que je vais rentrer."
             scene street with fade

@@ -5,6 +5,7 @@
 ## get the screens to work.
 
 init -2 python:
+
     #### Sofie(my MC)'s health
     ## Change this to whatever your character is named.
     #sofie_health = 90
@@ -19,8 +20,8 @@ init -2 python:
     ## something a bit more specific for a certain part.
     #time_ref = ""
     #### Your current location in the game
-    lieu = "DTC"
-    sante = "Bon"
+    lieu = "Non implanté"
+    sante = "En bonne forme"
     #### The curent page of the journal
     current_journal_page = 0
     #### The number of journal pages which can be accessed
@@ -118,7 +119,7 @@ screen stats:
                 ## "bar"creates a bar, "value"sets it current value,
                 ## and "range"sets the maximum value, resulting in a
                 ## bar which is the ratio between the value and the range.
-                bar value vig range 100
+                bar value vig range 10
             frame:
                 style_group "pref"
                 has vbox
@@ -138,7 +139,7 @@ screen stats:
             frame:
                 style_group "pref"
                 has vbox
-                label _("Date: [weekday] [day]")
+                label _("Date: [weekday2] [day2] [month2]")
                 label _("Location: [lieu]")
             ## This is the button that brings us to our journal page.
             frame:

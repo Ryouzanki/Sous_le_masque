@@ -3,8 +3,8 @@ screen demo_imagemap:
         auto "UI/imagemap_%s.png"
 
         hotspot (8, 200, 78, 78) action Return("science")
-        hotspot (204, 50, 78, 78) action Return("swimming")
-        hotspot (452, 79, 78, 78) action Return("go home")
+        hotspot (204, 50, 78, 78) action Return("gymnase")
+        hotspot (452, 79, 78, 78) action Return("rentrer")
         hotspot (602, 316, 78, 78) action Return("art")
 
 
@@ -574,7 +574,7 @@ label fin_cours:
     call screen demo_imagemap
     window show None
         
-    if _return == "swimming":
+    if _return == "gymnase":
         # $ renpy.block_rollback()
         $ unlocked_journal_pages += 1
         "Et si j'allais faire un peu de sport..."
@@ -593,7 +593,7 @@ label fin_cours:
         "Et si j'allais faire un tour au bâtiments des clubs..."
         call club
 
-    elif _return == "go home":
+    elif _return == "rentrer":
         # $ renpy.block_rollback()
         $ unlocked_journal_pages += 1
         "Je crois que je vais rentrer."

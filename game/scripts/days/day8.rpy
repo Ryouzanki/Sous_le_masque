@@ -279,21 +279,22 @@ label day8:
             $ choix1 = 1
         "Faire semblant d'écrire un truc.":
             # $ renpy.block_rollback()
-            "J'attrape mon style et le pose sur ma feuille."
+            "J'attrape mon stylo et le pose sur ma feuille."
             show prof happy with easeinleft
             "Il s'arrête pile devant moi et... Sourit ?"
             "On dirait qu'il attend quelque chose..."
             menu:
                 "Ecrire des trucs au hasard.":
                     # $ renpy.block_rollback()
-                    p "Oh, je vois que tu as quelques réponses."
-                    p "Vas donc faire la correction au tableau."
+                    p "Oh, je vois que vous avez quelques réponses."
+                    p "Allez donc faire la correction au tableau."
                     m "Mais je..."
-                    p "Ne sois pas modeste. Laisse tes camarades constater l'étandue de ton génie !"
+                    show prof naughty
+                    p "Ne soyez pas modeste. Laissez vos camarades constater l'étandue de votre génie !"
                     scene classroom with fade
                     "Je me déplace vers le tableau mais ne peux rien y écrire."
                     p "Que vois-je ?"
-                    p "Ce tableau est aussi vide que ta tête !"
+                    p "Ce tableau est aussi vide que votre tête !"
                 "Le regarder.":
                     # $ renpy.block_rollback()
                     p "Alors [j] ? Manque d'inspiration ?"
@@ -301,7 +302,8 @@ label day8:
                     p "Je sais. Tu n'as pas compris l'exercice."
                     p "C'est normal, tu passes ton temps à me regarder."
                     "Il pose sa main sur mon épaule ?"
-                    p "Désolé mais, je suis déjà marié."
+                    show prof naugthy
+                    p "Désolé mais... j'aime déjà quelqu'un..."
             "La classe éclate de rire."
             hide prof with easeoutright
             "Je me suis rarement senti[ter] aussi humilié[ter]..."
@@ -314,7 +316,8 @@ label day8:
             "La pose du Penseur de Rodin."
             show prof happy with easeinleft
             "Il se penche vers moi et me chuchotte :"
-            p "Secoue la tête pour voir si ça va connecter tes deux neurones."
+            show prof naughty
+            p "Secouez la tête pour voir si ça va connecter vos deux neurones."
             hide prof with easeoutright
             "Attends... Il vient de dire quoi là ?"
             $ choix1 = 3
@@ -322,14 +325,14 @@ label day8:
     "Enfin la fin du cours..."
     show prof normal with fade
     p "Oh, mais qui voilà ?"
-    p "Que puis-je faire pour toi en tant que prof ?"
+    p "Que puis-je faire pour vous en tant que prof ?"
     if choix1 == 1:
         m "On m'a posé une question à mon arrivée et..."
         show prof annoyed
-        p "On te bizute ?"
+        p "On vous bizute ?"
         m "Non ! Juste que je ne connais pas la réponse."
         m "Et on refuse de me la donner."
-        p "Je t'écoute."
+        p "Je vous écoute."
     elif choix1 == 2:
         m "Vous n'aviez pas besoin de m'humilier en public..."
         show prof happy
@@ -412,7 +415,7 @@ label day8_sport:
     call screen demo_imagemap
     window show None
         
-    if _return == "swimming":
+    if _return == "gymnase":
         # $ renpy.block_rollback()
         "Allons faire du sport..."
         call sport
@@ -434,7 +437,7 @@ label day8_sport:
             "Et si j'allais faire un tour au bâtiments des clubs..."
         call club
 
-    elif _return == "go home":
+    elif _return == "rentrer":
         # $ renpy.block_rollback()
         "Je crois que je vais rentrer."
         call go_home
