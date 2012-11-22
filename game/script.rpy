@@ -132,7 +132,7 @@ label route:
     $ p = DynamicCharacter("proftroll", color="#2b2a64", show_two_window=True)
     $ n = DynamicCharacter("boul", color="#fd5f6e", show_two_window=True)
     $ weekday2='Dimanche'
-    $ day2='20'
+    $ day2='19'
     $ month2='Mars'
     # $ a = Character('Alice',
                 # color="#228B22",

@@ -14,6 +14,7 @@ init python:
     mr.add("music/alice1.mp3")
     mr.add("music/joueur1.mp3")
     mr.add("music/shadow1.wav")
+    mr.add("music/bal des ombres.wav")
     mr.add("music/shadow end.mp3")
     mr.add("music/prof1.mp3")
     mr.add("music/prof2.mp3", always_unlocked=True)
@@ -69,6 +70,7 @@ screen music_room:
                 textbutton "Action" action mr.Play("music/jeux2.mp3")
                 textbutton "Méditation" action mr.Play("music/thinking1.wav")
                 textbutton "Réflexion intense" action mr.Play("music/thinking2.wav")
+                textbutton "Le bal des ombres" action mr.Play("music/bal des ombres.wav")
                 
                 textbutton "Démarrage en douceur" action mr.Play("music/matin1.mp3")
                 textbutton "Temps libre" action mr.Play("music/jour1.ogg")

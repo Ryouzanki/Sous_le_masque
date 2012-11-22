@@ -307,9 +307,11 @@ label day10q:
         "Assez bizarres...":
             # $ renpy.block_rollback()
             extend "Assez bizarres..."
+            
         "Scolaires, rien d'intéressants.":
             # $ renpy.block_rollback()
             extend "Scolaires, rien d'intéressants."
+            m "Il m'a parlé de mes anciennes notes."
          
 label day10_fin:
     play music (joueur1) fadein 2

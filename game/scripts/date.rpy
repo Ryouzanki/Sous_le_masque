@@ -8,7 +8,7 @@ init python:
         MONTHS = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
                 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']
                 
-        def __init__(self, epoch=None, year=2011, month=3, day=20, meteo=None):
+        def __init__(self, epoch=None, year=1939, month=3, day=19, meteo=None):
             self.meteo = meteo or [choice(['sunny', 'snowy', 'thunder', 'cloudy'])
                                     for i in xrange(365)]
             self.epoch = epoch or datetime(year, month, day)

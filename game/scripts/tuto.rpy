@@ -42,7 +42,7 @@ label tuto:
     define v = Character('Valeth', color="#800080", show_two_window=True)
     define y = Character('Lloyd', color="#FF8C00", show_two_window=True)
     define a =  Character('Alice', color="#228B22", show_two_window=True)
-    define s = Character('Shadow', color="#778899", show_two_window=True)
+    define ss = Character('Shadow', color="#778899", show_two_window=True)
     window show
     show ryou angry with easeinright
     r "Heu... Où est-ce que je suis là..."
@@ -203,16 +203,16 @@ label tuto_sha :
     r "Oh nan..."
     hide ryou with easeoutleft
     show shadow ombre with easeinleft
-    s "Héhéhé..."
-    s "A peine le jeu commencé et ça parle de finir le jeu ?"
-    s "Le jeu comporte 0 fin et 8 à venir."
-    s "2 très bonne, 2 bonnes et 4 mauvaises."
-    s "Voir des CG et entendres des musiques les débloque dans la galerie (à faire)."
-    s "Les très bonnes fins débloquent une route mirroir ou le personnage principal ne sera pas le même."
-    s "Gagner le jeu avec une bonne fin ou plus débloque un set de graphisme \"amélioré\"."
-    s "Je ne vois rien d'autre à ajouter."
-    s "Tu verra quand tu me battra..."
-    s "A supposer que cela soit possible..."
+    ss "Héhéhé..."
+    ss "A peine le jeu commencé et ça parle de finir le jeu ?"
+    ss "Le jeu comporte 0 fin et 8 à venir."
+    ss "2 très bonne, 2 bonnes et 4 mauvaises."
+    ss "Voir des CG et entendres des musiques les débloque dans la galerie (à faire)."
+    ss "Les très bonnes fins débloquent une route mirroir ou le personnage principal ne sera pas le même."
+    ss "Gagner le jeu avec une bonne fin ou plus débloque un set de graphisme \"amélioré\"."
+    ss "Je ne vois rien d'autre à ajouter."
+    ss "Tu verra quand tu me battra..."
+    ss "A supposer que cela soit possible..."
     hide shadow with easeoutleft
     return
 label tuto_ali :
