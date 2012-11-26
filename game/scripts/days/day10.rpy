@@ -236,9 +236,9 @@ label day10q:
                     # $ renpy.block_rollback()
                     ma "Ce n'est pas naïf mais réaliste !"
                     show prof happy
-                    p "C'est la raison pour laquelle les scientifques ne dirigent pas notre pays."
+                    p "C'est la raison pour laquelle les scientifiques ne dirigent pas notre pays."
                     p "Parce que les humains, nos victimes ici, ne sont pas que des variables chiffrées."
-                    p "Parce que les humains, vous ici, n'êtes pas un algorithme sans coeur."
+                    p "Parce que les humains, vous ici, ne sont pas des algorithmes sans coeur."
                     p "Le jour où ça arrivera, je vous souhaite de faire un choix que vous ne regretterez pas."
                 "C'est le meilleur choix possible !":
                     # $ renpy.block_rollback()
@@ -296,6 +296,7 @@ label day10q:
                     p "Les gens comme vous sont si rares..."
     show prof happy    
     p "Aller, vous pouvez disposer."
+    play music (jour1) fadein 2
     scene classroom
     show ryou normal at left
     show elusia sad at right
@@ -307,21 +308,182 @@ label day10q:
         "Assez bizarres...":
             # $ renpy.block_rollback()
             extend "Assez bizarres..."
-            
+            show ryou happy
+            r "Genre des dilemnes ?"
+            show elusia surprised
+            e "Hein ?"
+            m "Oui."
+            show elusia sad
+            show ryou normal
+            r "T'en fais pas, tes réponses ne nous concernent pas."
+            m "Effectivement."
         "Scolaires, rien d'intéressants.":
             # $ renpy.block_rollback()
+            $ rel_ryou -= 3
             extend "Scolaires, rien d'intéressants."
             m "Il m'a parlé de mes anciennes notes."
-         
+            m "Rien de bien captivant."
+            show ryou surprised
+            r "OK."
+    show ryou normal
+    r "Bon !"
+    r "On va faire un jeu au club ?"
+    show elusia normal
+    e "Avec plaisir, j'ai pas sport aujourd'hui."
+    if (rel_lulu < 50) or (rel_ryou < 50):
+        show ryou sad
+        r "Mince, j'ai quelque chose d'important de prévu..."
+        r "Vraiment désolé alors que c'est moi qui avait proposé..."
+        r "Je dois y aller, bye !"
+        hide ryou with easeoutleft
+        e "Bon et bien... On rentre ?"
+        m "D'accord..."
+        jump day10_fin
+    
+label day10_anniv: # Visible si on s'entend avec Elusia ET Ryouzanki a 50+
+    r "Tu peux voir Valeth réserver le jeu de ton choix."
+    r "Et potentiellement inviter Alice."
+    if bite:
+        r "Nous on doit discuter un moment."
+        r "Entre hommes..."
+        show elusia satisfied
+        e "Hu hu..."
+        e "Et de quoi exactement ?"
+        show elusia normal
+        e "Une discution d'homme à homme n'existe pas !"
+    else:
+        r "J'ai quelque chose d'important à dire à [j]."
+        r "En tête à tête."
+        show elusia sad
+        e "Un secret que même moi je ne peux pas entendre ?"
+        e "Alors que nous sommes tous amis ?"
+    show ryou sad
+    r "Et bien en fait..."
+    show ryou sad at Position(xpos=0.6) with move
+    "Ryouzanki se penche sur Elusia et lui chuchotte quelque chose à l'oreille."
+    show elusia embarassed with dissolve
+    e "Wawawawa~ !!!"
+    e "Je devais aller voir Alice, c'est vrai !"
+    e "A tout' !"
+    hide elusia with easeoutleft
+    show ryou happy
+    menu:
+        "De quoi voulais tu parler ?":
+            # $ renpy.block_rollback()
+            m "De quoi voulais tu parler ?"
+        "Que lui as tu dit ?":
+            # $ renpy.block_rollback()
+            m "Que lui as tu dit ?"
+            show ryou surprised
+            r "Des choses que tu ne voudrais même pas savoir !"
+            show ryou normal
+            r "Mais ce n'est pas important."
+            r "Ce qui est important, c'est ce que je voulais te dire."
+            r "Et que je ne voulais pas qu'elle sache."
+            show ryou sad 
+            r "Même si en toute logique, elle le sait déjà."
+    show ryou normal
+    r "Demain, c'est son anniversaire."
+    r "Bien sûr, tu ne le savais probablement pas."
+    r "Alors je te propose que demain matin avant d'aller en cours, on aille acheter un gâteau."
+    r "On le mangerait lors de la pause de midi vu que le soir elle le fêtera avec sa famille."
+    menu:
+        "T'aurais pas oublié son anniversaire par hasard ?":
+            # $ renpy.block_rollback()
+            m "T'aurais pas oublié son anniversaire par hasard ?"
+            show ryou happy
+            r "Chut !"
+            r "Pour la peine, t'ira chercher le gâteau tout[ter] seul[ter] !"
+            mh "Marrant tiens..."
+        "Et donc on s'organise comment ?":
+            # $ renpy.block_rollback()
+            m "Et donc on s'organise comment ?"
+            r "A priori, t'ira chercher le gâteau tout[ter] seul[ter]."
+    m "Et pourquoi ?"
+    show ryou sad
+    r "Parce que le gâteau, il a pas d'aile."
+    mh "Autre chose ?"
+    r "Parce qu'un gateau n'est pas pratique à transporter discrètement."
+    r "Parce qu'il faut que l'un d'entre nous ailles en cours avec elle pour lui dire de pas attendre l'autre."
+    show ryou normal
+    r "Et pourquoi moi ?"
+    r "Parce que je suis plus proche d'elle que toi."
+    r "Et que donc si c'est toi l'absent[ter], c'est moins suspect !"
+    m "OK."
+    "Il me tend un billet."
+    show ryou surprised
+    r "Tiens, je t'avance ma part."
+    r "Je m'en remets à tes goûts !"
+    r "Allons rejoindre les autre à présent."
+    play music (club1) fadein 2
+    scene salledart
+    show elusia shy at left
+    show ryou normal at Position(xpos=0.4)
+    show valeth normal at Position(xpos=0.6)
+    show alice normal at right
+    with fade
+    r "Tiens, y'a même Alice !"
+    show alice geez
+    a "Et oui, ça m'arrive de sortir de mon labo."
+    v "J'crois qu'elle attends juste que son PC compile un truc."
+    show alice angry
+    a "Je suppose que c'est vrai."
+    show valeth happy
+    v "T'en fais pas va, on est quand même content de te voir !"
+    show elusia timid
+    "Elusia s'approche de moi et me chuchotte."
+    e "Dis [j]..."
+    e "Alors maintenant, toi et Ryou formez un couple ?"
+    m "..."
+    "Oh non, il n'aurait quand même pas..."
+    menu:
+        "Lancer un regard sexy à Ryouzanki.":
+            # $ renpy.block_rollback()
+            $ rel_ryou += 5
+            show ryou surprised
+            r "Quoi ?"
+            mh "Devine, mon chou."
+            "Il réfléchit un instant."
+            show ryou happy
+            "Puis il éclate de rire."
+            "Je ne peux pas m'empêcher de rire à mon tour."
+            show elusia geez
+            e "Alors tout ceci n'était qu'une blague..."
+        "Lancer un regard affolé à Ryouzanki.":
+            # $ renpy.block_rollback()
+            $ rel_ryou += 3
+            show ryou surprised
+            "Il me regarde droit dans les yeux."
+            show ryou happy
+            "Puis il éclate de rire."
+            "Oh non, il l'a vraiment fait..."
+        "Lancer un regard furieux à Ryouzanki.":
+            # $ renpy.block_rollback()
+            show ryou surprised
+            "Il me regarde droit dans les yeux."
+            show ryou happy
+            "Puis il éclate de rire."
+            "Oh non, il l'a vraiment fait..."
+    show alice normal
+    a "Intéressant..."
+    show valeth normal
+    v "Qu'est ce qu'ils font ?"
+    a "Je crois comprendre et je peux t'assurer qu'il vaudrait mieux que tu l'ignores."
+    v "Si tu le dis."
+    "Puis, nous avons fait des jeux de société jusqu'à ce qu'Alice s'en ailles."
+    "A ce moment, nous sommes rentrés chez nous."
 label day10_fin:
     play music (joueur1) fadein 2
     scene couloir with fade
     play sound "sound/dooropen.mp3"
     pause(1)
-    "Ouf, je suis épuisé[ter]..."
-    "9 eme jour fini."
     scene chambre m with fade
     play sound "sound/doorclose.mp3"
-    "Je vais dormir tôt."
+    "Hop, couchons nous tôt !"
+    "9 eme jour fini."
+    if (rel_lulu < 50) or (rel_ryou < 50):
+        "Il faudra que je me lève un peu plus tôt pour acheter le gateau."
+    else:
+        "Je n'ai rien de mieux à faire après tout..."
     stop music
     return

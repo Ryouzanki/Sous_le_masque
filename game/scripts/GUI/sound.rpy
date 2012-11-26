@@ -17,7 +17,7 @@ init python:
     mr.add("music/bal des ombres.wav")
     mr.add("music/shadow end.mp3")
     mr.add("music/prof1.mp3")
-    mr.add("music/prof2.mp3", always_unlocked=True)
+    mr.add("music/prof2.mp3")
     mr.add("music/prof3.mp3")
     mr.add("music/laura1.mp3")
     # Thème autres

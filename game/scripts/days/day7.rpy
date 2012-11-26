@@ -410,6 +410,7 @@ label day7_lulu:
                             $ rel_lulu += 2
                             mh "Nan, t'es mignonne quand tu rougis."
                             show elusia embarassed sport
+                            e "Wawawawa~ !!!"
                             e "Mais qu'est ce qui te prends de dire des trucs pareils !"
                             e "C'est pas le moment de me déconcentrer !"
                             show elusia timid sport                    
