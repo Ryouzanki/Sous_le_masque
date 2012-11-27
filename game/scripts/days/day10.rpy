@@ -447,7 +447,7 @@ label day10_anniv: # Visible si on s'entend avec Elusia ET Ryouzanki a 50+
             show ryou happy
             "Puis il éclate de rire."
             "Je ne peux pas m'empêcher de rire à mon tour."
-            show elusia geez
+            show elusia geez with dissolve
             e "Alors tout ceci n'était qu'une blague..."
         "Lancer un regard affolé à Ryouzanki.":
             # $ renpy.block_rollback()
@@ -482,8 +482,8 @@ label day10_fin:
     "Hop, couchons nous tôt !"
     "9 eme jour fini."
     if (rel_lulu < 50) or (rel_ryou < 50):
-        "Il faudra que je me lève un peu plus tôt pour acheter le gateau."
-    else:
         "Je n'ai rien de mieux à faire après tout..."
+    else:
+        "Il faudra que je me lève un peu plus tôt pour acheter le gateau."
     stop music
     return

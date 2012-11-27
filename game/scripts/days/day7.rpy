@@ -1569,7 +1569,7 @@ label day7commandemoi:
                     e "Nan mais sinon, j'avais ma bouteille hein..."
                     show ryou surprised
                     r "Wouh... Un baiser indirecte de la belle Elusia..."
-                    show elusia embarrased
+                    show elusia embarrased sport
                     e "N'importe quoi !"
                     $ choix1 = "eau"
                 "Un sirop.":
@@ -1580,7 +1580,7 @@ label day7commandemoi:
                     show ryou sad
                     r "Roooh"
                     r "Tu viens pas dans un bar pour prendre du sirop..."
-                    show elusia geez
+                    show elusia geez sport
                     e "Bah, [sexe] boit ce qu'[sexe] veut hein..."
                     $ choix1 = "sirop"
                 "Un milkshake.":
@@ -1600,13 +1600,13 @@ label day7commandemoi:
                     l "Oh, un autre drogué !"
                     show ryou angry
                     r "Hey, j'ai arrêté d'en boire !"
-                    show elusia satisfied
+                    show elusia satisfied sport
                     e "Le café, c'est pas forcément mieux..."
                     $ choix1 = "soda"
         "Vous vendez de l'alcool ?":
             # $ renpy.block_rollback()
             m "Vous vendez de l'alcool ?"
-            show elusia surprised
+            show elusia surprised sport
             e "J'en connais qui vont se plaindre de courbatures après..."
             $ choix4 = True
             pnj "Bien sûr !"

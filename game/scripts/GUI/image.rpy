@@ -99,9 +99,17 @@ image prof naughty = "CG/prof naughty.png"
 
 # Une boulangère
 image nephie normal = "CG/nephie normal.png"
+image nephie sad = "CG/nephie sad.png"
+image nephie happy = "CG/nephie happy.png"
+image nephie angry = "CG/nephie angry.png"
+image nephie vhappy = "CG/nephie vhappy.png"
+image nephie surprised = "CG/nephie surprised.png"
 
 
 ## background
+
+# GCG
+image boulangere = "back/boulangere.jpg"
 
 # Cité universitaire
 image chambre m = "back/m_chambre.jpg"
@@ -129,6 +137,7 @@ image toit = "back/toit.jpg"
 image street = "back/street.jpg"
 image parc = "back/parc.jpg"
 image pub = "back/bar.jpg"
+image boulangerie = "back/boulangerie.jpg"
 
 # Autres
 image black = "#000000"
@@ -176,6 +185,7 @@ define shadow3 = "music/shadow end.mp3"
 define prof1 = "music/prof1.mp3"
 define prof2 = "music/prof2.mp3"
 define prof3 = "music/prof3.mp3"
+define nephie1 = "music/SMILE.mp3"
 
 # Thème autres
 define matin1 = "music/matin1.mp3"

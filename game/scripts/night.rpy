@@ -130,6 +130,8 @@ label night:
         jump night4
     elif date_manager.get_day() == 7:
         jump night8
+    elif date_manager.get_day() == 10:
+        jump night11
     else:
         jump fin_night
 
@@ -153,7 +155,17 @@ label night8:
     s "Je vais les briser en miette un à un..."
     hide shadow with fade
     jump fin_night
-
+    
+label night11:
+    show shadow ombre with fade
+    s "Aller chercher un gâteau..."
+    s "Comme c'est stupide..."
+    s "Mais voyons le résultat."
+    s "Je pourrais peut être bientôt me servir de toi."
+    s "Mais en attendant, profite bien..."
+    hide shadow with fade
+    jump fin_night
+    
 label fin_night:
     # $ dayyy = date_manager.datetime.day
     # $ monthh = date_manager.datetime.month

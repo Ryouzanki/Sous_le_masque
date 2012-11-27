@@ -20,6 +20,7 @@ init python:
     mr.add("music/prof2.mp3")
     mr.add("music/prof3.mp3")
     mr.add("music/laura1.mp3")
+    mr.add("music/SMILE.mp3")
     # Thème autres
     mr.add("music/matin1.mp3")
     mr.add("music/jour1.ogg")
@@ -71,7 +72,7 @@ screen music_room:
                 textbutton "Méditation" action mr.Play("music/thinking1.wav")
                 textbutton "Réflexion intense" action mr.Play("music/thinking2.wav")
                 textbutton "Le bal des ombres" action mr.Play("music/bal des ombres.wav")
-                
+                textbutton "Sourire du matin" action mr.Play("music/SMILE.mp3")
                 textbutton "Démarrage en douceur" action mr.Play("music/matin1.mp3")
                 textbutton "Temps libre" action mr.Play("music/jour1.ogg")
                 textbutton "Journée de repos" action mr.Play("music/weekend1.mp3")

@@ -118,7 +118,7 @@ label route:
     $ sha = '???'
     $ pnjj = 'osef'
     $ proftroll = 'Professeur Laroijesea'
-    $ boul = 'Jeune femme'
+    $ boul = 'Boulangère'
     $ persistent.preums = True
     $ mm = DynamicCharacter("j", color="#58D3F7", show_two_window=True)
     $ r = DynamicCharacter("inc", color="#4169E1", show_two_window=True)
@@ -170,6 +170,8 @@ label route:
     call day9
     call night
     call day10
+    call night
+    call day11
 label end:
     r "Fin du jeu"
     $ persistent.ending = "win"

@@ -15,8 +15,8 @@ init python:
     # transform to the first image.
     g.button("sunny")
     g.unlock_image("classroom")
-    g.unlock_image("tennis")
-    g.unlock_image("ru")
+    g.unlock_image("boulangerie","nephie normal")
+    g.unlock_image("boulangere")
 
     # # This button has a condition associated with it, allowing code
     # # to choose which images unlock.
