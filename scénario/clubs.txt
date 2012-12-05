@@ -1,10 +1,14 @@
-Club de culture *******************************************************************************************
+Ludothèque des élèves *************************************************************************************
 
 Président : Valeth
 
-Activités : Club qui rassemble un grand nombre de jeux de société. le club est ouvert à tous, mais il n'est pas très fréquenté. Valeth ne fait pas beaucoup d'effort pour promouvoir son club.
+Activités : Club qui rassemble un grand nombre de jeux de société. Le club est ouvert à tous, mais il n'est pas très fréquenté. Valeth ne fait pas beaucoup d'effort pour promouvoir son club.
 
 Défauts exploitables : manque de communication, inactivité organisatrice de Valeth, faible fréquentation, orientation vers les échecs poussée par Valeth
+
+Effectifs : 1 personne régulière, 4 personnes sporadiques du à la faible activité du club
+
+Action de GM : il met en relief la faible popularité du club qu'il impute à Valeth et sa molesse (et aussi à sa passion pour Dragon King 4). Il considère que Valeth est un membre honête, mais qu'il n'a pas sa place de dirigeant et qu'il devrait décliner ses responsabilités au profit d'autres membres plus actifs (Valeth ne délègue aucune tâche de son club à aucun membre). Après plusieurs discussions à ce sujet, GM propose au joueur des idées qu'il a imaginées pour rendre le club plus visible : publication de tracts, organisation de tournois... Il veut impliquer le joueur (et les autres membres) contre Valeth en proposant des idées que ces derniers appliqueront (de cette façon, il ne se met pas au premier plan). Valeth donne son accord à la réalisation de ces actions et les membres du club se tournent plus naturellement vers GM pour savoir comment faire. Ses idées rencontrent un certain succès et quelque chose comme 5 personnes rejoignent le club, mais plus pour y passer du temps que pour y jouer (Lloyd, par exemple, y vient pour écouter de la musique et aprfois jouer du violon). Valeth est mis à l'écart, mais il ne s'en rend pas compte. Si le joueur n'intervient pas, un membre se dispute avec Valeth, qui se plaint de la surfréquentation inutile du club. Valeth n'est plus soutenu par les membres du club et ces derniers demandent à GM de reprendre la présidence, Valeth est forcé de démisionner. Si le joueur intervient, c'est lui qui se dispute avec Valeth au sujet de son désientéret sur l'activité de son club. Il lui révèle que GM souhaite le destituer, Valet prend peur (c'est la première fois qu'il se sent directement menacé). Pour reprendre de l'importance au sein de son club, il entreprend avec le joueur quelques actions, la première étant de ranger le local et d'en changer la disposition des meubles. Valeth discute avec les autres membres et les range de son côté en leur proposant de prendre des responsabilités (GM excepté). Il parle de Dragon King aux autres membres du club et ceux-ci y adèrent facilement. L'engouement passe au club informatique. Valeth est plus proche des membres de son club et GM a moins d'emprise pour le discréditer. Il disparait complètement du paysage.
 
 Club de chimie ********************************************************************************************
 
@@ -22,11 +26,21 @@ Activités : Le club dans lequel Alice est la plus active. Il participe à diver
 
 Défauts exploitables : ambiance de compétition que met Alice dans le club, départ de quelques membres suite à ça, le club n'est malgré tout pas premier
 
+Action de GM :
+
+Club de informatique **************************************************************************************
+
 Club orchestre ********************************************************************************************
 
 Président : Aucun
 Trésorier : Lloyd
 
-Activités : Orchestre de l'école, joue quelque fois pour les grandes occasions, mais en état d'anarchie complet. Le club n'a plus de chef d'orchestre, deux courants se sont formés entre ceux qui veulent jouer malgré tout (lui-même fortement divisé) et ceux qui veulent attendre un nouveau chef. Le président a démissionné suite à la situation ingérable du club. Depuis, le club se retrouve sporadiquement pour répéter les morceaux habituels, mais il n'y a aucune solution. Lloyd a rapidement pris ses distances tant en tant que clarinettiste qu'en tant que trésorier.
+Effectifs : 6 cordes, 12 cuivres, 3 percussions, 20 bois, 4 divers
+
+Activités : Orchestre de l'école, joue quelque fois pour les grandes occasions, mais en état d'anarchie complet. Le club n'a plus de chef d'orchestre, deux courants se sont formés entre ceux qui veulent jouer malgré tout (lui-même fortement divisé, composé des cuivres, des bois et des percussions) et ceux qui veulent attendre un nouveau chef (principalement composé des cordes). Le président a démissionné suite à la situation ingérable du club. Depuis, le club se retrouve sporadiquement pour répéter les morceaux habituels, mais il n'y a aucune solution. Lloyd a rapidement pris ses distances tant en tant que violoniste qu'en tant que trésorier.
 
 Défauts exploitables : situation du club, départ du président, silence du trésorier, multiples branches
+
+Action de GM : il fait savoir à qui veut l'entendre que la situation du club n'est pas tolérable et que le trésorier devrait faire quelque chose. Il parle avec Lloyd d'un professeur de musique accessoirement chef d'orchestre dont il a entendu parler, dans la ville, et lui donne ses coordonnées. Il s'égit en réalité d'un professeur du conservatoire aux honoraires élevés. GM le sait et espère que Lloyd fera appel à lui sans chercher d'autre professeur, sachant que la trésorerie de l'orchestre ne le permet pas, ce qui l'obligera à demander une cotisation aux membres du club. C'est ce que fait Lloyd et la proposition est mal perçue par le club. Pour enfoncer le clou, GM cherche à isoler Lloyd en tant que musicien. Les cordes (dont fait partie Lloyd) sont minoritaires et préfèrent attendre un chef d'orchestre pour jouer. GM conseile aux autres instrumentistes de jouer sans eux, faisant de l'orchestre un orchestre d'harmonie. Le courant prend forme et tous els violonistes sont mis à l'écart. certains d'netre eux montent un club indépendant de musique de chambre. L'idée se séparer des éléments gênants fait mouche et les cuivres décident de se séparer du reste afin de monter une fanfare. GM n'avait pas prévu cette éventualité et perd le contrôle de la situation. Beaucoup de membres quittent les différentes formations avant que celles-ci n'implosent. GM s'écarte du club qui n'existe plus officellement.
+
+Clubs de sport ********************************************************************************************
