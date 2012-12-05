@@ -1,5 +1,33 @@
 label day11:
     if (rel_lulu < 50) or (rel_ryou < 50):
+        scene reveil with fade
+        play sound "sound/clock.mp3"
+        ma "..."
+        stop sound
+        play music (joueur1) fadein 2
+        m "Allons-y."
+        play sound "sound/bell.mp3"
+        m "Ils viennent toujours au moment ou je vais partir..."
+        play sound "sound/dooropen.mp3"
+        scene couloir
+        show elusia geez:
+            right
+        with fade
+        show elusia sad
+        e "Salutations !"
+        m "Salut !"
+        menu:
+            "Et Ryouzanki ?":
+                # $ renpy.block_rollback()
+                $ rel_lulu += 2
+                m "Et Ryouzanki ?"
+                show elusia geez at center with move
+                e "Il est déjà partit. Il avait quelque chose à régler."
+            "On y va ?":
+                # $ renpy.block_rollback()
+                $ rel_lulu -= 2
+                jump day5_solo
+        $ choix1 = 0
         jump day11_classe
     scene reveil with fade
     play sound "sound/clock.mp3"
@@ -94,7 +122,8 @@ label day11_nephie:
                                             "J'ai un très mauvais pressentiment."
                                             "Je devrais revenir sur mes pas."
                                             "Mais je n'ai plus vraiment le temps."
-                                            jump day11_bad
+                                            $ choix1 = 0
+                                            jump day11_classe
                                         "(Faire un achat)":
                                             # $ renpy.block_rollback()
                                             m "Bon d'accord, je vais acheter quelque chose avant de partir."
@@ -125,7 +154,8 @@ label day11_nephie:
                     show nephie sad
                     n "Mais attends !"
                     n "Je mords pas les gens !"
-                    jump day11_bad
+                    $ choix1 = 0
+                    jump day11_classe
                 "Acheter quelque chose.":
                     # $ renpy.block_rollback()
                     m "Bonjour !"
@@ -141,7 +171,8 @@ label day11_nephie:
                     show nephie vhappy
                     n "Et le voilà !"
                     m "Merci, au revoir."
-                    jump day11_like_a_boss
+                    $ choix1 = 1
+                    jump day11_classe
     show nephie vhappy
     n "Tu vois ce gâteau aux fraises ?"
     m "Il est un peu cher pour un[ter] étudiant[ter]..."
@@ -201,13 +232,95 @@ label day11_nephie:
     show nephie vhappy
     n "Bref, voilà ton gâteau. Amusez vous bien !"
     mh "Merci, au revoir !"
-label day11_like_a_boss:
-    # AWESOME CAKE
-    # boul == 'Néphénie'   <==>    AWESOME CAKE
-    # Else : Cake normal
-label day11_bad:
-    # label ou on a pas buy le cake D:
+    $ choix1 = 2
 label day11_classe:
-    # label ou l'anniv d'elusia n'a pas lieu
-    # EH et RZ lachent Minato qui se retrouve avec Laura
-    # Laura mange avec lui et lui explique pourquoi ils sont seuls
+    play music (matin1) fadein 2
+    scene classroom with fade
+    "Un cours bien ennuyeux..."
+    if choix1 == 0:
+        "Une fois le cours terminé, Ryouzanki et vient me voir."
+        show ryou sad with easeinright
+        r "On a une chose importante à faire, mange sans nous."
+        r "A plus !"
+        hide ryou with easeoutright
+        if rel_lolo > 20:
+            show laura normal with easeinright
+            l "Hey !"
+            l "On dirait bien que toi aussi t'es tout[ter] seul[ter] aujourd'hui..."
+            m "Oh, bonjour Laura."
+            menu:
+                "Tu n'es pas avec Valeth ?":
+                    # $ renpy.block_rollback()
+                    $ rel_lolo += 3
+                    m "Tu n'es pas avec Valeth ?"
+                    show laura sad
+                    l "Non. Il est avec les autres."
+                    menu:
+                        "Oh... Pas sympa...":
+                            # $ renpy.block_rollback()
+                            $ rel_lolo += 3
+                            m "Oh... Pas sympa..."
+                            show laura sad
+                            l "A vrai dire..."
+                            l "Je lui ai demandé d'y aller sans moi..."
+                        "Tu n'y es pas allée ?":
+                            # $ renpy.block_rollback()
+                            m "Tu n'y es pas allée ?"
+                            show laura sad
+                            l "Non, j'aurais été de trop."
+                "Tu sais ce qu'ils ont à faire ?":
+                    # $ renpy.block_rollback()
+                    m "Tu sais ce qu'ils ont à faire ?"
+                    show laura sad
+                    l "Oui."
+                    l "Ils vont fêter l'anniversaire d'Elusia."
+                    l "Il semblerait que tu ne t'entendes pas autant avec eux que je le pensais..."
+            show laura normal
+            l "Bon, j'ai faim."
+            l "On va manger ensemble ?"
+            menu:
+                "Bien sur.":
+                    # $ renpy.block_rollback()
+                    $ rel_lolo += 5
+                    mh "Bien sur."
+                    l "Allons-y alors."
+                    jump day11_ru_laura
+                "Une autre fois.":
+                    # $ renpy.block_rollback()
+                    m "Une autre fois."
+                    l "Tant pis, je vais rejoindre les autres."
+                    jump day11_ru_solo
+        else:
+            scene ru with fade
+            m "Ca fait un bail que je ne me suis pas retrouvé[ter] seul[ter]."
+            m "C'est presque... Triste."
+            m "J'ai l'impression de ne pas avoir d'amis."
+            jump day11_aprem
+label day11_anniv:
+label day11_ru_laura:
+    scene ru
+    show laura normal
+    with fade
+    l "Tu sais..."
+    if rel_ryou > 50:
+        l "Je crois que Ryou t'aime bien."
+        l "Mais il a peur que ce ne soit pas le cas d'Elusia."
+        l "Et vu que c'est son anniversaire..."
+    elif rel_lulu > 50:
+        l "Je crois qu'Elusia t'aime bien."
+        l "Mais ce n'est pas le cas de Ryou."
+        l "Et c'est lui qui organise ce genre de chose."
+    else:
+        l "Ces deux là ne t'apprécient pas plus que ça..."
+        l "Ils sont pourtant très gentils avec tout le monde."
+        l "Tu devrais y mettre du tien."
+    m "Je comprends."
+    jump day11_aprem
+label day11_ru_solo:
+    scene ru with fade
+    m "..."
+    m "Je devrais peut-être moins faire l'associal[ter]..."
+    jump day11_aprem
+label day11_aprem:
+    
+    

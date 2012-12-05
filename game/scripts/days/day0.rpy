@@ -16,7 +16,7 @@ label day0:
     "Je secoue ma tête, balayant mes songes."
     "Qui peut bien venir sonner à une heure pareille ?"
     play sound "sound/dooropen.mp3"
-    scene couloir nuit
+    scene couloir
     play music (ryou1) fadein 1
     show ryou angry
     with fade
@@ -200,7 +200,7 @@ label rencontre_tard:
     
 label rencontre_elusia:
     "Nous descendons d'un étage."
-    scene couloir nuit
+    scene couloir
     show ryou happy
     with fade
     r "Voila on y est !"

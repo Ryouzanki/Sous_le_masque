@@ -1,3 +1,15 @@
+### Animated
+
+# Foule
+image foule:
+    "CG/animated/foule1.png"
+    pause 1.0
+    "CG/animated/foule2.png"
+    pause 1.0
+    "CG/animated/foule3.png"
+    pause 1.0
+    repeat
+
 ### Personnages
 
 ## Elusia Hrist
@@ -117,14 +129,13 @@ image chambre e = "back/e_chambre.jpg"
 image chambre r = "back/r_chambre.jpg"
 image chambre m_cartons = "back/m_chambre_cartons.jpg"
 image couloir  = "back/couloir.jpg"
-image couloir nuit = "back/couloir_nuit.png"
 image reveil = "back/reveil.jpg"
 image reveil2 = "back/reveil2.jpg"
 
 # Ecole
 image classroom = "back/ecole_classe.JPG"
 image labo = "back/labo.jpg"
-image ru = "back/ru.JPG"
+image ru = "back/ru.png"
 image gymnase = "back/gymnase.jpg"
 image gymnaseout = "back/gymnaseout.jpg"
 image salledart = "back/salledart.jpg"
@@ -135,7 +146,7 @@ image toit = "back/toit.jpg"
 
 # Ville
 image street = "back/street.jpg"
-image parc = "back/parc.jpg"
+image parc = "back/parc.png"
 image pub = "back/bar.jpg"
 image boulangerie = "back/boulangerie.jpg"
 

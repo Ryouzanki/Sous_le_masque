@@ -104,7 +104,7 @@ label ryou_d1:
     stop music fadeout 5
     scene black with dissolve
     pause 1
-    scene couloir nuit with dissolve
+    scene couloir with dissolve
     "C'est quoi ce bruit ?"
     "C'est à cette heure ci qu'elle déballe ses cartons ?"
     "Quelle stupidité..."
