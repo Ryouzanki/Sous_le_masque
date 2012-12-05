@@ -390,7 +390,7 @@ label day7_lulu:
             # $ renpy.block_rollback()
             mh "Tu es la plus jolie."
             $ rel_lulu += 3
-            show elusia shy sport
+            show elusia shy sport with dissolve
             e "P...Pardon ?!"
             menu:
                 "Ca va, je plaisante...":

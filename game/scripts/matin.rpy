@@ -5,11 +5,13 @@ label matin_sport:
         "ERROR"
         
 label matin_sport1:
-    scene parc with fade
+    scene parc 
     show elusia happy sport
+    with fade
     "Je cours avec Elusia dans le parc."
-    scene parc with fade
+    scene parc 
     show elusia happy sport
+    with fade
     $ vig -= 2
     if vig < 0:
         $ str_points += 2

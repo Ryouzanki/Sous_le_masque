@@ -15,28 +15,68 @@ image foule:
 ## Elusia Hrist
 
 # Elusia en chemise et pull
-image elusia normal = "CG/elusia normal.png"
-image elusia happy = "CG/elusia happy.png"
-image elusia angry = "CG/elusia angry.png"
-image elusia sad = "CG/elusia sad.png"
-image elusia geez = "CG/elusia geez.png"
-image elusia surprised = "CG/elusia surprised.png"
-image elusia satisfied = "CG/elusia satisfied.png"
-image elusia embarassed = "CG/elusia embarassed.png"
-image elusia shy  = "CG/elusia shy.png"
-image elusia timid  = "CG/elusia timid.png"
+image elusia normal = im.Composite((200, 531),
+                                        (0, 50), "CG/elusia casual.png",
+                                        (0, 50), "CG/elusia normal.png")
+image elusia sad = im.Composite((200, 531),
+                                        (0, 50), "CG/elusia casual.png",
+                                        (0, 50), "CG/elusia sad.png")
+image elusia angry = im.Composite((200, 531),
+                                        (0, 50), "CG/elusia casual.png",
+                                        (0, 50), "CG/elusia angry.png")
+image elusia happy = im.Composite((200, 531),
+                                        (0, 50), "CG/elusia casual.png",
+                                        (0, 50), "CG/elusia happy.png")
+image elusia geez = im.Composite((200, 531),
+                                        (0, 50), "CG/elusia casual.png",
+                                        (0, 50), "CG/elusia geez.png")
+image elusia surprised = im.Composite((200, 531),
+                                        (0, 50), "CG/elusia casual.png",
+                                        (0, 50), "CG/elusia surprised.png")
+image elusia satisfied = im.Composite((200, 531),
+                                        (0, 50), "CG/elusia casual.png",
+                                        (0, 50), "CG/elusia satisfied.png")
+image elusia embarassed = im.Composite((200, 531),
+                                        (0, 50), "CG/elusia casual.png",
+                                        (0, 50), "CG/elusia embarassed.png")
+image elusia shy = im.Composite((200, 531),
+                                        (0, 50), "CG/elusia casual.png",
+                                        (0, 50), "CG/elusia shy.png")
+image elusia timid = im.Composite((200, 531),
+                                        (0, 50), "CG/elusia casual.png",
+                                        (0, 50), "CG/elusia timid.png")
 
 # Elusia en tenue de sport
-image elusia normal sport = "CG/elusia sport normal.png"
-image elusia happy sport = "CG/elusia sport happy.png"
-image elusia angry sport = "CG/elusia sport angry.png"
-image elusia sad sport = "CG/elusia sport sad.png"
-image elusia geez sport = "CG/elusia sport geez.png"
-image elusia surprised sport = "CG/elusia sport surprised.png"
-image elusia satisfied sport = "CG/elusia sport satisfied.png"
-image elusia shy sport = "CG/elusia sport shy.png"
-image elusia timid sport = "CG/elusia sport timid.png"
-image elusia embarassed sport = "CG/elusia sport embarassed.png"
+image elusia normal sport = im.Composite((200, 529),
+                                        (0, 50), "CG/elusia sport.png",
+                                        (0, 50), "CG/elusia normal.png")
+image elusia sad sport = im.Composite((200, 529),
+                                        (0, 50), "CG/elusia sport.png",
+                                        (0, 50), "CG/elusia sad.png")
+image elusia angry sport = im.Composite((200, 529),
+                                        (0, 50), "CG/elusia sport.png",
+                                        (0, 50), "CG/elusia angry.png")
+image elusia happy sport = im.Composite((200, 529),
+                                        (0, 50), "CG/elusia sport.png",
+                                        (0, 50), "CG/elusia happy.png")
+image elusia geez sport = im.Composite((200, 529),
+                                        (0, 50), "CG/elusia sport.png",
+                                        (0, 50), "CG/elusia geez.png")
+image elusia surprised sport = im.Composite((200, 529),
+                                        (0, 50), "CG/elusia sport.png",
+                                        (0, 50), "CG/elusia surprised.png")
+image elusia satisfied sport = im.Composite((200, 529),
+                                        (0, 50), "CG/elusia sport.png",
+                                        (0, 50), "CG/elusia satisfied.png")
+image elusia embarassed sport = im.Composite((200, 529),
+                                        (0, 50), "CG/elusia sport.png",
+                                        (0, 50), "CG/elusia embarassed.png")
+image elusia shy sport = im.Composite((200, 529),
+                                        (0, 50), "CG/elusia sport.png",
+                                        (0, 50), "CG/elusia shy.png")
+image elusia timid sport = im.Composite((200, 529),
+                                        (0, 50), "CG/elusia sport.png",
+                                        (0, 50), "CG/elusia timid.png")
 
 ## Laura Meyer
 
