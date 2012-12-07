@@ -122,13 +122,24 @@ image lloyd angry = "CG/lloyd angry.png"
 ## Alice Drezall
 
 # Alice normal
-image alice normal = "CG/alice normal.png"
-image alice happy = "CG/alice happy.png"
-image alice angry = "CG/alice angry.png"
-image alice sad = "CG/alice sad.png"
-image alice geez = "CG/alice geez.png"
-image alice satisfied = "CG/alice satisfied.png"
-
+image alice normal = im.Composite((200, 520),
+                                        (0, 50), "CG/alice scientist.png",
+                                        (0, 50), "CG/alice normal.png")
+image alice sad = im.Composite((200, 520),
+                                        (0, 50), "CG/alice scientist.png",
+                                        (0, 50), "CG/alice sad.png")
+image alice angry = im.Composite((200, 520),
+                                        (0, 50), "CG/alice scientist.png",
+                                        (0, 50), "CG/alice angry.png")
+image alice happy = im.Composite((200, 520),
+                                        (0, 50), "CG/alice scientist.png",
+                                        (0, 50), "CG/alice happy.png")
+image alice geez = im.Composite((200, 520),
+                                        (0, 50), "CG/alice scientist.png",
+                                        (0, 50), "CG/alice geez.png")
+image alice satisfied = im.Composite((200, 520),
+                                        (0, 50), "CG/alice scientist.png",
+                                        (0, 50), "CG/alice satisfied.png")
 ## Salazard Zelgius
 
 # Salazard normal
