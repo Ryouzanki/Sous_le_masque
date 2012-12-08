@@ -1677,7 +1677,7 @@ label day7fincommande:
             m "Oui... J'aime pas trop..."
             $ rel_ryou += 2
             $ rel_lolo += 1
-            show elusia surprised
+            show elusia surprised sport
             e "Oh, mais pourquoi ?"
             menu:
                 m "Eh bien..."

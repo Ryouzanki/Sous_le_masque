@@ -63,12 +63,16 @@ label day11:
     "La voilà."
     "C'est un établissement plutôt modeste mais la vitrine est alléchante."
     "J'entre."
-    "Il n'y a qu'une personne à l'intérieur."
+    "Il n'y a personne à l'intérieur."
     play music (nephie1) fadein 2
+    window hide None
     scene boulangere with fade
+    pause
+    window show None
     "Sauf elle."
     "Cette boulangère là."
     "Mais... Mais !"
+    $ n = DynamicCharacter("boul", color="#fd5f6e", show_two_window=True)
 label day11_nephie:
     menu:
         "Qu'est-ce que tu fais là, Elusia ?":
@@ -156,7 +160,7 @@ label day11_nephie:
                     n "Je mords pas les gens !"
                     $ choix1 = 0
                     jump day11_classe
-                "Acheter quelque chose.":
+                "(Revenir sur ses pas.).":
                     # $ renpy.block_rollback()
                     m "Bonjour !"
                     m "Excusez moi, j'étais ailleurs."
