@@ -172,7 +172,7 @@ image nephie surprised = "CG/nephie surprised.png"
 ## background
 
 # GCG
-image boulangere = "back/boulangere.jpg"
+image boulangere = "back/boulangere.png"
 
 # Cité universitaire
 image chambre m = "back/m_chambre.jpg"
