@@ -161,13 +161,24 @@ image prof dark = "CG/prof dark.png"
 image prof naughty = "CG/prof naughty.png"
 
 # Une boulangère
-image nephie normal = "CG/nephie normal.png"
-image nephie sad = "CG/nephie sad.png"
-image nephie happy = "CG/nephie happy.png"
-image nephie angry = "CG/nephie angry.png"
-image nephie vhappy = "CG/nephie vhappy.png"
-image nephie surprised = "CG/nephie surprised.png"
-
+image nephie normal = im.Composite((200, 529),
+                                        (0, 50), "CG/nephie casual.png",
+                                        (0, 50), "CG/nephie normal.png")
+image nephie sad = im.Composite((200, 529),
+                                        (0, 50), "CG/nephie casual.png",
+                                        (0, 50), "CG/nephie sad.png")
+image nephie angry = im.Composite((200, 529),
+                                        (0, 50), "CG/nephie casual.png",
+                                        (0, 50), "CG/nephie angry.png")
+image nephie happy = im.Composite((200, 529),
+                                        (0, 50), "CG/nephie casual.png",
+                                        (0, 50), "CG/nephie happy.png")
+image nephie vhappy = im.Composite((200, 529),
+                                        (0, 50), "CG/nephie casual.png",
+                                        (0, 50), "CG/nephie vhappy.png")
+image nephie surprised = im.Composite((200, 529),
+                                        (0, 50), "CG/nephie casual.png",
+                                        (0, 50), "CG/nephie surprised.png")
 
 ## background
 

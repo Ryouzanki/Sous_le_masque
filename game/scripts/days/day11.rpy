@@ -79,10 +79,11 @@ label day11_nephie:
             # $ renpy.block_rollback()
             m "Qu'est-ce que tu fais là, Elusia ?"
             scene boulangerie
-            show nephie normal
+            show nephie surprised
             with fade
             n "M~... Moi ?"
             n "Et bien je travaille et toi ?"
+            show nephie normal
             n "Il faut bien payer le loyer !"
             menu:
                 "Attends une minute...":
