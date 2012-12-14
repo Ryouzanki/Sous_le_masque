@@ -81,29 +81,61 @@ image elusia timid sport = im.Composite((200, 529),
 ## Laura Meyer
 
 # Laura normale
-image laura normal = "CG/laura normal.png"
-image laura happy = "CG/laura happy.png"
-image laura angry = "CG/laura angry.png"
-image laura sad = "CG/laura sad.png"
+image laura normal = im.Composite((300, 531),
+                                        (0, 50), "CG/laura casual.png",
+                                        (0, 50), "CG/laura normal.png")
+image laura sad = im.Composite((300, 531),
+                                        (0, 50), "CG/laura casual.png",
+                                        (0, 50), "CG/laura sad.png")
+image laura angry = im.Composite((300, 531),
+                                        (0, 50), "CG/laura casual.png",
+                                        (0, 50), "CG/laura angry.png")
+image laura happy = im.Composite((300, 531),
+                                        (0, 50), "CG/laura casual.png",
+                                        (0, 50), "CG/laura happy.png")
 
 ## Ryouzanki Zeldar
 
 # Ryouzanki normal
-image ryou normal = "CG/ryou normal.png"
-image ryou happy = "CG/ryou happy.png"
-image ryou angry = "CG/ryou angry.png"
-image ryou sad = "CG/ryou sad.png"
-image ryou surprised = "CG/ryou surprised.png"
+image ryou normal = im.Composite((200, 531),
+                                        (0, 50), "CG/ryou casual.png",
+                                        (0, 50), "CG/ryou normal.png")
+image ryou sad = im.Composite((200, 531),
+                                        (0, 50), "CG/ryou casual.png",
+                                        (0, 50), "CG/ryou sad.png")
+image ryou angry = im.Composite((200, 531),
+                                        (0, 50), "CG/ryou casual.png",
+                                        (0, 50), "CG/ryou angry.png")
+image ryou happy = im.Composite((200, 531),
+                                        (0, 50), "CG/ryou casual.png",
+                                        (0, 50), "CG/ryou happy.png")
+image ryou surprised = im.Composite((200, 531),
+                                        (0, 50), "CG/ryou casual.png",
+                                        (0, 50), "CG/ryou surprised.png")
 
 # Ryouzanki shadow
+image shadow contraried = im.Composite((446, 525),
+                                        (0, 50), "CG/shadow casual.png",
+                                        (0, 50), "CG/shadow contraried.png")
+image shadow normal = im.Composite((446, 525),
+                                        (0, 50), "CG/shadow casual.png",
+                                        (0, 50), "CG/shadow normal.png")
+image shadow pity = im.Composite((446, 525),
+                                        (0, 50), "CG/shadow casual.png",
+                                        (0, 50), "CG/shadow pity.png")
+image shadow smirk = im.Composite((446, 525),
+                                        (0, 50), "CG/shadow casual.png",
+                                        (0, 50), "CG/shadow smirk.png")
+image shadow surprised = im.Composite((446, 525),
+                                        (0, 50), "CG/shadow casual.png",
+                                        (0, 50), "CG/shadow surprised.png")
+image shadow afk = im.Composite((446, 525),
+                                        (0, 50), "CG/shadow casual.png",
+                                        (0, 50), "CG/shadow idle.png")
+image shadow hate = im.Composite((446, 525),
+                                        (0, 50), "CG/shadow casual.png",
+                                        (0, 50), "CG/shadow hate.png")
 image shadow ombre = "CG/shadow ombre.png"
-image shadow contraried = "CG/shadow contraried.png"
-image shadow normal = "CG/shadow normal.png"
-image shadow pity = "CG/shadow pity.png"
-image shadow smirk = "CG/shadow smirk.png"
-image shadow surprised = "CG/shadow surprised.png"
-image shadow afk = "CG/shadow idle.png"
-image shadow hate = "CG/shadow hate.png"
     
 ## Valeth Lezard
 
@@ -115,9 +147,15 @@ image valeth angry = "CG/valeth angry.png"
 ## Lloyd Baptiste Reeds de Bellato
 
 # Lloyd normal
-image lloyd normal = "CG/lloyd normal.png"
-image lloyd happy = "CG/lloyd happy.png"
-image lloyd angry = "CG/lloyd angry.png"
+image lloyd normal = im.Composite((200, 531),
+                                        (0, 50), "CG/lloyd casual.png",
+                                        (0, 50), "CG/lloyd normal.png")
+image lloyd angry = im.Composite((200, 531),
+                                        (0, 50), "CG/lloyd casual.png",
+                                        (0, 50), "CG/lloyd angry.png")
+image lloyd happy = im.Composite((200, 531),
+                                        (0, 50), "CG/lloyd casual.png",
+                                        (0, 50), "CG/lloyd happy.png")
 
 ## Alice Drezall
 
@@ -154,11 +192,21 @@ image salazard evil = "CG/salazard evil.png"
 ## Personnages secondaires
 
 # Un prof
-image prof normal = "CG/prof normal.png"
-image prof happy = "CG/prof happy.png"
-image prof annoyed = "CG/prof annoyed.png"
-image prof dark = "CG/prof dark.png"
-image prof naughty = "CG/prof naughty.png"
+image prof normal = im.Composite((200, 529),
+                                        (0, 50), "CG/prof casual.png",
+                                        (0, 50), "CG/prof normal.png")
+image prof annoyed = im.Composite((200, 529),
+                                        (0, 50), "CG/prof casual.png",
+                                        (0, 50), "CG/prof annoyed.png")
+image prof dark = im.Composite((200, 529),
+                                        (0, 50), "CG/prof casual.png",
+                                        (0, 50), "CG/prof dark.png")
+image prof happy = im.Composite((200, 529),
+                                        (0, 50), "CG/prof casual.png",
+                                        (0, 50), "CG/prof happy.png")
+image prof naughty = im.Composite((200, 529),
+                                        (0, 50), "CG/prof casual.png",
+                                        (0, 50), "CG/prof naughty.png")
 
 # Une boulangère
 image nephie normal = im.Composite((200, 529),
