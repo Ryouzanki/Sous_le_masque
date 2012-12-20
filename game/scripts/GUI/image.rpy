@@ -140,9 +140,15 @@ image shadow ombre = "CG/shadow ombre.png"
 ## Valeth Lezard
 
 # Valeth normal
-image valeth normal = "CG/valeth normal.png"
-image valeth happy = "CG/valeth happy.png"
-image valeth angry = "CG/valeth angry.png"
+image valeth normal = im.Composite((200, 510), # 525
+                                        (0, 50), "CG/valeth casual.png",
+                                        (0, 50), "CG/valeth normal.png")
+image valeth angry = im.Composite((200, 510), # 525
+                                        (0, 50), "CG/valeth casual.png",
+                                        (0, 50), "CG/valeth angry.png")
+image valeth happy = im.Composite((200, 510), # 525
+                                        (0, 50), "CG/valeth casual.png",
+                                        (0, 50), "CG/valeth happy.png")
 
 ## Lloyd Baptiste Reeds de Bellato
 
