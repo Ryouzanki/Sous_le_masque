@@ -123,25 +123,25 @@ label day9map:
     window show None
         
     if _return == "gymnase":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         $ unlocked_journal_pages += 1
         "Il n'y a pas sport mardi."
         jump day9map
     
     elif _return == "science":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         $ unlocked_journal_pages += 1
         "J'irais bien voir Alice."
         call labo
         
     elif _return == "art":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         $ unlocked_journal_pages += 1
         "Et si j'allais voir Valeth..."
         call club
 
     elif _return == "rentrer":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         $ unlocked_journal_pages += 1
         "Je crois que je vais rentrer."
         call go_home

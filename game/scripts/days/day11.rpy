@@ -1,3 +1,9 @@
+# choix 1
+# 0 -> pas de gateaux et pas au courant
+# 1 -> pas de gateaux mais au courant
+# 2 -> gateaux
+# 3 -> awesome cake
+
 label day11:
     if (rel_lulu < 50) or (rel_ryou < 50):
         scene reveil with fade
@@ -18,15 +24,14 @@ label day11:
         m "Salut !"
         menu:
             "Et Ryouzanki ?":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 $ rel_lulu += 2
                 m "Et Ryouzanki ?"
                 show elusia geez at center with move
                 e "Il est déjà partit. Il avait quelque chose à régler."
             "On y va ?":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 $ rel_lulu -= 2
-                jump day5_solo
         $ choix1 = 0
         jump day11_classe
     scene reveil with fade
@@ -76,7 +81,7 @@ label day11:
 label day11_nephie:
     menu:
         "Qu'est-ce que tu fais là, Elusia ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Qu'est-ce que tu fais là, Elusia ?"
             scene boulangerie
             show nephie surprised
@@ -87,7 +92,7 @@ label day11_nephie:
             n "Il faut bien payer le loyer !"
             menu:
                 "Attends une minute...":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     ma "Attends une minute..."
                     ma "Tu n'es pas Elusia ?"
                     show nephie vhappy
@@ -96,7 +101,7 @@ label day11_nephie:
                     n "Tu es venu[ter] chercher un gâteau n'est-ce pas ?"
                     m "Comment~..."
                 "Je suis passé[ter] par hasard.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     m "Je suis passé[ter] par hasard."
                     show nephie happy
                     n "Je ne crois pas à ce hasard."
@@ -104,7 +109,7 @@ label day11_nephie:
                     n "Au hasard... Un gâteau ?"
                     menu:
                         "Pas vraiment non.":
-                            # $ renpy.block_rollback()
+                            $ renpy.block_rollback()
                             ma "Pas vraiment non."
                             show nephie sad
                             n "Ewwww..."
@@ -116,36 +121,36 @@ label day11_nephie:
                             n "Sûr de sûr ?"
                             menu:
                                 "Oui.":
-                                    # $ renpy.block_rollback()
+                                    $ renpy.block_rollback()
                                     ma "Oui."
                                     n "Sûr de sûr de sûr ?"
                                     menu:
                                         "(Partir)":
-                                            # $ renpy.block_rollback()
+                                            $ renpy.block_rollback()
                                             "Je sors de la boutique."
                                             "Elle me regarde partir en silence."
                                             "J'ai un très mauvais pressentiment."
                                             "Je devrais revenir sur mes pas."
                                             "Mais je n'ai plus vraiment le temps."
-                                            $ choix1 = 0
+                                            $ choix1 = 1
                                             jump day11_classe
                                         "(Faire un achat)":
-                                            # $ renpy.block_rollback()
+                                            $ renpy.block_rollback()
                                             m "Bon d'accord, je vais acheter quelque chose avant de partir."
                                             show nephie normal
                                             n "Un gâteau alors ?"
                                 "Je peux bien acheter quelque chose en route.":
-                                    # $ renpy.block_rollback()
+                                    $ renpy.block_rollback()
                                     m "Je peux bien acheter quelque chose en route."
                         "Oui, c'est exact.":
-                            # $ renpy.block_rollback()
+                            $ renpy.block_rollback()
                             m "Oui, c'est exact."
                 "Je suis venu[ter] acheter quelque chose.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     m "Je suis venu[ter] acheter quelque chose."
 
         "(Ressortir discrètement.)":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "..."
             scene boulangerie
             show nephie angry
@@ -155,14 +160,14 @@ label day11_nephie:
             "Mince... Que faire ?"
             menu:
                 "(S'enfuir en courant.)":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     show nephie sad
                     n "Mais attends !"
                     n "Je mords pas les gens !"
-                    $ choix1 = 0
+                    $ choix1 = 1
                     jump day11_classe
                 "(Revenir sur ses pas.).":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     m "Bonjour !"
                     m "Excusez moi, j'étais ailleurs."
                     show nephie normal
@@ -176,7 +181,7 @@ label day11_nephie:
                     show nephie vhappy
                     n "Et le voilà !"
                     m "Merci, au revoir."
-                    $ choix1 = 1
+                    $ choix1 = 2
                     jump day11_classe
     show nephie vhappy
     n "Tu vois ce gâteau aux fraises ?"
@@ -202,7 +207,7 @@ label day11_nephie:
     n "Sais-tu qui je suis ?"
     menu:
         "Sa mère.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Sa mère ?"
             show nephie surprised
             n "Heyyyyy ?"
@@ -211,7 +216,7 @@ label day11_nephie:
             n "Nous n'avons pourtant que 6 ans de différence..."
             n "Je suis sa grande soeur !"
         "Sa soeur.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Sa soeur ?"
             show nephie surprised
             n "Bien joué !"
@@ -219,14 +224,14 @@ label day11_nephie:
             n "Pas trop dur, on dit souvent qu'on se ressemble."
             n "On a pourtant 6 ans de différence..."
         "Une amie.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Une amie ?"
             show nephie happy
             n "Perdu."
             n "Je suis sa grande soeur !"
             n "Je suis plus agée de 6 ans."
         "Sa marraine.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Sa marraine ?"
             show nephie happy
             n "Perdu. On est athées."
@@ -237,7 +242,7 @@ label day11_nephie:
     show nephie vhappy
     n "Bref, voilà ton gâteau. Amusez vous bien !"
     mh "Merci, au revoir !"
-    $ choix1 = 2
+    $ choix1 = 3
 label day11_classe:
     play music (matin1) fadein 2
     scene classroom with fade
@@ -255,26 +260,26 @@ label day11_classe:
             m "Oh, bonjour Laura."
             menu:
                 "Tu n'es pas avec Valeth ?":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lolo += 3
                     m "Tu n'es pas avec Valeth ?"
                     show laura sad
                     l "Non. Il est avec les autres."
                     menu:
                         "Oh... Pas sympa...":
-                            # $ renpy.block_rollback()
+                            $ renpy.block_rollback()
                             $ rel_lolo += 3
                             m "Oh... Pas sympa..."
                             show laura sad
                             l "A vrai dire..."
                             l "Je lui ai demandé d'y aller sans moi..."
                         "Tu n'y es pas allée ?":
-                            # $ renpy.block_rollback()
+                            $ renpy.block_rollback()
                             m "Tu n'y es pas allée ?"
                             show laura sad
                             l "Non, j'aurais été de trop."
                 "Tu sais ce qu'ils ont à faire ?":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     m "Tu sais ce qu'ils ont à faire ?"
                     show laura sad
                     l "Oui."
@@ -285,13 +290,13 @@ label day11_classe:
             l "On va manger ensemble ?"
             menu:
                 "Bien sur.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lolo += 5
                     mh "Bien sur."
                     l "Allons-y alors."
                     jump day11_ru_laura
                 "Une autre fois.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     m "Une autre fois."
                     l "Tant pis, je vais rejoindre les autres."
                     jump day11_ru_solo
@@ -302,6 +307,35 @@ label day11_classe:
             m "J'ai l'impression de ne pas avoir d'amis."
             jump day11_aprem
 label day11_anniv:
+    scene classroom
+    show ryou happy
+    with fade
+    r "Hey, Don Mario !"
+    r "T'as le colis pas vrai ?"
+    if choix1 == 1:
+        m "Justement je..."
+        show ryou furious
+        r "Nan, sérieusement ?"
+        $ rel_ryou -= 8
+        r "Je t'ai juste demandé ce ridicule petit service !"
+    else:
+        $ rel_ryou += 4
+        m "Oui."
+        r "Parfait."
+        r "Alice !"
+        show alice normal at left with easeinleft
+        a "Yep !"
+        r "Prends le gâteau et va au parc."
+        r "On vous rejoindra avec Elusia."
+        a "Spot habituel ?"
+        r "Oui."
+        hide alice with easeoutleft
+    show elusia normal at right with easeinright
+    r "Oh, quel merveilleux timing Elusia !"
+    r "Allons manger !"
+    show elusia happy
+    e "Oui !"
+    
 label day11_ru_laura:
     scene ru
     show laura normal
@@ -319,13 +353,24 @@ label day11_ru_laura:
         l "Ces deux là ne t'apprécient pas plus que ça..."
         l "Ils sont pourtant très gentils avec tout le monde."
         l "Tu devrais y mettre du tien."
-    m "Je comprends."
+    menu:
+        "Je comprends.":
+                $ renpy.block_rollback()
+                $ rel_lolo += 3
+                m "Je comprends."
+                show laura happy
+                l "J'espère de tout coeur que ça changera !"
+        "C'est pas tes affaires.":
+                $ renpy.block_rollback()
+                $ rel_lulu -= 2
+                ma "C'est pas tes affaires."
+                show laura normal
+                l "Oh, désolé, ne le prends pas comme ça."
+    l "Bref, retournons en cours."
     jump day11_aprem
 label day11_ru_solo:
     scene ru with fade
     m "..."
     m "Je devrais peut-être moins faire l'associal[ter]..."
-    jump day11_aprem
 label day11_aprem:
-    
-    
+    play music (jour1) fadein 2

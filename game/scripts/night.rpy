@@ -157,6 +157,8 @@ label night8:
     jump fin_night
     
 label night11:
+    if (rel_lulu < 50) or (rel_ryou < 50):
+        jump fin_night
     show shadow ombre with fade
     s "Aller chercher un gâteau..."
     s "Comme c'est stupide..."

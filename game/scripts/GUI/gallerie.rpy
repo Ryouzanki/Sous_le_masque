@@ -13,10 +13,6 @@ init python:
     # This button has multiple images assocated with it. We use unlock_image
     # so we don't have to call both .image and .unlock. We also apply a
     # transform to the first image.
-    g.button("sunny")
-    g.unlock_image("classroom")
-    g.unlock_image("boulangerie","nephie normal")
-    g.unlock_image("boulangere")
 
     # # This button has a condition associated with it, allowing code
     # # to choose which images unlock.
@@ -58,38 +54,29 @@ init python:
     # a background.
     g.button("elusia")
     g.unlock_image("tennis", "elusia normal")
-    g.unlock_image("tennis", "elusia happy")
-    g.unlock_image("tennis", "elusia sad")
+    g.unlock_image("tennis", "elusia normal sport")
+    
+    g.button("nephenie")
+    g.unlock_image("boulangerie","nephie normal")
+    g.unlock_image("boulangere")
 
     g.button("vincent")
     g.unlock_image("classroom", "prof normal")
-    g.unlock_image("classroom", "prof happy")
-    g.unlock_image("classroom", "prof contraried")
     
     g.button("alice")
     g.unlock_image("labo", "alice normal")
-    g.unlock_image("labo", "alice happy")
-    g.unlock_image("labo", "alice sad")
 
     g.button("shadow")
     g.unlock_image("toit", "shadow ombre")
-    g.unlock_image("toit", "shadow normal")
-    g.unlock_image("toit", "shadow smrik")
     
     g.button("ryou")
     g.unlock_image("couloir", "ryou normal")
-    g.unlock_image("couloir", "ryou happy")
-    g.unlock_image("couloir", "ryou angry")
     
     g.button("lloyd")
     g.unlock_image("bar", "lloyd normal")
-    g.unlock_image("bar", "lloyd happy")
-    g.unlock_image("bar", "lloyd angry")
     
     g.button("laura")
     g.unlock_image("ru", "laura normal")
-    g.unlock_image("ru", "laura happy")
-    g.unlock_image("ru", "laura angry")
     # The transition used when switching images.
     g.transition = dissolve
 
@@ -109,7 +96,7 @@ screen gallery:
         yfill True
 
         # Call make_button to show a particular button.
-        add g.make_button("sunny", "UI/cloudy.png", xalign=0.5, yalign=0.5)
+        add g.make_button("nephenie", "UI/nephenie.png", xalign=0.5, yalign=0.5)
         add g.make_button("vincent", "UI/vincent.png", xalign=0.5, yalign=0.5)
         add g.make_button("elusia", "UI/elusia.png", xalign=0.5, yalign=0.5)
         add g.make_button("alice", "UI/alice.png", xalign=0.5, yalign=0.5)

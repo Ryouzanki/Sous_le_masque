@@ -28,7 +28,7 @@ label day4:
         r "Alors comme ça t'as décidé d'aider Alice ?"
         menu:
             "Oui":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 m "Oui."
                 $ rel_ryou +=2
                 $ rel_lulu += 2
@@ -36,7 +36,7 @@ label day4:
                 r "J'aide le secrétaire de l'association des élèves à gérer les papiers."
                 r "Donc, je ne peux pas venir régulièrement."
             "On m'y a contraint...":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 m "On m'y a contraint..."
                 show ryou sad
                 r "C'est pas son genre à Alice..."
@@ -71,7 +71,7 @@ label day4:
         e "Tu as vraiment fait ça ?"
         menu:
             "Je n'aime pas qu'on me force la main.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 ma "Je n'aime pas qu'on me force la main."
                 $ rel_ryou -= 1
                 $ rel_lulu -= 3
@@ -81,7 +81,7 @@ label day4:
                 r "Tâches d'y aller aujourd'hui..."
                 m "Si j'oublie pas..."
             "J'ai oublié.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 m "J'ai oublié."
                 $ rel_ryou -= 3
                 $ rel_lulu -= 1
@@ -135,7 +135,7 @@ label day4_labo:
         show elusia sad
         menu:
             "Intervenir.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 $ rel_ali += 2
                 $ rel_lulu += 4
                 $ rel_ryou += 2
@@ -145,7 +145,7 @@ label day4_labo:
                 a "Oui... Excuse moi Elusia, je suis sur les nerfs."
                 e "C'est pas grave..."
             "Laisser passer.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 m "..."
                 r "Hey, c'est bon, elle ne te voulait pas de mal !"
                 r "Tu n'as pas besoin de l'agresser !"
@@ -178,14 +178,14 @@ label day4_labo:
         a "Je ne pensais pas que tu oserais venir te présenter devant moi tout naturellement le lendemain !"
         menu:
             "S'excuser.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 m "Excuse moi..."
                 $ rel_ali += 2
                 a "Des excuses..."
                 a "Je préfère de la présence."
                 a "Je veux que tu viennes ce soir."
             "Ne rien dire.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 m "..."
                 $ rel_ali -= 2
                 show alice geez
@@ -211,7 +211,7 @@ label day4_cours:
     "Laura et Valeth sont au dernier rang."
     menu:
         "J'irais bien au premier rang...":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 show ryou sad at left
                 show elusia normal at right
                 "Le premier rang n'est pas aussi désagréable que ça..."
@@ -228,7 +228,7 @@ label day4_cours:
                 hide elusia with easeoutright
                 jump day4_apres
         "J'irais bien au dernier rang...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             show valeth normal at left
             show laura sad at right
             "Valeth passe son temps à dessiner en relevant la tête parfois pour suivre le cours."
@@ -288,22 +288,26 @@ label day4_apres:
         window show None
             
         if _return == "gymnase":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "Si j'en profitais pour faire du sport..."
+            if aller_science == 1:
+                e "Je sais bien qu'on a sport aujourd'hui."
+                e "Mais je préfèrerais franchement que tu ailles voir Alice."
+                jump day4_apres
             call sport
             
         elif _return == "science" and aller_science == 3:
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "Les locaux sont fermés."
             "Il n'y a personne."
             jump day4_apres
             
         elif _return == "science":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             call labo
         
         elif _return == "art":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             if aller_art >= 1:
                 "Allons tenter de battre Valeth !"
             else:
@@ -311,7 +315,7 @@ label day4_apres:
             call club
     
         elif _return == "rentrer":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "Je crois que je vais rentrer."
             scene street with fade
             "Ah oui, Ryouzanki est allé à la réunion lui aussi..."

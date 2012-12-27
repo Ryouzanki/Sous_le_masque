@@ -9,7 +9,7 @@
     $ str_max = 20
     $ vig = 2
     
-    $ rel_ryou_max = 131#81
+    $ rel_ryou_max = 200#81
     $ rel_lulu_max = 200#103 #+3 ?
     $ rel_val_max = 200#59
     $ rel_lolo_max = 200#51
@@ -105,6 +105,8 @@ label choix_game:
         "Route classique":
             pass
         "Route bonus" if persistent.ending == "win":
+            "Route vérouillée pour cette version." # TODO
+            jump choix_game
             jump ryou
             
 label route:
@@ -165,13 +167,13 @@ label route:
     call night
     call day7
     call night
-    call day8
-    call night
-    call day9
-    call night
-    call day10
-    call night
-    call day11
+    #call day8
+    #call night
+    #call day9
+    #call night
+    #call day10
+    #call night
+    #call day11
 label end:
     r "Fin du jeu"
     $ persistent.ending = "win"

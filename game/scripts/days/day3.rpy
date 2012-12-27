@@ -132,13 +132,13 @@ label day3:
     menu:
         v "Oh, tu lisais beaucoup ?"
         "Pas vraiment non.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Pas vraiment non."
             v "Ah, dommage."
             l "Tu faisais du sport à la place ?"
             jump d3_sport
         "Oui, je lisais pas mal.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_val += 2
             m "Oui, je lisais pas mal."
             show valeth happy
@@ -160,7 +160,7 @@ label day3:
             menu:
                 m "Je lisais surout..."
                 "De la littérature classique.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     extend "De la littérature classique."
                     $ rel_val += 5
                     show valeth happy
@@ -175,7 +175,7 @@ label day3:
                     show alice angry
                     a "Tu ne pais rien pour attendre baka-powa !"
                 "De la science fiction.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     extend "De la science fiction."
                     $ rel_ryou += 5
                     show ryou normal
@@ -189,7 +189,7 @@ label day3:
                     show ryou sad
                     r "Mais bon, c'est vrai que je ne suis pas très malin et c'est plus du fantasme qu'autre chose."
                 "Du fantastique.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     extend "Du fantastique."
                     $ rel_lulu += 5
                     show elusia happy
@@ -200,7 +200,7 @@ label day3:
                     a "T'as des goûts de chiotte aussi..."
                     v "Respectez les goûts des autres vous deux..."
                 "Des articles par ci, par là.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     extend "Des articles par ci, par là."
                     $ rel_ali += 5
                     v "Oh, tu dois avoir une culture générale impressionante !"
@@ -223,7 +223,7 @@ label d3_sport:
 
         menu:
                     "Du sport, bah oui !":
-                        # $ renpy.block_rollback()
+                        $ renpy.block_rollback()
                         mh "Du sport, bah oui !"
                         mh "J'aime ça."
                         e "Oh ! Et tu faisais quoi comme sport ?"
@@ -231,7 +231,7 @@ label d3_sport:
                         m "J'aime surtout les sports..."
                         menu:
                             "Collectifs !":
-                                # $ renpy.block_rollback()
+                                $ renpy.block_rollback()
                                 $ rel_lolo += 5
                                 $ rel_lulu += 2
                                 extend "Collectifs !"
@@ -244,7 +244,7 @@ label d3_sport:
                                 show elusia angry
                                 e "J'ai le droit non ?"
                             "Solo !":
-                                # $ renpy.block_rollback()
+                                $ renpy.block_rollback()
                                 $ rel_lolo += 2
                                 $ rel_lulu += 5
                                 extend "Solo !"
@@ -264,7 +264,7 @@ label d3_sport:
                         a "A part le sport, tu as des loisirs ?"
                         jump d3_loisir
                     "Pas trop non.":
-                      # $ renpy.block_rollback()
+                      $ renpy.block_rollback()
                       m "Pas trop non."
                       show laura sad
                       l "OK."
@@ -280,7 +280,7 @@ label d3_loisir:
     v "Je me demande si tu faisais des jeux de rôles, de plateau ou ce genre de choses."
     menu:
         "Oui, très souvent !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_val += 5
             mh "Oui, très souvent !"
             show valeth happy
@@ -292,7 +292,7 @@ label d3_loisir:
             show ryou normal
             r "Oui, pourquoi pas."
         "Oui, ça m'arrive.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_val +=2
             m "Oui, ça m'arrive."
             v "Oh, on pourrait jouer quelques soirs.."
@@ -301,7 +301,7 @@ label d3_loisir:
             show ryou normal
             r "Ouais, on y pensera."
         "Non, pas trop.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Non pas trop."
             show laura normal
             l "Tu préfères sortir ?"
@@ -314,7 +314,7 @@ label d3_loisir:
     a "Tu étais dans des clubs ?"
     menu:
         "J'étais très impliqué dans les clubs.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "J'étais très impliqué dans les clubs."
             $ rel_lulu += 1
             $ rel_ali += 3
@@ -326,7 +326,7 @@ label d3_loisir:
             show valeth normal
             a "Le pannel de nos clubs n'est pas bien large mais ils sont de qualité."
         "Je venais de temps en temps.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Je venais de temps en temps."
             $ rel_ali += 1
             $ rel_val += 1
@@ -335,7 +335,7 @@ label d3_loisir:
             a "Le pannel de nos clubs n'est pas bien large mais ils sont de qualité."
             e "J'espère que tu en trouvera un qui te convienne."
         "Les clubs ne m'ont jamais vraiment intéressé.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Les clubs ne m'ont jamais vraiment intéressé."
             r "Pourtant, je veux pas dire mais ici les clubs sont assez sympas."
             r "Tu devrais vraiment au moins les tester."
@@ -347,7 +347,7 @@ label d3_loisir:
     menu:
         m "J'étais dans des clubs..."
         "... De sport":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             extend "De sport."
             e "Oh, c'est sympa ça..."
             l "Tu jouais dans l'équipe de ton école ?"
@@ -356,14 +356,14 @@ label d3_loisir:
             menu:
                 l "L'esprit d'équipe ou la rivalité ?"
                 "L'esprit d'équipe.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     m "Je pense que l'esprit d'équipe est très important."
                     l "Je le pense aussi."
                     l "Que ce soit pour gagner ou juste d'amuser."
                     $ rel_lolo += 5
                     $ rel_lulu += 2
                 "La rivalité.":
-                     # $ renpy.block_rollback()
+                     $ renpy.block_rollback()
                      m "Je pense que la rivalité permet de se surpasser."
                      e "Tout juste."
                      e "L'être humain peut devenir plus fort via l'esprit de compétivité !"
@@ -371,7 +371,7 @@ label d3_loisir:
                      $ rel_lulu += 5
             "On a discuté de sport pendant jusqu'à la fin de la pause."
         "... Plutôt techniques.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ali +=2
             extend "Plutôt techniques."
             a "Très intéressant."
@@ -392,20 +392,20 @@ label d3_loisir:
             menu:
                 a "On manque de gens responsables pour coordiner tout ça."
                 "Oui, pourquoi pas !":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_ali += 5
                     m "Oui, pourquoi pas !"
                     show alice happy
                     a "Superbe. Passe me voir le plus tôt possible dans les labos pour qu'on voit ça ensemble."
                     a "J'espère vraiment qu'on sera en mesure de surpasser l'équipe de l'année dernière !"
                 "Oui, je vais essayer.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_ali += 3
                     m "Oui, je vais essayer."
                     a "Intéressant. Passe me voir le plus tôt possible dans les labos pour qu'on voit ça ensemble."
                     a "J'espère vraiment qu'on sera en mesure de surpasser l'équipe de l'année dernière !"
                 "Non, je n'aime pas les responsabilités.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     m "Non, je n'aime pas les responsabilités."
                     show alice geez
                     a "Tu viens d'arriver après tout... Je suppose."
@@ -414,7 +414,7 @@ label d3_loisir:
                     a "Essayer ne suffit pas, il faut du résultat."
             "Ils ont parlé du gala de l'année dernière jusqu'à la fin de la pause."
         "... Plutôt art et divertissement.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             extend "Plutôt art et divertissement."
             show valeth happy
             v "Génial !"
@@ -431,14 +431,14 @@ label d3_loisir:
             menu:
                 m "Je dirais que j'étais plutôt du côté..."
                 "Art":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     extend "Art."
                     m "J'aime bien dessiner et peindre."
                     v "Tu dois avoir l'oeil alors ! Un regard expert serait le bienvenu au sein du club !"
                     $ rel_val += 5
                     "On a parlé d'art jusqu'à la fin de la pause."
                 "Divertissement.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     extend "Divertissement."
                     m "J'aime bien ce genre d'occupation."
                     show ryou surprised
@@ -448,7 +448,7 @@ label d3_loisir:
                     $ rel_ryou += 3
                     "On a parlé de jeux de rôle jusqu'à la fin de la pause."
                 "Théâtre.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     extend "Théâtre."
                     m "J'aime bien jouer la comédie."
                     v "Intéressant. Je veux te voir à l'oeuvre !"
@@ -469,7 +469,7 @@ label day3_cours:
     "Laura et Valeth sont au dernier rang."
     menu:
         "J'irais bien au premier rang...":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 show ryou sad at left
                 show elusia normal at right
                 "Elusia et Ryouzanki m'on parlé de leur liste électorale."
@@ -485,7 +485,7 @@ label day3_cours:
                 hide ryou with easeoutright
                 hide elusia with easeoutright
         "J'irais bien au dernier rang...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             show valeth normal at left
             show laura sad at right
             "Valeth passe son temps à dessiner en relevant la tête parfois pour suivre le cours."
@@ -521,17 +521,17 @@ label day3_passport:
     window show None
         
     if _return == "gymnase":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         "Il n'y a pas sport aujourd'hui..."
         jump day3_passport
     
     elif _return == "science":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         "Allons voir Alice."
         call labo
         
     elif _return == "art":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         $ rel_ali -= 5
         $ choix1 = False
         if aller_art >= 1:
@@ -541,7 +541,7 @@ label day3_passport:
         call club
 
     elif _return == "rentrer":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         $ rel_ali -= 5
         $ choix1 = False
         "Je crois que je vais rentrer."

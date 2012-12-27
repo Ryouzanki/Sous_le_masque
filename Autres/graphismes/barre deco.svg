@@ -133,6 +133,20 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2996"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3012"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -141,16 +155,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.185"
-     inkscape:cx="-2868.1125"
-     inkscape:cy="609.80385"
+     inkscape:zoom="0.74"
+     inkscape:cx="6083.8774"
+     inkscape:cy="363.15174"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1366"
-     inkscape:window-height="695"
+     inkscape:window-height="697"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -527,8 +541,8 @@
        id="rect27174"
        width="596.45514"
        height="208.12157"
-       x="6691.3735"
-       y="-248.60356" />
+       x="7075.1572"
+       y="-237.79276" />
     <rect
        style="color:#000000;fill:#800080;fill-opacity:1;fill-rule:nonzero;stroke:#040503;stroke-width:2.41365743;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.73507463;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect27176"
@@ -611,13 +625,13 @@
     <text
        xml:space="preserve"
        style="font-size:90.44437408px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
-       x="6913.0161"
-       y="-137.98608"
+       x="7248.1514"
+       y="-100.14825"
        id="text27215"><tspan
          sodipodi:role="line"
          id="tspan27217"
-         x="6913.0161"
-         y="-137.98608">pnj</tspan></text>
+         x="7248.1514"
+         y="-100.14825">pnj</tspan></text>
     <image
        y="175.08167"
        x="-4074.949"
@@ -645,5 +659,32 @@
          id="tspan27846"
          x="-3807.8486"
          y="776.34802">Néphénie Hrist</tspan></text>
+    <image
+       y="125.41238"
+       x="5749.8071"
+       id="image2998"
+       height="600"
+       width="800"
+       xlink:href="file:///media/Stockage/PROJETS/Sous%20le%20masque/game/back/salledart.jpg"
+       style="fill:#000000"
+       inkscape:export-filename="/media/Stockage/PROJETS/Sous le masque/game/UI/valeth_bar2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#800080;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 6654.0541,16.216216 -935.1352,43.243243 5.4054,281.081081 1102.7027,140.54054 -291.8919,145.94595 c 0,0 -832.4324,43.24324 -843.2432,-21.62162 -10.8108,-64.86487 5.4054,-772.97298 5.4054,-772.97298 l 951.3513,21.62162 5.4055,162.162166 z"
+       id="path3002"
+       transform="translate(-28.571402,203.79077)" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMathSymbols5;-inkscape-font-specification:LMMathSymbols5 Bold Italic"
+       x="5830.1899"
+       y="497.30411"
+       id="text5557-4"
+       transform="matrix(0.99897542,-0.04525595,0.04525595,0.99897542,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5559-8"
+         x="5830.1899"
+         y="497.30411">Valeth Lezard</tspan></text>
   </g>
 </svg>

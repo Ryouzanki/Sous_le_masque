@@ -223,6 +223,18 @@ label answer:
             ma "J'en ai assez d'entendre tes conneries..."
             show shadow normal
             s "..."
+            show shadow surprised
+            s "L'éternel combat entre la raison et la passion..."
+            s "La logique contre les sentiments..."
+            s "La prédestination contre le chaos..."
+            s "J'ai gagné [j] et tu as perdu !"
+            s "Tu ne veux rien entendre, soit !"
+            s "Mais le temps t'apprendra que j'ai raison"
+            s "Quoique..."
+            show shadow smirk
+            s "Je ne lui en laisserais pas l'occasion !"
+            ma "Les autres t'apprendront que tu as tort."
+            ma "Mais tu ne leur en laisse pas l'occasion."
             jump answer2
     jump answer
 label answer2:

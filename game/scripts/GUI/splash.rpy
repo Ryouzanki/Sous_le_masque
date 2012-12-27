@@ -12,7 +12,7 @@ label splashscreen:
     scene ryou_bar
     show ryou white at right with entrerinleft
     scene ryou_bar2
-    show ryou normal at right
+    show ryou ex at right
     with Dissolve(2.5)
     scene alice_bar
     show alice white at left with entrerinright
@@ -22,25 +22,29 @@ label splashscreen:
     scene lloyd_bar
     show lloyd white at right with entrerinleft
     scene lloyd_bar2
-    show lloyd normal at right
+    show lloyd ex at right
     with Dissolve(2.5)
     pause(0.5)
     scene laura_bar
     show laura white at left with entrerinright
     scene laura_bar2
-    show laura normal at left
+    show laura ex at left
     with Dissolve(2.5)
     scene prof_bar
     show prof white at right with entrerinleft
     scene prof_bar2
-    show prof normal at right
+    show prof ex at right
     with Dissolve(2.5)
     scene nephie_bar
     show nephie white at left with entrerinright
     scene nephie_bar2
-    show nephie normal at left
+    show nephie ex at left
     with Dissolve(2.5)
-    
-    
+    scene valeth_bar
+    show valeth white at right with entrerinleft
+    scene valeth_bar2
+    show valeth ex at right
+    with Dissolve(2.5)
+                                             
     pause(5)
     return

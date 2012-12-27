@@ -20,7 +20,7 @@ label day5:
     m "Salut !"
     menu:
         "Et Ryouzanki ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu += 2
             m "Et Ryouzanki ?"
             show elusia geez at center with move
@@ -29,12 +29,12 @@ label day5:
             e "Il est en train de se préparer là."
             e "Mais plutôt qu'être tous les 3 en retard, il m'a dit de partir devant."
         "On y va ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu -= 2
             jump day5_solo
     menu:
         "Attendre.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou += 4
             $rel_lulu += 5
             m "Personnellement, je voudrais bien l'attendre."
@@ -55,11 +55,11 @@ label day5:
             e "Que fait-on ?"
             menu:
                 "Sonner.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     play sound "sound/bell.mp3"
                     "Je sonne..."
                 "Attendre.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     pass
             play sound "sound/dooropen.mp3"
             show ryou angry at right with easeinright
@@ -90,7 +90,7 @@ label day5:
                 "Je suis arrivé en retard..."
             jump day5_matin
         "Partir.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             jump day5_solo
 
 label day5_solo:
@@ -223,18 +223,18 @@ label day5_choix:
         window show None
             
         if _return == "gymnase":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "Vendredi, pas sport ..."
             jump day5_choix
         
         elif _return == "science":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "Les locaux sont fermés."
             "Il n'y a personne."
             jump day5_choix
             
         elif _return == "art":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             if aller_art >= 1:
                 "Allons tenter de battre Valeth !"
             else:
@@ -242,7 +242,7 @@ label day5_choix:
             call club
     
         elif _return == "rentrer":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "Je crois que je vais rentrer."
             call go_home
             

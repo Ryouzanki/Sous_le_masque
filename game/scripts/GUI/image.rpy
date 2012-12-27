@@ -112,6 +112,9 @@ image ryou happy = im.Composite((200, 531),
 image ryou surprised = im.Composite((200, 531),
                                         (0, 50), "CG/ryou casual.png",
                                         (0, 50), "CG/ryou surprised.png")
+image ryou furious = im.Composite((200, 531),
+                                        (0, 50), "CG/ryou casual.png",
+                                        (0, 50), "CG/ryou furious.png")
 
 # Ryouzanki shadow
 image shadow contraried = im.Composite((446, 525),
@@ -140,13 +143,13 @@ image shadow ombre = "CG/shadow ombre.png"
 ## Valeth Lezard
 
 # Valeth normal
-image valeth normal = im.Composite((200, 510), # 525
+image valeth normal = im.Composite((230, 510), # 525
                                         (0, 50), "CG/valeth casual.png",
                                         (0, 50), "CG/valeth normal.png")
-image valeth angry = im.Composite((200, 510), # 525
+image valeth angry = im.Composite((230, 510), # 525
                                         (0, 50), "CG/valeth casual.png",
                                         (0, 50), "CG/valeth angry.png")
-image valeth happy = im.Composite((200, 510), # 525
+image valeth happy = im.Composite((230, 510), # 525
                                         (0, 50), "CG/valeth casual.png",
                                         (0, 50), "CG/valeth happy.png")
 
@@ -299,6 +302,15 @@ image prof white = "UI/profW.png"
 image nephie_bar = "UI/nephie_bar.png"
 image nephie_bar2 = "UI/nephie_bar2.png"
 image nephie white = "UI/nephieW.png"
+image valeth_bar = "UI/valeth_bar.png"
+image valeth white = "UI/valethW.png"
+image valeth_bar2 = "UI/valeth_bar2.png"
+image ryou ex = "UI/ryou normal.png"
+image lloyd ex = "UI/lloyd normal.png"
+image laura ex = "UI/laura normal.png"
+image nephie ex = "UI/nephie normal.png"
+image prof ex = "UI/prof normal.png"
+image valeth ex = "UI/valeth normal.png"
 
 ### Music
 
@@ -316,6 +328,7 @@ define nephie1 = "music/SMILE.mp3"
 
 # Thème autres
 define matin1 = "music/matin1.mp3"
+define festivite = "music/festivite.mp3"
 define jour1 = "music/jour1.ogg"
 define club1 = "music/club1.mp3"
 define main_menu1 = "music/game.ogg"

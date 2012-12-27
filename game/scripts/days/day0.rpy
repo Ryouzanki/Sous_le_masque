@@ -30,7 +30,7 @@ label day0:
 label choix_sexe:
     menu:
         "Perdu, je suis un {b}{u}homme{/u}{/b} !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ m = DynamicCharacter("j",
                  color="#58D3F7",
                  window_left_padding=160,
@@ -51,7 +51,7 @@ label choix_sexe:
             $ bite = True
             $ ter = ''
         "Je suis une {b}{u}femme{/u}{/b} mais...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ m = DynamicCharacter("j",
                  color="#58D3F7",
                  window_left_padding=160,
@@ -120,10 +120,10 @@ label sonnette:
         jump ending
     menu:
         "Ah, c'est bien, tu sais lire !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             ma "Ah, c'est bien, tu sais lire !"
         "Mais non... Retourne en primaire !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             show ryou sad
             ma "Mais non... Retourne en primaire !"
             "Dans le doute, je regarde une fois de plus."
@@ -156,12 +156,12 @@ label sonnette:
         
     menu :
         "Oui, je veux bien !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             mh "Oui, je veux bien !"
             $ rel_ryou += 5
             jump accompagner_matin
         "Non merci, ça ira...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Non merci, ça ira..."
             show ryou angry
             r "..."
@@ -177,11 +177,11 @@ label accompagner_matin:
     r "Tant qu'à faire, tu veux qu'on aille te présenter à la voisine ?"
     menu:
         "Oui, pourquoi pas...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             mh "Oui, pourquoi pas..."
             jump rencontre_elusia
         "C'est pas un peu tard là ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             ma "C'est pas un peu tard là ?"
             jump rencontre_tard
             
@@ -244,7 +244,7 @@ label rencontre_elusia:
     if bite:
         menu:
             "Prendre un café.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 $ rel_ryou += 2
                 m "Oui, moi aussi je prendrais bien un café si possible."
                 show ryou happy at left
@@ -254,7 +254,7 @@ label rencontre_elusia:
                 e "Lui, je ne sais pas. Mais toi, Ryou, sûrement pas !"
                 show elusia normal
             "Prendre un thé.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 $ rel_lulu += 2
                 m "Un thé me conviendra parfaitement !"
                 show ryou angry
@@ -268,7 +268,7 @@ label rencontre_elusia:
     else:
         menu:
             "Prendre un café.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 $ rel_ryou += 2
                 mh "Je prendrais aussi un café si ça ne te gêne pas."
                 show ryou angry at left
@@ -277,7 +277,7 @@ label rencontre_elusia:
                 show elusia satisfied at right
                 e "Je crois que son stéréotype de la virilité s'est éffondré !"
             "Prendre un thé.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 $ rel_lulu += 2
                 mh "Un thé me conviendra parfaitement !"
                 show elusia satisfied

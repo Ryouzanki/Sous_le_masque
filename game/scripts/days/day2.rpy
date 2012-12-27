@@ -47,7 +47,7 @@ label route_d2:
         menu:
             m "Le club de science..."
             "Je vais essayer de m'y inscrire aujourd'hui.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 show elusia normal
                 show ryou normal
                 m "Je vais essayer de m'y inscrire aujourd'hui."
@@ -60,7 +60,7 @@ label route_d2:
                 show elusia sad
                 e "Nous devrions y aller avant d'être en retard !"
             "Je ne risque pas d'y revenir...":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 m "Je ne risque pas d'y revenir..."
                 show ryou sad
                 r "Dommage, c'est pourtant un excellent club, avec une bonne ambiance."
@@ -92,7 +92,7 @@ label route_d2:
         r "As tu joué aux échecs contre lui ?"
         menu:
             "J'ai perdu.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 m "J'ai perdu."
                 show ryou happy
                 r "C'est pas grave, tu n'as qu'à retenter ce soir !"
@@ -106,7 +106,7 @@ label route_d2:
                 e "Rien rien... Allons voir [j] jouer ce soir..."
                 r "D'accord."
             "J'ai gagné...":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 m "J'ai gagné..."
                 show ryou happy
                 show elusia surprised
@@ -116,7 +116,7 @@ label route_d2:
                 e "Je viendrais aussi, si ça ne dérange personne."
                 "Heu..."
             "Je n'ai pas joué contre lui.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 m "Je n'ai pas joué contre lui."
                 r "Dommage."
                 e "C'est son jeu favori et il est vraiment très très fort."
@@ -210,7 +210,7 @@ label day2_midi:
     r "Bien sûr ! Tu viens [j] ?"
     menu:
         "Bien entendu !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Bien entendu !"
             show ryou happy at left
             show elusia happy at right
@@ -228,14 +228,14 @@ label day2_midi:
                 y "Je n'étais pas dans mon assiette."
                 menu:
                     "Il y avait de quoi...":
-                        # $ renpy.block_rollback()
+                        $ renpy.block_rollback()
                         m "Il y avait de quoi..."
                         $ rel_lloy += 2
                         show lloyd happy
                         y "C'est exact."
                         y "Madame la présidente sera là cet après midi si tu veux."
                     "T'en fais pas.":
-                        # $ renpy.block_rollback()
+                        $ renpy.block_rollback()
                         m "T'en fais pas."
                         
                 y "Je vais rentrer chez moi déjeuner."
@@ -265,7 +265,7 @@ label day2_midi:
             "Ces deux là s'entendent bien."
             jump day2_cours2
         "Nan, je vais au self aujourd'hui.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             r "Ok, bah à plus !"
             e "On se voit plus tard !"
             hide ryou
@@ -279,14 +279,14 @@ label day2_midi:
                 y "Je n'étais pas dans mon assiette."
                 menu:
                     "Il y avait de quoi...":
-                        # $ renpy.block_rollback()
+                        $ renpy.block_rollback()
                         m "Il y avait de quoi..."
                         $ rel_lloy += 2
                         show lloyd happy
                         y "C'est exact."
                         y "Madame la présidente sera là cet après midi si tu veux."
                     "T'en fais pas.":
-                        # $ renpy.block_rollback()
+                        $ renpy.block_rollback()
                         m "T'en fais pas."
                         
                 y "Je vais rentrer chez moi déjeuner."
@@ -333,7 +333,7 @@ label day2_midi:
                 
             menu:
                   "Refuser":
-                      # $ renpy.block_rollback()
+                      $ renpy.block_rollback()
                       m "Non merci, je préfère rester seul."
                       $rel_val -=1
                       $ rel_lolo -= 2
@@ -343,7 +343,7 @@ label day2_midi:
                       "Pourquoi est-ce que j'ai refusé d'ailleurs..."
                       jump day2_cours2
                   "Accepter":
-                      # $ renpy.block_rollback()
+                      $ renpy.block_rollback()
                       $rel_val +=5
                       $ rel_lolo += 5
                       mh "OK."
@@ -389,7 +389,7 @@ label day2_cours2:
     menu:
         "Et si j'allais voir..."
         "Ryouzanki et Elusia.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 show ryou sad at left
                 show elusia normal at right
                 "Le cours a été suivit en silence."
@@ -398,7 +398,7 @@ label day2_cours2:
                 $ rel_ryou += 2
                 jump day2_cours3
         "Lloyd."if rel_lloy >= 5:
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             show lloyd normal
             m "Re !"
             y "Re-bonjour [j]."
@@ -451,12 +451,12 @@ label day2_passport:
     window show None
         
     if _return == "gymnase":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         "Il n'y a pas sport aujourd'hui..."
         jump day2_passport
     
     elif _return == "science":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         if aller_science == 1:
             "Allons nous inscire..."
         else:
@@ -465,7 +465,7 @@ label day2_passport:
         call labo
         
     elif _return == "art":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         if aller_art == 1:
             "Allons tenter de battre Valeth !"
         else:
@@ -473,7 +473,7 @@ label day2_passport:
         call club
 
     elif _return == "rentrer":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         
         "Je crois que je vais rentrer."
         call go_home

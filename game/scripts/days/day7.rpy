@@ -18,18 +18,18 @@ label day7:
     e "Est-ce que tu veux les miens ?"
     menu:
         "OK.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "OK."
             show elusia happy
             e "Tiens, les voila !"
         "En quel honneur ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu +=3
             m "En quel honneur ?"
             show elusia satisfied
             e "Comme ça, par gentillesse..."
         "Non merci.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu+=1
             m "Non merci."
             show elusia sad
@@ -44,7 +44,7 @@ label day7:
     e "Normalement on le fait avec Alice mais elle est prise."
     menu:
         "D'accord, je vais essayer.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m"D'accord, je vais essayer."
             show elusia satisfied
             e "Je savais qu'on pouvait compter sur toi."
@@ -54,7 +54,7 @@ label day7:
             $ rel_lulu+=5
             hide elusia with easeoutright
         "Je ne suis pas un bouche trou...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m"Je ne suis pas un bouche trou..."
             show elusia geez
             e"Misère..."
@@ -88,10 +88,10 @@ label day7:
             "Peut-être que je devrais me coucher tôt finalement aujourd'hui..."
             menu:
                 "C'est une bonne idée...":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ action_soir = 'd'
                 "Non, ça ira...":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     pass
         else:
             $  str_points += 2
@@ -190,7 +190,7 @@ label day7_choix: # TODO imagemap
     m "Qui choisir..."
     menu:
         "Elusia...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "Elusia..."
             "C'est une sportive."
             "Qui fait régulièrement du tennis en plus..."
@@ -201,7 +201,7 @@ label day7_choix: # TODO imagemap
             "Elle ne veut pas perdre contre sa rivale."
             $ choix1 = 'Elusia'
         "Laura...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "Laura..."
             "Elle est sportive."
             "C'est une excellente leader."
@@ -212,7 +212,7 @@ label day7_choix: # TODO imagemap
             "L'obsession d'Elusia pour sa rivale peut jouer en notre faveur."
             $ choix1 = 'Laura'
         "Ryouzanki...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "Ryouzanki..."
             "Il n'a pas l'air d'être très sportif."
             "Mais c'est un homme alors peut être que..."
@@ -226,11 +226,11 @@ label day7_choix: # TODO imagemap
     e "Alors ? T'as décidé ?"
     menu:
         "Oui.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Oui."
             mh "J'ai choisi [choix1] !"
         "Non.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Pas encore."
             m "Une minute..."
             jump day7_choix
@@ -333,7 +333,7 @@ label day7_lulu:
     e "Tâchons de les écraser !"
     menu:
         "T'en fais pas un peu trop ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "T'en fais pas un peu trop ?"
             $ rel_lulu -= 2
             show elusia surprised sport
@@ -345,27 +345,27 @@ label day7_lulu:
             show elusia sad sport
             e "Je trouve dommage que tu ne comprennes pas cela."
         "Oui...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Oui..."
             show elusia surprised sport
             e "Hey ! Tu pourrais être un peu plus motivé[ter] !"
             menu:
                 "Je vais essayer.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lulu += 3
                     m "Je vais essayer."
                     show elusia normal sport
                     e "C'est mieux !"
                     e "Partir avec un bon moral, c'est avoir la victoire à portée de main."
                 "Non.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lulu -= 3
                     m "Non."
                     show elusia sad sport
                     e "T'es pas cool..."
                     e "Moi qui me faisait une joie de jouer avec toi..."
         "C'est comme si c'était fait !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu += 5
             mh "C'est comme si c'était fait !"
             show elusia happy sport
@@ -379,7 +379,7 @@ label day7_lulu:
     menu:
         m "Et bien..."
         "Tu es la plus forte non ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Tu es la plus forte non ?"
             $ rel_lulu += 5
             show elusia satisfied sport
@@ -387,26 +387,26 @@ label day7_lulu:
             show elusia happy sport
             e "Excellent choix !"
         "Tu es la plus jolie.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             mh "Tu es la plus jolie."
             $ rel_lulu += 3
             show elusia shy sport with dissolve
             e "P...Pardon ?!"
             menu:
                 "Ca va, je plaisante...":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     mh "Ca va, je plaisante..."
                     show elusia timid sport
                     e "Si possible, j'aimerais que tu évites ce genre de plaisanterie..."
                     menu:
                         "Oui, désolé.":
-                            # $ renpy.block_rollback()
+                            $ renpy.block_rollback()
                             $ rel_lulu -= 1
                             m "Oui, désolé."
                             show elusia sad sport
                             e "C'est pas bien grave..."
                         "Nan, t'es mignonne quand tu rougis.":
-                            # $ renpy.block_rollback()
+                            $ renpy.block_rollback()
                             $ rel_lulu += 2
                             mh "Nan, t'es mignonne quand tu rougis."
                             show elusia embarassed sport
@@ -415,7 +415,7 @@ label day7_lulu:
                             e "C'est pas le moment de me déconcentrer !"
                             show elusia timid sport                    
                 "Bah oui, c'est vrai quoi...":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lulu += 4
                     m "Bah oui, c'est vrai quoi..."
                     show elusia embarassed sport
@@ -423,14 +423,14 @@ label day7_lulu:
                     e "C'est pas le moment de me déconcentrer !"
                     show elusia timid sport
                 "Je t'aime, Elusia...":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     mh "Je t'aime, Elusia..."
                     show elusia embarassed sport
                     e "C'est pas un peu tôt pour ce genre de chose ?"
                     show elusia timid sport
                     e "Tu me connais à peine..."
         "Tu es la plus sympa.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             mh "Tu es la plus sympa."
             e "Ah bon..."
             show elusia happy sport
@@ -461,13 +461,13 @@ label day7_elu:
     l "..."
     menu:
         "T'es vraiment forte !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu += 3
             mh "T'es vraiment forte !"
             show elusia happy sport
             e "Merci, espérons que tu fasses aussi bien !"
         "Je vais faire mieux !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             mh "Je vais faire mieux !"
             show elusia normal sport
             e "Ah bon... Nous verrons."
@@ -487,7 +487,7 @@ label day7_elu:
     "Elle va servir."
     menu:
         "Attaquer sur le service.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu -= 2
             "Je décide d'attaquer sur son service."
             "Elle frappe."
@@ -497,7 +497,7 @@ label day7_elu:
             show laura happy
             l "15 A !"
         "Défendre sur le service.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "Je décide de défendre sur son service."
             "Elle frappe."
             "La balle va bien plus vite que prévu."
@@ -514,52 +514,52 @@ label day7_elu:
 label day7_elu_2:
     menu:
         "Désolé[ter].":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu += 2
             m "Désolé[ter]."
             e "Tu fais ce que tu peux hein..."
             e "Je t'avais prévenu qu'ils étaient forts."
             menu:
                 "Je n'ai pas été assez prudent[ter].":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lulu += 2
                     m "Je n'ai pas été assez prudent[ter]."
                     e "Je vois ça."
                 "Oui je sais merci.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     ma "Oui je sais merci."
                     e "C'est juste vrai."
             show elusia geez sport
             e "Espérons que cela ne se reproduise pas."
         "Ils sont fourbes !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Ils sont fourbes !"
             show elusia normal sport
             e "Que veux tu dire ?"
             menu:
                 m "Et bien..."
                 "Ils cachent bien leur jeu...":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lulu -= 2
                     m "Ils cachent bien leur jeu..."
                     show elusia geez sport
                     e "Je t'avais prévenu qu'ils étaient forts."
                     e "Espérons que cela ne se reproduise pas."
                 "Ils me visent intentionnellement...":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lulu -= 4
                     m "Ils me visent intentionnellement..."
                     show elusia geez sport
                     e "Tu ne serais pas un peu parano sur les bords ?"
         "..." if choix1:
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu -= 2
             $ choix1 = False
             m "..."
             e "Tu n'as donc rien à me dire ?"
             jump day7_elu_2
         "Je n'ai rien à te dire." if not choix1:
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu -= 4
             m "Je n'ai rien à te dire."
             show elusia angry sport
@@ -583,7 +583,7 @@ label day7_elu_3:
     menu:
         "Que faire ?"
         "Défendre.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "En jouant défensif, je renvoie aisément la balle."
             "Celle-ci atterrit entre les deux."
             l "Ryou !"
@@ -592,30 +592,30 @@ label day7_elu_3:
             "Elusia l'attaque en retour et déséquilibré, il sort la balle."
             $ equipe2 = 40
         "Attaquer sur Ryouzanki.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "J'attaque sur Ryouzanki."
             "Force contre force, je n'ai pas pu envoyer une attaque digne de ce nom."
             "Il smash aux pieds d'Elusia qui, à cette distance ne peux pas contrer."
             $ equipe1 = 30
         "Attaquer sur Laura." if choix1:
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "J'attaque sur Laura."
             "Force contre force, je n'ai pas pu envoyer une attaque digne de ce nom."
             "Laura attaque de nouveau sur moi."
             $ choix1 = False
             jump day7_elu_3
         "Encore attaquer Laura" if not choix1:
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "J'attaque encore sur Laura."
             "Laura renvoie encore la balle sur moi."
             "Cette fois, je la rate."
             $ equipe1 = 30
     menu:
         "Ils me visent intentionnellement !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             ma "Ils me visent intentionnellement !"
         "Elusia, tu ne remarques rien d'anormal ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu +=3
             m "Elusia, tu ne remarques rien d'anormal ?"
     show elusia sad sport
@@ -625,19 +625,19 @@ label day7_elu_3:
     e "Exceptionnellement, je vais t'aider."
     menu:
         "Tu es censée m'aider, on est une équipe...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu -= 4
             m "Tu es censée m'aider, on est une équipe..."
             show elusia normal sport
             e "Possible..."
             e "Mais tu es censé[ter] être assez compétent[ter] pour ne pas avoir besoin de moi."
         "Pourquoi exceptionnellement ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Pourquoi exceptionnellement ?"
             show elusia normal sport
             e "Parce que je veux gagner face à Laura sur son terrain."
         "D'accord, merci !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu += 2
             m "D'accord, merci !"
             show elusia normal sport
@@ -693,18 +693,18 @@ label day7_lolo:
     menu:
         m "Ce pari..."
         "C'est une bonne idée...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lolo += 2
             mh "C'est une bonne idée..."
             l "Tu trouves ?"
         "Je ne veux pas être impliqué[ter].":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lolo += 4
             ma "Je ne veux pas être impliqué[ter]."
             l "Bah... Moi non plus..."
             l "Mais ne t'en fais pas."
         "...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "..."
             l "Qu'y a t'il ?"
             l "Le pari te dérange, c'est ça ?"
@@ -712,17 +712,17 @@ label day7_lolo:
     l "Je pense que ce sont juste des paroles en l'air."
     menu:
         "OK":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "OK."
         "Ca me rassure.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lolo += 2
             m "Ca me rassure."
             show laura happy
             l "A ce point là ?"
             l "Tu vas pouvoir jouer l'esprit tranquille !"
         "Dommage.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lolo += 4
             m "Dommage."
             l "Tout à fait."
@@ -744,7 +744,7 @@ label day7_lolo:
     "J'entends Laura crier \"J'ai !\""
     menu:
         "Laisser passer.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lolo += 4
             "Je laisse passer la balle."
             "J'entends une frappe derrière moi et la balle va rebondir dans un coin du camp adverse."
@@ -752,20 +752,20 @@ label day7_lolo:
             l "Bravo partenaire !"
             menu:
                 "Bravo à toi !":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lolo += 2
                     m "Bravo à toi !"
                     show laura sad
                     l "Non..."
                     l "C'est du travail d'équipe !"
                 "Excellent travail d'équipe.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lolo += 4
                     m "Excellent travail d'équipe."
                     show laura happy
                     l "Exactement !"
                 "J'ai rien fait...":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     m "J'ai rien fait..."
                     show laura sad
                     l "Mais si..."
@@ -775,27 +775,27 @@ label day7_lolo:
             l "C'est pourquoi on devrait gagner !"
             l "Tu as eut confiance en moi."
         "Attaquer.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lolo -= 2
             "Je décide d'attaquer sur Ryouzanki."
             "Il me renvoie une balle molle."
             l "N'attaque surtout pas !"
             menu:
                 "Rattaquer.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lolo -= 4
                     "Laura ne chercherait pas à prendre mon moment de gloire ?"
                     "Je rattaque."
                     "Grave erreur, c'était un effet très bien placé et je touche le filet."
                 "Défendre.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lolo -= 2
                     "Je défends."
                     "C'était une bonne idée."
                     "La balle possédait un effet monstrueux."
                     "Elusia attaque sur moi et je n'ai pas la force de renvoyer la balle."
                 "Laisser passer.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     "Je laisse passer la balle."
                     "Laura la frappe."
                     "Mais elle n'attaque pas."
@@ -815,7 +815,7 @@ label day7_lolo:
     l "..."
     menu:
         "Tu préfères jouer avec Alice ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lolo += 4
             m "Tu préfères jouer avec Alice ?"
             show laura sad
@@ -825,7 +825,7 @@ label day7_lolo:
             l "Elle est meilleure que toi mais c'est ennuyeux de jouer ave elle."
             menu:
                 "Parce qu'elle est trop forte ?":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     m "Parce qu'elle est trop forte ?"
                     show laura normal
                     l "Non, pas plus que ça..."
@@ -833,7 +833,7 @@ label day7_lolo:
                     l "On ne se connait pas non plus."
                     l "Et nos centres d'intérêts sont trop distants."
                 "Parce que c'est une geek ?":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lolo += 4
                     m "Parce que c'est une geek ?"
                     l "... Ha ha !"
@@ -842,7 +842,7 @@ label day7_lolo:
                     l "En fait, c'est surtout parce qu'elle ne parle pas du tout."
                     l "Du coup, les parties muettes sont si ennuyantes..."
         "Quelque chose te tracasse ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Quelque chose te tracasse ?"
             show laura normal
             l "Non non..."
@@ -877,13 +877,13 @@ label day7_ryou:
     r "Je veux pas perdre."
     menu:
         "Mec, on va pas perdre...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou +=2
             m "Mec, on va pas perdre..."
             show ryou sad
             r "Bien sur que si..."
         "Tant pis...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Tant pis..."
             r "Nan mais sérieusement, ces deux filles m'extorquent des sous avec des paris à la con..."
     show ryou angry
@@ -891,19 +891,19 @@ label day7_ryou:
     r "On a juste aucune chance contre ces monstres !"
     menu:
         "Parce que je t'aime bien.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou +=2
             m "Parce que je t'aime bien."
             show ryou sad
             r "Désolé, mais je préfère les femmes."
         "Parce qu'on est des hommes.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou +=4
             m "Parce qu'on est des hommes."
             show ryou normal
             r "Ouais bah j'espère que t'assure !"
         "Non mais on va gagner !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Non mais on va gagner !"
             r "T'as l'air vraiment sûr de toi..."
     call day7_normal
@@ -915,14 +915,14 @@ label day7_ryou:
     r "D'habitude avec Alice, on séparait les deux brutes."
     menu:
         "Arrête de gémir, t'es un homme.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou -=2
             m "Arrête de gémir, t'es un homme."
             show ryou sad
             r "Vas te faire foutre..."
             r "Il faut trouver un autre moyen de gagner..."
         "T'as raison, trouvons un autre moyen de gagner.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou +=2
             m"T'as raison, trouvons un autre moyen de gagner."
             show ryou sad
@@ -939,13 +939,13 @@ label day7_ryou:
     "La balle arrive..."
     menu:
         "Faire semblant de jouer.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou +=2
             "Je touche la balle mais la laisse partir dans le filet."
             e"Jeu !"
             e"Changement de serveur !"
         "Tenter de l'arrêter.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ stamina -=1
             $rel_ryou -=2
             "J'ai réussi à l'arrêter."
@@ -954,19 +954,19 @@ label day7_ryou:
             e "Changement de serveur !"
             menu:
                 "...":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     pass
                 "T'as fait exprès de rater ?":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $rel_ryou -=2
                     ma "T'as fait exprès de rater ?"
                     r "Bah ouais..."
                     menu:
                         "OK....":
-                            # $ renpy.block_rollback()
+                            $ renpy.block_rollback()
                             m"OK...."
                         "Pour une fois qu'on renvoie une balle...":
-                            # $ renpy.block_rollback()
+                            $ renpy.block_rollback()
                             $rel_ryou -=2
                             ma "Pour une fois qu'on renvoie une balle..."
                             show ryou angry
@@ -975,15 +975,15 @@ label day7_ryou:
     r "Il faut se débrouiller pour gagner le tiens et celui de Laura et c'est gagné."
     menu:
         "OK.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou +=2
             m "OK."
         "Ce sera égalité.":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 m "Ce sera égalité."
                 r "Nan, je vais gagner le mien, t'en fais pas."
         "Et le tiens ?":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 $rel_ryou -=2
                 m "Et le tiens ?"
                 r "Nan, je vais gagner le mien, t'en fais pas."
@@ -992,7 +992,7 @@ label day7_ryou:
     r "Elusia la renverra de toutes façons."
     menu:
         "\"Quelqu'un qui ne se donne pas toujours à fond ne gagne pas...\"":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou -=2
             m "\"Quelqu'un qui ne se donne pas toujours à fond ne gagne pas...\""
             show ryou angry
@@ -1002,7 +1002,7 @@ label day7_ryou:
             r "Et on perdra à coup sûr."
             r "Fait le..."
         "OK, ça marche.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou +=2
             m "OK, ça marche."
             show ryou happy
@@ -1010,20 +1010,20 @@ label day7_ryou:
     "Je dois servir sur Elusia."
     menu:
         "Servir avec un effet.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou -=2
             "Je donne un effet maximal à mon service."
             "Elusia renvoie la balle avec grande aisance."
             "Comme s'il n'y avait jamais eut d'effet."
         "Servir avec force.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou -=2
             $ stamina -= 1
             "Je frappe aussi fort que je peux."
             "Elusia renvoie la balle avec la même force."
             "Comme si elle n'était qu'un miroir."
         "Servir en économisant ses forces.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou +=2
             $ stamina += 1
             "Je frappe doucement la balle."
@@ -1043,7 +1043,7 @@ label day7_ryou_2:
     m "Service contre Laura."
     menu:
         "Servir avec un effet.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             if equipe1 != 30:
                   $ equipe1 += 15
             else:
@@ -1054,7 +1054,7 @@ label day7_ryou_2:
             "Après un échange intense, nous remportons le point."
             show ryou happy
         "Servir avec force.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou -=2
             $ stamina -= 1
             "Je frappe aussi fort que je peux."
@@ -1078,7 +1078,7 @@ label day7_ryou_2:
                 else:
                     $ equipe2 = 40
         "Servir en économisant ses forces.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ stamina += 1
             "Je frappe doucement la balle."
             $ n = renpy.random.randint(1,3)
@@ -1103,7 +1103,7 @@ label day7_ryou_2:
     m "Service contre Elusia..."
     menu:
         "Servir avec un effet.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou -=2
             "Je donne un effet maximal à mon service."
             "Elusia renvoie la balle avec grande aisance."
@@ -1124,7 +1124,7 @@ label day7_ryou_2:
                 else:
                     $ equipe2 = 40
         "Servir avec force.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $rel_ryou +=2
             $ stamina -= 1
             "Je frappe aussi fort que je peux."
@@ -1148,7 +1148,7 @@ label day7_ryou_2:
                     $ equipe2 = 40
                 show ryou angry
         "Servir en économisant ses forces.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ stamina += 1
             "Je frappe doucement la balle."
             $ n = renpy.random.randint(1,4)
@@ -1203,7 +1203,7 @@ label day7_ryou_3:
     r "Elle va fatiguer plus vite qu'Elusia."
     menu:
         "C'est pas très cool ça...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             ma "C'est pas très cool ça..."
             r "J'sais mais j'veux pas perdre."
             show ryou sad
@@ -1215,7 +1215,7 @@ label day7_ryou_3:
             "Nous avons perdu le set de très peu."
             $ rel_ryou -= 5
         "OK, ça marche...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "OK, ça marche."
             show ryou happy
             r "J'savais que tu comprendrais."
@@ -1248,13 +1248,13 @@ label day7_ryou_3:
                 show ryou normal
                 r "Mais avec le Tie Break, il va falloir donner..."
             "Il n'y a pas que gagner qui compte...":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 $ rel_ryou -= 4
                 ma "Il n'y a pas que gagner qui compte..."
                 show ryou angry
                 r "..."
             "Bah tant pis...":
-                # $ renpy.block_rollback()
+                $ renpy.block_rollback()
                 $ rel_ryou -= 2
                 m "Bah tant pis..."
                 show ryou angry
@@ -1275,13 +1275,13 @@ label day_ryou4:
     r  "Nan, t'en fais pas..."
     menu:
         "Je vais essayer.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Je vais essayer."
             $ rel_ryou += 3
             "Nous tirons tous les deux au milieu."
             "Nous gagnons des points faciles car aucune ne bouge."
         "Non, c'est stupide.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             ma "Non, c'est stupide."
             $ rel_ryou -= 2
             "Ryouzanki marque des points faciles en tirant au centre car aucune ne bouge."
@@ -1297,14 +1297,14 @@ label day_ryou4:
     e "Ce n'est pas ma faute si tu es si faible !"
     menu:
         "C'est pas la peine de vous disputer !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "C'est pas la peine de vous disputer !"
             show ryou happy
             r "Après, tout, vous avez déjà perdu."
             m "C'était pas vraiment ce que je voulais dire..."
             menu:
                 "En fait, si.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     m "En fait, si."
                     m "Vous avez perdu."
                     show elusia angry sport
@@ -1316,7 +1316,7 @@ label day_ryou4:
                     $ rel_lolo -= 3
                     jump day7_ryou5
                 "Le tennis, c'est qu'un jeu.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lulu += 2
                     $ rel_lolo += 4
                     m "Le tennis, c'est qu'un jeu."
@@ -1328,7 +1328,7 @@ label day_ryou4:
                     e "On n'arrête là ?"
                     menu:
                         "OK.":
-                            # $ renpy.block_rollback()
+                            $ renpy.block_rollback()
                             m "OK."
                             m "Ryou ?"
                             show ryou sad
@@ -1339,7 +1339,7 @@ label day_ryou4:
                             $ rel_lolo += 3
                             jump day7_perfect
                         "Non, finissons.":
-                            # $ renpy.block_rollback()
+                            $ renpy.block_rollback()
                             m "Non, finissons."
                             r "Oui, chef !"
                             show elusia sad sport
@@ -1347,7 +1347,7 @@ label day_ryou4:
                             $ rel_ryou += 3
                             jump day7_ryou5
                 "Vous êtes toutes les deux en tort.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lulu += 4
                     $ rel_lolo += 2
                     m "Vous êtes toutes les deux en tort."
@@ -1361,7 +1361,7 @@ label day_ryou4:
                     jump day7_ryou5
                     
         "Elusia, tu devrais jouer en équipe.":
-               # $ renpy.block_rollback()
+               $ renpy.block_rollback()
                m "Elusia, tu devrais jouer en équipe."
                $ rel_lulu -= 4
                $ rel_lolo += 3
@@ -1375,7 +1375,7 @@ label day_ryou4:
                r "On s'en fout, jouez..."
                jump day7_ryou5
         "Laura, t'es juste trop faible.":
-                # $ renpy.block_rollback()
+               $ renpy.block_rollback()
                m "Laura, t'es juste trop faible."
                $ rel_lolo -= 4
                $ rel_lulu += 3
@@ -1388,7 +1388,7 @@ label day_ryou4:
                r "On s'en fout, jouez..."
                jump day7_ryou5
         "Vous formez un mauvais couple.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Vous formez un mauvais couple."
             m "Vous n'êtes pas faîtes pour vous entendre."
             $ rel_lulu -= 3
@@ -1483,12 +1483,12 @@ label day7_ryou_win:
     r "Nan mais c'est bon, je vais payer juste ma part."
     menu:
         "Je vais payer la mienne.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Je vais payer la mienne."
             $ rel_lulu += 3
             $ rel_lolo += 3
         "Il reste juste la mienne.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Il reste juste la mienne."
     r "Heu... Oui..."
     r "On y va ? j'ai soif..."
@@ -1515,7 +1515,7 @@ label day7_pari:
 label day7bar:
     menu:
         "Y'a quoi ?" if choix2:
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ choix2 = False
             $ rel_ryou -= 2
             $ rel_lolo -= 2
@@ -1525,24 +1525,24 @@ label day7bar:
             l "Y'a tout ce qu'il y a d'habitude dans les bars."
             jump day7bar
         "Commandez avant.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Commandez avant."
             jump day7commandeautre
         "Je vais prendre...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Je vais prendre..."
             $ rel_lulu += 3
             $ rel_lolo += 4
 label day7commandemoi:
     menu:
         "Vous vendez quoi comme softdrink ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Vous vendez quoi comme softdrink ?"
             pnj "Thé, café, sirop, milkshake et sodas... Tout est là !"
             menu:
                 m "Alors va pour..."
                 "Un thé.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     mh "Un thé."
                     $ rel_lulu += 3
                     show ryou happy
@@ -1551,14 +1551,14 @@ label day7commandemoi:
                     l "Fuyons !!!"
                     $ choix1 = "thé"
                 "Un café.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_ryou += 3
                     mh "Un café."
                     show ryou happy
                     r "Le repos du guerrier..."
                     $ choix1 = "café"
                 "De l'eau.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     mh "De l'eau."
                     $ rel_lulu += 2
                     $ rel_lolo += 2
@@ -1573,7 +1573,7 @@ label day7commandemoi:
                     e "N'importe quoi !"
                     $ choix1 = "eau"
                 "Un sirop.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     mh "Un sirop."
                     $ rel_lulu += 2
                     $ rel_lolo += 1
@@ -1584,7 +1584,7 @@ label day7commandemoi:
                     e "Bah, [sexe] boit ce qu'[sexe] veut hein..."
                     $ choix1 = "sirop"
                 "Un milkshake.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     mh "Un milkshake."
                     $ rel_lulu += 1
                     $ rel_lolo += 3
@@ -1592,7 +1592,7 @@ label day7commandemoi:
                     r "C'est trop meugnon !"
                     $ choix1 = "milkshake"
                 "Un soda.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_ryou += 2
                     $ rel_lolo += 1
                     mh "Un soda."
@@ -1604,7 +1604,7 @@ label day7commandemoi:
                     e "Le café, c'est pas forcément mieux..."
                     $ choix1 = "soda"
         "Vous vendez de l'alcool ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Vous vendez de l'alcool ?"
             show elusia surprised sport
             e "J'en connais qui vont se plaindre de courbatures après..."
@@ -1614,21 +1614,21 @@ label day7commandemoi:
             menu:
                 m "Alors va pour..."
                 "Un demi de bière.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     mh "Un demi de bière."
                     $ rel_ryou += 1
                     show ryou happy
                     r "Barbare va !"
                     $ choix1 = "demi"
                 "Un apéritif.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     mh "Un apéritif."
                     $ rel_lolo += 1
                     show laura happy
                     l "Y'en a qui osent..."
                     $ choix1 = "apéritif"
                 "Un verre de vin.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     mh "Un verre de vin."
                     $ rel_lulu += 1
                     show ryou happy
@@ -1665,7 +1665,7 @@ label day7fincommande:
     e "J'ai tort ?"
     menu:
         "Non non, j'aime bien !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             mh "Non non, j'aime bien !"
             $ rel_ryou += 1
             $ rel_lulu += 3
@@ -1673,7 +1673,7 @@ label day7fincommande:
             $ choix1 = True
             jump day7bartennis
         "Oui... J'aime pas trop...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Oui... J'aime pas trop..."
             $ rel_ryou += 2
             $ rel_lolo += 1
@@ -1682,7 +1682,7 @@ label day7fincommande:
             menu:
                 m "Eh bien..."
                 "J'aime pas le sport en général.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_ryou += 3
                     $ rel_lolo -= 2
                     $ rel_lulu -= 2
@@ -1692,7 +1692,7 @@ label day7fincommande:
                     show laura normal
                     l "Oui, moi je n'aime jouer qu'avec mes amis en fait."
                 "J'aime pas le tennis, c'est tout.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lolo += 1
                     $ rel_ryou += 1
                     m "J'aime pas le tennis, c'est tout."
@@ -1720,7 +1720,7 @@ label day7bartennis:
     r "Ah oui..."
     menu:
         "J'aime le tennis.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ryou += 1
             $ rel_lulu += 4
             $ rel_lolo += 2
@@ -1735,7 +1735,7 @@ label day7bartennis:
             e "T'en faisais avant ?"
             menu:
                 "Oui.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lolo += 2
                     $ rel_lulu += 4
                     mh "Oui."
@@ -1743,7 +1743,7 @@ label day7bartennis:
                     show ryou sad
                     r "Oh bah ça promet..."
                 "Non.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lulu += 3
                     $ rel_lolo += 4
                     mh "Non."
@@ -1753,7 +1753,7 @@ label day7bartennis:
                     show elusia happy sport
                     e "Je confirme !"
                 "Maintenant oui !":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_ryou += 3
                     $ rel_lulu += 2
                     $ rel_lolo += 2
@@ -1766,7 +1766,7 @@ label day7bartennis:
                     show ryou happy
                     r "C'était vraiment cool de jouer avec nous."
         "Non, mais avec vous...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ryou += 2
             $ rel_lulu += 3
             $ rel_lolo += 3
@@ -1781,7 +1781,7 @@ label day7bartennis:
             r "T'en avais déjà fait avec des amis ?"
             menu:
                 "Oui et ça m'avait plus.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_ryou += 1
                     $ rel_lulu += 2
                     $ rel_lolo += 3
@@ -1793,7 +1793,7 @@ label day7bartennis:
                     show ryou happy
                     r "Enfin, j'espère pour toi !"
                 "Oui mais ce n'était pas fun...":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_ryou += 1
                     $ rel_lulu += 2
                     $ rel_lolo += 2
@@ -1805,7 +1805,7 @@ label day7bartennis:
                     show ryou surprised
                     r "On est donc si différents que ça ?"
                 "Non, jamais.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_ryou += 1
                     $ rel_lulu += 3
                     $ rel_lolo += 1

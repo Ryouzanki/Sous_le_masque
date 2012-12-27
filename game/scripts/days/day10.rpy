@@ -84,12 +84,12 @@ label day10:
     r "Nan, avoir la moyenne c'est suffisant."
     menu:
         "Je pense que...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lolo += 3
             menu:
                 m "Je pense que..."
                 "Avoir la moyenne, c'est suffisant.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_ryou += 3
                     mh "Avoir la moyenne, c'est suffisant."
                     m "Ce qui compte, c'est d'avoir son diplôme après tout."
@@ -97,7 +97,7 @@ label day10:
                     e "Misère..."
                     e "Principe de la démocratie, je me tais..."
                 "Être dans les premiers, c'est mieux.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     $ rel_lulu += 3
                     mh "Être dans les premiers, c'est mieux."
                     show ryou sad
@@ -112,7 +112,7 @@ label day10:
                     show elusia geez
                     e "C'est ça..."
         "...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             pass
     show elusia surprised
     e "D'ailleurs, où est Valou ?"
@@ -161,7 +161,7 @@ label day10:
     e "Mais nan !"
     menu:
         "Insister.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ryou += 4
             $ rel_lulu -= 2
             mh "Aller, raconte nous !"
@@ -171,13 +171,13 @@ label day10:
             show ryou sad
             r "OK, comme tu voudra..."
         "Ne pas agir.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ryou -= 2
             "Il y eut un petit silence."
             show elusia geez
             e "[j], à ton tour..."
         "Défendre Elusia.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu += 4
             m "Si elle ne veut pas nous le dire, c'est pas si grave."
             show elusia geez
@@ -205,14 +205,14 @@ label day10q:
     menu:
         m "Je..."
         "Je désire ne pas répondre.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             ma "Je désire ne pas répondre."
             show prof annoyed
             p "Oh mais vous ne partirez pas d'ici sans !"
             p "Je vis seul, j'ai tout mon temps !"
             jump day10q
         "J'enclenche le levier...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "J'enclenche le levier."
             m "Il faut parfois sacrifier une vie pour en sauver plus."
             m "Objectivement parlant, j'en sacrifie une pour en sauver cinq."
@@ -233,7 +233,7 @@ label day10q:
             p "Offrez moi donc du spectacle !"
             menu:
                 "Ce n'est pas naïf mais réaliste !":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     ma "Ce n'est pas naïf mais réaliste !"
                     show prof happy
                     p "C'est la raison pour laquelle les scientifiques ne dirigent pas notre pays."
@@ -241,7 +241,7 @@ label day10q:
                     p "Parce que les humains, vous ici, ne sont pas des algorithmes sans coeur."
                     p "Le jour où ça arrivera, je vous souhaite de faire un choix que vous ne regretterez pas."
                 "C'est le meilleur choix possible !":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     ma "C'est le meilleur choix possible !"
                     p "Meilleur ?"
                     p "C'est très subjectif ça."
@@ -249,7 +249,7 @@ label day10q:
                     show prof naughty
                     p "Le courage de faire face à vos actes devant une famille éplorée."
         "Je n'enclenche pas le levier...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Je n'enclenche pas le levier..."
             m "Je refuse d'être responsable de la mort d'une personne."
             play music (prof2) fadein 2
@@ -268,7 +268,7 @@ label day10q:
             menu:
                 ma "Je n'avais pas le choix avant-hier !"
                 "Je ne veux tuer personne !":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     ma "Je ne veux tuer personne !"
                     ma "Avant-hier, je devais obligatoirement tuer des gens !"
                     ma "Alors autant en tuer le moins possible !"
@@ -281,7 +281,7 @@ label day10q:
                     p "Quel choix égoiste..."
                     p "Après tout, c'est dans la nature humaine que de se protéger soi d'abord..."
                 "Je ne veux pas de problème !":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     ma "Je ne veux pas de problème !"
                     ma "Avant-hier, j'allais déjà tuer des gens alors autant faire le moins de mort possible."
                     ma "Là, je vais avoir des problèmes parce que je suis totalement responsable de la mort d'une personne."
@@ -306,7 +306,7 @@ label day10q:
     menu:
         m "Il m'a posé des questions..."
         "Assez bizarres...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             extend "Assez bizarres..."
             show ryou happy
             r "Genre des dilemnes ?"
@@ -318,7 +318,7 @@ label day10q:
             r "T'en fais pas, tes réponses ne nous concernent pas."
             m "Effectivement."
         "Scolaires, rien d'intéressants.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ryou -= 3
             extend "Scolaires, rien d'intéressants."
             m "Il m'a parlé de mes anciennes notes."
@@ -369,10 +369,10 @@ label day10_anniv: # Visible si on s'entend avec Elusia ET Ryouzanki a 50+
     show ryou happy
     menu:
         "De quoi voulais tu parler ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "De quoi voulais tu parler ?"
         "Que lui as tu dit ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Que lui as tu dit ?"
             show ryou surprised
             r "Des choses que tu ne voudrais même pas savoir !"
@@ -389,14 +389,14 @@ label day10_anniv: # Visible si on s'entend avec Elusia ET Ryouzanki a 50+
     r "On le mangerait lors de la pause de midi vu que le soir elle le fêtera avec sa famille."
     menu:
         "T'aurais pas oublié son anniversaire par hasard ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "T'aurais pas oublié son anniversaire par hasard ?"
             show ryou happy
             r "Chut !"
             r "Pour la peine, t'ira chercher le gâteau tout[ter] seul[ter] !"
             mh "Marrant tiens..."
         "Et donc on s'organise comment ?":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Et donc on s'organise comment ?"
             r "A priori, t'ira chercher le gâteau tout[ter] seul[ter]."
     m "Et pourquoi ?"
@@ -418,8 +418,8 @@ label day10_anniv: # Visible si on s'entend avec Elusia ET Ryouzanki a 50+
     play music (club1) fadein 2
     scene salledart
     show elusia shy at left
-    show ryou normal at Position(xpos=0.4)
-    show valeth normal at Position(xpos=0.6)
+    show ryou normal at Position(xpos=0.38)
+    show valeth normal at Position(xpos=0.65)
     show alice normal at right
     with fade
     r "Tiens, y'a même Alice !"
@@ -438,7 +438,7 @@ label day10_anniv: # Visible si on s'entend avec Elusia ET Ryouzanki a 50+
     "Oh non, il n'aurait quand même pas..."
     menu:
         "Lancer un regard sexy à Ryouzanki.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ryou += 5
             show ryou surprised
             r "Quoi ?"
@@ -450,7 +450,7 @@ label day10_anniv: # Visible si on s'entend avec Elusia ET Ryouzanki a 50+
             show elusia geez with dissolve
             e "Alors tout ceci n'était qu'une blague..."
         "Lancer un regard affolé à Ryouzanki.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ryou += 3
             show ryou surprised
             "Il me regarde droit dans les yeux."
@@ -458,7 +458,7 @@ label day10_anniv: # Visible si on s'entend avec Elusia ET Ryouzanki a 50+
             "Puis il éclate de rire."
             "Oh non, il l'a vraiment fait..."
         "Lancer un regard furieux à Ryouzanki.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             show ryou surprised
             "Il me regarde droit dans les yeux."
             show ryou happy

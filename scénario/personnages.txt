@@ -164,6 +164,8 @@ Gameplay : Les choix intelligent font monter la barre. Les choix extremement nai
 
 Dialogue : Personage plutot calme. plutot gentil et se donne l'air stupide sans pour autant l'être. ne manipule pas ouvertement et trop de hasard tue le hasard
 
+phrase type : "Sérieux ?"
+
 Salazard Zelgius ******************************************************************************************
 
 Rôle : Néant

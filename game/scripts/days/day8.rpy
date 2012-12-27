@@ -79,7 +79,7 @@ label day8:
         $ choix1 = 2
     "La dernière question me dit quelque chose..."
     $ ans = renpy.input("Combien d'éléments y a t-il dans le sang ?", "", length=2)
-    # $ renpy.block_rollback()
+    $ renpy.block_rollback()
     if ans == '4' :
         "Mmmh... J'assure au moins les points faciles..."
         $ choix1 += 1
@@ -108,7 +108,7 @@ label day8:
     menu:
         m "Oh moi.."
         "Avouer." if choix1 == 0:
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ryou += 1
             $ rel_lulu += 1
             "Cela ne sert à rien de mentir."
@@ -120,7 +120,7 @@ label day8:
             m "Je n'ai aucune bonne réponse sûre..."
             r "Aïe..."
         "Avouer." if choix1 == 1:
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ryou += 2
             $ rel_lulu += 2
             "Cela ne sert à rien de mentir."
@@ -131,7 +131,7 @@ label day8:
             m "J'aurais une note pas trop mauvaise."
             e "Tu fera mieux la prochaine fois hein !"
         "Mentir" if choix1 < 2:
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ryou -= 4
             $ rel_lulu -= 6
             "J'ai assez honte..."
@@ -144,7 +144,7 @@ label day8:
             e "Espérons que l'on déteigne sur toi !"
             r "Puisque je te dis que ça va..."
         "Modestie..." if choix1 > 1:
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ryou += 3
             $ rel_lulu +=3
             "On va éviter de les rabaisser."
@@ -155,7 +155,7 @@ label day8:
             e "Bien joué."
             r "T'as travaillé pour ça ?"
         "Franchise..." if choix1 > 1:
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_ryou -= 2
             $ rel_lulu += 2
             "Ce sont mes amis après tout."
@@ -174,7 +174,7 @@ label day8:
     e "C'est pas mon but !"
     menu:
         "Accepter.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             $ rel_lulu += 3
             mh "Personnellement, je ne vois pas de raison de refuser."
             mh "On n'a pas grand chose à perdre et on est voisin."
@@ -183,7 +183,7 @@ label day8:
             show elusia satisfied
             e "Super. On s'organisera pour réviser la prochaine fois alors."
         "Refuser.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "Non merci."
             m "Je n'ai rien contre vous mais je travaille mieux seul[ter]."
             r "Idem."
@@ -268,7 +268,7 @@ label day8:
     menu:
         "Que faire ?"
         "Faire la statue...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "Je m'immobilise en attendant qu'il passe."
             show prof normal with easeinleft
             "C'est si stupide, qu'est ce que je suis en train de faire bon sang ?"
@@ -278,14 +278,14 @@ label day8:
             "Certains font même des mots-croisés ou des Sudoku..."
             $ choix1 = 1
         "Faire semblant d'écrire un truc.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "J'attrape mon stylo et le pose sur ma feuille."
             show prof happy with easeinleft
             "Il s'arrête pile devant moi et... Sourit ?"
             "On dirait qu'il attend quelque chose..."
             menu:
                 "Ecrire des trucs au hasard.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     p "Oh, je vois que vous avez quelques réponses."
                     p "Allez donc faire la correction au tableau."
                     m "Mais je..."
@@ -296,7 +296,7 @@ label day8:
                     p "Que vois-je ?"
                     p "Ce tableau est aussi vide que votre tête !"
                 "Le regarder.":
-                    # $ renpy.block_rollback()
+                    $ renpy.block_rollback()
                     p "Alors [j] ? Manque d'inspiration ?"
                     m "Je..."
                     p "Je sais. Tu n'as pas compris l'exercice."
@@ -312,7 +312,7 @@ label day8:
             $ rel_lolo -= 2
             $ choix1 = 2
         "Faire semblant de réfléchir.":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             "La pose du Penseur de Rodin."
             show prof happy with easeinleft
             "Il se penche vers moi et me chuchotte :"
@@ -369,15 +369,15 @@ label day8:
     "Je suppose que c'est la réponse d'un psycopathe..."
     menu:
         "Vous êtes monstrueux !":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             ma "Vous êtes monstrueux !"
             show prof happy
         "Vous êtes très intelligent...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             mh "Vous êtes très intelligent..."
             show prof normal
         "OK...":
-            # $ renpy.block_rollback()
+            $ renpy.block_rollback()
             m "OK..."
     play music (prof1) fadein 4
     p "Bah voyons..."
@@ -416,12 +416,12 @@ label day8_sport:
     window show None
         
     if _return == "gymnase":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         "Allons faire du sport..."
         call sport
     
     elif _return == "science":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         if aller_science > 0:
             "Allons voir Alice..."
         else:
@@ -430,7 +430,7 @@ label day8_sport:
         call labo
         
     elif _return == "art":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         if aller_art == 1:
             "Allons tenter de battre Valeth !"
         else:
@@ -438,7 +438,7 @@ label day8_sport:
         call club
 
     elif _return == "rentrer":
-        # $ renpy.block_rollback()
+        $ renpy.block_rollback()
         "Je crois que je vais rentrer."
         call go_home
         
