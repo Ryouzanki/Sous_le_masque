@@ -1,5 +1,5 @@
 # TODO easin + easeout
-#            $ renpy.block_rollback()
+#            # $ renpy.block_rollback()
 
 label ryou:
     define e = Character('Elusia', color="#FF69B4", show_two_window=True)
@@ -228,7 +228,7 @@ label test:
     $rel_lulu +=10
     $ rel_ryou -=10
     e "Ryou, je t'aime !"
-    $ renpy.block_rollback()
+    # $ renpy.block_rollback()
     l "test"
     v "test"
     y "test"

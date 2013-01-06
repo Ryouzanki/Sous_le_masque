@@ -19,27 +19,27 @@ label day6:
         menu:
             m "Je dirais..."
             "Elusia !":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 m "Elusia !"
                 a "Elusia..."
                 jump day6_fille
             "Ryouzanki !":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 m "Ryouzanki !"
                 a "Ryouzanki..."
                 jump day6_mec
             "Laura !":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 m "Laura !"
                 a "Laura..."
                 jump day6_fille
             "Valeth !":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 m "Valeth !"
                 a "Valeth..."
                 jump day6_mec
             "Alice !":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 m "Alice !"
                 a "Alice..."
                 a "Oh... C'est une bonne réponse !"
@@ -47,7 +47,7 @@ label day6:
                 $ rel_ali += 5
                 jump day6_phone
             "Lloyd !":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 m "Lloyd !"
                 a "Lloyd..."
                 jump day6_mec
@@ -79,7 +79,7 @@ label day6_phone:
     a "Je suis lourde ? J'en fais trop ?"
     menu:
         "Non, pas du tout.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_ali += 5
             m "Non, pas du tout."
             m "Tu es passionnée. C'est une bonne chose."
@@ -87,7 +87,7 @@ label day6_phone:
             a "Ca me fait vraiment plaisir d'entendre ça."
             a "Surtout de toi !"
         "Oui un peu.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_ali += 3
             m "Oui un peu. Mais c'est naturel."
             m "Ce n'est pas si dérangeant."
@@ -95,7 +95,7 @@ label day6_phone:
             a "Je comprends."
             a "Ca me rassure un peu."
         "Effectivement, ils n'ont pas tort...":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_ali -= 2
             m "Effectivement, ils n'ont pas tort..."
             m "T'abuses un peu des fois..."
@@ -112,12 +112,12 @@ label day6_phone:
     a "Aujourd'hui, ils ont piqués mes clefs des locaux."
     menu:
         "(Rire)":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_ali += 2
             mh "Hahaha..."
             a "Amusant n'est-ce pas ?"
         "Ah les enfoirés...":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             ma "Ah les enfoirés..."
             a "Mais non. Je ne l'ai pas mal prit."
     a "Ils me les rendront ce midi lorsqu'ils ouvriront les locaux."
@@ -157,7 +157,7 @@ label day6_plan:
         e "Ne me dis pas que tu avais l'intention de dormir toute la matiné !"
         menu:
             "Mentir":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 m "Mais non."
                 show elusia satisfied sport
                 e "Me voilà rassurée !"
@@ -168,7 +168,7 @@ label day6_plan:
                 e "Je me demandais si cela t'intéressait de m'accompagner."
                 menu:
                     "Je vais travailler en fait.":
-                        $ renpy.block_rollback()
+                        # $ renpy.block_rollback()
                         m "Je vais travailler en fait."
                         show elusia geez sport
                         e "Oh... d'accord, je te laisse travailler."
@@ -190,7 +190,7 @@ label day6_plan:
                         $ rel_lulu -= 2
                         jump day6_aprem
                     "Je préfère me reposer.":
-                        $ renpy.block_rollback()
+                        # $ renpy.block_rollback()
                         m "Je préfère me reposer."
                         m "C'est tout."
                         show elusia angry sport
@@ -212,7 +212,7 @@ label day6_plan:
                         $ rel_lulu -= 5
                         jump day6_aprem
                     "Je vais venir.":
-                        $ renpy.block_rollback()
+                        # $ renpy.block_rollback()
                         m "Je vais venir."
                         show elusia happy sport
                         e "Super !"
@@ -225,13 +225,13 @@ label day6_plan:
                         call matin_sport
                         jump day6_aprem
             "Avouer":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 ma "Oui."
                 show elusia sad sport
                 e "Est-ce que... Tu es fatigué[ter] ou quelque chose comme ça ?"
                 menu:
                     "Oui.":
-                        $ renpy.block_rollback()
+                        # $ renpy.block_rollback()
                         ma "Oui."
                         show elusia geez sport
                         e "Oh, je suis désolée de t'avoir dérangé[ter]."
@@ -253,7 +253,7 @@ label day6_plan:
                         scene black with fade
                         jump day6_aprem
                     "Non.":
-                        $ renpy.block_rollback()
+                        # $ renpy.block_rollback()
                         m "Non."
                         show elusia geez sport
                         e "Ah..."
@@ -265,7 +265,7 @@ label day6_plan:
                         e "Je me demandais si cela t'intéressait de m'accompagner."
                         menu:
                             "Je préfère dormir.":
-                                $ renpy.block_rollback()
+                                # $ renpy.block_rollback()
                                 m"Je préfère dormir."
                                 m "C'est tout."
                                 show elusia angry sport
@@ -285,7 +285,7 @@ label day6_plan:
                                 $ rel_lulu -= 3
                                 jump day6_aprem
                             "Je vais venir.":
-                                $ renpy.block_rollback()
+                                # $ renpy.block_rollback()
                                 m "Je vais venir."
                                 show elusia happy sport
                                 e "Super !"
@@ -314,7 +314,7 @@ label day6_plan:
         e "Tu veux bien ?"
         menu:
             "Accepter.":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 $ rel_lulu += 5
                 m "Je ne vois pas de raison de refuser."
                 e "Super !"
@@ -322,7 +322,7 @@ label day6_plan:
                 call matin_sport
                 jump day6_aprem
             "Refuser.":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 ma "Nan, désolé, je cours seul[ter]."
                 show elusia surprised sport
                 m "Avec ma musique dans les oreilles."
@@ -334,7 +334,7 @@ label day6_plan:
                 e "Est-ce que... Tu me détestes ?"
                 menu:
                     "Je ne t'aime pas, non.":
-                        $ renpy.block_rollback()
+                        # $ renpy.block_rollback()
                         $ rel_lulu -= 10
                         stop music fadeout 4.0
                         ma "Je ne t'aime pas, non."
@@ -353,17 +353,17 @@ label day6_plan:
                             "Peut-être que je devrais me coucher tôt finalement aujourd'hui..."
                             menu:
                                 "C'est une bonne idée...":
-                                    $ renpy.block_rollback()
+                                    # $ renpy.block_rollback()
                                     $ action_soir = 'd'
                                 "Non, ça ira...":
-                                    $ renpy.block_rollback()
+                                    # $ renpy.block_rollback()
                                     pass
                         else:
                             $  str_points += 2
                             "J'ai bien couru !"
                         jump day6_aprem
                     "Pas particulièrement.":
-                        $ renpy.block_rollback()
+                        # $ renpy.block_rollback()
                         $rel_lulu -= 5
                         m "Pas particulièrement."
                         e "Alors où est le problème ?"
@@ -371,7 +371,7 @@ label day6_plan:
                         e "S'il te plait !"
                         menu:
                             "Non, vraiment...":
-                                $ renpy.block_rollback()
+                                # $ renpy.block_rollback()
                                 $rel_lulu -= 5
                                 stop music fadeout 4.0
                                 m "Non, vraiment..."
@@ -390,17 +390,17 @@ label day6_plan:
                                     "Peut-être que je devrais me coucher tôt finalement aujourd'hui..."
                                     menu:
                                         "C'est une bonne idée...":
-                                            $ renpy.block_rollback()
+                                            # $ renpy.block_rollback()
                                             $ action_soir = 'd'
                                         "Non, ça ira...":
-                                            $ renpy.block_rollback()
+                                            # $ renpy.block_rollback()
                                             pass
                                 else:
                                     $  str_points += 2
                                     "J'ai bien couru !"
                                 jump day6_aprem
                             "Bon, d'accord !":
-                                $ renpy.block_rollback()
+                                # $ renpy.block_rollback()
                                 mh "Bon, d'accord !"
                                 show elusia happy sport
                                 e "Super !"
@@ -409,7 +409,7 @@ label day6_plan:
                                 call matin_sport
                                 jump day6_aprem
                     "Mais non, je t'aime bien !":
-                        $ renpy.block_rollback()
+                        # $ renpy.block_rollback()
                         mh "Mais non, je t'aime bien !"
                         show elusia geez sport
                         e "Alors..."
@@ -417,7 +417,7 @@ label day6_plan:
                         e "Pourquoi est-ce que tu ne veux pas courir avec moi ?"
                         menu:
                             "Bon, d'accord, on va le faire.":
-                                $ renpy.block_rollback()
+                                # $ renpy.block_rollback()
                                 $ rel_lulu += 3
                                 m "Bon, d'accord, on va le faire."
                                 show elusia happy sport
@@ -427,7 +427,7 @@ label day6_plan:
                                 call matin_sport
                                 jump day6_aprem
                             "J'ai mes raisons, une autre fois.":
-                                $ renpy.block_rollback()
+                                # $ renpy.block_rollback()
                                 $ rel_lulu += 1
                                 m "J'ai mes raisons, une autre fois."
                                 show elusia geez sport
@@ -447,10 +447,10 @@ label day6_plan:
                                     "Peut-être que je devrais me coucher tôt finalement aujourd'hui..."
                                     menu:
                                         "C'est une bonne idée...":
-                                            $ renpy.block_rollback()
+                                            # $ renpy.block_rollback()
                                             $ action_soir = 'd'
                                         "Non, ça ira...":
-                                            $ renpy.block_rollback()
+                                            # $ renpy.block_rollback()
                                             pass
                                 else:
                                     $  str_points += 2
@@ -480,7 +480,7 @@ label day6_plan:
         e "Je me demandais si cela t'intéressait de m'accompagner."
         menu:
             "Je vais travailler en fait.":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 m "Je vais travailler en fait."
                 show elusia geez sport
                 e "Oh... d'accord, je te laisse travailler."
@@ -508,7 +508,7 @@ label day6_plan:
                 $ rel_lulu -= 1
                 jump day6_aprem
             "Je vais venir.":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 m "Je vais venir."
                 show elusia happy sport
                 e "Super !"
@@ -543,7 +543,7 @@ label day6_aprem:
         r "Je me demandais ce que tu faisais le week-end après midi."
         menu:
             "Je joue, là...":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 $ rel_ryou += 3
                 m "Je joue là..."
                 r "Bah, j'allais faire la même chose en fait."
@@ -551,7 +551,7 @@ label day6_aprem:
                 r "On peut se mettre ensemble à un jeu en ligne."
                 menu:
                     "Ouais, si tu veux.":
-                        $ renpy.block_rollback()
+                        # $ renpy.block_rollback()
                         $ rel_ryou += 5
                         m "Ouais, si tu veux."
                         show ryou happy
@@ -561,7 +561,7 @@ label day6_aprem:
                         "J'ai joué jusqu'au soir."
                         jump day6_soir
                     "Non, ça ira.":
-                        $ renpy.block_rollback()
+                        # $ renpy.block_rollback()
                         m "Non, ça ira."
                         show ryou sad
                         r "OK, tu sais ou me trouver au pire."
@@ -569,7 +569,7 @@ label day6_aprem:
                         "J'ai joué jusqu'au soir."
                         jump day6_soir
             "Je travaille là.":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 m "Je travaille là."
                 show ryou angry
                 r "Ouais ouais..."
@@ -582,7 +582,7 @@ label day6_aprem:
                 "J'ai joué jusqu'au soir."
                 jump day6_soir
             "J'allais sortir.":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 $ rel_ryou -= 4
                 m "J'allais sortir."
                 show ryou angry
@@ -645,7 +645,7 @@ label day6_alice:
     play music (alice1) fadein 10
     menu:
         "Attendre.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ choix1 = False
             "Je ne devrais pas me mêler de ce qui ne me regarde pas."
             "Je vais attendre que ça passe."
@@ -657,7 +657,7 @@ label day6_alice:
             hide alice
             show lloyd normal at center with move
         "Aller voir.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ choix1 = True
             "Je vais voir de plus près ce qui se passe."
             "Ils se disputent et les autres regardent en silence."
@@ -696,13 +696,13 @@ label day6_alice:
     if choix1:
         menu:
             "Elle en a plus que toi.":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 $ rel_lloy -= 2
                 m "Elle en a plus que toi."
                 show lloyd angry
                 y "Je te demande pardon ?"
             "Elle en a juste un différent du tien.":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 $ rel_lloy += 3
                 m "Elle en a juste un différent du tien."
                 show lloyd angry
@@ -712,7 +712,7 @@ label day6_alice:
                 show lloyd normal
                 y "..."
             "Elle n'en a aucun, effectivement...":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 $ rel_lloy += 5
                 m "Elle n'en a aucun, effectivement..."
                 show lloyd happy
@@ -725,18 +725,18 @@ label day6_alice:
     y"Et elle refuse de découvrir les coupables."
     menu:
         "Complicité, elle défend ses amis.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_lloy += 5
             m "Complicité, elle défend ses amis."
             show lloyd happy
             y "Exactement !"
         "En quoi est-ce important ?":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             m "En quoi est-ce important ?"
             y "Elle est censée être impartiale et juste."
             y "Voler, c'est mal, peut importe la raison."
         "C'était pour la bonne cause.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_lloy += 2
             m "C'était pour la bonne cause."
             y "C'était pour la bonne cause ?"
@@ -752,7 +752,7 @@ label day6_alice:
     $ choix2 = False
     menu:
         "Laisses le rester.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_lloy += 2
             $ rel_ali += 6
             m"Laisses le rester."
@@ -772,14 +772,14 @@ label day6_alice:
             $ choix1= True # Lloyd est resté grace a Minato
             $ choix2= True # Lloyd est la
         "Ne rien dire.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             m"..."
             y "Je serais discret dans un coin."
             a "..."
             y "Mais je veille sur vous."
             $ choix2= True # Lloyd est la
         "Tu n'as plus rien à faire ici.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_lloy -= 2
             $ rel_ali += 5
             m "Tu n'as plus rien à faire ici."
@@ -795,17 +795,17 @@ label day6_alice:
     a "Il est juste mais trop trop chiant des fois l'aristo..."
     menu:
         "C'est pas faux...":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             m "C'est pas faux..."
             $ rel_ali += 5
         "N'exagérons rien...":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 m"N'exagérons rien..."
                 $ rel_ali += 2
                 show alice sad
                 a "Je n'exagère pas !"
         "Il n'a pas tout à fait tort...":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 m"Il n'a pas tout à fait tort..."
                 $ rel_ali -= 2
                 show alice sad
@@ -819,12 +819,12 @@ label day6_alice:
     a "Je crois qu'il fait des effort alors je devrais en faire aussi."
     menu:
         "C'est un peu tard pour l'inviter.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             m "C'est un peu tard pour l'inviter."
             show alice normal
             a "Il est toujours dans le coin... Je suppose..."
         "Invites le !" if choix2:
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             m "Invites le !"
             show alice happy
             a "Bonne idée !"
@@ -841,13 +841,13 @@ label day6_alice:
 label day6_pfc:
     menu:
         "Pierre":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             pass
         "Feuille":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             pass
         "Ciseaux.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             pass
     $ n = renpy.random.randint(1,3)
     if n !=1:
@@ -865,7 +865,7 @@ label day6_pfc:
         a "Oui mais je suis ta supérieure et donc tu vas y aller pour moi."
         menu:
             "Oui madame la dictatrice !":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 $ rel_ali += 5
                 mh "Oui madame la dictatrice !"
                 show alice satisfied
@@ -876,30 +876,30 @@ label day6_pfc:
                 y "Qu'est ce qu'il y a ?"
                 menu:
                     "L'inviter à venir.":
-                        $ renpy.block_rollback()
+                        # $ renpy.block_rollback()
                         m "Tu viens avec nous ?"
                         y "Je ne suis plus la bienvenue."
                         menu:
                             "Tu surveillera mieux de l'intérieur.":
                                 $ rel_lloy += 2
-                                $ renpy.block_rollback()
+                                # $ renpy.block_rollback()
                                 m "Tu surveillera mieux de l'intérieur."
                                 y "Non... J'ai mieux à faire."
                             "Alice veut te voir.":
-                                $ renpy.block_rollback()
+                                # $ renpy.block_rollback()
                                 $ rel_ali += 2
                                 m "Alice veut te voir."
                                 m "Elle voulait s'excuser auprès de toi."
                                 y "Ce n'est pas important."
                                 y "J'ai plus important à faire."
                             "Tant pis.":
-                                $ renpy.block_rollback()
+                                # $ renpy.block_rollback()
                                 pass
                         y "Je vais partir."
                         y "A plus tard."
                         "Il est subitement partit..."
                     "Partir.":
-                        $ renpy.block_rollback()
+                        # $ renpy.block_rollback()
                         m "Rien, je ne faisais que passer."
                         show lloyd angry
                         y "Pas de bêtises, je vous ai à l'oeil..."
@@ -909,7 +909,7 @@ label day6_pfc:
                 m "Il dit qu'il ne veut pas venir."
                 jump day6_postlloyd
             "C'est pas un peu de l'abus de position ?":
-                $ renpy.block_rollback()
+                # $ renpy.block_rollback()
                 ma "C'est pas un peu de l'abus de position ?"
                 show alice geez
                 a "C'est bon, je plaisantais"
@@ -932,19 +932,19 @@ label day6_postlloyd:
     a "Je ne sais pas pourquoi mais je suis très contente de te voir ici."
     menu:
         "C'est beau l'amour.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $rel_ali += 3
             mh "C'est beau l'amour."
             show alice geez
             a "Le jour où je tomberais amoureuse de quelqu'un n'est pas près d'arriver."
             menu:
                 "Ca va, je plaisantais.":
-                    $ renpy.block_rollback()
+                    # $ renpy.block_rollback()
                     mh "Ca va, je plaisantais."
                     show alice satisfied
                     a"Je sais."
                 "Pourquoi tu dis ça ?":
-                    $ renpy.block_rollback()
+                    # $ renpy.block_rollback()
                     $rel_ali += 3
                     m "Pourquoi tu dis ça ?"
                     show alice sad
@@ -953,7 +953,7 @@ label day6_postlloyd:
                     a "Et puis il faudrait que je trouve quelqu'un de spécial."
                     a "Quelqu'un qui sache m'apprécier à ma juste valeur !"
         "En fait, j'avais rien de mieux à faire.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             m "En fait, j'avais rien de mieux à faire."
             show alice happy
             a "Hey ! C'est pas sympa !"
@@ -961,7 +961,7 @@ label day6_postlloyd:
             a"Enfin le hasard a déjà conduit à des découvertes scientifiques majeures !"
             a "Peut importe la raison, tant que tu y prends du plaisir au final... Je suppose..."
         "Je voulais m'intégrer au plus vite.":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $rel_ali += 3
             m "Je voulais m'intégrer au plus vite."
             show alice happy
@@ -979,7 +979,7 @@ label day6_postlloyd:
 label day6_q:
     menu:
         "Pourquoi tu portes une blouse ?" if choix2:
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_ali += 4
             m "Pourquoi tu portes une blouse ?"
             m "Je veux dire, on est samedi..."
@@ -996,7 +996,7 @@ label day6_q:
             $ choix2 = False
             jump day6_q
         "Est ce que tes parents sont des scientifiques ?" if choix1:
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_ali += 4
             m "Est ce que tes parents sont des scientifiques ?"
             show alice angry
@@ -1009,7 +1009,7 @@ label day6_q:
             $ choix1 = False
             jump day6_q
         "Comment as tu obtenu mon numéro ?" if choix4:
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_ali += 2
             m "Comment as tu obtenu mon numéro ?"
             show alice satisfied
@@ -1018,7 +1018,7 @@ label day6_q:
             $ choix4 = False
             jump day6_q
         "Pourquoi tu tiens tant que ça à me recruter ?" if choix5:
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             m "Pourquoi tu tiens tant que ça à me recruter ?"
             show alice geez
             a "On n'a pas assez de membre ni assez de temps..."
@@ -1027,7 +1027,7 @@ label day6_q:
             $ choix5 = False
             jump day6_q
         "Pas assez de membre... Pourquoi ?"if choix3:
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_ali -= 2
             m "Pas assez de membre... Pourquoi ?"
             show alice angry
@@ -1037,7 +1037,7 @@ label day6_q:
             $ choix3 =  False
             jump day6_q
         "C'est pas un peu de ta faute si y'a pas grand monde ?"if choix6:
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_ali -= 3
             $ choix6 = False
             m "C'est pas un peu de ta faute ?"
@@ -1056,18 +1056,18 @@ label day6_q:
     a"Maintenant, au travail !"
     menu:
         "J'ai l'impression de m'être fait roulé !":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_ali += 4
             mh "J'ai l'impression de m'être fait roulé !"
             show alice satisfied
             a "Tu crois ?"
         "D'accord...":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_ali += 2
             m "D'accord."
             a "J'apprécie ta bonne volonté."
         "Non, je ne suis pas venu pour ça !":
-            $ renpy.block_rollback()
+            # $ renpy.block_rollback()
             $ rel_ali -= 4
             ma "Non, je ne suis pas venu pour ça !"
             show alice sad
@@ -1082,7 +1082,7 @@ label day6_q:
     a "Donc, on a dépassé le seuil de matière active."
     a "Ce seuil est de combien de Kg ?"
     $ ans = renpy.input("Le seuil en Kg est de :", "", length=2)
-    $ renpy.block_rollback()
+    # $ renpy.block_rollback()
     if ans == '35':
         $ rel_ali += 8
         show alice happy
