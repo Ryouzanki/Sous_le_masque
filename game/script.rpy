@@ -106,7 +106,6 @@ label choix_game:
             pass
         "Route bonus" if persistent.ending == "win":
             "Route vérouillée pour cette version." # TODO
-            jump choix_game
             jump ryou
             
 label route:
@@ -167,13 +166,13 @@ label route:
     call night
     call day7
     call night
-    #call day8
-    #call night
-    #call day9
-    #call night
-    #call day10
-    #call night
-    #call day11
+    call day8
+    call night
+    call day9
+    call night
+    call day10
+    call night
+    call day11
 label end:
     r "Fin du jeu"
     $ persistent.ending = "win"

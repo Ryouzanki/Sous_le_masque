@@ -56,7 +56,7 @@ label day3:
     show elusia geez
     e "Misère, ce n'est pas une raison !"
     show alice geez
-    a "Allons bon... Nous vous laisserons le siège d'honneur en boût de table, Sir."
+    a "Allons bon... Nous vous laisserons le siège d'honneur en bout de table, Sir."
     y "Non merci. Cela ne m'intéresse guère."
     y "Je rentre manger, mais j'apprécie l'intention."
     $ rel_lloy += 2
@@ -111,11 +111,11 @@ label day3:
     $ rel_lolo += 3
     $ rel_ali += 3
     scene ru
-    show elusia normal at left
-    show ryou normal at Position(xpos=0.375)
-    show alice normal at center
-    show valeth normal at Position(xpos=0.625)
-    show laura normal at right 
+    show elusia normal at Position(xpos=0.1)
+    show ryou normal at Position(xpos=0.3)
+    show alice normal at Position(xpos=0.5)
+    show valeth normal at Position(xpos=0.7)
+    show laura normal at Position(xpos=0.9)
     with fade
     "Ils se sont tous assis autour de moi."
     show alice geez

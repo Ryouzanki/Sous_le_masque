@@ -254,20 +254,22 @@ label day4_labo2:
         hide alice with easeoutright
         return
     else:
-        $ choix1 = True
         show alice sad
         a "[j] ! Je vais au labo."
         a "Tu es libre ? On y va maintenant ?"
         if aller_science == 1:
             menu:
                 "Mais je ne veux pas venir !":
+                    $ renpy.block_rollback()
+                    $ rel_ali -= 2
                     ma "Mais je ne veux pas venir !"
                     show alice sad
                     a "Vraiment...."
                     show alice happy
                     a "Réfléchis-y bien !"
-                    $ choix1 = False
                 "Oui...":
+                    $ renpy.block_rollback()
+                    $ choix1 = True
                     m "Oui..."
                     a "Je te laisse prendre tes affaires."
                     a "Je t'attends dans le couloir."
@@ -279,7 +281,6 @@ label day4_apres:
         scene classroom with fade
         show alice normal
         a "Allons-y..."
-        $ choix1 = True
         hide alice with easeoutright
         call labo
     else:        
@@ -304,6 +305,7 @@ label day4_apres:
             
         elif _return == "science":
             $ renpy.block_rollback()
+            $ choix1 = True
             call labo
         
         elif _return == "art":

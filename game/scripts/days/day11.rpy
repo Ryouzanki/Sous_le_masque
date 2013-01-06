@@ -51,13 +51,13 @@ label day11:
     m "Ca va, ça va..."
     show ryou normal
     r "Je suis juste venu te réveiller au cas où."
-    r "Et faire un boût de chemin avec toi pour aller acheter des bougies."
+    r "Et faire un bout de chemin avec toi pour aller acheter des bougies."
     r "C'est plus discret et rapide. Je ferais ma part, t'en fais pas."
     m "OK."
     scene street
     show ryou normal
     with fade
-    r "Bon, la meilleure pâtisserie de la ville est au boût de cette rue."
+    r "Bon, la meilleure pâtisserie de la ville est au bout de cette rue."
     r "La supérette est de l'autre côté."
     r "A plus !"
     show ryou happy

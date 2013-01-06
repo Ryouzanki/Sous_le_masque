@@ -1032,7 +1032,7 @@ label day6_q:
             m "Pas assez de membre... Pourquoi ?"
             show alice angry
             a "Parce qu'ils veulent leur nom écrit dans la liste du staff."
-            a "Mais refusent de mettre la main à la patte."
+            a "Mais refusent de mettre la main à la pâte."
             a "\"Oh non, c'est trop de travail  !\""
             $ choix3 =  False
             jump day6_q

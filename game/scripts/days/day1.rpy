@@ -316,7 +316,7 @@ label RUU:
     show valeth normal at right with easeinright
     v "Oui, oui, j'arrive !"
     v "Salut toi !"
-    v "Je suis dans ta classe, j'étais assis à l'autre boût du rang !"
+    v "Je suis dans ta classe, j'étais assis à l'autre bout du rang !"
     m "Ah, oui."
     v "Je m'appelle Valeth !"
     $ valou = 'Valeth'

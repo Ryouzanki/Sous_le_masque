@@ -25,7 +25,7 @@ label club_0:
         v "T'es le nouveau dans la classe de Télécoms-Réseaux avec moi non ?"
         m "Je ne sais pas..."
         m "Mais je suis bien en Télécoms-Réseaux."
-        v "Oui je sais. Tu étais assis[ter] à l'autre boût du rang."
+        v "Oui je sais. Tu étais assis[ter] à l'autre bout du rang."
         v "Oh ! Mais je me présente : je suis Valeth !"
         $ valou = 'Valeth'
     elif rel_val >= 5:
@@ -52,7 +52,7 @@ label club_0:
             "C'était stressant."
             "Valeth n'a pas dit grand mot de la partie."
             "Ce sourire sur de lui ne quittait pas ses lèvres."
-            "Je suis suis fait[ter] ramassé[ter] en beauté."
+            "Je suis fait[ter] ramassé[ter] en beauté."
             "Il est bien trop fort."
             "Au moment de partir, Valeth m'a montré[ter] le chemin du retour."
             $ rel_val += 5

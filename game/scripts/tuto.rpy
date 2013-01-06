@@ -145,10 +145,10 @@ label tuto_val :
     v "\"Relations\" permet de voir comment tu t'entends avec les 8 personnages du jeu."
     v "Sous forme de chiffre et de barre. Une barre remplie est très difficile à avoir."
     show shadow ombre at left with easeinleft
-    s "Voire impossible."
+    ss "Voire impossible."
     show valeth angry
     v "On t'as pas sonné toi !"
-    s"..."
+    ss"..."
     hide shadow with easeoutleft
     show valeth normal
     v "Ne cherches pas à avoir une barre à 100\%."

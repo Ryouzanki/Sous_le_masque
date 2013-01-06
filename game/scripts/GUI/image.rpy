@@ -201,19 +201,19 @@ image salazard evil = "CG/salazard evil.png"
 ## Personnages secondaires
 
 # Un prof
-image prof normal = im.Composite((200, 529),
+image prof normal = im.Composite((230, 529),
                                         (0, 50), "CG/prof casual.png",
                                         (0, 50), "CG/prof normal.png")
-image prof annoyed = im.Composite((200, 529),
+image prof annoyed = im.Composite((230, 529),
                                         (0, 50), "CG/prof casual.png",
                                         (0, 50), "CG/prof annoyed.png")
-image prof dark = im.Composite((200, 529),
+image prof dark = im.Composite((230, 529),
                                         (0, 50), "CG/prof casual.png",
                                         (0, 50), "CG/prof dark.png")
-image prof happy = im.Composite((200, 529),
+image prof happy = im.Composite((230, 529),
                                         (0, 50), "CG/prof casual.png",
                                         (0, 50), "CG/prof happy.png")
-image prof naughty = im.Composite((200, 529),
+image prof naughty = im.Composite((230, 529),
                                         (0, 50), "CG/prof casual.png",
                                         (0, 50), "CG/prof naughty.png")
 

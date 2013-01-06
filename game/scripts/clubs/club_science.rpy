@@ -311,7 +311,7 @@ label arrive_lloyd:
             a "Les clubs de sciences sont 3 avec chacun leur architecture propre."
             a "Leur propre président, leur propre secrétaire et leur propre trésorier."
             a "Je suis la coordinatrice, c'est à dire que je gère les projets en commun."
-            a "Il m'arrive aussi de mettre main à la patte dans un des projets s'il m'intéresse."
+            a "Il m'arrive aussi de mettre main à la pâte dans un des projets s'il m'intéresse."
             a "Un club en particulier t'intéresse ?"
             m "Vous avez quoi déjà ?"
             a "Chimie, robotique ou informatique."
