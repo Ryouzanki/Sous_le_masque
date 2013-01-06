@@ -329,7 +329,7 @@ define nephie1 = "music/SMILE.mp3"
 # Thème autres
 define matin1 = "music/matin1.mp3"
 define festivite = "music/festivite.mp3"
-define jour1 = "music/jour1.ogg"
+define jour1 = "music/jour1.wav"
 define club1 = "music/club1.mp3"
 define main_menu1 = "music/game.ogg"
 define weekend1 = "music/weekend1.mp3"
