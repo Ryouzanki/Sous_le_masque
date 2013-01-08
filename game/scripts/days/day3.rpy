@@ -80,6 +80,8 @@ label day3:
     show valeth normal at Position(xpos=0.4) with easeinright
     $ valou = 'Valeth'
     v "Salut !"
+    if aller_art > 0:
+        e "Je ne sais pas s'il te l'a déjà dit mais..."
     show elusia happy
     e "A l'instar d'Alice, c'est le responsable de tous les clubs artistiques de l'école."
     e "Que ce soit les JDR, le théâtre..."
@@ -284,9 +286,13 @@ label d3_loisir:
             $ rel_val += 5
             mh "Oui, très souvent !"
             show valeth happy
-            v "Cool, au bâtiment des clubs, on a beaucoup de jeux."
-            show valeth normal
-            v "Plus que de joueurs d'ailleurs..."
+            if aller_art > 0:
+                v "J'ai hâte de te revoir au bâtiment des clubs !"
+                v "On manque de joueurs..."
+            else:
+                v "Cool, au bâtiment des clubs, on a beaucoup de jeux."
+                show valeth normal
+                v "Plus que de joueurs d'ailleurs..."
             show alice normal
             a "On pourrait y aller tous ensemble un de ces jours."
             show ryou normal
@@ -295,7 +301,11 @@ label d3_loisir:
             # $ renpy.block_rollback()
             $ rel_val +=2
             m "Oui, ça m'arrive."
-            v "Oh, on pourrait jouer quelques soirs.."
+            if aller_art > 0:
+                v "C'est sympa parfois, pas vrai..."
+                v "On devrait tous y aller de de temps en temps."
+            else:
+                v "Oh, on pourrait jouer quelques soirs.."
             show alice normal
             a "C'est agréable de temps à autre."
             show ryou normal
@@ -307,7 +317,10 @@ label d3_loisir:
             l "Tu préfères sortir ?"
             m "Entre autre."
             v "Oh, tant pis..."
-            v "Si un jour tu es tenté[ter], passe me voir."
+            if aller_art > 0:
+                v "Si un jour tu es retenté[ter], passe me voir."
+            else:
+                v "Si un jour tu es tenté[ter], passe me voir."
     show elusia happy
     e "Etais-tu impliqué[ter] dans la vie associative de ton école ?"
     show alice normal

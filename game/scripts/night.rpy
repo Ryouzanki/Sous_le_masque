@@ -136,7 +136,10 @@ label night:
         jump fin_night
 
 label night4:
-    show shadow ombre with fade
+    if bite :
+        show shadow ombre with fade
+    else:
+        show shadow ombre B with fade
     s "Je n'arrive pas à dormir..."
     s "Des nouveaux visages..."
     s "Je déteste ça !"
@@ -148,10 +151,18 @@ label night4:
     hide shadow with fade
     jump fin_night
 label night8:
-    show shadow ombre with fade
-    s "Pourquoi j'y suis allé[ter] ?"
-    s "Je ne suis pas un pion, ni une pièce de rechange..."
-    s "Je les déteste !"
+    if bite :
+        show shadow ombre with fade
+    else:
+        show shadow ombre B with fade
+    if bite:
+        s "Pourquoi j'y suis allé[ter] ?"
+        s "Je ne suis pas un pion, ni une pièce de rechange..."
+        s "Je les déteste !"
+    else:
+        s "Une partie de tennis pour resserrer nos liens ?"
+        s "Je ne suis pas votre amie, ni un bouche-trous..."
+        s "Je les déteste !"
     s "Je vais les briser en miette un à un..."
     hide shadow with fade
     jump fin_night
@@ -159,7 +170,10 @@ label night8:
 label night11:
     if (rel_lulu < 50) or (rel_ryou < 50):
         jump fin_night
-    show shadow ombre with fade
+    if bite :
+        show shadow ombre with fade
+    else:
+        show shadow ombre B with fade
     s "Aller chercher un gâteau..."
     s "Comme c'est stupide..."
     s "Mais voyons le résultat."

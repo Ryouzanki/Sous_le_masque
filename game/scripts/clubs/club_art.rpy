@@ -205,7 +205,6 @@ label club_2:
                     v "Très bien, à la prochaine !"
                     return
 label art3_fin:
-            $ aller_art += 1
             v"On dirait qu'il ne reste plus que nous."
             v "Je vais rentrer donc je vais devoir fermer les locaux."
             v "Désolé de te kicker aussi brutalement !"

@@ -78,6 +78,11 @@ image elusia timid sport = im.Composite((200, 529),
                                         (0, 50), "CG/elusia sport.png",
                                         (0, 50), "CG/elusia timid.png")
 
+# Elusia shadow
+image shadow ombre B = "CG/shadow B ombre.png"
+
+
+
 ## Laura Meyer
 
 # Laura normale
